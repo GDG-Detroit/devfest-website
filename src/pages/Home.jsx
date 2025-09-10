@@ -14,9 +14,9 @@ function Home() {
     <main>
       <Navbar />
       <LandingSection />
+      <LocationSection />
       <SpeakersSection />
       <SessionsSection />
-      <LocationSection />
       <SponsorsSection />
       <OrganizersSection />
       <FacilitatorsSection />
