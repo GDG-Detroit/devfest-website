@@ -22,6 +22,9 @@ function SpeakersSection() {
     setDirection(isExpanded ? DIRECTION.TOP : DIRECTION.BOTTOM)
   }
 
+  // TODO: Can Abstract this into a more reusable component
+  // Like making the date setable via props
+  // Passing the correct year's speakers data via props
   return (
     <SpeakerProvider>
       <section
@@ -30,7 +33,7 @@ function SpeakersSection() {
       >
         <div className="flex w-full justify-between pt-6 sm:pt-8 md:pt-12 lg:pt-14">
           <header className="font-russell text-4xl md:text-5xl lg:text-6xl">
-            Speakers
+            2024 Speakers
           </header>
           <img
             src={SpeakersLogo}
