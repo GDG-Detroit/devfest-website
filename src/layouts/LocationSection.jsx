@@ -17,7 +17,7 @@ function LocationSection() {
             </h3>
           </div>
           <div className="ml-16">
-            <p className="whitespace-nowrap">Saturday, October 26, 2024 </p>
+            <p className="whitespace-nowrap">Saturday, November 22nd, 2025 </p>
             <p>9:00 AM - 5:00 PM</p>
           </div>
         </div>
@@ -32,25 +32,23 @@ function LocationSection() {
             </h3>
           </div>
           <a
-            href="https://www.google.com/maps/dir//2125+Woodward+Ave,+Detroit,+MI+48201/@42.3378209,-83.0576339,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x883b2d3478f11d5b:0x4dfda74fa49a6074!2m2!1d-83.052484!2d42.337821?entry=ttu"
+            href="https://www.google.com/maps/dir//2901+Grand+River+Ave,+Detroit,+MI+48201/@42.3388889,-83.0703527,1162m/data=!3m2!1e3!5s0x883b2d527a607d6f:0xe075cfc124b83793!4m20!1m10!3m9!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!2sMotorCity+Casino+Hotel!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3!3m8!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3?entry=ttu"
             target="_blank"
             className="ml-16 cursor-pointer hover:underline"
             rel="noreferrer"
           >
+            <p className="xl:whitespace-nowrap">MotorCity Casino Hotel</p>
             <p className="xl:whitespace-nowrap">
-              Little Caesars Global Resource Center
-            </p>
-            <p className="xl:whitespace-nowrap">
-              2125 Woodward Avenue Detroit, 48201
+              2901 Grand River Ave, Detroit, MI 48201
             </p>
           </a>
         </div>
 
         <div className="w-full lg:w-1/2">
           <iframe
-            title="Little Caesars Global Resource Center"
+            title="MotorCity Casino Hotel"
             className="h-64 w-full lg:h-auto"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2945.986922468408!2d-83.05744148519915!3d42.34028517918937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824d0cfb478df2b%3A0x44f8f6a6518c20f9!2sLittle%20Caesars%20World%20Headquarters!5e0!3m2!1sen!2sus!4v1661844163892!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5043.696479671668!2d-83.07032016920797!3d42.33888511227875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d4d71da8bb1%3A0xe4a8072514ccbe55!2sMotorCity%20Casino%20Hotel!5e1!3m2!1sen!2sus!4v1757466338342!5m2!1sen!2sus"
             allowFullScreen
           ></iframe>
         </div>
