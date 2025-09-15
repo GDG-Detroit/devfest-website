@@ -1,5 +1,4 @@
 //import detroitSkyline from '@/assets/images/Frame 2 - Detroit Skyline.png'
-import { FaTicketAlt } from 'react-icons/fa'
 
 import date from '@/assets/images/date.png'
 //import michiganDevFestLogoDark from '@/assets/images/devfest_logo_dark.png'
@@ -29,14 +28,13 @@ function LandingSection() {
               knowledge sharing for all involved.
             </p>
             <a
-              href="https://www.eventbrite.com/e/michigan-devfest-2024-tickets-1002088352237?aff=erelexpmlt"
+              href="https://www.papercall.io/midevfest2025"
               target="_blank"
               className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-400 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
               rel="noreferrer"
             >
               {' '}
-              <FaTicketAlt className="mr-3" />
-              GET TICKETS
+              APPLY TO SPEAK
             </a>
           </div>
         </div>
