@@ -33,7 +33,7 @@ function SpeakersSection() {
       >
         <div className="flex w-full justify-between pt-6 sm:pt-8 md:pt-12 lg:pt-14">
           <header className="font-russell text-4xl md:text-5xl lg:text-6xl">
-            2024 Speakers
+            2025 Speakers
           </header>
           <img
             src={SpeakersLogo}
