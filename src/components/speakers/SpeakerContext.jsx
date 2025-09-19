@@ -1,4 +1,4 @@
-import { SpeakersData } from '@/data/speakers'
+import { SpeakersData } from '@/data/2024/speakers'
 import PropTypes from 'prop-types'
 import { createContext, useMemo, useState } from 'react'
 

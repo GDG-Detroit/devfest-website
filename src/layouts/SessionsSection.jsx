@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
 import SessionsLogo from '@/assets/images/sessions-logo.png'
 import SessionCard from '@/components/sessions/SessionCard'
-import { SpeakersData } from '@/data/speakers'
 
 const convertTo24Hour = (time) => {
   const [hour, minute] = time.split(':').map(Number)
@@ -20,15 +20,18 @@ const convertTo24Hour = (time) => {
     .padStart(2, '0')}`
 }
 
-// TODO: Abstract this logic into a more reusable component
-// This will allow us to reset the years, sessions, etc... more easily
-function SessionsSection() {
+// TODO: Make SessionsSection collapsible like SpeakersSection
+const SessionsSection = ({
+  speakersData,
+  year = new Date().getFullYear(),
+  tracks = ['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous'],
+}) => {
   const [activeTab, setActiveTab] = useState(0)
-  const tabs = ['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous']
+  const tabs = [...tracks]
 
   let combinedSpeakerData = []
 
-  SpeakersData.forEach((speaker) => {
+  speakersData.forEach((speaker) => {
     let existingSession = combinedSpeakerData.find(
       (session) => session.sessionTitle === speaker.session.title
     )
@@ -58,7 +61,7 @@ function SessionsSection() {
     >
       <div className="flex w-full justify-between px-8 pt-6 sm:px-10 sm:pt-8 md:px-14 md:pt-12 lg:px-16 lg:pt-14">
         <header className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
-          2024 Sessions
+          {year} Sessions
         </header>
         <img
           src={SessionsLogo}
@@ -117,6 +120,28 @@ function SessionsSection() {
       </ul>
     </section>
   )
+}
+
+SessionsSection.propTypes = {
+  speakersData: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired,
+      session: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string,
+        track: PropTypes.string.isRequired,
+        time: PropTypes.string.isRequired,
+        room: PropTypes.string.isRequired,
+      }).isRequired,
+    })
+  ).isRequired,
+  year: PropTypes.number,
+  tracks: PropTypes.arrayOf(PropTypes.string),
+  sectionId: PropTypes.string,
+  logo: PropTypes.string,
+  backgroundColor: PropTypes.string,
 }
 
 export default SessionsSection

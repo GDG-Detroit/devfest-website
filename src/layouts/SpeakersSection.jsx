@@ -1,39 +1,42 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
 import SpeakersLogo from '@/assets/images/speakers-logo.png'
 import SpeakerCard from '@/components/speakers/SpeakerCard'
 import { SpeakerProvider } from '@/components/speakers/SpeakerContext'
-import { SpeakersData } from '@/data/speakers'
 
 import { DIRECTION } from '@/constants/directions'
 import { IoChevronDown } from 'react-icons/io5'
 
-function SpeakersSection() {
-  const [isExpanded, setIsExpanded] = useState(true)
-  const [direction, setDirection] = useState(DIRECTION.BOTTOM)
+const SpeakersSection = ({
+  speakersData,
+  year = new Date().getFullYear(),
+  defaultExpanded = true,
+}) => {
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded)
+  const [direction, setDirection] = useState(
+    defaultExpanded === true ? DIRECTION.TOP : DIRECTION.BOTTOM
+  )
 
-  const uniqueSpeakers = SpeakersData.filter(
+  const uniqueSpeakers = speakersData.filter(
     (speaker, index, self) =>
       index === self.findIndex((s) => s.email === speaker.email)
   )
 
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded)
-    setDirection(isExpanded ? DIRECTION.TOP : DIRECTION.BOTTOM)
+    setDirection(isExpanded ? DIRECTION.BOTTOM : DIRECTION.TOP)
   }
 
-  // TODO: Can Abstract this into a more reusable component
-  // Like making the date setable via props
-  // Passing the correct year's speakers data via props
   return (
     <SpeakerProvider>
       <section
         id="speakers"
-        className="flex flex-col justify-center px-8 sm:px-10 md:px-14 lg:px-16"
+        className="flex flex-col justify-center border-b border-primary px-8 sm:px-10 md:px-14 lg:px-16"
       >
         <div className="flex w-full justify-between pt-6 sm:pt-8 md:pt-12 lg:pt-14">
           <header className="font-russell text-4xl md:text-5xl lg:text-6xl">
-            2024 Speakers
+            {year} Speakers
           </header>
           <img
             src={SpeakersLogo}
@@ -76,6 +79,26 @@ function SpeakersSection() {
       </section>
     </SpeakerProvider>
   )
+}
+
+SpeakersSection.propTypes = {
+  speakersData: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired,
+      session: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string,
+        track: PropTypes.string.isRequired,
+        time: PropTypes.string.isRequired,
+        room: PropTypes.string.isRequired,
+      }).isRequired,
+    })
+  ).isRequired,
+  year: PropTypes.number,
+  logo: PropTypes.string,
+  defaultExpanded: PropTypes.bool,
 }
 
 export default SpeakersSection
