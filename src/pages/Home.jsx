@@ -22,14 +22,14 @@ function Home() {
         speakersData={Speakers2024}
         tracks={['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous']}
       />
+      <SponsorsSection />
+      <OrganizersSection />
+      <FacilitatorsSection />
       <SpeakersSection
         year={2024}
         speakersData={Speakers2024}
         defaultExpanded={false}
       />
-      <SponsorsSection />
-      <OrganizersSection />
-      <FacilitatorsSection />
       <DevTeamSection />
       <Footer />
     </main>
