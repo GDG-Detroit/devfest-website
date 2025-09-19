@@ -1,8 +1,8 @@
 //import detroitSkyline from '@/assets/images/Frame 2 - Detroit Skyline.png'
 
-import date from '@/assets/images/date.png'
+import date from '@/assets/images/date2025.png'
 //import michiganDevFestLogoDark from '@/assets/images/devfest_logo_dark.png'
-import DevFestLogo from '@/assets/images/DevFestLogo.png'
+import DevFestLogo from '@/assets/images/DevFestLogo2025.png'
 
 function LandingSection() {
   return (
