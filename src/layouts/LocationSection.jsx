@@ -10,13 +10,13 @@ function LocationSection() {
         <div className="mb-4 lg:mb-0">
           <div className="flex items-center">
             <div className="mr-4 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
-              <FaMapMarkerAlt className="h-6 w-6 text-white" />
+              <FaClock className="h-6 w-6 text-white" />
             </div>
             <h3 className="text-lg font-semibold md:text-xl lg:text-2xl">
               When
             </h3>
           </div>
-          <div className="ml-16">
+          <div className="ml-0 sm:ml-16">
             <p className="whitespace-nowrap">Saturday, November 22nd, 2025 </p>
             <p>9:00 AM - 5:00 PM</p>
           </div>
@@ -25,7 +25,7 @@ function LocationSection() {
         <div className="mb-4 flex flex-col lg:mb-0">
           <div className="flex items-center">
             <div className="mr-4 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
-              <FaClock className="h-6 w-6 text-white" />
+              <FaMapMarkerAlt className="h-6 w-6 text-white" />
             </div>
             <h3 className="text-lg font-semibold md:text-xl lg:text-2xl">
               Where
@@ -34,7 +34,7 @@ function LocationSection() {
           <a
             href="https://www.google.com/maps/dir//2901+Grand+River+Ave,+Detroit,+MI+48201/@42.3388889,-83.0703527,1162m/data=!3m2!1e3!5s0x883b2d527a607d6f:0xe075cfc124b83793!4m20!1m10!3m9!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!2sMotorCity+Casino+Hotel!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3!3m8!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3?entry=ttu"
             target="_blank"
-            className="ml-16 cursor-pointer hover:underline"
+            className="ml-0 cursor-pointer hover:underline sm:ml-16"
             rel="noreferrer"
           >
             <p className="xl:whitespace-nowrap">MotorCity Casino Hotel</p>
