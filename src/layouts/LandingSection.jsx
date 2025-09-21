@@ -1,24 +1,33 @@
 //import detroitSkyline from '@/assets/images/Frame 2 - Detroit Skyline.png'
 
-import date from '@/assets/images/date2025.png'
+import datePng from '@/assets/images/date2025.png'
+import dateWebp from '@/assets/images/date2025.webp'
 //import michiganDevFestLogoDark from '@/assets/images/devfest_logo_dark.png'
-import DevFestLogo from '@/assets/images/DevFestLogo2025.png'
+import DevFestLogoPng from '@/assets/images/DevFestLogo2025.png'
+import DevFestLogoWebp from '@/assets/images/DevFestLogo2025.webp'
+import ResponsiveImage from '@/components/ui/ResponsiveImage'
 
 function LandingSection() {
   return (
     <section id="landing" className="mt-16">
       <div className="flex flex-wrap bg-black">
         <div className="p-12 w-full sm:w-1/2">
-          <img
+          <ResponsiveImage
             className="w-full"
-            src={DevFestLogo}
+            webpSrc={DevFestLogoWebp}
+            pngSrc={DevFestLogoPng}
             alt="Michigan DevFest Logo"
           />
         </div>
 
         <div className="flex flex-col justify-between w-full bg-primary-400 sm:w-1/2">
           <div className="flex flex-col justify-center items-center p-10 space-y-8 grow">
-            <img className="w-3/4" src={date} alt="Date and Red Circle" />
+            <ResponsiveImage 
+              className="w-[570px] max-w-full" 
+              webpSrc={dateWebp} 
+              pngSrc={datePng} 
+              alt="Date and Red Circle" 
+            />
 
             <p className="text-sm font-normal text-justify lg:text-base xl:text-lg">
               The Detroit and Ann Arbor Google Developer Groups (GDG) are
