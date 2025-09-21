@@ -12,9 +12,9 @@ const GenericCard = ({
 }) => {
   return (
     <div
-      className={`relative mx-auto mb-16 w-full max-w-xs ${
+      className={`relative mx-auto mb-16 w-full max-w-[280px] px-2 sm:max-w-xs sm:px-4 ${
         onOpen &&
-        'transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer'
+        'transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-105 hover:cursor-pointer'
       }`}
       onClick={onOpen}
     >
