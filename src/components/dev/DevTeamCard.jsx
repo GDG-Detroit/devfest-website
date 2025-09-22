@@ -13,7 +13,11 @@ const DevTeamCard = ({
 }) => {
   return (
     <div className="group relative mb-4 ml-4 transform-gpu overflow-hidden transition-transform hover:z-20 hover:scale-110 hover:cursor-pointer hover:filter-none">
-      <img src={avatar} alt={`${name} - ${organization || university}`} className="h-60 w-full object-cover object-center" />
+      <img
+        src={avatar}
+        alt={`${name} - ${organization || university}`}
+        className="h-60 w-full object-cover object-center"
+      />
       <div className="invisible absolute inset-x-0 bottom-0 h-20 translate-y-8 bg-primary-200 pt-4 text-center text-sm text-sky-900 transition ease-in-out group-hover:visible group-hover:translate-y-0">
         <h1 className="text-sm font-semibold text-sky-900">{name}</h1>
         <div className="px-2">

@@ -56,15 +56,15 @@ export default defineConfig({
 
 ## Development Scripts
 
-| Command              | Description                                                   |
-| -------------------- | ------------------------------------------------------------- |
-| `npm run dev`        | Start the development server via Vite                         |
-| `npm run build`      | Build the project for production                              |
-| `npm run preview`    | Create a preview of the production build locally              |
-| `npm run lint`       | Check code for linting errors (includes Tailwind class order) |
-| `npm run lint:fix`   | Automatically fix linting errors                              |
-| `npm run format`     | Check code formatting with Prettier                           |
-| `npm run format:fix` | Automatically format code with Prettier                       |
+| Command                | Description                                                   |
+| ---------------------- | ------------------------------------------------------------- |
+| `npm run dev`          | Start the development server via Vite                         |
+| `npm run build`        | Build the project for production                              |
+| `npm run preview`      | Create a preview of the production build locally              |
+| `npm run lint`         | Check code for linting errors (includes Tailwind class order) |
+| `npm run lint:fix`     | Automatically fix linting errors                              |
+| `npm run format`       | Format code with Prettier                                     |
+| `npm run format:check` | Check code formatting with Prettier                           |
 
 ## Project Structure
 
@@ -85,8 +85,24 @@ src/
 This project uses ESLint and Prettier for code quality and formatting:
 
 - Run `npm run lint` to check for linting issues
-- Run `npm run format` to check code formatting
-- Use `npm run lint:fix` and `npm run format:fix` to automatically fix issues
+- Run `npm run format:check` to check code formatting
+- Use `npm run lint:fix` and `npm run format` to automatically fix issues
+
+### Git Hooks
+
+This project uses Husky and lint-staged to automatically enforce code quality:
+
+- **Pre-commit hook** - Automatically runs ESLint and Prettier on staged files before each commit
+- **Automatic formatting** - Code is automatically formatted and linted before commits
+- **No manual intervention** - The hooks will fix issues automatically when possible
+
+**How it works:**
+
+1. When you run `git commit`, the pre-commit hook triggers
+2. lint-staged runs ESLint and Prettier on only the files you're committing
+3. If there are fixable issues, they're automatically resolved
+4. If there are unfixable issues, the commit is blocked until you fix them manually
+5. Once all issues are resolved, the commit proceeds
 
 ### Accessibility
 
@@ -131,8 +147,6 @@ This project uses a **manual class ordering** approach for optimal control and r
 - ❌ **Debugging complexity** - Hard to troubleshoot when sorting doesn't work as expected
 - ❌ **Tool conflicts** - Can interfere with other formatting rules
 - ✅ **Manual control** - Developers maintain full control over class organization
-
-<!-- TODO: This project will likely use Husky for Git hooks in the future. Add configuration for Husky. Ensure Husky is run before commits are made to keep the codebase clean and consistent. -->
 
 ### Building for Production
 

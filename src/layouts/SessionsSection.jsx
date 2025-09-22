@@ -91,8 +91,8 @@ const SessionsSection = ({
             >
               {tab === 'Miscellaneous' ? (
                 <>
-                  <span className="max-xs:hidden inline">Miscellaneous</span>
-                  <span className="max-xs:inline hidden">Misc</span>
+                  <span className="inline max-xs:hidden">Miscellaneous</span>
+                  <span className="hidden max-xs:inline">Misc</span>
                 </>
               ) : (
                 tab
