@@ -14,10 +14,10 @@ The repository for the website of [Michigan DevFest](https://midevfest.com/). Bu
 
 This project includes VS Code extension recommendations. When you open the project in VS Code, you'll be prompted to install:
 
-- **ESLint** (`dbaeumer.vscode-eslint`) - For code linting
+- **ESLint** (`dbaeumer.vscode-eslint`) - For code linting and Tailwind CSS class ordering
 - **Prettier** (`esbenp.prettier-vscode`) - For code formatting
-- **Tailwind CSS IntelliSense** (`bradlc.vscode-tailwindcss`) - For Tailwind CSS autocomplete
-- **axe Accessibility Linter** (`deque-systems.vscode-axe-linter`) - For accessibility linting
+- **Tailwind CSS IntelliSense** (`bradlc.vscode-tailwindcss`) - For Tailwind CSS autocomplete and IntelliSense
+- **axe Accessibility Linter** (`deque-systems.vscode-axe-linter`) - For real-time accessibility linting
 
 These extensions work with the project's `.vscode/settings.json` to provide automatic formatting, linting, and accessibility checking on save.
 
@@ -92,12 +92,19 @@ This project uses ESLint and Prettier for code quality and formatting:
 
 This project prioritizes accessibility and uses several tools to ensure inclusive design:
 
-- **axe Accessibility Linter** - Real-time accessibility linting in VS Code
+- **VS Code axe Accessibility Linter** - Real-time accessibility linting in the editor (when extension is installed)
 - **ESLint Tailwind plugin** - Detects class ordering issues for better maintainability
 - **ResponsiveImage component** - Provides proper alt text fallbacks and modern image formats
 - **Semantic HTML** - Uses proper heading hierarchy and landmark elements
+- **Manual accessibility testing** - Regular testing with browser accessibility tools
 
-**Note**: The project uses axe-core for accessibility linting as it provides more accurate and context-aware accessibility checks compared to other linters.
+**Accessibility Guidelines**: This project follows WCAG 2.1 guidelines and includes proper ARIA labels, keyboard navigation support, and semantic HTML structure.
+
+**Note**: If the axe Accessibility Linter extension is not available, you can use browser-based accessibility tools like:
+
+- [axe DevTools browser extension](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
+- [WAVE Web Accessibility Evaluator](https://wave.webaim.org/)
+- Built-in browser accessibility inspectors
 
 ### Tailwind CSS Class Ordering
 
@@ -118,6 +125,7 @@ This project uses a **manual class ordering** approach for optimal control and r
 
 **Why not use Prettier Tailwind plugin:**
 
+- ❌ **Layout breaking** - Plugin reorders classes that break specific layouts
 - ❌ **Inconsistent behavior** - Plugin sometimes fails to sort classes properly
 - ❌ **Version conflicts** - Plugin compatibility issues with different Prettier versions
 - ❌ **Debugging complexity** - Hard to troubleshoot when sorting doesn't work as expected
