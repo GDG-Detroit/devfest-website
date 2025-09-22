@@ -8,6 +8,16 @@ The repository for the website of [Michigan DevFest](https://midevfest.com/). Bu
 
 - Node.js
 - npm
+- VS Code (recommended)
+
+### Recommended VS Code Extensions
+
+This project includes VS Code extension recommendations. When you open the project in VS Code, you'll be prompted to install:
+
+- **ESLint** (`dbaeumer.vscode-eslint`) - For code linting
+- **Prettier** (`esbenp.prettier-vscode`) - For code formatting
+
+These extensions work with the project's `.vscode/settings.json` to provide automatic formatting and linting on save.
 
 ### Installation
 
