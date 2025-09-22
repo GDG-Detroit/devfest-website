@@ -54,6 +54,54 @@ export default defineConfig({
 })
 ```
 
+## Docker
+
+This application can be containerized using Docker for easy deployment and consistent environments.
+
+### Prerequisites
+
+- Docker installed on your system
+- Basic understanding of Docker commands
+
+### Building the Docker Image
+
+1. Build the Docker image:
+
+```bash
+docker build -t michigan-devfest-website .
+```
+
+2. Run the container:
+
+```bash
+docker run -p 3000:3000 michigan-devfest-website
+```
+
+3. Open your browser and navigate to `http://localhost:3000`
+
+### Docker Commands
+
+| Command                                                                  | Description                                     |
+| ------------------------------------------------------------------------ | ----------------------------------------------- |
+| `docker build -t michigan-devfest-website .`                             | Build the Docker image                          |
+| `docker run -p 3000:3000 michigan-devfest-website`                       | Run the container on port 3000                  |
+| `docker run -d -p 3000:3000 --name devfest-app michigan-devfest-website` | Run container in detached mode with custom name |
+| `docker stop devfest-app`                                                | Stop the running container                      |
+| `docker rm devfest-app`                                                  | Remove the container                            |
+| `docker images`                                                          | List all Docker images                          |
+| `docker rmi michigan-devfest-website`                                    | Remove the Docker image                         |
+
+### Environment Variables
+
+Currently, no environment variables are required to run the application. The application uses static data and doesn't require external services.
+
+### Docker Features
+
+- **Alpine Linux base**: Lightweight and secure
+- **Non-root user**: Enhanced security by running as non-root user
+- **Multi-stage optimization**: Efficient image size
+- **Production-ready**: Uses Vite preview for serving the built application
+
 ## Development Scripts
 
 | Command              | Description                                                   |
