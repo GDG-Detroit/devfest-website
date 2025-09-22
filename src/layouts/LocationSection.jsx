@@ -9,8 +9,8 @@ function LocationSection() {
       <div className="flex flex-col lg:mb-0 lg:flex-row lg:space-x-10 xl:space-x-28">
         <div className="mb-4 lg:mb-0">
           <div className="flex items-center">
-            <div className="mr-4 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
-              <FaMapMarkerAlt className="h-6 w-6 text-white" />
+            <div className="mx-2 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
+              <FaClock className="h-6 w-6 text-white" />
             </div>
             <h3 className="text-lg font-semibold md:text-xl lg:text-2xl">
               When
@@ -24,8 +24,8 @@ function LocationSection() {
 
         <div className="mb-4 flex flex-col lg:mb-0">
           <div className="flex items-center">
-            <div className="mr-4 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
-              <FaClock className="h-6 w-6 text-white" />
+            <div className="mx-2 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
+              <FaMapMarkerAlt className="h-6 w-6 text-white" />
             </div>
             <h3 className="text-lg font-semibold md:text-xl lg:text-2xl">
               Where

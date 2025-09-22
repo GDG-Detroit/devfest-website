@@ -7,7 +7,7 @@ function AboutSection() {
       className="relative flex h-screen flex-col items-center justify-center text-center"
     >
       <div id="text-aboutPage" className="mx-auto mb-8 max-w-screen-lg">
-        <p className="text-sm font-normal md:text-base lg:text-lg xl:text-xl ">
+        <p className="text-sm font-normal md:text-base lg:text-lg xl:text-xl">
           The Detroit and Ann Arbor Google Developer Groups (GDG) are teaming up
           once again to bring you the 9th Michigan DevFest on October 26, 2024,
           at the Little Caesar&apos;s Global. With our 9th DevFest, we aim to

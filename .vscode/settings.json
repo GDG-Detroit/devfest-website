@@ -1,7 +1,29 @@
 {
   "iis.configDir": "",
   "eslint.validate": ["javascript", "javascriptreact"],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
-  }
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.format.enable": false,
+  "prettier.requireConfig": true,
+  "tailwindCSS.experimental.classSort": false,
+  "tailwindCSS.experimental.configFile": "./tailwind.config.js",
+  "tailwindCSS.experimental.classRegex": [],
+  "tailwindCSS.includeLanguages": {},
+  "tailwindCSS.experimental.includeLanguages": {},
+  "tailwindCSS.experimental.includeLanguages": {},
+  "tailwindCSS.experimental.classRegex": [],
+  "tailwindCSS.experimental.classSort": false,
+  "tailwindCSS.experimental.configFile": "./tailwind.config.js"
 }

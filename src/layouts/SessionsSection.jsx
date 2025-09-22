@@ -112,7 +112,14 @@ const SessionsSection = ({
               }`}
               onClick={() => setActiveTab(index)}
             >
-              {tab}
+              {tab === 'Miscellaneous' ? (
+                <>
+                  <span className="max-xs:hidden inline">Miscellaneous</span>
+                  <span className="max-xs:inline hidden">Misc</span>
+                </>
+              ) : (
+                tab
+              )}
               {activeTab === index && (
                 <div className="absolute -bottom-3 left-1/2 h-0 w-0 -translate-x-1/2 border-x-[12px] border-t-[12px] border-primary-400 border-x-transparent"></div>
               )}
