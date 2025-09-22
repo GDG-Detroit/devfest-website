@@ -113,6 +113,7 @@ Currently, no environment variables are required to run the application. The app
 | `npm run lint:fix`     | Automatically fix linting errors                              |
 | `npm run format`       | Format code with Prettier                                     |
 | `npm run format:check` | Check code formatting with Prettier                           |
+| `npm run commitlint`   | Validate commit message format                                |
 
 ## Project Structure
 
@@ -151,6 +152,57 @@ This project uses Husky and lint-staged to automatically enforce code quality:
 3. If there are fixable issues, they're automatically resolved
 4. If there are unfixable issues, the commit is blocked until you fix them manually
 5. Once all issues are resolved, the commit proceeds
+
+### Conventional Commits
+
+This project enforces the [Conventional Commits](https://www.conventionalcommits.org/) specification for clear, consistent commit messages:
+
+- **Commit-msg hook** - Automatically validates commit message format before each commit
+- **Consistent history** - All commits follow a standardized format
+- **Automation ready** - Enables automated changelog generation and semantic versioning
+
+**Commit Message Format:**
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+**Supported Types:**
+
+- `feat` - A new feature
+- `fix` - A bug fix
+- `docs` - Documentation changes
+- `style` - Formatting, missing semicolons, etc.
+- `refactor` - Code change that neither fixes a bug nor adds a feature
+- `test` - Adding or correcting tests
+- `chore` - Maintenance
+- `perf` - Performance improvements
+- `ci` - CI/CD changes
+- `build` - Build system changes
+- `revert` - Revert a previous commit
+
+**Examples:**
+
+```bash
+feat: add user authentication
+fix: resolve memory leak in data processing
+docs: update API documentation
+style: fix code formatting issues
+refactor: simplify user validation logic
+test: add unit tests for payment module
+chore: update dependencies
+```
+
+**How it works:**
+
+1. When you run `git commit`, the commit-msg hook triggers
+2. commitlint validates your commit message against the conventional format
+3. If the message is invalid, the commit is blocked with helpful error messages
+4. If the message is valid, the commit proceeds normally
 
 ### Accessibility
 
