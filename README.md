@@ -124,7 +124,7 @@ src/
 └── constants/          # Application constants
 ├── data/               # Static data and content (e.g. devs, facilitators, organizers, speakers, and sponsors - Contains multiple years)
 ├── layouts/            # Section layout components
-├── pages/              # Page components (Currently only Home)
+├── pages/              # Page components
 ```
 
 ## Development

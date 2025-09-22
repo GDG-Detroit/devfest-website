@@ -9,7 +9,7 @@ import { DIRECTION } from '@/constants/directions'
 import { IoChevronDown } from 'react-icons/io5'
 
 const SpeakersSection = ({
-  speakersData,
+  speakersData = [],
   year = new Date().getFullYear(),
   defaultExpanded = true,
 }) => {
@@ -59,22 +59,41 @@ const SpeakersSection = ({
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="mt-32 grid grid-cols-1 items-stretch gap-20 sm:grid-cols-2 lg:mt-36 lg:grid-cols-3 xl:grid-cols-4">
-            {uniqueSpeakers.map((speaker, index) => (
-              <div key={index}>
-                <SpeakerCard
-                  id={speaker.id}
-                  name={speaker.name}
-                  twitter={speaker.twitter}
-                  avatar={speaker.avatar}
-                  organization={speaker.organization}
-                  position={speaker.position}
-                  bio={speaker.bio}
-                  sessionTitle={speaker.session.title}
-                />
-              </div>
-            ))}
-          </div>
+          {uniqueSpeakers && uniqueSpeakers.length ? (
+            <div className="mt-32 grid grid-cols-1 items-stretch gap-20 sm:grid-cols-2 lg:mt-36 lg:grid-cols-3 xl:grid-cols-4">
+              {uniqueSpeakers.map((speaker, index) => (
+                <div key={index}>
+                  <SpeakerCard
+                    id={speaker.id}
+                    name={speaker.name}
+                    twitter={speaker.twitter}
+                    avatar={speaker.avatar}
+                    organization={speaker.organization}
+                    position={speaker.position}
+                    bio={speaker.bio}
+                    sessionTitle={speaker.session.title}
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="col-span-1 my-4 flex flex-col items-center justify-center space-y-8 text-center text-lg leading-relaxed">
+              <p>
+                We are currently looking for speakers and will update the list
+                once we have more information. If you are interested in
+                speaking, sign up with the link below.
+              </p>
+              <a
+                href="https://www.papercall.io/midevfest2025"
+                target="_blank"
+                className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-400 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
+                rel="noreferrer"
+              >
+                {' '}
+                APPLY TO SPEAK
+              </a>
+            </div>
+          )}
         </div>
       </section>
     </SpeakerProvider>

@@ -9,6 +9,12 @@ function Navbar() {
 
   const navRef = useRef(null)
 
+  // TODO: Update navigation once Aaron's PR is merged
+  // TODO: Customize navigation if it's the previous-events route
+  // Add a link to previous-events
+  // Don't need the links to the different sections
+  // Need a link back to the home page
+  // Create a separate component for the previous-events navbar?
   const sections = useMemo(
     () => [
       { id: 'landing', text: 'Landing' },
