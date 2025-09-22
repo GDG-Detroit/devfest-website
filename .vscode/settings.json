@@ -17,13 +17,9 @@
   },
   "eslint.format.enable": false,
   "prettier.requireConfig": true,
+  "tailwindCSS.experimental.classRegex": [],
   "tailwindCSS.experimental.classSort": false,
   "tailwindCSS.experimental.configFile": "./tailwind.config.js",
-  "tailwindCSS.experimental.classRegex": [],
   "tailwindCSS.includeLanguages": {},
-  "tailwindCSS.experimental.includeLanguages": {},
-  "tailwindCSS.experimental.includeLanguages": {},
-  "tailwindCSS.experimental.classRegex": [],
-  "tailwindCSS.experimental.classSort": false,
-  "tailwindCSS.experimental.configFile": "./tailwind.config.js"
+  "tailwindCSS.experimental.includeLanguages": {}
 }
