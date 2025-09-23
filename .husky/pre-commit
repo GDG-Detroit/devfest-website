@@ -1,1 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 Running pre-commit checks..."
+echo "📝 Running lint-staged (ESLint, Accessibility, Prettier)..."
 npx lint-staged
+
+echo "✅ Pre-commit checks completed successfully!"
