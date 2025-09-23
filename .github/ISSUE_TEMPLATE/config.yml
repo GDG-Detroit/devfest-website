@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: DevFest Detroit Community
+    url: https://gdg.community.dev/gdg-detroit/
+    about: Join our GDG Detroit community for discussions and support
+  - name: General Questions
+    url: https://github.com/gdg-detroit/devfest-website/discussions
+    about: Ask general questions about the project in our discussions

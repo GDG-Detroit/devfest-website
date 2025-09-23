@@ -18,7 +18,7 @@ function Footer() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             width="16"
-            role="img-alt"
+            role="img"
             alt="XIcon"
             data-testid="XIcon"
             title=""
@@ -44,7 +44,7 @@ function Footer() {
         >
           <svg
             className="h-5 w-5 fill-current"
-            role="img-alt"
+            role="img"
             viewBox="0 0 256 256"
             xmlns="http://www.w3.org/2000/svg"
           >

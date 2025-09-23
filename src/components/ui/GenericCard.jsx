@@ -10,6 +10,13 @@ const GenericCard = ({
   position,
   onOpen,
 }) => {
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      onOpen?.()
+    }
+  }
+
   return (
     <div
       className={`relative mx-auto mb-16 w-full max-w-xs ${
@@ -17,6 +24,9 @@ const GenericCard = ({
         'transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer'
       }`}
       onClick={onOpen}
+      onKeyDown={handleKeyDown}
+      role={onOpen ? 'button' : undefined}
+      tabIndex={onOpen ? 0 : undefined}
     >
       <div className="overflow-hidden rounded-lg bg-primary-200 shadow-2xl hover:bg-primary-300">
         <div className="absolute -mt-24 flex w-full justify-center">

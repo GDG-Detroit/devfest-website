@@ -35,7 +35,7 @@ function SpeakerDetails(props) {
       <div className="relative flex w-5/6 flex-col justify-between space-y-2 bg-black px-12 py-8 lg:hidden">
         <div className="flex flex-col items-center">
           <div className="relative">
-            <img src={props.avatar} alt="speaker image" />
+            <img src={props.avatar} alt={props.name} />
             {props.twitter && <TwitterHandle handle={props.twitter} />}
           </div>
           <div>
@@ -80,7 +80,7 @@ function SpeakerDetails(props) {
         <div className="relative w-5/12">
           <div className="absolute bottom-1/4 right-1/2 flex w-full translate-x-[60%] translate-y-[44%] flex-col items-center">
             <div className="relative w-3/5">
-              <img src={props.avatar} alt="speaker image" />
+              <img src={props.avatar} alt={props.name} />
               {props.twitter && <TwitterHandle handle={props.twitter} />}
             </div>
             <div>
