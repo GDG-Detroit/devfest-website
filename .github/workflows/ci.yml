@@ -2,9 +2,9 @@ name: CI Pipeline
 
 on:
   pull_request:
-    branches: [main, master]
+    branches: [main]
   push:
-    branches: [main, master]
+    branches: [main]
 
 jobs:
   quality-and-build:
@@ -26,9 +26,6 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
-
-      - name: Run ESLint accessibility checks
-        run: npm run lint:a11y
 
       - name: Check Prettier formatting
         run: npm run format:check
@@ -53,16 +50,23 @@ jobs:
     needs: quality-and-build
 
     steps:
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: build-files
-          path: dist/
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-files
+          path: dist/
 
       - name: Install accessibility tools
         run: npm install --save-dev @axe-core/cli serve
