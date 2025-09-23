@@ -27,6 +27,7 @@ const GenericCard = ({
       onKeyDown={handleKeyDown}
       role={onOpen ? 'button' : undefined}
       tabIndex={onOpen ? 0 : undefined}
+      aria-label={onOpen ? `View details for ${name}` : undefined}
     >
       <div className="overflow-hidden rounded-lg bg-primary-200 shadow-2xl hover:bg-primary-300">
         <div className="absolute -mt-24 flex w-full justify-center">

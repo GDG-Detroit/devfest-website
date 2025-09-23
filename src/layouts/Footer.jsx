@@ -19,10 +19,9 @@ function Footer() {
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             role="img"
-            alt="XIcon"
+            alt="X (Twitter) icon"
             data-testid="XIcon"
-            title=""
-            aria-hidden="true"
+            title="Share on X (Twitter)"
             color="currentColor"
           >
             <path
@@ -45,6 +44,8 @@ function Footer() {
           <svg
             className="h-5 w-5 fill-current"
             role="img"
+            alt="LinkedIn icon"
+            title="Share on LinkedIn"
             viewBox="0 0 256 256"
             xmlns="http://www.w3.org/2000/svg"
           >

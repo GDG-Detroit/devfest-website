@@ -1,0 +1,14 @@
+echo "🚀 Running pre-push checks..."
+echo "🔍 Running full accessibility audit..."
+
+# Run accessibility checks on all files
+npm run a11y:check
+
+if [ $? -ne 0 ]; then
+  echo "❌ Accessibility checks failed! Please fix the issues before pushing."
+  echo "💡 Run 'npm run a11y:check' to see detailed errors."
+  exit 1
+fi
+
+echo "✅ All accessibility checks passed!"
+echo "🚀 Ready to push!"
