@@ -27,7 +27,9 @@
     ]
   },
   "dependencies": {
+    "@floating-ui/react": "^0.27.16",
     "date-fns": "^2.30.0",
+    "framer-motion": "^12.23.22",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -36,8 +38,8 @@
     "react-tabs": "^6.0.2"
   },
   "devDependencies": {
-    "@axe-core/react": "^4.10.2",
     "@axe-core/cli": "^4.8.4",
+    "@axe-core/react": "^4.10.2",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@types/react": "^18.2.15",

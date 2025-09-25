@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { FaBars } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import gdgDetroitLogo from '@/assets/images/gdg-detroit-logo.png'
+import MobileNav from './MobileNav'
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState('landing')
@@ -99,16 +100,40 @@ function Navbar() {
     }
   }, [])
 
+  //   Separating NavList DOM because we need to use the same thing links twice, once in the desktop version
+  //   an the other in the mobile version
+  const navList = (
+    <ul
+      className={`flex flex-col space-y-4 overflow-hidden lg:flex-row lg:justify-end lg:space-x-2 lg:space-y-0 lg:px-4 lg:py-2 ${
+        isNavVisible ? 'h-full' : 'h-0 lg:h-full'
+      }`}
+    >
+      {sections.map((section) => (
+        <li key={section.id} className="px-3 text-center">
+          <Link
+            to={`#${section.id}`}
+            onClick={(event) => handleNavigation(event, section.id)}
+            className={`text-center ${
+              section.id === 'landing' ? 'hidden' : ''
+            } ${activeLink === section.id ? 'text-primary-500' : ''}`}
+          >
+            {section.text}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
+
   return (
     <nav
       ref={navRef}
-      className={`fixed left-0 top-0 z-10 w-full p-4 ${
+      className={`fixed left-0 top-0 z-10 w-full ${
         activeLink === 'landing'
           ? 'bg-primary-400 text-sky-900'
           : 'bg-white shadow-lg'
       }`}
     >
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between p-4">
         <img src={gdgDetroitLogo} alt="GDG Detroit Logo" className="h-16" />
         <button
           className="rounded border-2 px-4 lg:hidden"
@@ -116,25 +141,19 @@ function Navbar() {
         >
           <FaBars className="h-10" />
         </button>
-        <ul
-          className={`flex flex-col space-y-4 overflow-hidden lg:flex-row lg:justify-end lg:space-x-2 lg:space-y-0 lg:px-4 lg:py-2 ${
-            isNavVisible ? 'h-full' : 'h-0 lg:h-full'
-          }`}
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:block">{navList}</div>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className="w-full py-2 lg:hidden">
+        <MobileNav
+          open={isNavVisible}
+          className={activeLink === 'landing' ? 'bg-primary-400' : 'bg-white'}
         >
-          {sections.map((section) => (
-            <li key={section.id}>
-              <Link
-                to={`#${section.id}`}
-                onClick={(event) => handleNavigation(event, section.id)}
-                className={`${section.id === 'landing' ? 'hidden' : ''} p-6 ${
-                  activeLink === section.id ? 'text-primary-500' : ''
-                }`}
-              >
-                {section.text}
-              </Link>
-            </li>
-          ))}
-        </ul>
+          {navList}
+        </MobileNav>
       </div>
     </nav>
   )
