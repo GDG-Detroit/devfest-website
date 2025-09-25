@@ -18,10 +18,14 @@ const SpeakersSection = ({
     defaultExpanded === true ? DIRECTION.TOP : DIRECTION.BOTTOM
   )
 
+  // Filtering Unique Spearkers
   const uniqueSpeakers = speakersData.filter(
     (speaker, index, self) =>
       index === self.findIndex((s) => s.email === speaker.email)
   )
+
+  // Sorting Unique Speakers by name in alphabatical order
+  uniqueSpeakers.sort((a, b) => a.name.localeCompare(b.name))
 
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded)
