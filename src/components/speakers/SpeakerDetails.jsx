@@ -1,125 +1,180 @@
 import PropTypes from 'prop-types'
-import { useContext, useEffect } from 'react'
-import { CgCloseO } from 'react-icons/cg'
-import { IoChevronBack, IoChevronForward } from 'react-icons/io5'
+import { useCallback, useContext, useEffect } from 'react'
+import {
+  IoClose,
+  IoChevronBack,
+  IoChevronForward,
+  IoLogoTwitter,
+} from 'react-icons/io5'
 
-import SessionTitle from '@/components/sessions/SessionTitle'
-import TwitterHandle from '@/components/ui/TwitterHandle'
 import { SpeakerContext } from './SpeakerContext'
 
 function SpeakerDetails(props) {
-  const { speakerID, setSpeakerID, numSpeakers } = useContext(SpeakerContext)
-  const goLastSpeaker = () => {
-    setSpeakerID((id) => (id - 1 <= 0 ? numSpeakers : id - 1))
-  }
-  const goNextSpeaker = () => {
-    setSpeakerID(speakerID + 1 >= numSpeakers ? 1 : speakerID + 1)
-  }
+  const {
+    speakerID,
+    setSpeakerID,
+    numSpeakers,
+    uniqueSpeakersSortedByFirstName,
+  } = useContext(SpeakerContext)
+
+  const goLastSpeaker = useCallback(() => {
+    const currentIndex = uniqueSpeakersSortedByFirstName.findIndex(
+      (speaker) => speaker.id === speakerID
+    )
+    const previousIndex =
+      currentIndex === 0
+        ? uniqueSpeakersSortedByFirstName.length - 1
+        : currentIndex - 1
+    setSpeakerID(uniqueSpeakersSortedByFirstName[previousIndex].id)
+  }, [uniqueSpeakersSortedByFirstName, speakerID, setSpeakerID])
+
+  const goNextSpeaker = useCallback(() => {
+    const currentIndex = uniqueSpeakersSortedByFirstName.findIndex(
+      (speaker) => speaker.id === speakerID
+    )
+    const nextIndex =
+      currentIndex === uniqueSpeakersSortedByFirstName.length - 1
+        ? 0
+        : currentIndex + 1
+    setSpeakerID(uniqueSpeakersSortedByFirstName[nextIndex].id)
+  }, [uniqueSpeakersSortedByFirstName, speakerID, setSpeakerID])
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape' || event.key === 'Backspace') {
+      if (event.key === 'Escape') {
         props.onClose()
+      } else if (event.key === 'ArrowLeft') {
+        goLastSpeaker()
+      } else if (event.key === 'ArrowRight') {
+        goNextSpeaker()
       }
     }
 
     document.addEventListener('keydown', handleKeyDown)
+    document.body.style.overflow = 'hidden'
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = 'auto'
     }
-  }, [props])
+  }, [props, goLastSpeaker, goNextSpeaker])
+
+  const currentIndex = uniqueSpeakersSortedByFirstName.findIndex(
+    (speaker) => speaker.id === speakerID
+  )
+  const displayPosition = currentIndex + 1
 
   return (
-    <>
-      <div className="relative flex w-5/6 flex-col justify-between space-y-2 bg-black px-12 py-8 lg:hidden">
-        <div className="flex flex-col items-center">
-          <div className="relative">
-            <img src={props.avatar} alt={`${props.name} speaker portrait`} />
-            {props.twitter && <TwitterHandle handle={props.twitter} />}
+    <div className="relative max-h-[90vh] w-full max-w-4xl overflow-hidden rounded-3xl bg-white shadow-2xl">
+      <div className="relative bg-gradient-to-r from-sky-600 to-blue-900 px-8 py-12">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+        <div className="absolute -right-12 -top-12 h-24 w-24 rounded-full bg-white/10"></div>
+        <div className="absolute -bottom-6 -left-6 h-16 w-16 rounded-full bg-white/5"></div>
+
+        <button
+          onClick={props.onClose}
+          className="absolute right-6 top-6 rounded-full bg-white/20 p-2 text-white transition-all hover:scale-110 hover:bg-white/30"
+        >
+          <IoClose className="h-6 w-6" />
+        </button>
+
+        <div className="relative z-10 flex flex-col items-center text-center text-white">
+          <div className="relative mb-6">
+            <div className="h-64 w-64 rounded-full bg-white/20 p-3">
+              <img
+                src={props.avatar}
+                alt={`${props.name} portrait`}
+                className="h-full w-full rounded-full object-cover"
+              />
+            </div>
           </div>
-          <div>
-            <h1 className="mt-3 text-center text-xl font-bold text-white">
-              {props.name}
-            </h1>
-            <h3 className="text-center font-semibold text-white">
-              {props.organization}
-            </h3>
-          </div>
-        </div>
-        <div className="space-y-6">
-          <div className="max-h-40 overflow-y-auto">
-            <p className="text-justify text-sm font-normal text-white">
-              {props.bio}
-            </p>
-          </div>
-        </div>
-        <div className="overflow-x-hidden rounded-lg bg-blue-500 p-2">
-          <p className="text-sm text-gray-200 sm:text-lg">Talking About</p>
-          <p className="overflow-x-scroll whitespace-nowrap font-bold text-white sm:text-xl">
-            {props.sessionTitle}
+
+          <h1 className="mb-3 text-3xl font-bold">{props.name}</h1>
+          <p className="mb-2 text-lg font-medium text-blue-100">
+            {props.position}
           </p>
+          <p className="text-blue-200">{props.organization}</p>
+
+          {props.twitter && (
+            <a
+              href={`https://twitter.com/${props.twitter}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <IoLogoTwitter className="mr-2 h-4 w-4" />@{props.twitter}
+            </a>
+          )}
         </div>
-        <button className="absolute right-3 top-0" onClick={props.onClose}>
-          <CgCloseO className="h-8 w-8 text-blue-500" />
-        </button>
-        <button
-          className="absolute left-0 top-1/2 -translate-y-1/2 transition hover:scale-110"
-          onClick={goLastSpeaker}
-        >
-          <IoChevronBack className="h-16 w-16 text-blue-500" />
-        </button>
-        <button
-          className="absolute right-0 top-1/2 -translate-y-1/2 transition hover:scale-110"
-          onClick={goNextSpeaker}
-        >
-          <IoChevronForward className="h-16 w-16 text-blue-500" />
-        </button>
       </div>
-      <div className="relative hidden h-5/6 w-5/6 bg-[url(@/assets/images/speaker-details-modal.png)] bg-cover bg-center lg:flex">
-        <div className="relative w-5/12">
-          <div className="absolute bottom-1/4 right-1/2 flex w-full translate-x-[60%] translate-y-[44%] flex-col items-center">
-            <div className="relative w-3/5">
-              <img src={props.avatar} alt={`${props.name} speaker portrait`} />
-              {props.twitter && <TwitterHandle handle={props.twitter} />}
+
+      <div className="p-8">
+        <div className="grid gap-8 lg:grid-cols-5">
+          <div className="lg:col-span-3">
+            <h2 className="mb-4 text-2xl font-bold text-gray-900">
+              About {props.name.split(' ')[0]}
+            </h2>
+            <div className="max-h-64 overflow-y-auto pr-4">
+              <p className="leading-relaxed text-gray-700">{props.bio}</p>
             </div>
-            <div>
-              <h1 className="mt-3 text-center text-4xl font-bold text-black">
-                {props.name}
-              </h1>
-              <h3 className="text-center font-semibold text-black">
-                {props.organization}
-              </h3>
+          </div>
+
+          <div className="lg:col-span-2">
+            <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-sky-50 p-6">
+              <h3 className="mb-3 text-lg font-bold text-gray-900">Session</h3>
+              <div className="rounded-xl bg-white p-4 shadow-sm">
+                <p className="text-sm font-semibold leading-relaxed text-gray-900">
+                  {props.sessionTitle}
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div className="w-7/12">
-          <div className="flex h-full flex-col justify-between space-y-6 px-20 pb-8 pt-72">
-            <div className="max-h-80 overflow-y-auto">
-              <p className="text-justify text-xl font-normal text-white">
-                {props.bio}
-              </p>
-            </div>
-            <SessionTitle sessionTitle={props.sessionTitle} />
+
+        <div className="mt-8 flex items-center justify-center space-x-6 text-sm text-gray-500">
+          <div className="flex items-center space-x-2">
+            <kbd className="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600">
+              ←
+            </kbd>
+            <span>Previous</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <kbd className="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600">
+              →
+            </kbd>
+            <span>Next</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <kbd className="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600">
+              Esc
+            </kbd>
+            <span>Close</span>
           </div>
         </div>
-        <button className="absolute right-6 top-6" onClick={props.onClose}>
-          <CgCloseO className="h-14 w-14" />
-        </button>
+      </div>
+
+      <div className="mb-8">
         <button
-          className="absolute left-0 top-1/2 -translate-y-1/2 transition hover:scale-110"
           onClick={goLastSpeaker}
+          className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
         >
-          <IoChevronBack className="h-28 w-28" />
+          <IoChevronBack className="h-6 w-6 text-gray-600" />
         </button>
+
         <button
-          className="absolute right-0 top-1/2 -translate-y-1/2 transition hover:scale-110"
           onClick={goNextSpeaker}
+          className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
         >
-          <IoChevronForward className="h-28 w-28 text-blue-500" />
+          <IoChevronForward className="h-6 w-6 text-gray-600" />
         </button>
       </div>
-    </>
+
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-gray-900/80 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
+        {displayPosition} of {numSpeakers}
+      </div>
+    </div>
   )
 }
 
@@ -129,6 +184,7 @@ SpeakerDetails.propTypes = {
   twitter: PropTypes.string,
   avatar: PropTypes.string.isRequired,
   organization: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
   sessionTitle: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
 }
