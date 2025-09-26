@@ -109,7 +109,7 @@ function Navbar() {
       }`}
     >
       {sections.map((section) => (
-        <li key={section.id} className="px-3 text-center">
+        <li key={section.id} className="px-3 lg:text-center">
           <Link
             to={`#${section.id}`}
             onClick={(event) => handleNavigation(event, section.id)}
@@ -135,7 +135,10 @@ function Navbar() {
     >
       <div className="flex items-center justify-between p-4">
         <img src={gdgDetroitLogo} alt="GDG Detroit Logo" className="h-16" />
+
+        {/* Mobile NavBar Hamburger Button */}
         <button
+          aria-label={isNavVisible ? 'Close Main Menu' : 'Open Main Menu'}
           className="rounded border-2 px-4 lg:hidden"
           onClick={() => setIsNavVisible(!isNavVisible)}
         >
