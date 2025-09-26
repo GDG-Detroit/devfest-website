@@ -64,7 +64,7 @@ const SponsorsSection = ({
             </p>
             {year === new Date().getFullYear() && (
               <a
-                href="mailto:sponsors@michigandevfest.com"
+                href="mailto:sponsors@midevfest.com"
                 className="rounded-lg bg-blue-600 px-8 py-4 text-white shadow-lg transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-blue-700 hover:shadow-xl"
               >
                 Become a Sponsor
