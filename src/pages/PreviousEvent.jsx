@@ -17,7 +17,7 @@ const PreviousEvent = () => {
       <main>
         <PreviousEventsNavbar />
         <section className="mt-16 bg-primary-100">
-          <div className="flex min-h-[60vh] flex-col items-center justify-center px-8 py-16 text-center sm:px-10 md:px-14 lg:px-16">
+          <div className="flex min-h-[90vh] min-w-[100vw] flex-col items-center justify-center p-4 text-center sm:px-10 md:px-8 lg:px-8">
             <h1 className="mb-4 font-russell text-4xl font-bold text-primary-800">
               Event Not Found
             </h1>
