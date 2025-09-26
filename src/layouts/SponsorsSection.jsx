@@ -6,6 +6,8 @@ const SponsorsSection = ({
   sponsorsData = [],
   year = new Date().getFullYear(),
 }) => {
+  const isCurrentYear = year === new Date().getFullYear()
+
   return (
     <section
       id="sponsors"
@@ -13,7 +15,7 @@ const SponsorsSection = ({
     >
       <div className="flex w-full justify-between px-8 sm:px-10 md:px-14 lg:px-16">
         <header className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
-          {year && year !== new Date().getFullYear() ? `${year} ` : ''}Sponsors
+          {year && !isCurrentYear ? `${year} ` : ''}Sponsors
         </header>
         <img src={Kite} alt="Sponsors" className="h-12 md:h-14 lg:h-16" />
       </div>
@@ -44,7 +46,7 @@ const SponsorsSection = ({
                 </button>
               ))}
             </div>
-            {year === new Date().getFullYear() && (
+            {year && isCurrentYear && (
               <div className="mt-4 flex justify-center">
                 <a
                   href="mailto:sponsors@michigandevfest.com"
@@ -58,11 +60,11 @@ const SponsorsSection = ({
         ) : (
           <div className="col-span-1 my-8 flex flex-col items-center justify-center space-y-6 text-center text-lg leading-relaxed">
             <p className="text-gray-600">
-              {year && year !== new Date().getFullYear()
+              {year && !isCurrentYear
                 ? `No sponsor information available for ${year}.`
                 : 'We are currently looking for sponsors for this event.'}
             </p>
-            {year === new Date().getFullYear() && (
+            {year && isCurrentYear && (
               <a
                 href="mailto:sponsors@midevfest.com"
                 className="rounded-lg bg-blue-600 px-8 py-4 text-white shadow-lg transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-blue-700 hover:shadow-xl"
