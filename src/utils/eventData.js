@@ -1,12 +1,15 @@
 import { SpeakersData as Speakers2024 } from '@/data/2024/speakers'
 import { SpeakersData as Speakers2023 } from '@/data/2023/speakers'
+import { sponsorsData as Sponsors2024 } from '@/data/2024/sponsors'
 
 const EVENT_YEARS = {
   2024: {
     speakers: Speakers2024,
+    sponsors: Sponsors2024,
   },
   2023: {
     speakers: Speakers2023,
+    sponsors: [],
   },
 }
 
@@ -25,8 +28,14 @@ export const getSpeakersData = (year) => {
   return eventData?.speakers || null
 }
 
+export const getSponsorsData = (year) => {
+  const eventData = getEventData(year)
+  return eventData?.sponsors || null
+}
+
 export const getEventMetadata = (year) => {
   const speakers = getSpeakersData(year)
+  const sponsors = getSponsorsData(year)
 
   if (!speakers) {
     return {
@@ -50,6 +59,7 @@ export const getEventMetadata = (year) => {
     sessionCount: speakers.filter((speaker) => speaker.session).length,
     tracks,
     available: true,
+    sponsorsCount: sponsors.length,
   }
 }
 
