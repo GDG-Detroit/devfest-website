@@ -11,6 +11,7 @@ export const SpeakerContext = createContext({
   setSpeakerID: (_speakerID) => {},
   numSpeakers: 0,
   uniqueSpeakers: [],
+  uniqueSpeakersSortedByFirstName: [],
 })
 
 export const SpeakerProvider = ({ children, speakersData = [] }) => {
@@ -25,16 +26,16 @@ export const SpeakerProvider = ({ children, speakersData = [] }) => {
     setIsModalOpen(false)
   }
 
-  const uniqueSpeakersSortedByFirstName = useMemo(
-    () =>
-      speakersData
-        .filter(
-          (speaker, index, self) =>
-            index === self.findIndex((s) => s.email === speaker.email)
-        )
-        .sort((a, b) => a.name.localeCompare(b.name)),
-    [speakersData]
-  )
+  const uniqueSpeakers = useMemo(() => {
+    return speakersData.filter(
+      (speaker, index, self) =>
+        index === self.findIndex((s) => s.email === speaker.email)
+    )
+  }, [speakersData])
+
+  const uniqueSpeakersSortedByFirstName = useMemo(() => {
+    return [...uniqueSpeakers].sort((a, b) => a.name.localeCompare(b.name))
+  }, [uniqueSpeakers])
 
   return (
     <SpeakerContext.Provider
@@ -45,6 +46,7 @@ export const SpeakerProvider = ({ children, speakersData = [] }) => {
         speakerID,
         setSpeakerID,
         numSpeakers,
+        uniqueSpeakers,
         uniqueSpeakersSortedByFirstName,
       }}
     >
