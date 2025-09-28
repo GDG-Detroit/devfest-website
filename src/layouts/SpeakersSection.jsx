@@ -49,7 +49,9 @@ const SpeakersSection = ({
           />
           <button
             aria-label={
-              isExpanded ? 'Collapse 2025 Speakers' : 'Expand 2025 Speakers'
+              isExpanded
+                ? `Collapse ${year} Speakers`
+                : `Expand ${year} Speakers`
             }
             onClick={toggleExpanded}
             className="flex cursor-pointer items-center hover:text-gray-600"
