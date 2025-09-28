@@ -74,7 +74,7 @@ function SpeakerDetails(props) {
 
         <button
           onClick={props.onClose}
-          className="absolute right-6 top-6 rounded-full bg-white/20 p-2 text-white transition-all hover:scale-110 hover:bg-white/30"
+          className="absolute right-6 top-6 z-20 rounded-full bg-white/20 p-2 text-white transition-all hover:scale-110 hover:bg-white/30"
         >
           <IoClose className="h-6 w-6" />
         </button>
@@ -158,14 +158,14 @@ function SpeakerDetails(props) {
       <div className="mb-8">
         <button
           onClick={goLastSpeaker}
-          className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
+          className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
         >
           <IoChevronBack className="h-6 w-6 text-gray-600" />
         </button>
 
         <button
           onClick={goNextSpeaker}
-          className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
+          className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
         >
           <IoChevronForward className="h-6 w-6 text-gray-600" />
         </button>
