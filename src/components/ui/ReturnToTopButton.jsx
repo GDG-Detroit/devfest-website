@@ -22,6 +22,11 @@ const ReturnToTopButton = () => {
     const startTime = Date.now()
     const startPosition = window.scrollY
 
+    /**
+     * Easing function for smooth scroll animation
+     * @param {number} t - Progress value from 0 (start) to 1 (end)
+     * @returns {number} Eased progress value
+     */
     const easeInOutCubic = (t) =>
       t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
 
