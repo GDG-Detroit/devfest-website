@@ -22,7 +22,7 @@ function Navbar() {
       { id: 'location', text: 'Location' },
       { id: 'sessions', text: 'Sessions' },
       { id: 'sponsors', text: 'Sponsors' },
-      { id: 'jobboard', text: 'Job Board' },
+      // { id: 'jobboard', text: 'Job Board' },
       { id: 'organizers', text: 'Organizers' },
       { id: 'facilitators', text: 'Facilitators' },
       { id: 'speakers', text: 'Speakers' },
@@ -33,38 +33,80 @@ function Navbar() {
 
   useEffect(() => {
     // Function to set the active link based on scroll position
+    // Algorithm Explanation:
+    // Section will be set to active if it touches or pass the navbar
     const handleScroll = () => {
-      // Initialize the active section and its IoU
-      let activeIoU = 0
+      const navbar = document.querySelector('nav')
+      const navbarHeight = navbar ? navbar.offsetHeight : 96
 
-      // For each section
-      sections.forEach((section) => {
+      // Set Defautl section to landing (first element in sections)
+      let currentSection = sections[0].id
+
+      // This will track the closest distance to navbar
+      let minDistance = Infinity
+
+      sections.forEach((section, index) => {
         const target = document.querySelector(`#${section.id}`)
-
-        // Check if the target element exists
         if (!target) return
 
-        // Get the bounding rectangle of the section
         const rect = target.getBoundingClientRect()
+        const distance = Math.abs(rect.top - navbarHeight)
 
-        // Calculate the intersection height
-        const intersectionHeight = Math.max(
-          0,
-          Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0)
-        )
+        // only consider sections that have passed the navbar
+        if (rect.top - navbarHeight <= 0 && distance < minDistance) {
+          currentSection = section.id
+          minDistance = distance
+        }
 
-        // Calculate the IoU
-        const IoU =
-          intersectionHeight /
-          (rect.height + window.innerHeight - intersectionHeight)
+        // Special case: last section
+        if (index === sections.length - 1) {
+          const scrolledToBottom =
+            window.innerHeight + window.scrollY >=
+            document.body.offsetHeight - 10 // near bottom
 
-        // If this section's IoU is higher than the current active section's IoU, update the active section
-        if (IoU > activeIoU) {
-          setActiveLink(section.id)
-          activeIoU = IoU
+          if (scrolledToBottom) {
+            currentSection = section.id
+          }
         }
       })
+
+      setActiveLink(currentSection)
     }
+
+    // TODO: DELETE THE FOLLOWING OLD CODE.
+
+    // const handleScroll = () => {
+    //   // Initialize the active section and its IoU
+    //   let activeIoU = 0
+
+    //   // For each section
+    //   sections.forEach((section) => {
+    //     const target = document.querySelector(`#${section.id}`)
+
+    //     // Check if the target element exists
+    //     if (!target) return
+
+    //     // Get the bounding rectangle of the section
+    //     const rect = target.getBoundingClientRect()
+
+    //     // Calculate the intersection height
+    //     const intersectionHeight = Math.max(
+    //       0,
+    //       Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0)
+    //     )
+
+    //     // Calculate the IoU
+    //     const IoU =
+    //       intersectionHeight /
+    //       (rect.height + window.innerHeight - intersectionHeight)
+
+    //     // If this section's IoU is higher than the current active section's IoU, update the active section
+    //     if (IoU > activeIoU) {
+    //       setActiveLink(section.id)
+    //       activeIoU = IoU
+    //     }
+    //   })
+    // }
 
     // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll)
@@ -77,9 +119,32 @@ function Navbar() {
 
   const handleNavigation = (event, sectionId) => {
     event.preventDefault()
+
     const target = document.querySelector(`#${sectionId}`)
+
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' })
+      // The following was implemented previously, problem with this is that
+      // the section header goes behind the navbar, making it not visible.
+      // target.scrollIntoView({ behavior: 'smooth' })
+
+      // We have to adjust for the height of the navbar. Using 96px as a fallback
+      const hardcoded_navbar_height = 96
+
+      // I implemented dynamic navbar calculation, but it doesn't work on mobile because the navbar is expanded,
+      // so the height is much larger than what it should be. I am leaving the code below in case we decide to fix it in the future.
+
+      // const navbar = document.querySelector('nav');
+      // const navbar_height = navbar ? navbar.offsetHeight : hardcoded_navbar_height;
+
+      const navbar_height = hardcoded_navbar_height
+
+      const y =
+        target.getBoundingClientRect().top + window.pageYOffset - navbar_height
+
+      window.scrollTo({ top: y, behavior: 'smooth' })
+
+      // Closing NavBar (for mobile navigation). Note: it doesn't work without setTimeout.
+      setTimeout(() => setIsNavVisible(false), 10)
     }
   }
 
@@ -115,7 +180,9 @@ function Navbar() {
             onClick={(event) => handleNavigation(event, section.id)}
             className={`text-center ${
               section.id === 'landing' ? 'hidden' : ''
-            } ${activeLink === section.id ? 'text-primary-500' : ''}`}
+            } ${
+              activeLink === section.id ? 'border-b-2 border-primary-400' : ''
+            }`}
           >
             {section.text}
           </Link>

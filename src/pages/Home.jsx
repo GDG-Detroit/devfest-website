@@ -9,6 +9,8 @@ import SessionsSection from '@/layouts/SessionsSection'
 import SpeakersSection from '@/layouts/SpeakersSection'
 import SponsorsSection from '@/layouts/SponsorsSection'
 
+import { SpeakersData as Speakers2025 } from '@/data/2025/speakers'
+
 function Home() {
   return (
     <main>
@@ -17,14 +19,18 @@ function Home() {
       <LocationSection />
       <SessionsSection
         year={2025}
-        speakersData={[]}
-        tracks={[]}
+        speakersData={Speakers2025}
+        tracks={['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous']}
         defaultExpanded
       />
       <SponsorsSection />
       <OrganizersSection />
       <FacilitatorsSection />
-      <SpeakersSection year={2025} speakersData={[]} defaultExpanded />
+      <SpeakersSection
+        year={2025}
+        speakersData={Speakers2025}
+        defaultExpanded
+      />
       <DevTeamSection />
       <Footer />
     </main>
