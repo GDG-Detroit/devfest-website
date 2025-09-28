@@ -19,17 +19,7 @@ const GenericCard = ({
   }
 
   return (
-    <div
-      className={`group relative w-full max-w-sm ${
-        onOpen &&
-        'cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]'
-      }`}
-      onClick={onOpen}
-      onKeyDown={handleKeyDown}
-      role={onOpen ? 'button' : undefined}
-      tabIndex={onOpen ? 0 : undefined}
-      aria-label={onOpen ? `View details for ${name}` : undefined}
-    >
+    <div className="group relative w-full max-w-sm">
       <div className="relative h-[27rem] overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-gray-200 transition-all duration-300 group-hover:shadow-xl group-hover:ring-gray-300">
         <div className="relative h-24 bg-gradient-to-r from-sky-600 to-blue-900">
           <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
@@ -68,11 +58,15 @@ const GenericCard = ({
 
           {onOpen && (
             <button
-              className="inline-flex items-center rounded-lg bg-gray-50 px-3 py-2 text-xs font-medium text-gray-700 opacity-0 transition-all duration-200 hover:bg-gray-100 group-hover:opacity-100"
-              onClick={(e) => {
-                e.stopPropagation()
-                onOpen()
-              }}
+              className={`inline-flex items-center rounded-lg bg-gray-50 px-3 py-2 text-xs font-medium text-gray-700 opacity-0 transition-all duration-200 hover:bg-gray-100 group-hover:opacity-100 ${
+                onOpen &&
+                'cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-[1.025]'
+              }`}
+              onClick={onOpen}
+              onKeyDown={handleKeyDown}
+              role={onOpen ? 'button' : undefined}
+              tabIndex={onOpen ? 0 : undefined}
+              aria-label={onOpen ? `View details for ${name}` : undefined}
             >
               View Details
               <IoChevronForward className="ml-1 h-3 w-3" />
