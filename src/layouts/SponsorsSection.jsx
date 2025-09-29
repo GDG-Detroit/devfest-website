@@ -8,9 +8,9 @@ function SponsorsSection() {
       className="flex flex-col justify-center p-8 sm:p-10 md:p-14 lg:p-16"
     >
       <div className="flex w-full justify-between px-8 sm:px-10 md:px-14 lg:px-16">
-        <header className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
           Sponsors
-        </header>
+        </h2>
         <img src={Kite} alt="Sponsors" className="h-12 md:h-14 lg:h-16" />
       </div>
       <div className="mt-8 grid grid-cols-1 gap-8 sm:mt-10 sm:grid-cols-2 sm:gap-10 md:mt-14 md:gap-14 lg:mt-16 lg:gap-16">

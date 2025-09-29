@@ -39,9 +39,9 @@ const SpeakersSection = ({
         className="flex flex-col justify-center border-b border-primary px-8 sm:px-10 md:px-14 lg:px-16"
       >
         <div className="flex w-full justify-between pt-6 sm:pt-8 md:pt-12 lg:pt-14">
-          <header className="font-russell text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="font-russell text-4xl md:text-5xl lg:text-6xl">
             {year} Speakers
-          </header>
+          </h2>
           <img
             src={SpeakersLogo}
             alt="Speakers"

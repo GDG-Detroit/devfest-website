@@ -9,9 +9,9 @@ const DevTeamSection = () => {
       className="flex flex-wrap items-center justify-center bg-primary-100 pb-10"
     >
       <div className="flex w-full pt-6 sm:px-10 sm:pt-8 md:px-14 md:pt-12 lg:px-16 lg:pt-14">
-        <header className="mb-4 w-full text-center font-russell text-4xl md:mb-6 md:text-5xl lg:text-6xl">
+        <h2 className="mb-4 w-full text-center font-russell text-4xl md:mb-6 md:text-5xl lg:text-6xl">
           Dev Team
-        </header>
+        </h2>
         <img src={DevLogo} alt="Dev Team" className="h-12 md:h-14 lg:h-16" />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
