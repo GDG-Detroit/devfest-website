@@ -214,12 +214,16 @@ function Navbar() {
 
   // Desktop Navigation List
   const desktopNavList = (
-    <ul className="flex flex-row justify-end space-x-6 px-4 py-2">
+    <ul
+      role="menubar"
+      className="flex flex-row justify-end space-x-6 px-4 py-2"
+    >
       {sections.map((section) => (
-        <li key={section.id} className="text-center">
+        <li key={section.id} role="none" className="text-center">
           <Link
             to={`#${section.id}`}
             onClick={(event) => handleNavigation(event, section.id)}
+            role="menuitem"
             aria-current={activeLink === section.id ? 'page' : undefined}
             className={`${
               section.id === 'landing' ? 'hidden' : ''
