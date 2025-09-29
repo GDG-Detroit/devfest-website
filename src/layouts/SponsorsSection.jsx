@@ -7,11 +7,15 @@ function SponsorsSection() {
       id="sponsors"
       className="flex flex-col justify-center p-8 sm:p-10 md:p-14 lg:p-16"
     >
-      <div className="flex w-full justify-between px-8 sm:px-10 md:px-14 lg:px-16">
+      <div className="relative w-full px-8 sm:px-10 md:px-14 lg:px-16">
         <h2 className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
           Sponsors
         </h2>
-        <img src={Kite} alt="Sponsors" className="h-12 md:h-14 lg:h-16" />
+        <img
+          src={Kite}
+          alt="Sponsors"
+          className="absolute right-2 top-0 h-10 sm:right-10 sm:h-12 md:right-14 md:h-14 lg:right-16 lg:h-16"
+        />
       </div>
       <div className="mt-8 grid grid-cols-1 gap-8 sm:mt-10 sm:grid-cols-2 sm:gap-10 md:mt-14 md:gap-14 lg:mt-16 lg:gap-16">
         {sponsorsData.map((sponsor) => (

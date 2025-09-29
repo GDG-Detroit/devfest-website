@@ -8,14 +8,14 @@ function FacilitatorsSection() {
       id="facilitators"
       className="flex flex-col justify-center px-8 sm:px-10 md:px-14 lg:px-16"
     >
-      <div className="flex w-full justify-between px-8 pt-6 sm:px-10 sm:pt-8 md:px-14 md:pt-12 lg:px-16 lg:pt-14">
+      <div className="relative w-full px-8 pt-6 sm:px-10 sm:pt-8 md:px-14 md:pt-12 lg:px-16 lg:pt-14">
         <h2 className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
           Facilitators
         </h2>
         <img
           src={Connector}
           alt="Facilitators"
-          className="h-12 md:h-14 lg:h-16"
+          className="absolute right-2 top-6 h-10 sm:right-10 sm:h-12 md:right-14 md:top-8 md:h-14 lg:right-16 lg:top-12 lg:h-16"
         />
       </div>
       <div className="mt-32 flex flex-wrap justify-center gap-20 sm:mt-36">
