@@ -275,6 +275,13 @@ function Navbar() {
           : 'bg-white shadow-lg'
       }`}
     >
+      {/* Screen Reader Announcements */}
+      <div aria-live="polite" aria-atomic="true" className="sr-only">
+        {activeLink &&
+          `Currently viewing ${
+            sections.find((s) => s.id === activeLink)?.text
+          } section`}
+      </div>
       <div className="flex items-center justify-between p-4">
         <Link
           to="/"
