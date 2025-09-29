@@ -1,14 +1,29 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import gdgDetroitLogo from '@/assets/images/gdg-detroit-logo.png'
-import MobileNav from './MobileNav'
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState('landing')
   const [isNavVisible, setIsNavVisible] = useState(false)
+  const [isManualNavigation, setIsManualNavigation] = useState(false)
+  const [isNavigating, setIsNavigating] = useState(false)
 
   const navRef = useRef(null)
+  const mobileButtonRef = useRef(null)
+
+  // Helper function to get accurate navbar height
+  const getNavbarHeight = () => {
+    const navbar = document.querySelector('nav')
+    return navbar ? navbar.offsetHeight : 96
+  }
+
+  // Helper function to close mobile nav
+  const closeMobileNav = () => {
+    if (isNavVisible) {
+      setIsNavVisible(false)
+    }
+  }
 
   // TODO: Update navigation once Aaron's PR is merged
   // TODO: Customize navigation if it's the previous-events route
@@ -36,10 +51,13 @@ function Navbar() {
     // Algorithm Explanation:
     // Section will be set to active if it touches or pass the navbar
     const handleScroll = () => {
-      const navbar = document.querySelector('nav')
-      const navbarHeight = navbar ? navbar.offsetHeight : 96
+      // Skip scroll detection during manual navigation
+      if (isManualNavigation) return
 
-      // Set Defautl section to landing (first element in sections)
+      // Use dynamic navbar height for accurate scroll detection
+      const navbarHeight = getNavbarHeight()
+
+      // Set Default section to landing (first element in sections)
       let currentSection = sections[0].id
 
       // This will track the closest distance to navbar
@@ -50,15 +68,29 @@ function Navbar() {
         if (!target) return
 
         const rect = target.getBoundingClientRect()
-        const distance = Math.abs(rect.top - navbarHeight)
 
-        // only consider sections that have passed the navbar
-        if (rect.top - navbarHeight <= 0 && distance < minDistance) {
+        // Check if section is in view (top is above navbar but bottom is below navbar)
+        const sectionTop = rect.top
+        const sectionBottom = rect.bottom
+        const isInView =
+          sectionTop <= navbarHeight && sectionBottom > navbarHeight
+
+        // Check if section has passed the navbar by a reasonable amount
+        const hasPassedNavbar = sectionTop <= navbarHeight - 50 // 50px buffer
+
+        if (isInView) {
+          // Section is currently in view
           currentSection = section.id
-          minDistance = distance
+        } else if (hasPassedNavbar) {
+          // Section has passed the navbar, use it as fallback
+          const distance = Math.abs(sectionTop - navbarHeight)
+          if (distance < minDistance) {
+            currentSection = section.id
+            minDistance = distance
+          }
         }
 
-        // Special case: last section
+        // Special case: last section when scrolled to bottom
         if (index === sections.length - 1) {
           const scrolledToBottom =
             window.innerHeight + window.scrollY >=
@@ -73,41 +105,6 @@ function Navbar() {
       setActiveLink(currentSection)
     }
 
-    // TODO: DELETE THE FOLLOWING OLD CODE.
-
-    // const handleScroll = () => {
-    //   // Initialize the active section and its IoU
-    //   let activeIoU = 0
-
-    //   // For each section
-    //   sections.forEach((section) => {
-    //     const target = document.querySelector(`#${section.id}`)
-
-    //     // Check if the target element exists
-    //     if (!target) return
-
-    //     // Get the bounding rectangle of the section
-    //     const rect = target.getBoundingClientRect()
-
-    //     // Calculate the intersection height
-    //     const intersectionHeight = Math.max(
-    //       0,
-    //       Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0)
-    //     )
-
-    //     // Calculate the IoU
-    //     const IoU =
-    //       intersectionHeight /
-    //       (rect.height + window.innerHeight - intersectionHeight)
-
-    //     // If this section's IoU is higher than the current active section's IoU, update the active section
-    //     if (IoU > activeIoU) {
-    //       setActiveLink(section.id)
-    //       activeIoU = IoU
-    //     }
-    //   })
-    // }
-
     // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll)
 
@@ -115,36 +112,70 @@ function Navbar() {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [sections])
+  }, [sections, isManualNavigation, activeLink])
 
   const handleNavigation = (event, sectionId) => {
     event.preventDefault()
 
+    // Prevent multiple rapid clicks
+    if (isNavigating) {
+      return
+    }
+
     const target = document.querySelector(`#${sectionId}`)
 
     if (target) {
-      // The following was implemented previously, problem with this is that
-      // the section header goes behind the navbar, making it not visible.
-      // target.scrollIntoView({ behavior: 'smooth' })
+      // Check if we're already at this section (within a reasonable distance)
+      const navbar_height = getNavbarHeight()
+      const targetRect = target.getBoundingClientRect()
+      const distanceFromTarget = Math.abs(targetRect.top - navbar_height)
 
-      // We have to adjust for the height of the navbar. Using 96px as a fallback
-      const hardcoded_navbar_height = 96
+      // If we're already close to the target (within 100px), just update active link and return
+      if (distanceFromTarget < 100 && !isNavVisible) {
+        setActiveLink(sectionId)
+        return
+      }
 
-      // I implemented dynamic navbar calculation, but it doesn't work on mobile because the navbar is expanded,
-      // so the height is much larger than what it should be. I am leaving the code below in case we decide to fix it in the future.
+      // Set navigation state
+      setIsNavigating(true)
+      setActiveLink(sectionId)
+      setIsManualNavigation(true)
 
-      // const navbar = document.querySelector('nav');
-      // const navbar_height = navbar ? navbar.offsetHeight : hardcoded_navbar_height;
+      // Check if this is a mobile navigation (mobile nav is visible)
+      const isMobileNavigation = isNavVisible
 
-      const navbar_height = hardcoded_navbar_height
+      if (isMobileNavigation) {
+        // Mobile navigation logic
+        closeMobileNav()
 
-      const y =
-        target.getBoundingClientRect().top + window.pageYOffset - navbar_height
+        // Wait for mobile nav animation to complete before calculating position
+        setTimeout(() => {
+          const navbar_height = getNavbarHeight()
+          const targetRect = target.getBoundingClientRect()
+          const y = targetRect.top + window.pageYOffset - navbar_height
 
-      window.scrollTo({ top: y, behavior: 'smooth' })
+          window.scrollTo({ top: y, behavior: 'smooth' })
 
-      // Closing NavBar (for mobile navigation). Note: it doesn't work without setTimeout.
-      setTimeout(() => setIsNavVisible(false), 10)
+          // Re-enable scroll detection after scroll animation completes
+          setTimeout(() => {
+            setIsManualNavigation(false)
+            setIsNavigating(false)
+          }, 1000)
+        }, 350) // Wait for mobile nav animation
+      } else {
+        // Desktop navigation logic - immediate scroll
+        const navbar_height = getNavbarHeight()
+        const targetRect = target.getBoundingClientRect()
+        const y = targetRect.top + window.pageYOffset - navbar_height
+
+        window.scrollTo({ top: y, behavior: 'smooth' })
+
+        // Re-enable scroll detection after scroll animation completes
+        setTimeout(() => {
+          setIsManualNavigation(false)
+          setIsNavigating(false)
+        }, 500) // Shorter timeout for desktop navigation
+      }
     }
   }
 
@@ -165,23 +196,40 @@ function Navbar() {
     }
   }, [])
 
-  //   Separating NavList DOM because we need to use the same thing links twice, once in the desktop version
-  //   an the other in the mobile version
-  const navList = (
-    <ul
-      className={`flex flex-col space-y-4 overflow-hidden lg:flex-row lg:justify-end lg:space-x-2 lg:space-y-0 lg:px-4 lg:py-2 ${
-        isNavVisible ? 'h-full' : 'h-0 lg:h-full'
-      }`}
-    >
+  // Desktop Navigation List
+  const desktopNavList = (
+    <ul className="flex flex-row justify-end space-x-2 px-4 py-2">
       {sections.map((section) => (
-        <li key={section.id} className="px-3 lg:text-center">
+        <li key={section.id} className="text-center">
           <Link
             to={`#${section.id}`}
             onClick={(event) => handleNavigation(event, section.id)}
-            className={`text-center ${
-              section.id === 'landing' ? 'hidden' : ''
-            } ${
+            className={`${section.id === 'landing' ? 'hidden' : ''} ${
               activeLink === section.id ? 'border-b-2 border-primary-400' : ''
+            }`}
+          >
+            {section.text}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
+
+  // Mobile Navigation List
+  const mobileNavList = (
+    <ul className="flex flex-col space-y-2 p-4">
+      {sections.map((section) => (
+        <li
+          key={section.id}
+          className={`${section.id === 'landing' ? 'hidden' : ''}`}
+        >
+          <Link
+            to={`#${section.id}`}
+            onClick={(event) => handleNavigation(event, section.id)}
+            className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 ${
+              activeLink === section.id
+                ? 'bg-primary-100 font-semibold text-primary-700'
+                : 'text-gray-700'
             }`}
           >
             {section.text}
@@ -205,25 +253,58 @@ function Navbar() {
 
         {/* Mobile NavBar Hamburger Button */}
         <button
+          ref={mobileButtonRef}
           aria-label={isNavVisible ? 'Close Main Menu' : 'Open Main Menu'}
-          className="rounded border-2 px-4 lg:hidden"
-          onClick={() => setIsNavVisible(!isNavVisible)}
+          className="touch-manipulation rounded border-2 px-4 py-2 transition-colors hover:bg-gray-100 active:bg-gray-200 lg:hidden"
+          onClick={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            setIsNavVisible((prev) => !prev)
+          }}
+          onTouchStart={(e) => {
+            e.preventDefault()
+          }}
+          onTouchEnd={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            setIsNavVisible((prev) => !prev)
+          }}
+          style={{
+            touchAction: 'manipulation',
+            WebkitTouchCallout: 'none',
+            WebkitUserSelect: 'none',
+            userSelect: 'none',
+            minHeight: '44px',
+            minWidth: '44px',
+          }}
         >
-          <FaBars className="h-10" />
+          {isNavVisible ? (
+            <FaTimes className="h-6 w-6" />
+          ) : (
+            <FaBars className="h-6 w-6" />
+          )}
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:block">{navList}</div>
+        <div className="hidden lg:block">{desktopNavList}</div>
       </div>
 
       {/* Mobile Navigation */}
-      <div className="w-full py-2 lg:hidden">
-        <MobileNav
-          open={isNavVisible}
-          className={activeLink === 'landing' ? 'bg-primary-400' : 'bg-white'}
-        >
-          {navList}
-        </MobileNav>
+      <div className="w-full lg:hidden">
+        {isNavVisible && (
+          <div
+            className={`block w-full overflow-hidden bg-white shadow-lg ${
+              activeLink === 'landing' ? 'bg-primary-400' : 'bg-white'
+            }`}
+            style={{
+              transform: 'translateZ(0)',
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+            }}
+          >
+            {mobileNavList}
+          </div>
+        )}
       </div>
     </nav>
   )
