@@ -214,15 +214,19 @@ function Navbar() {
 
   // Desktop Navigation List
   const desktopNavList = (
-    <ul className="flex flex-row justify-end space-x-2 px-4 py-2">
+    <ul className="flex flex-row justify-end space-x-6 px-4 py-2">
       {sections.map((section) => (
         <li key={section.id} className="text-center">
           <Link
             to={`#${section.id}`}
             onClick={(event) => handleNavigation(event, section.id)}
-            className={`${section.id === 'landing' ? 'hidden' : ''} ${
-              activeLink === section.id ? 'border-b-2 border-primary-400' : ''
-            }`}
+            className={`${
+              section.id === 'landing' ? 'hidden' : ''
+            } relative pb-2 ${
+              activeLink === section.id
+                ? 'after:w-full after:opacity-100'
+                : 'after:w-0 after:opacity-0'
+            } after:absolute after:bottom-0 after:left-0 after:h-1 after:bg-primary-400 after:transition-all after:duration-300 after:ease-in-out`}
           >
             {section.text}
           </Link>
