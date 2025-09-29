@@ -264,6 +264,7 @@ function Navbar() {
   return (
     <nav
       ref={navRef}
+      aria-label="Main navigation"
       className={`fixed left-0 top-0 z-10 w-full ${
         activeLink === 'landing'
           ? 'bg-primary-400 text-sky-900'
@@ -275,6 +276,7 @@ function Navbar() {
           to="/"
           className="transition-opacity hover:opacity-80"
           onClick={handleHomeNavigation}
+          aria-label="Go to home page"
         >
           <img src={gdgDetroitLogo} alt="GDG Detroit Logo" className="h-16" />
         </Link>
@@ -282,7 +284,10 @@ function Navbar() {
         {/* Mobile NavBar Hamburger Button */}
         <button
           ref={mobileButtonRef}
+          id="mobile-menu-button"
           aria-label={isNavVisible ? 'Close Main Menu' : 'Open Main Menu'}
+          aria-expanded={isNavVisible}
+          aria-controls="mobile-navigation"
           className="touch-manipulation rounded border-2 px-4 py-2 transition-colors hover:bg-gray-100 active:bg-gray-200 lg:hidden"
           onClick={(e) => {
             e.preventDefault()
@@ -321,6 +326,8 @@ function Navbar() {
       <div className="w-full lg:hidden">
         {isNavVisible && (
           <div
+            id="mobile-navigation"
+            aria-labelledby="mobile-menu-button"
             className={`block w-full overflow-hidden bg-white shadow-lg ${
               activeLink === 'landing' ? 'bg-primary-400' : 'bg-white'
             }`}
