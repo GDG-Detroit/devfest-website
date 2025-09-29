@@ -220,6 +220,7 @@ function Navbar() {
           <Link
             to={`#${section.id}`}
             onClick={(event) => handleNavigation(event, section.id)}
+            aria-current={activeLink === section.id ? 'page' : undefined}
             className={`${
               section.id === 'landing' ? 'hidden' : ''
             } relative pb-2 ${
@@ -246,6 +247,7 @@ function Navbar() {
           <Link
             to={`#${section.id}`}
             onClick={(event) => handleNavigation(event, section.id)}
+            aria-current={activeLink === section.id ? 'page' : undefined}
             className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 ${
               activeLink === section.id
                 ? 'bg-primary-100 font-semibold text-primary-700'
