@@ -36,7 +36,7 @@ const SpeakersSection = ({
     <SpeakerProvider>
       <section
         id="speakers"
-        className="flex flex-col justify-center border-b border-primary px-8 sm:px-10 md:px-14 lg:px-16"
+        className="flex flex-col justify-center border-b border-primary px-8 pb-8 sm:px-10 md:px-14 lg:px-16"
       >
         <div className="relative w-full pt-6 sm:pt-8 md:pt-12 lg:pt-14">
           <h2 className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
