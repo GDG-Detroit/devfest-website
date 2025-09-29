@@ -52,7 +52,10 @@ function SpeakerDetails(props) {
         </div>
         <div className="space-y-6">
           <div className="max-h-40 overflow-y-auto">
-            <p className="text-justify text-sm font-normal text-white">
+            <p
+              id="speaker-modal-bio"
+              className="text-justify text-sm font-normal text-white"
+            >
               {props.bio}
             </p>
           </div>
@@ -63,18 +66,24 @@ function SpeakerDetails(props) {
             {props.sessionTitle}
           </p>
         </div>
-        <button className="absolute right-3 top-0" onClick={props.onClose}>
+        <button
+          className="absolute right-3 top-0"
+          onClick={props.onClose}
+          aria-label="Close speaker details"
+        >
           <CgCloseO className="h-8 w-8 text-blue-500" />
         </button>
         <button
           className="absolute left-0 top-1/2 -translate-y-1/2 transition hover:scale-110"
           onClick={goLastSpeaker}
+          aria-label="Previous speaker"
         >
           <IoChevronBack className="h-16 w-16 text-blue-500" />
         </button>
         <button
           className="absolute right-0 top-1/2 -translate-y-1/2 transition hover:scale-110"
           onClick={goNextSpeaker}
+          aria-label="Next speaker"
         >
           <IoChevronForward className="h-16 w-16 text-blue-500" />
         </button>
@@ -87,9 +96,12 @@ function SpeakerDetails(props) {
               {props.twitter && <TwitterHandle handle={props.twitter} />}
             </div>
             <div>
-              <h1 className="mt-3 text-center text-4xl font-bold text-black">
+              <h2
+                id="speaker-modal-title"
+                className="mt-3 text-center text-4xl font-bold text-black"
+              >
                 {props.name}
-              </h1>
+              </h2>
               <h3 className="text-center font-semibold text-black">
                 {props.organization}
               </h3>
@@ -99,25 +111,34 @@ function SpeakerDetails(props) {
         <div className="w-7/12">
           <div className="flex h-full flex-col justify-between space-y-6 px-20 pb-8 pt-72">
             <div className="max-h-80 overflow-y-auto">
-              <p className="text-justify text-xl font-normal text-white">
+              <p
+                id="speaker-modal-bio"
+                className="text-justify text-xl font-normal text-white"
+              >
                 {props.bio}
               </p>
             </div>
             <SessionTitle sessionTitle={props.sessionTitle} />
           </div>
         </div>
-        <button className="absolute right-6 top-6" onClick={props.onClose}>
+        <button
+          className="absolute right-6 top-6"
+          onClick={props.onClose}
+          aria-label="Close speaker details"
+        >
           <CgCloseO className="h-14 w-14" />
         </button>
         <button
           className="absolute left-0 top-1/2 -translate-y-1/2 transition hover:scale-110"
           onClick={goLastSpeaker}
+          aria-label="Previous speaker"
         >
           <IoChevronBack className="h-28 w-28" />
         </button>
         <button
           className="absolute right-0 top-1/2 -translate-y-1/2 transition hover:scale-110"
           onClick={goNextSpeaker}
+          aria-label="Next speaker"
         >
           <IoChevronForward className="h-28 w-28 text-blue-500" />
         </button>

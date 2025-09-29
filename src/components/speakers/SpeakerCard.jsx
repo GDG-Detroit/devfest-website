@@ -30,7 +30,13 @@ const SpeakerCard = ({
       />
 
       {isModalOpen && id === speakerID && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800/75">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800/75"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="speaker-modal-title"
+          aria-describedby="speaker-modal-bio"
+        >
           <SpeakerDetails
             name={name}
             bio={bio}

@@ -43,6 +43,17 @@ function SessionCard({
     <div className="rounded-xl border bg-white shadow-lg transition duration-200 hover:shadow-2xl">
       <button
         onClick={() => sessionDesc && toggle()}
+        aria-expanded={sessionDesc ? direction === DIRECTION.TOP : undefined}
+        aria-controls={
+          sessionDesc
+            ? `session-${sessionTitle.replace(/\s+/g, '-').toLowerCase()}`
+            : undefined
+        }
+        aria-label={
+          sessionDesc
+            ? `Toggle session details for ${sessionTitle}`
+            : `Session: ${sessionTitle}`
+        }
         className="flex w-full items-center justify-between p-3 md:px-8 lg:px-14"
       >
         <div className="flex items-center text-left">
@@ -88,7 +99,10 @@ function SessionCard({
         )}
       </button>
       {direction == DIRECTION.TOP ? (
-        <div className="mt-5 w-10/12 pl-12">
+        <div
+          id={`session-${sessionTitle.replace(/\s+/g, '-').toLowerCase()}`}
+          className="mt-5 w-10/12 pl-12"
+        >
           <p className="whitespace-pre-wrap border-t border-gray-700 pb-10 pt-5 text-justify">
             {sessionDesc}
           </p>
