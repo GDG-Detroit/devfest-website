@@ -140,9 +140,9 @@ function Navbar() {
 
     if (target) {
       // Check if we're already at this section (within a reasonable distance)
-      const navbar_height = getNavbarHeight()
+      const navbarHeight = getNavbarHeight()
       const targetRect = target.getBoundingClientRect()
-      const distanceFromTarget = Math.abs(targetRect.top - navbar_height)
+      const distanceFromTarget = Math.abs(targetRect.top - navbarHeight)
 
       // If we're already close to the target (within 100px), just update active link and return
       if (distanceFromTarget < 100 && !isNavVisible) {
@@ -164,9 +164,9 @@ function Navbar() {
 
         // Wait for mobile nav animation to complete before calculating position
         setTimeout(() => {
-          const navbar_height = getNavbarHeight()
+          const navbarHeight = getNavbarHeight()
           const targetRect = target.getBoundingClientRect()
-          const y = targetRect.top + window.pageYOffset - navbar_height
+          const y = targetRect.top + window.pageYOffset - navbarHeight
 
           window.scrollTo({ top: y, behavior: 'smooth' })
 
@@ -178,9 +178,9 @@ function Navbar() {
         }, 350) // Wait for mobile nav animation
       } else {
         // Desktop navigation logic - immediate scroll
-        const navbar_height = getNavbarHeight()
+        const navbarHeight = getNavbarHeight()
         const targetRect = target.getBoundingClientRect()
-        const y = targetRect.top + window.pageYOffset - navbar_height
+        const y = targetRect.top + window.pageYOffset - navbarHeight
 
         window.scrollTo({ top: y, behavior: 'smooth' })
 
