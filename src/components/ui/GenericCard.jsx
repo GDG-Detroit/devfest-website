@@ -41,10 +41,10 @@ const GenericCard = ({
           </div>
         </div>
         <div className="mb-4 mt-28 h-20 px-2">
-          <h1 className="text-center text-lg font-semibold text-sky-900">
+          <h3 className="text-center text-lg font-semibold text-sky-900">
             {name}
-          </h1>
-          <h3 className="text-center text-base text-sky-900">{organization}</h3>
+          </h3>
+          <h4 className="text-center text-base text-sky-900">{organization}</h4>
           <p className="text-center text-sm text-sky-900">{position}</p>
         </div>
       </div>

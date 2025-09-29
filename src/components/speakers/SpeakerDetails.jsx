@@ -39,9 +39,12 @@ function SpeakerDetails(props) {
             {props.twitter && <TwitterHandle handle={props.twitter} />}
           </div>
           <div>
-            <h1 className="mt-3 text-center text-xl font-bold text-white">
+            <h2
+              id="speaker-modal-title"
+              className="mt-3 text-center text-xl font-bold text-white"
+            >
               {props.name}
-            </h1>
+            </h2>
             <h3 className="text-center font-semibold text-white">
               {props.organization}
             </h3>

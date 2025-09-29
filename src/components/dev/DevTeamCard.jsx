@@ -19,9 +19,9 @@ const DevTeamCard = ({
         className="h-60 w-full object-cover object-center"
       />
       <div className="invisible absolute inset-x-0 bottom-0 h-20 translate-y-8 bg-primary-200 pt-4 text-center text-sm text-sky-900 transition ease-in-out group-hover:visible group-hover:translate-y-0">
-        <h1 className="text-sm font-semibold text-sky-900">{name}</h1>
+        <h3 className="text-sm font-semibold text-sky-900">{name}</h3>
         <div className="px-2">
-          <h3 className="text-xs text-sky-900">{organization || university}</h3>
+          <h4 className="text-xs text-sky-900">{organization || university}</h4>
           <p className="text-xs text-sky-900">{position}</p>
         </div>
         <LinkedInHandle handle={linkedin} />
