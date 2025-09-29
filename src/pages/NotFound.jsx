@@ -11,8 +11,8 @@ const NotFound = () => {
   }, [])
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-gray-100 p-16 text-center">
-      <h1 className="text-6xl font-bold text-primary-600">
+    <main className="flex min-h-screen flex-col items-center justify-center gap-4 bg-gray-100 p-16 text-center">
+      <h1 id="main-heading" className="text-6xl font-bold text-primary-600">
         404 - Page Not Found
       </h1>
       <p className="text-xl">
@@ -22,7 +22,7 @@ const NotFound = () => {
       <NavLink className="text-blue-500 hover:underline" to="/">
         Return to Home Page
       </NavLink>
-    </div>
+    </main>
   )
 }
 

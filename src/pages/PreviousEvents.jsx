@@ -8,7 +8,10 @@ import { SpeakersData as Speakers2023 } from '@/data/2023/speakers'
 const PreviousEvents = () => {
   return (
     <PageLayout>
-      <h1 className="mb-8 mt-16 pt-8 text-center font-russell text-6xl font-bold text-primary-800">
+      <h1
+        id="main-heading"
+        className="mb-8 mt-16 pt-8 text-center font-russell text-6xl font-bold text-primary-800"
+      >
         Michigan DevFest Past Events
       </h1>
       <div>

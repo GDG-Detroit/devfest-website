@@ -5,11 +5,11 @@ import Footer from './Footer'
 
 export const PageLayout = ({ children }) => {
   return (
-    <main>
+    <>
       <Navbar />
-      {children}
+      <main aria-labelledby="main-heading">{children}</main>
       <Footer />
-    </main>
+    </>
   )
 }
 

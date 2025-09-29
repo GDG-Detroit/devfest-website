@@ -11,7 +11,10 @@ import SponsorsSection from '@/layouts/SponsorsSection'
 
 function Home() {
   return (
-    <main>
+    <main aria-labelledby="main-heading">
+      <h1 id="main-heading" className="sr-only">
+        Michigan DevFest 2025
+      </h1>
       <Navbar />
       <LandingSection />
       <LocationSection />
