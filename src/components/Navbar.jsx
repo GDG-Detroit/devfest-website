@@ -18,6 +18,28 @@ function Navbar() {
     return navbar ? navbar.offsetHeight : 96
   }
 
+  // Helper function to calculate scroll position
+  const calculateScrollPosition = (target) => {
+    const navbarHeight = getNavbarHeight()
+    const targetRect = target.getBoundingClientRect()
+    return targetRect.top + window.pageYOffset - navbarHeight
+  }
+
+  // Helper function to reset navigation state after delay
+  const resetNavigationState = (delay) => {
+    setTimeout(() => {
+      setIsManualNavigation(false)
+      setIsNavigating(false)
+    }, delay)
+  }
+
+  // Helper function to perform scroll and reset state
+  const performScroll = (target, resetDelay) => {
+    const scrollPosition = calculateScrollPosition(target)
+    window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
+    resetNavigationState(resetDelay)
+  }
+
   // Helper function to close mobile nav
   const closeMobileNav = () => {
     if (isNavVisible) {
@@ -162,33 +184,13 @@ function Navbar() {
         // Mobile navigation logic
         closeMobileNav()
 
-        // Wait for mobile nav animation to complete before calculating position
+        // Wait for mobile nav animation to complete before scrolling
         setTimeout(() => {
-          const navbarHeight = getNavbarHeight()
-          const targetRect = target.getBoundingClientRect()
-          const y = targetRect.top + window.pageYOffset - navbarHeight
-
-          window.scrollTo({ top: y, behavior: 'smooth' })
-
-          // Re-enable scroll detection after scroll animation completes
-          setTimeout(() => {
-            setIsManualNavigation(false)
-            setIsNavigating(false)
-          }, 1000)
+          performScroll(target, 1000) // 1000ms reset delay for mobile
         }, 350) // Wait for mobile nav animation
       } else {
         // Desktop navigation logic - immediate scroll
-        const navbarHeight = getNavbarHeight()
-        const targetRect = target.getBoundingClientRect()
-        const y = targetRect.top + window.pageYOffset - navbarHeight
-
-        window.scrollTo({ top: y, behavior: 'smooth' })
-
-        // Re-enable scroll detection after scroll animation completes
-        setTimeout(() => {
-          setIsManualNavigation(false)
-          setIsNavigating(false)
-        }, 500) // Shorter timeout for desktop navigation
+        performScroll(target, 500) // 500ms reset delay for desktop
       }
     }
   }
