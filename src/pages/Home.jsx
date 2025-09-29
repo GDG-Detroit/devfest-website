@@ -1,7 +1,6 @@
-import Navbar from '@/components/Navbar'
+import { PageLayout } from '@/layouts/PageLayout'
 import DevTeamSection from '@/layouts/DevTeamSection'
 import FacilitatorsSection from '@/layouts/FacilitatorsSection'
-import Footer from '@/layouts/Footer'
 import LandingSection from '@/layouts/LandingSection'
 import LocationSection from '@/layouts/LocationSection'
 import OrganizersSection from '@/layouts/OrganizersSection'
@@ -13,8 +12,7 @@ import { SpeakersData as Speakers2025 } from '@/data/2025/speakers'
 
 function Home() {
   return (
-    <main>
-      <Navbar />
+    <PageLayout>
       <LandingSection />
       <LocationSection />
       <SessionsSection
@@ -32,8 +30,7 @@ function Home() {
         defaultExpanded
       />
       <DevTeamSection />
-      <Footer />
-    </main>
+    </PageLayout>
   )
 }
 
