@@ -25,6 +25,20 @@ function Navbar() {
     }
   }
 
+  // Helper function to navigate to home
+  const handleHomeNavigation = () => {
+    // Close mobile nav if open
+    if (isNavVisible) {
+      setIsNavVisible(false)
+    }
+
+    // Set active link to landing
+    setActiveLink('landing')
+
+    // Scroll to top of page
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   // TODO: Update navigation once Aaron's PR is merged
   // TODO: Customize navigation if it's the previous-events route
   // Add a link to previous-events
@@ -249,7 +263,13 @@ function Navbar() {
       }`}
     >
       <div className="flex items-center justify-between p-4">
-        <img src={gdgDetroitLogo} alt="GDG Detroit Logo" className="h-16" />
+        <Link
+          to="/"
+          className="transition-opacity hover:opacity-80"
+          onClick={handleHomeNavigation}
+        >
+          <img src={gdgDetroitLogo} alt="GDG Detroit Logo" className="h-16" />
+        </Link>
 
         {/* Mobile NavBar Hamburger Button */}
         <button
