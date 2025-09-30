@@ -5,6 +5,7 @@ import dateWebp from '@/assets/images/date2025.webp'
 import DevFestLogoPng from '@/assets/images/DevFestLogo2025.png'
 import DevFestLogoWebp from '@/assets/images/DevFestLogo2025.webp'
 import ResponsiveImage from '@/components/ui/ResponsiveImage'
+import config from '../../config.json'
 
 function LandingSection() {
   return (
@@ -31,9 +32,9 @@ function LandingSection() {
             <p className="text-justify text-sm font-normal lg:text-base xl:text-lg">
               The Detroit and Ann Arbor Google Developer Groups (GDG) are
               teaming up once again to bring you the 10th Michigan DevFest on
-              November 22, 2025, at Motor City Casino. With our 11th DevFest, we
-              aim to put together a great day of networking and knowledge
-              sharing for all involved.
+              November 22, {config.year}, at Motor City Casino. With our 11th
+              DevFest, we aim to put together a great day of networking and
+              knowledge sharing for all involved.
             </p>
             <a
               href="https://www.papercall.io/midevfest2025"

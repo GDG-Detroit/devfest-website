@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import config from '../../../config.json'
 
 const ResponsiveImage = ({
   webpSrc,
@@ -7,7 +8,7 @@ const ResponsiveImage = ({
   className = '',
   ...props
 }) => {
-  const finalAlt = alt ?? 'Michigan DevFest 2025 event logo'
+  const finalAlt = alt ?? `Michigan DevFest ${config.year} event logo`
   return (
     <picture>
       <source srcSet={webpSrc} type="image/webp" />
