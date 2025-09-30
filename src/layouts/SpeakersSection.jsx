@@ -48,11 +48,16 @@ const SpeakersSection = ({
             className="h-8 md:h-10 lg:h-12"
           />
           <button
+            aria-label={
+              isExpanded
+                ? `Collapse ${year} Speakers`
+                : `Expand ${year} Speakers`
+            }
             onClick={toggleExpanded}
             className="flex cursor-pointer items-center hover:text-gray-600"
           >
             <IoChevronDown
-              className={`h-10 w-10 shrink-0 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 ${
+              className={`size-10 shrink-0 sm:size-14 md:size-16 lg:size-20 ${
                 direction === DIRECTION.TOP && '-scale-y-100'
               } transition-transform duration-100 ease-linear`}
             />

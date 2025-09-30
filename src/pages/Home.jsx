@@ -9,6 +9,8 @@ import SpeakersSection from '@/layouts/SpeakersSection'
 import SponsorsSection from '@/layouts/SponsorsSection'
 import config from '../../config.json'
 
+import { SpeakersData as Speakers2025 } from '@/data/2025/speakers'
+
 function Home() {
   return (
     <PageLayout>
@@ -16,14 +18,17 @@ function Home() {
       <LocationSection />
       <SessionsSection
         year={config.year}
-        speakersData={[]}
-        tracks={[]}
-        defaultExpanded
+        speakersData={Speakers2025}
+        tracks={['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous']}
       />
       <SponsorsSection />
       <OrganizersSection />
       <FacilitatorsSection />
-      <SpeakersSection year={config.year} speakersData={[]} defaultExpanded />
+      <SpeakersSection
+        year={config.year}
+        speakersData={Speakers2025}
+        defaultExpanded
+      />
       <DevTeamSection />
     </PageLayout>
   )
