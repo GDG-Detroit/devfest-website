@@ -30,9 +30,9 @@ SpeakersSection.propTypes = {
       }).isRequired,
     })
   ).isRequired,
-  year: PropTypes.number.isRequired,
+  year: PropTypes.number,
   logo: PropTypes.string,
-  defaultExpanded: PropTypes.bool.isRequired,
+  defaultExpanded: PropTypes.bool,
 }
 
 export default SpeakersSection
