@@ -59,7 +59,7 @@ export const getEventMetadata = (year) => {
     sessionCount: speakers.filter((speaker) => speaker.session).length,
     tracks,
     available: true,
-    sponsorsCount: sponsors.length,
+    sponsorsCount: sponsors?.length ?? 0,
   }
 }
 
