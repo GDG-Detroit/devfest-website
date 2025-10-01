@@ -12,7 +12,7 @@ const DevTeamCard = ({
   university,
 }) => {
   return (
-    <div className="group relative mb-4 ml-4 transform-gpu overflow-hidden transition-transform hover:z-20 hover:scale-110 hover:cursor-pointer hover:filter-none">
+    <div className="group relative mb-4 ml-4 transform-gpu overflow-hidden transition-transform  hover:scale-110 hover:cursor-pointer hover:filter-none">
       <img
         src={avatar}
         alt={`${name} - ${organization || university}`}

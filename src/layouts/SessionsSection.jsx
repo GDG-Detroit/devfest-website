@@ -82,6 +82,9 @@ const SessionsSection = ({
           className="absolute right-2 top-6 h-10 sm:right-10 sm:h-12 md:right-14 md:top-8 md:h-14 lg:right-16 lg:top-12 lg:h-16"
         />
         <button
+          aria-label={
+            isExpanded ? `Collapse ${year} Sessions` : `Expand ${year} Sessions`
+          }
           onClick={toggleExpanded}
           className="flex cursor-pointer items-center hover:text-gray-600"
         >
