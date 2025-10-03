@@ -1,4 +1,3 @@
-import { SpeakersData } from '@/data/2024/speakers'
 import PropTypes from 'prop-types'
 import { createContext, useMemo, useState } from 'react'
 
@@ -11,12 +10,14 @@ export const SpeakerContext = createContext({
   // eslint-disable-next-line no-unused-vars
   setSpeakerID: (_speakerID) => {},
   numSpeakers: 0,
+  uniqueSpeakers: [],
+  uniqueSpeakersSortedByFirstName: [],
 })
 
-export const SpeakerProvider = ({ children }) => {
+export const SpeakerProvider = ({ children, speakersData = [] }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [speakerID, setSpeakerID] = useState(0)
-  const numSpeakers = useMemo(() => SpeakersData.length, [])
+
   const openModal = () => {
     setIsModalOpen(true)
   }
@@ -24,6 +25,19 @@ export const SpeakerProvider = ({ children }) => {
   const closeModal = () => {
     setIsModalOpen(false)
   }
+
+  const uniqueSpeakers = useMemo(() => {
+    return speakersData.filter(
+      (speaker, index, self) =>
+        index === self.findIndex((s) => s.email === speaker.email)
+    )
+  }, [speakersData])
+
+  const numSpeakers = useMemo(() => uniqueSpeakers.length, [uniqueSpeakers])
+
+  const uniqueSpeakersSortedByFirstName = useMemo(() => {
+    return [...uniqueSpeakers].sort((a, b) => a.name.localeCompare(b.name))
+  }, [uniqueSpeakers])
 
   return (
     <SpeakerContext.Provider
@@ -34,6 +48,8 @@ export const SpeakerProvider = ({ children }) => {
         speakerID,
         setSpeakerID,
         numSpeakers,
+        uniqueSpeakers,
+        uniqueSpeakersSortedByFirstName,
       }}
     >
       {children}
@@ -43,4 +59,5 @@ export const SpeakerProvider = ({ children }) => {
 
 SpeakerProvider.propTypes = {
   children: PropTypes.node.isRequired,
+  speakersData: PropTypes.arrayOf(PropTypes.object),
 }
