@@ -37,6 +37,9 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
           className="h-8 md:h-10 lg:h-12"
         />
         <button
+          aria-label={
+            isExpanded ? `Collapse ${year} Speakers` : `Expand ${year} Speakers`
+          }
           onClick={toggleExpanded}
           className="flex cursor-pointer items-center hover:text-gray-600"
         >
@@ -54,9 +57,9 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
       >
         {uniqueSpeakersSortedByFirstName &&
         uniqueSpeakersSortedByFirstName.length ? (
-          <div className="mt-16 grid grid-cols-1 items-stretch gap-8 px-2 sm:grid-cols-2 lg:mt-36 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="mt-32 grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:mt-36 lg:grid-cols-3 xl:grid-cols-4">
             {uniqueSpeakersSortedByFirstName.map((speaker, index) => (
-              <div key={speaker.id || index}>
+              <div key={speaker.id || `speaker-${index}`}>
                 <SpeakerCard
                   id={speaker.id}
                   name={speaker.name}
