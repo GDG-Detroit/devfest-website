@@ -23,6 +23,12 @@ const SpeakerCard = ({
     setSpeakerID(id)
   }
 
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      closeModal()
+    }
+  }
+
   return (
     <>
       <GenericCard
@@ -30,17 +36,35 @@ const SpeakerCard = ({
       />
 
       {isModalOpen && id === speakerID && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800/75">
-          <SpeakerDetails
-            name={name}
-            bio={bio}
-            organization={organization}
-            avatar={avatar}
-            twitter={twitter}
-            sessionTitle={sessionTitle}
-            onClose={closeModal}
+        <>
+          <div
+            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+            onClick={handleOverlayClick}
+            onKeyDown={(e) => {
+              if (e.key === 'Escape') {
+                closeModal()
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label="Close speaker details modal"
           />
-        </div>
+
+          <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center p-4">
+            <div className="pointer-events-auto">
+              <SpeakerDetails
+                name={name}
+                bio={bio}
+                organization={organization}
+                avatar={avatar}
+                twitter={twitter}
+                sessionTitle={sessionTitle}
+                onClose={closeModal}
+                position={position}
+              />
+            </div>
+          </div>
+        </>
       )}
     </>
   )

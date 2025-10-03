@@ -18,7 +18,7 @@ function OrganizersSection() {
           className="h-8 -scale-x-100 md:h-10 lg:h-12"
         />
       </div>
-      <div className="mt-32 grid grid-cols-1 gap-20 sm:grid-cols-2 lg:mt-36">
+      <div className="my-32 grid grid-cols-1 place-items-center gap-20 sm:grid-cols-2 lg:mt-36">
         {organizersData.map((organizer) => (
           <GenericCard
             key={organizer.id}
