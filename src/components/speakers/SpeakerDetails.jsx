@@ -93,6 +93,7 @@ function SpeakerDetails(props) {
         <button
           onClick={props.onClose}
           className="absolute right-6 top-6 z-20 rounded-full bg-white/20 p-2 text-white transition-all hover:scale-110 hover:bg-white/30"
+          aria-label="Close speaker details"
         >
           <IoClose className="h-6 w-6" />
         </button>
@@ -108,7 +109,12 @@ function SpeakerDetails(props) {
             </div>
           </div>
 
-          <h1 className="mb-3 text-3xl font-bold">{props.name}</h1>
+          <h2
+            id={`speaker-modal-title-${props.id}`}
+            className="mb-3 text-3xl font-bold"
+          >
+            {props.name}
+          </h2>
           <p className="mb-2 text-lg font-medium text-blue-100">
             {props.position}
           </p>
@@ -131,11 +137,16 @@ function SpeakerDetails(props) {
       <div className="p-8">
         <div className="grid gap-8 lg:grid-cols-5">
           <div className="lg:col-span-3">
-            <h2 className="mb-4 text-2xl font-bold text-gray-900">
+            <h3 className="mb-4 text-2xl font-bold text-gray-900">
               About {props.name.split(' ')[0]}
-            </h2>
+            </h3>
             <div className="max-h-64 overflow-y-auto pr-4">
-              <p className="leading-relaxed text-gray-700">{props.bio}</p>
+              <p
+                id={`speaker-modal-bio-${props.id}`}
+                className="leading-relaxed text-gray-700"
+              >
+                {props.bio}
+              </p>
             </div>
           </div>
 
@@ -177,6 +188,7 @@ function SpeakerDetails(props) {
         <button
           onClick={goToPreviousSpeaker}
           className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
+          aria-label="Previous speaker"
         >
           <IoChevronBack className="h-6 w-6 text-gray-600" />
         </button>
@@ -184,6 +196,7 @@ function SpeakerDetails(props) {
         <button
           onClick={goToNextSpeaker}
           className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
+          aria-label="Next speaker"
         >
           <IoChevronForward className="h-6 w-6 text-gray-600" />
         </button>
@@ -205,6 +218,7 @@ SpeakerDetails.propTypes = {
   position: PropTypes.string.isRequired,
   sessionTitle: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
 }
 
 export default SpeakerDetails

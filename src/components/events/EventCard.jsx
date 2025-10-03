@@ -53,7 +53,7 @@ const EventCard = ({ eventMetadata }) => {
         </div>
       )}
 
-      <div className="flex items-center text-sm text-primary-600 group-hover:text-primary-500">
+      <div className="flex items-center text-sm text-primary-900 group-hover:text-primary-800">
         <span>View Details</span>
         <svg
           className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"

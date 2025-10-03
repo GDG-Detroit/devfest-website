@@ -15,11 +15,18 @@ const PreviousEvent = () => {
 
   if (!eventData || !eventMetadata.available) {
     return (
-      <main>
+      <>
         <PreviousEventsNavbar />
-        <section className="mt-16 bg-primary-100">
+        <section
+          role="banner"
+          aria-labelledby="not-found-heading"
+          className="mt-16 bg-primary-100"
+        >
           <div className="flex min-h-[90vh] min-w-[100vw] flex-col items-center justify-center p-4 text-center sm:px-10 md:px-8 lg:px-8">
-            <h1 className="mb-4 font-russell text-4xl font-bold text-primary-800">
+            <h1
+              id="not-found-heading"
+              className="mb-4 font-russell text-4xl font-bold text-primary-950"
+            >
               Event Not Found
             </h1>
             <p className="mb-8 text-lg text-gray-600">
@@ -27,14 +34,17 @@ const PreviousEvent = () => {
             </p>
             <Link
               to="/previous-events"
-              className="rounded-lg bg-primary-600 px-6 py-3 text-white transition-colors hover:bg-primary-700"
+              className="rounded-lg bg-primary-950 px-6 py-3 text-white transition-colors hover:bg-primary-800"
             >
               Back to All Events
             </Link>
           </div>
         </section>
+
+        <main id="main-content">{/* Error page content */}</main>
+
         <Footer />
-      </main>
+      </>
     )
   }
 
@@ -42,18 +52,25 @@ const PreviousEvent = () => {
   const sponsorsData = eventData.sponsors || []
 
   return (
-    <main>
+    <>
       <PreviousEventsNavbar />
 
-      <section className="mt-16 bg-primary-100">
+      <section
+        role="banner"
+        aria-labelledby="event-heading"
+        className="mt-16 bg-primary-100"
+      >
         <div className="flex flex-col items-center justify-center px-8 py-12 sm:px-10 sm:py-16 md:px-14 md:py-20 lg:px-16 lg:py-24">
-          <h1 className="mb-8 text-center font-russell text-4xl font-bold text-primary-800 md:text-5xl lg:text-6xl">
+          <h1
+            id="event-heading"
+            className="mb-8 text-center font-russell text-4xl font-bold text-primary-800 md:text-5xl lg:text-6xl"
+          >
             Michigan DevFest {year}
           </h1>
           <div className="mb-8 flex justify-center gap-4">
             <Link
               to="/previous-events"
-              className="flex items-center text-primary-600 transition-colors hover:text-primary-500"
+              className="flex items-center text-primary-950 transition-colors hover:text-primary-800"
             >
               <svg
                 className="mr-2 h-4 w-4"
@@ -90,30 +107,32 @@ const PreviousEvent = () => {
         </div>
       </section>
 
-      <SessionsSection
-        year={yearNumber}
-        speakersData={speakersData}
-        tracks={eventMetadata.tracks}
-        defaultExpanded
-      />
-
-      <SpeakersSection
-        year={yearNumber}
-        speakersData={speakersData}
-        defaultExpanded
-      />
-
-      {sponsorsData.length > 0 && (
-        <SponsorsSection
+      <main id="main-content">
+        <SessionsSection
           year={yearNumber}
-          sponsorsData={sponsorsData}
+          speakersData={speakersData}
+          tracks={eventMetadata.tracks}
           defaultExpanded
-          collapsible
         />
-      )}
+
+        <SpeakersSection
+          year={yearNumber}
+          speakersData={speakersData}
+          defaultExpanded
+        />
+
+        {sponsorsData.length > 0 && (
+          <SponsorsSection
+            year={yearNumber}
+            sponsorsData={sponsorsData}
+            defaultExpanded
+            collapsible
+          />
+        )}
+      </main>
 
       <Footer />
-    </main>
+    </>
   )
 }
 

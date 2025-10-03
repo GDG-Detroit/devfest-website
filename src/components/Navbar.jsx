@@ -232,7 +232,7 @@ function Navbar() {
             aria-current={activeLink === section.id ? 'page' : undefined}
             className={`${
               section.id === 'landing' ? 'hidden' : ''
-            } relative pb-2 ${
+            } relative px-2 py-6 pb-2 ${
               activeLink === section.id
                 ? 'after:w-full after:opacity-100'
                 : 'after:w-0 after:opacity-0'
@@ -243,10 +243,11 @@ function Navbar() {
         </li>
       ))}
       {externalLinks.map((link) => (
-        <li key={link.to}>
+        <li key={link.to} role="none" className="text-center">
           <Link
             to={link.to}
-            className="p-6 transition-colors hover:text-primary-500"
+            role="menuitem"
+            className="relative px-2 py-6 pb-2 after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:opacity-100"
           >
             {link.text}
           </Link>
@@ -281,7 +282,7 @@ function Navbar() {
         <li key={link.to}>
           <Link
             to={link.to}
-            className="p-6 transition-colors hover:text-primary-500"
+            className="block rounded-lg px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-100"
           >
             {link.text}
           </Link>
@@ -324,7 +325,7 @@ function Navbar() {
           aria-label={isNavVisible ? 'Close Main Menu' : 'Open Main Menu'}
           aria-expanded={isNavVisible}
           aria-controls="mobile-navigation"
-          className="touch-manipulation rounded border-2 px-4 py-2 transition-colors hover:bg-gray-100 active:bg-gray-200 lg:hidden"
+          className="touch-manipulation rounded border-2 px-4 py-2 transition-colors hover:bg-gray-100 active:bg-gray-200 xl:hidden"
           onClick={(e) => {
             e.preventDefault()
             e.stopPropagation()
@@ -355,11 +356,11 @@ function Navbar() {
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:block">{desktopNavList}</div>
+        <div className="hidden xl:block">{desktopNavList}</div>
       </div>
 
       {/* Mobile Navigation */}
-      <div className="w-full lg:hidden">
+      <div className="w-full xl:hidden">
         {isNavVisible && (
           <div
             id="mobile-navigation"

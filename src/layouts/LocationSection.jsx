@@ -12,13 +12,23 @@ function LocationSection() {
             <div className="mx-2 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
               <FaClock className="h-6 w-6 text-white" />
             </div>
-            <h3 className="text-lg font-semibold md:text-xl lg:text-2xl">
+            <span className="text-lg font-semibold md:text-xl lg:text-2xl">
               When
-            </h3>
+            </span>
           </div>
           <div className="ml-16">
-            <p className="whitespace-nowrap">Saturday, November 22nd, 2025 </p>
-            <p>9:00 AM - 5:00 PM</p>
+            <time
+              dateTime="2025-11-22T09:00:00-05:00"
+              className="block whitespace-nowrap"
+            >
+              Saturday, November 22nd, 2025
+            </time>
+            <time
+              dateTime="2025-11-22T09:00:00-05:00/2025-11-22T17:00:00-05:00"
+              className="block"
+            >
+              9:00 AM - 5:00 PM
+            </time>
           </div>
         </div>
 
@@ -27,21 +37,36 @@ function LocationSection() {
             <div className="mx-2 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
               <FaMapMarkerAlt className="h-6 w-6 text-white" />
             </div>
-            <h3 className="text-lg font-semibold md:text-xl lg:text-2xl">
+            <span className="text-lg font-semibold md:text-xl lg:text-2xl">
               Where
-            </h3>
+            </span>
           </div>
-          <a
-            href="https://www.google.com/maps/dir//2901+Grand+River+Ave,+Detroit,+MI+48201/@42.3388889,-83.0703527,1162m/data=!3m2!1e3!5s0x883b2d527a607d6f:0xe075cfc124b83793!4m20!1m10!3m9!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!2sMotorCity+Casino+Hotel!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3!3m8!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3?entry=ttu"
-            target="_blank"
-            className="ml-16 cursor-pointer hover:underline"
-            rel="noreferrer"
-          >
-            <p className="xl:whitespace-nowrap">MotorCity Casino Hotel</p>
-            <p className="xl:whitespace-nowrap">
-              2901 Grand River Ave, Detroit, MI 48201
-            </p>
-          </a>
+          <div className="ml-16">
+            <dl>
+              <dt className="sr-only">Venue</dt>
+              <dd className="font-medium xl:whitespace-nowrap">
+                <strong>MotorCity Casino Hotel</strong>
+              </dd>
+              <dt className="sr-only">Address</dt>
+              <dd>
+                <address
+                  className="not-italic xl:whitespace-nowrap"
+                  aria-label="Event venue address"
+                >
+                  2901 Grand River Ave, Detroit, MI 48201
+                </address>
+              </dd>
+            </dl>
+            <a
+              href="https://www.google.com/maps/dir//2901+Grand+River+Ave,+Detroit,+MI+48201/@42.3388889,-83.0703527,1162m/data=!3m2!1e3!5s0x883b2d527a607d6f:0xe075cfc124b83793!4m20!1m10!3m9!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!2sMotorCity+Casino+Hotel!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3!3m8!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3?entry=ttu"
+              target="_blank"
+              className="mb-4 mt-3 inline-flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2"
+              rel="noreferrer"
+              aria-label="Get directions to MotorCity Casino Hotel (opens in new tab)"
+            >
+              GET DIRECTIONS
+            </a>
+          </div>
         </div>
 
         <div className="w-full lg:w-1/2">

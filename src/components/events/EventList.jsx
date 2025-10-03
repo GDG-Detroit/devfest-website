@@ -7,12 +7,19 @@ const EventList = () => {
   const events = getAllEventsMetadata()
 
   return (
-    <main>
+    <>
       <PreviousEventsNavbar />
 
-      <section className="mt-16 bg-primary-100">
+      <section
+        role="banner"
+        aria-labelledby="main-heading"
+        className="mt-16 bg-primary-100"
+      >
         <div className="flex flex-col items-center justify-center px-8 py-12 sm:px-10 sm:py-16 md:px-14 md:py-20 lg:px-16 lg:py-24">
-          <h1 className="mb-8 text-center font-russell text-4xl font-bold text-primary-800 md:text-5xl lg:text-6xl">
+          <h1
+            id="main-heading"
+            className="mb-8 text-center font-russell text-4xl font-bold text-primary-800 md:text-5xl lg:text-6xl"
+          >
             Michigan DevFest Past Events
           </h1>
           <p className="mx-auto w-5/6 text-center text-lg leading-relaxed lg:w-2/3">
@@ -34,28 +41,38 @@ const EventList = () => {
         </div>
       </section>
 
-      <section className="flex flex-col items-center justify-center bg-white py-16">
-        <div className="w-full px-8 sm:px-10 md:px-14 lg:px-16">
-          <h2 className="mb-12 text-center font-russell text-3xl font-bold text-primary-800 md:text-4xl">
-            Explore Past Events
-          </h2>
+      <main id="main-content">
+        <section
+          aria-labelledby="events-heading"
+          className="flex flex-col items-center justify-center bg-white py-16"
+        >
+          <div className="w-full px-8 sm:px-10 md:px-14 lg:px-16">
+            <h2
+              id="events-heading"
+              className="mb-12 text-center font-russell text-3xl font-bold text-primary-800 md:text-4xl"
+            >
+              Explore Past Events
+            </h2>
 
-          {events.length === 0 ? (
-            <div className="flex flex-col items-center justify-center py-16 text-center">
-              <p className="text-lg text-gray-600">No previous events found.</p>
-            </div>
-          ) : (
-            <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {events.map((event) => (
-                <EventCard key={event.year} eventMetadata={event} />
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
+            {events.length === 0 ? (
+              <div className="flex flex-col items-center justify-center py-16 text-center">
+                <p className="text-lg text-gray-600">
+                  No previous events found.
+                </p>
+              </div>
+            ) : (
+              <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {events.map((event) => (
+                  <EventCard key={event.year} eventMetadata={event} />
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      </main>
 
       <Footer />
-    </main>
+    </>
   )
 }
 
