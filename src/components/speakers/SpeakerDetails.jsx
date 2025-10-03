@@ -17,10 +17,21 @@ function SpeakerDetails(props) {
     uniqueSpeakersSortedByFirstName,
   } = useContext(SpeakerContext)
 
-  const goLastSpeaker = useCallback(() => {
+  const goToPreviousSpeaker = useCallback(() => {
     const currentIndex = uniqueSpeakersSortedByFirstName.findIndex(
       (speaker) => speaker.id === speakerID
     )
+
+    // If no speaker is currently selected, default to the last speaker
+    if (currentIndex === -1) {
+      setSpeakerID(
+        uniqueSpeakersSortedByFirstName[
+          uniqueSpeakersSortedByFirstName.length - 1
+        ]?.id
+      )
+      return
+    }
+
     const previousIndex =
       currentIndex === 0
         ? uniqueSpeakersSortedByFirstName.length - 1
@@ -28,10 +39,17 @@ function SpeakerDetails(props) {
     setSpeakerID(uniqueSpeakersSortedByFirstName[previousIndex].id)
   }, [uniqueSpeakersSortedByFirstName, speakerID, setSpeakerID])
 
-  const goNextSpeaker = useCallback(() => {
+  const goToNextSpeaker = useCallback(() => {
     const currentIndex = uniqueSpeakersSortedByFirstName.findIndex(
       (speaker) => speaker.id === speakerID
     )
+
+    // If no speaker is currently selected, default to the first speaker
+    if (currentIndex === -1) {
+      setSpeakerID(uniqueSpeakersSortedByFirstName[0]?.id)
+      return
+    }
+
     const nextIndex =
       currentIndex === uniqueSpeakersSortedByFirstName.length - 1
         ? 0
@@ -44,9 +62,9 @@ function SpeakerDetails(props) {
       if (event.key === 'Escape') {
         props.onClose()
       } else if (event.key === 'ArrowLeft') {
-        goLastSpeaker()
+        goToPreviousSpeaker()
       } else if (event.key === 'ArrowRight') {
-        goNextSpeaker()
+        goToNextSpeaker()
       }
     }
 
@@ -57,7 +75,7 @@ function SpeakerDetails(props) {
       document.removeEventListener('keydown', handleKeyDown)
       document.body.style.overflow = 'auto'
     }
-  }, [props, goLastSpeaker, goNextSpeaker])
+  }, [props, goToPreviousSpeaker, goToNextSpeaker])
 
   const currentIndex = uniqueSpeakersSortedByFirstName.findIndex(
     (speaker) => speaker.id === speakerID
@@ -157,14 +175,14 @@ function SpeakerDetails(props) {
 
       <div className="mb-8">
         <button
-          onClick={goLastSpeaker}
+          onClick={goToPreviousSpeaker}
           className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
         >
           <IoChevronBack className="h-6 w-6 text-gray-600" />
         </button>
 
         <button
-          onClick={goNextSpeaker}
+          onClick={goToNextSpeaker}
           className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
         >
           <IoChevronForward className="h-6 w-6 text-gray-600" />
