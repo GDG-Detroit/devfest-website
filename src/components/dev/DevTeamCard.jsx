@@ -39,7 +39,6 @@ DevTeamCard.propTypes = {
   avatar: PropTypes.string.isRequired,
   organization: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
-  bio: PropTypes.string.isRequired,
   university: PropTypes.string.isRequired,
 }
 

@@ -15,10 +15,10 @@ const DevTeamSection = () => {
         <img src={DevLogo} alt="Dev Team" className="h-12 md:h-14 lg:h-16" />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-        {devTeamData.map((dev, index) => (
+        {devTeamData.map((dev) => (
           <DevTeamCard
-            key={`dev-${index}`}
-            id={index}
+            key={`dev-${dev.id}`}
+            id={dev.id}
             name={dev.name}
             avatar={dev.avatar}
             linkedin={dev.linkedin}
@@ -26,7 +26,6 @@ const DevTeamSection = () => {
             organization={dev.organization}
             position={dev.position}
             university={dev.university}
-            bio={dev.bio}
           />
         ))}
       </div>
