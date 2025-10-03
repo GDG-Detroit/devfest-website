@@ -63,19 +63,9 @@ function PreviousEventsNavbar() {
                   : 'hover:text-primary-500'
               }`}
             >
-              All Events
+              {isPreviousEventPage ? 'Back to Events' : 'All Events'}
             </Link>
           </li>
-          {isPreviousEventPage && (
-            <li>
-              <Link
-                to="/previous-events"
-                className="p-6 transition-colors hover:text-primary-500"
-              >
-                Back to Events
-              </Link>
-            </li>
-          )}
         </ul>
       </div>
     </nav>
