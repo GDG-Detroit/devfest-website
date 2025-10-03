@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link, useLocation } from 'react-router-dom'
 import gdgDetroitLogo from '@/assets/images/gdg-detroit-logo.png'
 
@@ -29,44 +29,137 @@ function PreviousEventsNavbar() {
   return (
     <nav
       ref={navRef}
-      className="fixed left-0 top-0 z-10 w-full bg-white p-4 shadow-lg"
+      aria-label="Main navigation"
+      className="fixed left-0 top-0 z-10 w-full bg-white shadow-lg"
     >
-      <div className="flex items-center justify-between">
-        <Link to="/" className="flex items-center">
+      {/* Screen Reader Announcements */}
+      <div aria-live="polite" aria-atomic="true" className="sr-only">
+        {location.pathname === '/previous-events'
+          ? 'Currently viewing all previous events'
+          : 'Currently viewing previous event details'}
+      </div>
+      <div className="flex items-center justify-between p-4">
+        <Link
+          to="/"
+          className="transition-opacity hover:opacity-80"
+          aria-label="Go to home page"
+        >
           <img src={gdgDetroitLogo} alt="GDG Detroit Logo" className="h-16" />
         </Link>
+
+        {/* Mobile NavBar Hamburger Button */}
         <button
-          className="rounded border-2 px-4 lg:hidden"
-          onClick={() => setIsNavVisible(!isNavVisible)}
+          id="mobile-menu-button"
+          aria-label={isNavVisible ? 'Close Main Menu' : 'Open Main Menu'}
+          aria-expanded={isNavVisible}
+          aria-controls="mobile-navigation"
+          className="touch-manipulation rounded border-2 px-4 py-2 transition-colors hover:bg-gray-100 active:bg-gray-200 xl:hidden"
+          onClick={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            setIsNavVisible((prev) => !prev)
+          }}
+          onTouchStart={(e) => {
+            e.preventDefault()
+          }}
+          onTouchEnd={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            setIsNavVisible((prev) => !prev)
+          }}
+          style={{
+            touchAction: 'manipulation',
+            WebkitTouchCallout: 'none',
+            WebkitUserSelect: 'none',
+            userSelect: 'none',
+            minHeight: '44px',
+            minWidth: '44px',
+          }}
         >
-          <FaBars className="h-10" />
+          {isNavVisible ? (
+            <FaTimes className="h-6 w-6" />
+          ) : (
+            <FaBars className="h-6 w-6" />
+          )}
         </button>
-        <ul
-          className={`flex flex-col space-y-4 overflow-hidden lg:flex-row lg:justify-end lg:space-x-2 lg:space-y-0 lg:px-4 lg:py-2 ${
-            isNavVisible ? 'h-full' : 'h-0 lg:h-full'
-          }`}
-        >
-          <li>
-            <Link
-              to="/"
-              className="p-6 transition-colors hover:text-primary-500"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/previous-events"
-              className={`p-6 transition-colors ${
-                location.pathname === '/previous-events'
-                  ? 'text-primary-500'
-                  : 'hover:text-primary-500'
-              }`}
-            >
-              {isPreviousEventPage ? 'Back to Events' : 'All Events'}
-            </Link>
-          </li>
-        </ul>
+
+        {/* Desktop Navigation */}
+        <div className="hidden xl:block">
+          <ul
+            role="menubar"
+            className="flex flex-row justify-end space-x-6 px-4 py-2"
+          >
+            <li role="none" className="text-center">
+              <Link
+                to="/"
+                role="menuitem"
+                className="relative px-2 py-6 pb-2 after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:opacity-100"
+              >
+                Home
+              </Link>
+            </li>
+            <li role="none" className="text-center">
+              <Link
+                to="/previous-events"
+                role="menuitem"
+                aria-current={
+                  location.pathname === '/previous-events' ? 'page' : undefined
+                }
+                className={`relative px-2 py-6 pb-2 ${
+                  location.pathname === '/previous-events'
+                    ? 'after:w-full after:opacity-100'
+                    : 'after:w-0 after:opacity-0'
+                } after:absolute after:bottom-0 after:left-0 after:h-1 after:bg-primary-400 after:transition-all after:duration-300 after:ease-in-out`}
+              >
+                {isPreviousEventPage ? 'Back to Events' : 'All Events'}
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className="w-full xl:hidden">
+        {isNavVisible && (
+          <div
+            id="mobile-navigation"
+            aria-labelledby="mobile-menu-button"
+            className="block w-full overflow-hidden bg-white shadow-lg"
+            style={{
+              transform: 'translateZ(0)',
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+            }}
+          >
+            <ul className="flex flex-col space-y-2 p-4">
+              <li>
+                <Link
+                  to="/"
+                  className="block rounded-lg px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-100"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/previous-events"
+                  aria-current={
+                    location.pathname === '/previous-events'
+                      ? 'page'
+                      : undefined
+                  }
+                  className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 ${
+                    location.pathname === '/previous-events'
+                      ? 'bg-primary-100 font-semibold text-primary-700'
+                      : 'text-gray-700'
+                  }`}
+                >
+                  {isPreviousEventPage ? 'Back to Events' : 'All Events'}
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </nav>
   )
