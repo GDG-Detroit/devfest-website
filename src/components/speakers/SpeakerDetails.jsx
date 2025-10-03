@@ -109,12 +109,12 @@ function SpeakerDetails(props) {
             </div>
           </div>
 
-          <h3
+          <h2
             id={`speaker-modal-title-${props.id}`}
             className="mb-3 text-3xl font-bold"
           >
             {props.name}
-          </h3>
+          </h2>
           <p className="mb-2 text-lg font-medium text-blue-100">
             {props.position}
           </p>
@@ -137,9 +137,9 @@ function SpeakerDetails(props) {
       <div className="p-8">
         <div className="grid gap-8 lg:grid-cols-5">
           <div className="lg:col-span-3">
-            <div className="mb-4 text-2xl font-bold text-gray-900">
+            <h3 className="mb-4 text-2xl font-bold text-gray-900">
               About {props.name.split(' ')[0]}
-            </div>
+            </h3>
             <div className="max-h-64 overflow-y-auto pr-4">
               <p
                 id={`speaker-modal-bio-${props.id}`}
@@ -152,7 +152,7 @@ function SpeakerDetails(props) {
 
           <div className="lg:col-span-2">
             <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-sky-50 p-6">
-              <h2 className="mb-3 text-lg font-bold text-gray-900">Session</h2>
+              <h3 className="mb-3 text-lg font-bold text-gray-900">Session</h3>
               <div className="rounded-xl bg-white p-4 shadow-sm">
                 <p className="text-sm font-semibold leading-relaxed text-gray-900">
                   {props.sessionTitle}
