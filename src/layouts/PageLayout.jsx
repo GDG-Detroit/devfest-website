@@ -8,7 +8,9 @@ export const PageLayout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main aria-labelledby="main-heading">{children}</main>
+      <main id="main-content" aria-labelledby="main-heading">
+        {children}
+      </main>
       <Footer />
       <ReturnToTopButton />
     </>

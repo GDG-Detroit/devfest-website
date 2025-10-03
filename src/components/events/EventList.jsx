@@ -7,7 +7,7 @@ const EventList = () => {
   const events = getAllEventsMetadata()
 
   return (
-    <main>
+    <>
       <PreviousEventsNavbar />
 
       <section
@@ -41,34 +41,38 @@ const EventList = () => {
         </div>
       </section>
 
-      <section
-        aria-labelledby="events-heading"
-        className="flex flex-col items-center justify-center bg-white py-16"
-      >
-        <div className="w-full px-8 sm:px-10 md:px-14 lg:px-16">
-          <h2
-            id="events-heading"
-            className="mb-12 text-center font-russell text-3xl font-bold text-primary-800 md:text-4xl"
-          >
-            Explore Past Events
-          </h2>
+      <main id="main-content">
+        <section
+          aria-labelledby="events-heading"
+          className="flex flex-col items-center justify-center bg-white py-16"
+        >
+          <div className="w-full px-8 sm:px-10 md:px-14 lg:px-16">
+            <h2
+              id="events-heading"
+              className="mb-12 text-center font-russell text-3xl font-bold text-primary-800 md:text-4xl"
+            >
+              Explore Past Events
+            </h2>
 
-          {events.length === 0 ? (
-            <div className="flex flex-col items-center justify-center py-16 text-center">
-              <p className="text-lg text-gray-600">No previous events found.</p>
-            </div>
-          ) : (
-            <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {events.map((event) => (
-                <EventCard key={event.year} eventMetadata={event} />
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
+            {events.length === 0 ? (
+              <div className="flex flex-col items-center justify-center py-16 text-center">
+                <p className="text-lg text-gray-600">
+                  No previous events found.
+                </p>
+              </div>
+            ) : (
+              <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {events.map((event) => (
+                  <EventCard key={event.year} eventMetadata={event} />
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      </main>
 
       <Footer />
-    </main>
+    </>
   )
 }
 
