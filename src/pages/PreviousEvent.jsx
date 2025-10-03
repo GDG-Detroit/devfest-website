@@ -17,9 +17,16 @@ const PreviousEvent = () => {
     return (
       <main>
         <PreviousEventsNavbar />
-        <section className="mt-16 bg-primary-100">
+        <section
+          role="banner"
+          aria-labelledby="not-found-heading"
+          className="mt-16 bg-primary-100"
+        >
           <div className="flex min-h-[90vh] min-w-[100vw] flex-col items-center justify-center p-4 text-center sm:px-10 md:px-8 lg:px-8">
-            <h1 className="mb-4 font-russell text-4xl font-bold text-primary-800">
+            <h1
+              id="not-found-heading"
+              className="mb-4 font-russell text-4xl font-bold text-primary-800"
+            >
               Event Not Found
             </h1>
             <p className="mb-8 text-lg text-gray-600">
@@ -45,9 +52,16 @@ const PreviousEvent = () => {
     <main>
       <PreviousEventsNavbar />
 
-      <section className="mt-16 bg-primary-100">
+      <section
+        role="banner"
+        aria-labelledby="event-heading"
+        className="mt-16 bg-primary-100"
+      >
         <div className="flex flex-col items-center justify-center px-8 py-12 sm:px-10 sm:py-16 md:px-14 md:py-20 lg:px-16 lg:py-24">
-          <h1 className="mb-8 text-center font-russell text-4xl font-bold text-primary-800 md:text-5xl lg:text-6xl">
+          <h1
+            id="event-heading"
+            className="mb-8 text-center font-russell text-4xl font-bold text-primary-800 md:text-5xl lg:text-6xl"
+          >
             Michigan DevFest {year}
           </h1>
           <div className="mb-8 flex justify-center gap-4">

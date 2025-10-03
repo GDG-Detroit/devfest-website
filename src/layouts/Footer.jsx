@@ -1,6 +1,9 @@
 function Footer() {
   return (
-    <footer className="flex h-28 flex-col items-center justify-center bg-gray-100 text-black">
+    <footer
+      role="contentinfo"
+      className="flex h-28 flex-col items-center justify-center bg-gray-100 text-black"
+    >
       <h3 className="mb-3">Contact us</h3>
       <div className="flex space-x-4">
         <button

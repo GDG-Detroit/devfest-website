@@ -29,6 +29,7 @@ function PreviousEventsNavbar() {
   return (
     <nav
       ref={navRef}
+      role="navigation"
       aria-label="Main navigation"
       className="fixed left-0 top-0 z-10 w-full bg-white shadow-lg"
     >
