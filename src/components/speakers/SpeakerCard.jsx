@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { useContext } from 'react'
+import { useContext, useEffect, useRef } from 'react'
 
 import SpeakerDetails from '@/components/speakers/SpeakerDetails'
 import GenericCard from '@/components/ui/GenericCard'
@@ -18,7 +18,12 @@ const SpeakerCard = ({
   const { isModalOpen, openModal, closeModal, setSpeakerID, speakerID } =
     useContext(SpeakerContext)
 
+  const modalRef = useRef(null)
+  const previousActiveElement = useRef(null)
+
   const open = () => {
+    // Store the currently focused element before opening modal
+    previousActiveElement.current = document.activeElement
     openModal()
     setSpeakerID(id)
   }
@@ -29,6 +34,33 @@ const SpeakerCard = ({
     }
   }
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Escape') {
+      closeModal()
+    }
+  }
+
+  // Focus management for modal
+  useEffect(() => {
+    if (isModalOpen && id === speakerID && modalRef.current) {
+      // Focus the modal when it opens
+      modalRef.current.focus()
+
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden'
+
+      return () => {
+        // Restore body scroll when modal closes
+        document.body.style.overflow = 'auto'
+
+        // Return focus to the element that opened the modal
+        if (previousActiveElement.current) {
+          previousActiveElement.current.focus()
+        }
+      }
+    }
+  }, [isModalOpen, id, speakerID])
+
   return (
     <>
       <GenericCard
@@ -36,20 +68,23 @@ const SpeakerCard = ({
       />
 
       {isModalOpen && id === speakerID && (
-        <>
-          <div
-            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby={`speaker-modal-title-${id}`}
+          aria-describedby={`speaker-modal-bio-${id}`}
+          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+          tabIndex={-1}
+          ref={modalRef}
+          aria-label="Speaker details modal"
+        >
+          <button
+            className="absolute inset-0 h-full w-full cursor-default"
             onClick={handleOverlayClick}
-            onKeyDown={(e) => {
-              if (e.key === 'Escape') {
-                closeModal()
-              }
-            }}
-            role="button"
-            tabIndex={0}
-            aria-label="Close speaker details modal"
+            onKeyDown={handleKeyDown}
+            aria-label="Close modal"
+            tabIndex={-1}
           />
-
           <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center p-4">
             <div className="pointer-events-auto">
               <SpeakerDetails
@@ -61,10 +96,11 @@ const SpeakerCard = ({
                 sessionTitle={sessionTitle}
                 onClose={closeModal}
                 position={position}
+                id={id}
               />
             </div>
           </div>
-        </>
+        </div>
       )}
     </>
   )
