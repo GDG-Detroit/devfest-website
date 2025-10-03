@@ -12,6 +12,11 @@ function Navbar() {
   const navRef = useRef(null)
   const mobileButtonRef = useRef(null)
 
+  const externalLinks = useMemo(
+    () => [{ to: '/previous-events', text: 'Previous Events' }],
+    []
+  )
+
   // Helper function to get accurate navbar height
   const getNavbarHeight = () => {
     const navbar = document.querySelector('nav')
@@ -237,6 +242,16 @@ function Navbar() {
           </Link>
         </li>
       ))}
+      {externalLinks.map((link) => (
+        <li key={link.to}>
+          <Link
+            to={link.to}
+            className="p-6 transition-colors hover:text-primary-500"
+          >
+            {link.text}
+          </Link>
+        </li>
+      ))}
     </ul>
   )
 
@@ -259,6 +274,16 @@ function Navbar() {
             }`}
           >
             {section.text}
+          </Link>
+        </li>
+      ))}
+      {externalLinks.map((link) => (
+        <li key={link.to}>
+          <Link
+            to={link.to}
+            className="p-6 transition-colors hover:text-primary-500"
+          >
+            {link.text}
           </Link>
         </li>
       ))}

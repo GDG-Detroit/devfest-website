@@ -9,6 +9,7 @@ import SpeakersSection from '@/layouts/SpeakersSection'
 import SponsorsSection from '@/layouts/SponsorsSection'
 import config from '../../config.json'
 
+import { sponsorsData } from '@/data/sponsors'
 import { SpeakersData as Speakers2025 } from '@/data/2025/speakers'
 
 function Home() {
@@ -21,7 +22,7 @@ function Home() {
         speakersData={Speakers2025}
         tracks={['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous']}
       />
-      <SponsorsSection />
+      <SponsorsSection year={2025} sponsorsData={sponsorsData} />
       <OrganizersSection />
       <FacilitatorsSection />
       <SpeakersSection
