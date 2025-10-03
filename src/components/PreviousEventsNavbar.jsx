@@ -105,11 +105,16 @@ function PreviousEventsNavbar() {
                 aria-current={
                   location.pathname === '/previous-events' ? 'page' : undefined
                 }
+                aria-label={
+                  isPreviousEventPage
+                    ? 'Back to all previous events'
+                    : 'View all previous events'
+                }
                 className={`relative px-2 py-6 pb-2 ${
                   location.pathname === '/previous-events'
                     ? 'after:w-full after:opacity-100'
                     : 'after:w-0 after:opacity-0'
-                } after:absolute after:bottom-0 after:left-0 after:h-1 after:bg-primary-400 after:transition-all after:duration-300 after:ease-in-out`}
+                } after:absolute after:bottom-0 after:left-0 after:h-1 after:bg-primary-400 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:opacity-100`}
               >
                 {isPreviousEventPage ? 'Back to Events' : 'All Events'}
               </Link>
