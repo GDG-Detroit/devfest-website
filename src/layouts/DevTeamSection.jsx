@@ -6,9 +6,9 @@ const DevTeamSection = () => {
   return (
     <section
       id="devteam"
-      className="flex flex-wrap items-center justify-center bg-primary-100 pb-10"
+      className="flex flex-wrap items-center justify-center bg-primary-100 p-8 sm:px-10 md:px-14 lg:px-16"
     >
-      <div className="relative w-full pt-6 sm:px-10 sm:pt-8 md:px-14 md:pt-12 lg:px-16 lg:pt-14">
+      <div className="relative w-full pt-0">
         <h2 className="mb-4 w-full text-center font-russell text-4xl md:mb-6 md:text-5xl lg:text-6xl">
           Dev Team
         </h2>

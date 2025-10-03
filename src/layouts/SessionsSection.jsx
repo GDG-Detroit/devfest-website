@@ -70,9 +70,9 @@ const SessionsSection = ({
   return (
     <section
       id="sessions"
-      className="flex flex-col items-center justify-center bg-primary-100 pb-8"
+      className="flex flex-col items-center justify-center bg-primary-100 p-8 sm:px-10 md:px-14 lg:px-16"
     >
-      <div className="relative w-full px-8 pt-6 sm:px-10 sm:pt-8 md:px-14 md:pt-12 lg:px-16 lg:pt-14">
+      <div className="relative w-full pt-0">
         <h2 className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
           {year} Sessions
         </h2>

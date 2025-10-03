@@ -11,13 +11,17 @@ const SponsorsSection = ({
   return (
     <section
       id="sponsors"
-      className="flex flex-col justify-center p-8 sm:p-10 md:p-14 lg:p-16"
+      className="flex flex-col justify-center p-8 sm:px-10 md:px-14 lg:px-16"
     >
-      <div className="flex w-full justify-between px-8 sm:px-10 md:px-14 lg:px-16">
-        <header className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
+      <div className="relative w-full pt-0">
+        <h2 className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
           {year && !isCurrentYear ? `${year} ` : ''}Sponsors
-        </header>
-        <img src={Kite} alt="Sponsors" className="h-12 md:h-14 lg:h-16" />
+        </h2>
+        <img
+          src={Kite}
+          alt="Sponsors"
+          className="absolute right-2 top-6 h-12 sm:right-10 md:right-14 md:top-8 lg:right-16 lg:top-12 lg:h-16"
+        />
       </div>
 
       <div className="overflow-hidden transition-all duration-500 ease-in-out">
