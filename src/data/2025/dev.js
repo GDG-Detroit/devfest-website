@@ -2,7 +2,7 @@ import SohanKetireddy from '@/data/2025/assets/images/dev/sohan_ketireddy.png'
 import GregMiller from '@/data/2025/assets/images/dev/greg_miller.png'
 import AaronAmano from '@/data/2025/assets/images/dev/aaron_amano.jpeg'
 import Rehanashri from '@/data/2025/assets/images/dev/rehanashri.jpg'
-import ShugmiShumunv from '@/data/2025/assets/images/dev/shugmi_shumunv.jpg'
+import ShugmiShumunov from '@/data/2025/assets/images/dev/shugmi_shumunov.jpg'
 import KayleBusenbark from '@/data/2025/assets/images/dev/kayle_busenbark.jpeg'
 import JustinBeaudry from '@/data/2025/assets/images/dev/justin_beaudry.jpg'
 
@@ -43,13 +43,13 @@ export const devTeamData = [
     avatar: Rehanashri,
   },
   {
-    name: 'Shugmi Shumunv',
+    name: 'Shugmi Shumunov',
     linkedin: 'https://www.linkedin.com/in/shugmishumunov/',
-    github: 'https://github.com/shugmi',
+    github: 'https://github.com/ShugKnight24',
     university: '',
     organization: 'Shumunov Solutions',
     position: 'Developer',
-    avatar: ShugmiShumunv,
+    avatar: ShugmiShumunov,
   },
   {
     name: 'Kayle Busenbark',
