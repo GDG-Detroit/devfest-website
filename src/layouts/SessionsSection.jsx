@@ -70,16 +70,16 @@ const SessionsSection = ({
   return (
     <section
       id="sessions"
-      className="flex flex-col items-center justify-center bg-primary-100"
+      className="flex flex-col items-center justify-center bg-primary-100 p-8 sm:px-10 md:px-14 lg:px-16"
     >
-      <div className="flex w-full justify-between px-8 pt-6 sm:px-10 sm:pt-8 md:px-14 md:pt-12 lg:px-16 lg:pt-14">
-        <header className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
+      <div className="relative w-full pt-0">
+        <h2 className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
           {year} Sessions
-        </header>
+        </h2>
         <img
           src={SessionsLogo}
           alt="Sessions"
-          className="h-12 md:h-14 lg:h-16"
+          className="absolute right-2 top-6 h-10 sm:right-10 sm:h-12 md:right-14 md:top-8 md:h-14 lg:right-16 lg:top-12 lg:h-16"
         />
         <button
           aria-label={
@@ -172,7 +172,7 @@ const SessionsSection = ({
             <a
               href="https://www.papercall.io/midevfest2025"
               target="_blank"
-              className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-400 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
+              className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
               rel="noreferrer"
             >
               {' '}

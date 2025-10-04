@@ -25,16 +25,16 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
   return (
     <section
       id="speakers"
-      className="flex flex-col justify-center border-b border-primary px-8 sm:px-10 md:px-14 lg:px-16"
+      className="flex flex-col justify-center border-b border-primary p-8 sm:px-10 md:px-14 lg:px-16"
     >
-      <div className="flex w-full justify-between pt-6 sm:pt-8 md:pt-12 lg:pt-14">
-        <header className="font-russell text-4xl md:text-5xl lg:text-6xl">
+      <div className="relative w-full pt-0">
+        <h2 className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
           {year} Speakers
-        </header>
+        </h2>
         <img
           src={SpeakersLogo}
           alt="Speakers"
-          className="h-8 md:h-10 lg:h-12"
+          className="absolute right-2 top-6 h-8 sm:right-10 sm:h-10 md:right-14 md:top-8 md:h-12 lg:right-16 lg:top-12 lg:h-12"
         />
         <button
           aria-label={

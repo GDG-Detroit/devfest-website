@@ -15,6 +15,9 @@ import { SpeakersData as Speakers2025 } from '@/data/2025/speakers'
 function Home() {
   return (
     <PageLayout>
+      <h1 id="main-heading" className="sr-only">
+        Michigan DevFest 2025
+      </h1>
       <LandingSection />
       <LocationSection />
       <SessionsSection

@@ -6,12 +6,14 @@ import ReturnToTopButton from '@/components/ui/ReturnToTopButton'
 
 export const PageLayout = ({ children }) => {
   return (
-    <main>
+    <>
       <Navbar />
-      {children}
+      <main id="main-content" aria-labelledby="main-heading">
+        {children}
+      </main>
       <Footer />
       <ReturnToTopButton />
-    </main>
+    </>
   )
 }
 
