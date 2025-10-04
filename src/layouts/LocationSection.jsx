@@ -38,10 +38,10 @@ function LocationSection() {
                 Friday: 9:00 AM - 5:00 PM
               </time>
               <time
-                dateTime="2025-11-22T09:00:00-05:00/2025-11-22T17:00:00-05:00"
+                dateTime="2025-11-22T09:00:00-05:00/2025-11-22T21:00:00-05:00"
                 className="block"
               >
-                Saturday: 9:00 AM - 5:00 PM
+                Saturday: 9:00 AM - 9:00 PM
               </time>
             </div>
           </div>
@@ -64,7 +64,7 @@ function LocationSection() {
             </div>
             <div className="ml-16">
               <h4 className="mb-2 text-base font-semibold text-gray-800">
-                Friday, November 21st - IBM Hackathon
+                Friday, November 21st - IBM Agentic AI Hackathon
               </h4>
               <dl>
                 <dt className="sr-only">Venue</dt>
