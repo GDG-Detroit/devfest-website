@@ -5,17 +5,21 @@ function LocationSection() {
     <section
       id="location"
       className="flex h-auto items-center justify-center bg-slate-100 py-16 md:py-28"
+      aria-labelledby="location-heading"
     >
       <div className="flex flex-col space-y-8">
         {/* When Section */}
         <div className="flex justify-center">
           <div className="flex items-center">
             <div className="mx-2 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
-              <FaClock className="h-6 w-6 text-white" />
+              <FaClock className="h-6 w-6 text-white" aria-hidden="true" />
             </div>
-            <span className="text-lg font-semibold md:text-xl lg:text-2xl">
-              When
-            </span>
+            <h2
+              id="location-heading"
+              className="text-lg font-semibold md:text-xl lg:text-2xl"
+            >
+              When & Where
+            </h2>
           </div>
         </div>
         <div className="flex justify-center pb-16">
@@ -41,16 +45,19 @@ function LocationSection() {
           <div className="mb-4 flex flex-col lg:mb-0 lg:w-1/2">
             <div className="mb-4 flex items-center">
               <div className="mx-2 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
-                <FaMapMarkerAlt className="h-6 w-6 text-white" />
+                <FaMapMarkerAlt
+                  className="h-6 w-6 text-white"
+                  aria-hidden="true"
+                />
               </div>
-              <span className="text-lg font-semibold md:text-xl lg:text-2xl">
+              <h3 className="text-lg font-semibold md:text-xl lg:text-2xl">
                 Friday Location
-              </span>
+              </h3>
             </div>
             <div className="ml-16">
-              <h3 className="mb-2 text-base font-semibold text-gray-800">
+              <h4 className="mb-2 text-base font-semibold text-gray-800">
                 Friday, November 21st - IBM Hackathon
-              </h3>
+              </h4>
               <dl>
                 <dt className="sr-only">Venue</dt>
                 <dd className="font-medium">
@@ -83,9 +90,9 @@ function LocationSection() {
 
           {/* Friday Map */}
           <div className="lg:w-1/2">
-            <h3 className="mb-2 text-sm font-semibold text-gray-700">
+            <h4 className="mb-2 text-sm font-semibold text-gray-700">
               Friday - Wayne State University Location
-            </h3>
+            </h4>
             <iframe
               title="Wayne State University - Saint Andrew's Memorial Episcopal Church"
               className="h-48 w-full border-4 border-sky-900 lg:h-56"
@@ -101,16 +108,19 @@ function LocationSection() {
           <div className="mb-4 flex flex-col lg:mb-0 lg:w-1/2">
             <div className="mb-4 flex items-center">
               <div className="mx-2 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
-                <FaMapMarkerAlt className="h-6 w-6 text-white" />
+                <FaMapMarkerAlt
+                  className="h-6 w-6 text-white"
+                  aria-hidden="true"
+                />
               </div>
-              <span className="text-lg font-semibold md:text-xl lg:text-2xl">
+              <h3 className="text-lg font-semibold md:text-xl lg:text-2xl">
                 Saturday Location
-              </span>
+              </h3>
             </div>
             <div className="ml-16">
-              <h3 className="mb-2 text-base font-semibold text-gray-800">
+              <h4 className="mb-2 text-base font-semibold text-gray-800">
                 Saturday, November 22nd - Main DevFest Event
-              </h3>
+              </h4>
               <dl>
                 <dt className="sr-only">Venue</dt>
                 <dd className="font-medium xl:whitespace-nowrap">
@@ -140,9 +150,9 @@ function LocationSection() {
 
           {/* Saturday Map */}
           <div className="lg:w-1/2">
-            <h3 className="mb-2 text-sm font-semibold text-gray-700">
+            <h4 className="mb-2 text-sm font-semibold text-gray-700">
               Saturday - MotorCity Casino Hotel Location
-            </h3>
+            </h4>
             <iframe
               title="MotorCity Casino Hotel"
               className="h-48 w-full border-4 border-sky-900 lg:h-56"
