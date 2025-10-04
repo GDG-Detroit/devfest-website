@@ -10,7 +10,7 @@ function LandingSection() {
   return (
     <section id="landing" className="mt-16">
       <div className="flex flex-wrap bg-black">
-        <div className="w-full p-12 sm:w-1/2">
+        <div className="flex w-full items-center justify-center p-12 lg:w-1/2">
           <ResponsiveImage
             className="w-full"
             webpSrc={DevFestLogoWebp}
@@ -19,7 +19,7 @@ function LandingSection() {
           />
         </div>
 
-        <div className="flex w-full flex-col justify-between bg-primary-400 sm:w-1/2">
+        <div className="flex w-full flex-col justify-between bg-primary-400 lg:w-1/2">
           <div className="flex grow flex-col items-center justify-center space-y-8 p-10">
             <ResponsiveImage
               className="w-[570px] max-w-full"
@@ -30,10 +30,16 @@ function LandingSection() {
 
             <p className="text-justify text-sm font-normal lg:text-base xl:text-lg">
               The Detroit and Ann Arbor Google Developer Groups (GDG) are
-              teaming up once again to bring you the 10th Michigan DevFest on
-              November 21-22, 2025, at Motor City Casino. With our 11th DevFest,
-              we aim to put together a great day of networking and knowledge
-              sharing for all involved.
+              teaming up once again to bring you the 11th Michigan DevFest on
+              November 21-22, 2025.
+            </p>
+            <p className="text-justify text-sm font-normal lg:text-base xl:text-lg">
+              Join us on Friday, November 21st for an Agentic AI Hackathon at
+              Wayne State University&apos;s Saint Andrew&apos;s Memorial
+              Episcopal Church in Detroit, followed by the main DevFest event on
+              Saturday, November 22nd at Motor City Casino. With this
+              year&apos;s DevFest, we aim to put together a great weekend of
+              networking, innovation, and knowledge sharing for all involved.
             </p>
             <a
               href="https://www.papercall.io/midevfest2025"
