@@ -18,10 +18,18 @@ function LocationSection() {
             </h3>
           </div>
           <div className="ml-16">
-            <p className="whitespace-nowrap">
+            <time
+              dateTime="2025-11-22T09:00:00-05:00"
+              className="block whitespace-nowrap"
+            >
               Saturday, November 22nd, {config.year}
-            </p>
-            <p>9:00 AM - 5:00 PM</p>
+            </time>
+            <time
+              dateTime="2025-11-22T09:00:00-05:00/2025-11-22T17:00:00-05:00"
+              className="block"
+            >
+              9:00 AM - 5:00 PM
+            </time>
           </div>
         </div>
 
