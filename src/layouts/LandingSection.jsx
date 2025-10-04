@@ -15,7 +15,7 @@ function LandingSection() {
             className="w-full"
             webpSrc={DevFestLogoWebp}
             pngSrc={DevFestLogoPng}
-            alt="Michigan DevFest Logo"
+            alt="Michigan DevFest 2025 logo with Detroit skyline and developer graphics"
           />
         </div>
 
@@ -25,14 +25,14 @@ function LandingSection() {
               className="w-[570px] max-w-full"
               webpSrc={dateWebp}
               pngSrc={datePng}
-              alt="Date and Red Circle"
+              alt="November 21-22, 2025 event dates with red circular badge"
             />
 
             <p className="text-justify text-sm font-normal lg:text-base xl:text-lg">
               The Detroit and Ann Arbor Google Developer Groups (GDG) are
               teaming up once again to bring you the 10th Michigan DevFest on
-              November 22, 2025, at Motor City Casino. With our 11th DevFest, we
-              aim to put together a great day of networking and knowledge
+              November 21-22, 2025, at Motor City Casino. With our 11th DevFest,
+              we aim to put together a great day of networking and knowledge
               sharing for all involved.
             </p>
             <a
