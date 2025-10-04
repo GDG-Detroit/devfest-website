@@ -30,12 +30,20 @@ function LocationSection() {
             >
               Friday, November 21st - Saturday, November 22nd, 2025
             </time>
-            <time
-              dateTime="2025-11-21T09:00:00-05:00/2025-11-22T17:00:00-05:00"
-              className="block"
-            >
-              9:00 AM - 5:00 PM
-            </time>
+            <div className="mt-2 space-y-1">
+              <time
+                dateTime="2025-11-21T09:00:00-05:00/2025-11-21T17:00:00-05:00"
+                className="block"
+              >
+                Friday: 9:00 AM - 5:00 PM
+              </time>
+              <time
+                dateTime="2025-11-22T09:00:00-05:00/2025-11-22T17:00:00-05:00"
+                className="block"
+              >
+                Saturday: 9:00 AM - 5:00 PM
+              </time>
+            </div>
           </div>
         </div>
 
