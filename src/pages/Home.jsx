@@ -22,7 +22,7 @@ function Home() {
         speakersData={Speakers2025}
         tracks={['AI/ML', 'Mobile', 'Fullstack', 'Miscellaneous']}
       />
-      <SponsorsSection year={2025} sponsorsData={sponsorsData} />
+      <SponsorsSection year={config.year} sponsorsData={sponsorsData} />
       <OrganizersSection />
       <FacilitatorsSection />
       <SpeakersSection
