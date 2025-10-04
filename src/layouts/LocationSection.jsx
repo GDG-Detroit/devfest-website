@@ -18,13 +18,13 @@ function LocationSection() {
           </div>
           <div className="ml-16">
             <time
-              dateTime="2025-11-22T09:00:00-05:00"
+              dateTime="2025-11-21T09:00:00-05:00/2025-11-22T17:00:00-05:00"
               className="block whitespace-nowrap"
             >
-              Saturday, November 22nd, 2025
+              Friday, November 21st - Saturday, November 22nd, 2025
             </time>
             <time
-              dateTime="2025-11-22T09:00:00-05:00/2025-11-22T17:00:00-05:00"
+              dateTime="2025-11-21T09:00:00-05:00/2025-11-22T17:00:00-05:00"
               className="block"
             >
               9:00 AM - 5:00 PM
