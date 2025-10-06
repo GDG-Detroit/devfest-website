@@ -24,7 +24,7 @@ const DevTeamCard = ({
           <h4 className="text-xs text-sky-900">{organization || university}</h4>
           <p className="text-xs text-sky-900">{position}</p>
         </div>
-        <LinkedInHandle handle={linkedin} />
+        {linkedin && <LinkedInHandle handle={linkedin} />}
         <GithubHandle handle={github} />
       </div>
     </div>
@@ -34,12 +34,11 @@ const DevTeamCard = ({
 DevTeamCard.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  linkedin: PropTypes.string.isRequired,
+  linkedin: PropTypes.string,
   github: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
   organization: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
-  bio: PropTypes.string.isRequired,
   university: PropTypes.string.isRequired,
 }
 
