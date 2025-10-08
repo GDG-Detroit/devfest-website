@@ -1,0 +1,22 @@
+{
+  "name": "Michigan DevFest 2025",
+  "short_name": "DevFest MI",
+  "description": "Join Michigan's largest developer conference — DevFest 2025 in Detroit. Hackathon, talks, workshops, and networking across mobile, web, and AI.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#0d47a1",
+  "icons": [
+    {
+      "src": "images/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
