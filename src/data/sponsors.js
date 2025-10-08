@@ -6,7 +6,7 @@ export const sponsorsData = [
     id: 1,
     name: 'Google',
     logo: Google,
-    desc: `Our mission is to organize the world’s information and make it universally accessible and useful.
+    desc: `Our mission is to organize the world's information and make it universally accessible and useful.
 
 We are committed to significantly improving the lives of as many people as possible by protecting users, building belonging, expanding opportunity, responding to crises, and advancing sustainability.`,
     url: 'https://google.com/',

@@ -72,7 +72,7 @@ const SponsorsSection = ({
             {year && isCurrentYear && (
               <a
                 href="mailto:sponsors@midevfest.com"
-                className="rounded-lg bg-blue-600 px-8 py-4 text-white shadow-lg transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-blue-700 hover:shadow-xl"
+                className="mb-4 mt-3 inline-flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2"
               >
                 Become a Sponsor
               </a>
