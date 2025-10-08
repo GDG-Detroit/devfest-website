@@ -10,7 +10,7 @@ function LandingSection() {
   return (
     <section id="landing" className="mt-16">
       <div className="flex flex-wrap bg-black">
-        <div className="w-full p-12 sm:w-1/2">
+        <div className="flex w-full items-center justify-center p-12 lg:w-1/2">
           <ResponsiveImage
             className="w-full"
             webpSrc={DevFestLogoWebp}
@@ -19,7 +19,7 @@ function LandingSection() {
           />
         </div>
 
-        <div className="flex w-full flex-col justify-between bg-primary-400 sm:w-1/2">
+        <div className="flex w-full flex-col justify-between bg-primary-400 lg:w-1/2">
           <div className="flex grow flex-col items-center justify-center space-y-8 p-10">
             <ResponsiveImage
               className="w-[570px] max-w-full"
