@@ -15,7 +15,7 @@ import ResponsiveImage from '@/components/ui/ResponsiveImage'
 function LandingSection() {
   return (
     <section id="landing" className="mt-16 bg-black">
-      <div className="mx-auto flex max-w-screen-lg flex-wrap ">
+      <div className="mx-auto flex max-w-[1554px] flex-wrap">
         <div className="mt-4 flex w-full items-center justify-center p-12 lg:mt-0 lg:w-1/2">
           <img
             rel="preload"
