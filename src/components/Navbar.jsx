@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import gdgDetroitLogo from '@/assets/images/gdg-detroit-logo.png'
+import gdgDetroitLogo from '@/assets/images/gdg-detroit-logo.svg'
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState('landing')

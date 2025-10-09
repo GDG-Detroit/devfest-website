@@ -4,10 +4,10 @@ function LocationSection() {
   return (
     <section
       id="location"
-      className="flex h-auto items-center justify-center bg-slate-100 py-16 md:py-28"
+      className="flex h-auto items-center justify-center bg-slate-100 py-16 text-black md:py-28"
       aria-labelledby="location-heading"
     >
-      <div className="flex flex-col space-y-8">
+      <div className="mx-4 flex flex-col space-y-8 sm:mx-6 lg:mx-8">
         {/* When Section */}
         <div className="flex justify-center">
           <div className="flex items-center">
@@ -24,12 +24,6 @@ function LocationSection() {
         </div>
         <div className="flex justify-center pb-16">
           <div className="text-center">
-            <time
-              dateTime="2025-11-21T09:00:00-05:00/2025-11-22T17:00:00-05:00"
-              className="block whitespace-nowrap"
-            >
-              Friday, November 21st - Saturday, November 22nd, 2025
-            </time>
             <div className="mt-2 space-y-1">
               <time
                 dateTime="2025-11-21T09:00:00-05:00/2025-11-21T21:00:00-05:00"
@@ -48,7 +42,7 @@ function LocationSection() {
         </div>
 
         {/* Friday Location Row */}
-        <div className="flex w-full flex-col pb-12 lg:flex-row lg:space-x-6">
+        <div className="flex w-full max-w-full flex-col pb-12 lg:flex-row lg:space-x-6">
           {/* Friday Location Info */}
           <div className="mb-4 flex flex-col lg:mb-0 lg:w-1/2">
             <div className="mb-4 flex items-center">
@@ -98,21 +92,28 @@ function LocationSection() {
           </div>
 
           {/* Friday Map */}
-          <div className="lg:w-1/2">
+          <div className="mx-2 w-full max-w-full overflow-hidden lg:w-1/2">
             <h4 className="mb-2 text-sm font-semibold text-gray-700">
               Friday - Wayne State University Location
             </h4>
-            <iframe
-              title="Wayne State University - Saint Andrew's Memorial Episcopal Church"
-              className="h-48 w-full border-4 border-sky-900 shadow-lg lg:h-56"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.5!2d-83.0730112!3d42.355556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824d2a41779eb09%3A0xee199848d652faba!2sSaint%20Andrew%27s%20Memorial%20Episcopal%20Church!5e1!3m2!1sen!2sus!4v1757466338342!5m2!1sen!2sus"
-              allowFullScreen
-            ></iframe>
+            <div className="">
+              <iframe
+                title="Wayne State University - Saint Andrew's Memorial Episcopal Church"
+                className="aspect-[4/3]  rounded-lg border-8 border-sky-200"
+                style={{
+                  maxWidth: '95%',
+                  width: '95%',
+                  boxSizing: 'border-box',
+                }}
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.5!2d-83.0730112!3d42.355556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824d2a41779eb09%3A0xee199848d652faba!2sSaint%20Andrew%27s%20Memorial%20Episcopal%20Church!5e1!3m2!1sen!2sus!4v1757466338342!5m2!1sen!2sus"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
 
         {/* Saturday Location Row */}
-        <div className="flex w-full flex-col lg:flex-row lg:space-x-6">
+        <div className="flex w-full max-w-full flex-col lg:flex-row lg:space-x-6">
           {/* Saturday Location Info */}
           <div className="mb-4 flex flex-col lg:mb-0 lg:w-1/2">
             <div className="mb-4 flex items-center">
@@ -159,16 +160,23 @@ function LocationSection() {
           </div>
 
           {/* Saturday Map */}
-          <div className="lg:w-1/2">
+          <div className="mx-2 w-full max-w-full overflow-hidden lg:w-1/2">
             <h4 className="mb-2 text-sm font-semibold text-gray-700">
               Saturday - MotorCity Casino Hotel Location
             </h4>
-            <iframe
-              title="MotorCity Casino Hotel"
-              className="h-48 w-full border-4 border-sky-900 shadow-xl lg:h-56"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5043.696479671668!2d-83.07032016920797!3d42.33888511227875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d4d71da8bb1%3A0xe4a8072514ccbe55!2sMotorCity%20Casino%20Hotel!5e1!3m2!1sen!2sus!4v1757466338342!5m2!1sen!2sus"
-              allowFullScreen
-            ></iframe>
+            <div className="">
+              <iframe
+                title="MotorCity Casino Hotel"
+                className="aspect-[4/3] rounded-lg border-8 border-sky-200"
+                style={{
+                  maxWidth: '95%',
+                  width: '95%',
+                  boxSizing: 'border-box',
+                }}
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5043.696479671668!2d-83.07032016920797!3d42.33888511227875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d4d71da8bb1%3A0xe4a8072514ccbe55!2sMotorCity%20Casino%20Hotel!5e1!3m2!1sen!2sus!4v1757466338342!5m2!1sen!2sus"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>

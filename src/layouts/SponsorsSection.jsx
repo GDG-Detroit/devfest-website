@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import Kite from '@/assets/images/kite.png'
+import Kite from '@/assets/images/icn-kite.png'
 
 const SponsorsSection = ({
   sponsorsData = [],
@@ -14,13 +14,14 @@ const SponsorsSection = ({
       className="flex flex-col justify-center p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="relative w-full pt-0">
-        <h2 className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="w-full text-center font-russell text-4xl text-white md:text-5xl lg:text-6xl">
           {year && !isCurrentYear ? `${year} ` : ''}Sponsors
         </h2>
         <img
           src={Kite}
           alt="Sponsors"
           className="absolute right-2 top-6 h-12 sm:right-10 md:right-14 md:top-8 lg:right-16 lg:top-12 lg:h-16"
+          loading="lazy"
         />
       </div>
 
@@ -71,7 +72,7 @@ const SponsorsSection = ({
             {year && isCurrentYear && (
               <a
                 href="mailto:sponsors@midevfest.com"
-                className="rounded-lg bg-blue-600 px-8 py-4 text-white shadow-lg transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-blue-700 hover:shadow-xl"
+                className="mb-4 mt-3 inline-flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2"
               >
                 Become a Sponsor
               </a>

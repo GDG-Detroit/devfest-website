@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import SessionsLogo from '@/assets/images/sessions-logo.png'
+import SessionsLogo from '@/assets/images/icn-sessions.png'
 import SessionCard from '@/components/sessions/SessionCard'
 
 import { DIRECTION } from '@/constants/directions'
@@ -73,13 +73,14 @@ const SessionsSection = ({
       className="flex flex-col items-center justify-center bg-primary-100 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="relative w-full pt-0">
-        <h2 className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="w-full text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
           {year} Sessions
         </h2>
         <img
           src={SessionsLogo}
           alt="Sessions"
           className="absolute right-2 top-6 h-10 sm:right-10 sm:h-12 md:right-14 md:top-8 md:h-14 lg:right-16 lg:top-12 lg:h-16"
+          loading="lazy"
         />
         <button
           aria-label={

@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react'
 import PropTypes from 'prop-types'
 
-import SpeakersLogo from '@/assets/images/speakers-logo.png'
+import SpeakersLogo from '@/assets/images/icn-speakers.png'
 import SpeakerCard from '@/components/speakers/SpeakerCard'
 
 import { SpeakerContext } from '@/components/speakers/SpeakerContext'
@@ -28,7 +28,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
       className="flex flex-col justify-center border-b border-primary p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="relative w-full pt-0">
-        <h2 className="w-full text-center font-russell text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="w-full text-center font-russell text-4xl text-white md:text-5xl lg:text-6xl">
           {year} Speakers
         </h2>
         <img
