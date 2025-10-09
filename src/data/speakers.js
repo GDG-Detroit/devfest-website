@@ -1,3 +1,6 @@
+import BrianMcKeiver from '@/assets/images/speakers/BrianMcKeiver.png'
+import ChrisDemars from '@/assets/images/speakers/ChrisDemars.jpg'
+
 export const SpeakersData = [
   {
     id: 1,
@@ -36,7 +39,7 @@ export const SpeakersData = [
     id: 2,
     name: 'Brian McKeiver',
     email: 'bmckeiver@bizstream.com',
-    avatar: 'https://placehold.co/600x400/0F9D58/FFFFFF?text=Brian+McKeiver',
+    avatar: BrianMcKeiver,
     bio: 'Brian McKeiver is Co-Owner at BizStream, a digital agency in Allendale, MI. He is a solution architect, visionary, Microsoft Azure AI MVP, and Kentico MVP. He has 23 years of experience leading his agency of more than 40 employees and about a hundred clients spread out across North America. In addition to his expertise in web development, cloud, integration, and digital marketing, Brian is active with the tech community via his blog at Mcbeev.com.',
     twitter: 'mcbeev',
     url: 'mcbeev.com',
@@ -58,7 +61,7 @@ export const SpeakersData = [
     id: 3,
     name: 'Chris DeMars',
     email: 'cdemars86@gmail.com',
-    avatar: 'https://placehold.co/600x400/AB47BC/FFFFFF?text=Chris+DeMars',
+    avatar: ChrisDemars,
     bio: "Chris DeMars is a Senior Developer Advocate with over 20 years of technical experience. He speaks globally on various frontend topics and has received accolades including the prestigious Microsoft MVP and Progress Champion awards. Chris is passionate about enhancing web development and helping developers achieve their goals. In his free time, he enjoys rating Detroit-style pizza, searching for Bigfoot, and investigating UFO's.",
     twitter: 'saltnburnem',
     url: null,
