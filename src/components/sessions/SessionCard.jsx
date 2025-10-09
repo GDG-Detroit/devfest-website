@@ -25,7 +25,10 @@ function SessionCard({
 
   let startTime, endTime
 
-  if (sessionTime.includes('-')) {
+  if (!sessionTime) {
+    startTime = 'TBD'
+    endTime = 'TBD'
+  } else if (sessionTime.includes('-')) {
     const [startStr, endStr] = sessionTime.split('-').map((str) => str.trim())
     const parsedStartTime = parse(startStr, 'h:mm', new Date())
     const parsedEndTime = parse(endStr, 'h:mm', new Date())
@@ -45,12 +48,12 @@ function SessionCard({
         onClick={() => sessionDesc && toggle()}
         aria-expanded={sessionDesc ? direction === DIRECTION.TOP : undefined}
         aria-controls={
-          sessionDesc
+          sessionTitle
             ? `session-${sessionTitle.replace(/\s+/g, '-').toLowerCase()}`
             : undefined
         }
         aria-label={
-          sessionDesc
+          sessionTitle
             ? `Toggle session details for ${sessionTitle}`
             : `Session: ${sessionTitle}`
         }
@@ -85,7 +88,9 @@ function SessionCard({
               </div>
               <div className="flex flex-col items-center justify-center sm:flex-row sm:space-x-2">
                 <p>in</p>
-                <p className="whitespace-nowrap">{sessionRoom}</p>
+                <p className="whitespace-nowrap">
+                  {sessionRoom ? sessionRoom : 'TBD'}
+                </p>
               </div>
             </div>
           </div>
