@@ -28,13 +28,13 @@ function Home() {
       />
       <SponsorsSection year={2025} sponsorsData={sponsorsData} />
       <JobBoardSection year={2025} />
+      <OrganizersSection />
+      <FacilitatorsSection />
       <SpeakersSection
         year={2025}
         speakersData={Speakers2025}
         defaultExpanded
       />
-      <OrganizersSection />
-      <FacilitatorsSection />
       <DevTeamSection />
     </PageLayout>
   )
