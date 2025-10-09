@@ -6,7 +6,7 @@ const DevTeamSection = () => {
   return (
     <section
       id="devteam"
-      className="flex flex-wrap items-center justify-center bg-primary-100 p-8 sm:px-10 md:px-14 lg:px-16"
+      className="flex flex-wrap items-center justify-center bg-primary-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="relative w-full pt-0">
         <h2 className="mb-4 w-full text-center font-russell text-4xl text-black md:mb-6 md:text-5xl lg:text-6xl">

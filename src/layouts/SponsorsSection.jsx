@@ -11,10 +11,10 @@ const SponsorsSection = ({
   return (
     <section
       id="sponsors"
-      className="flex flex-col justify-center p-8 sm:px-10 md:px-14 lg:px-16"
+      className="flex flex-col justify-center bg-white p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="relative w-full pt-0">
-        <h2 className="w-full text-center font-russell text-4xl text-white md:text-5xl lg:text-6xl">
+        <h2 className="w-full text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
           {year && !isCurrentYear ? `${year} ` : ''}Sponsors
         </h2>
         <img

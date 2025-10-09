@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link, useLocation } from 'react-router-dom'
-import gdgDetroitLogo from '@/assets/images/gdg-detroit-logo.png'
+import gdgDetroitLogo from '@/assets/images/gdg-detroit-logo.svg'
 
 function PreviousEventsNavbar() {
   const [isNavVisible, setIsNavVisible] = useState(false)
