@@ -232,9 +232,7 @@ function Navbar() {
             aria-current={activeLink === section.id ? 'page' : undefined}
             className={`${
               section.id === 'landing' ? 'hidden' : ''
-            } relative px-2 py-6 pb-2 transition-colors ${
-              activeLink === 'landing' ? 'text-sky-900' : 'text-gray-700'
-            } ${
+            } relative px-2 py-6 pb-2 ${
               activeLink === section.id
                 ? 'after:w-full after:opacity-100'
                 : 'after:w-0 after:opacity-0'
@@ -249,9 +247,7 @@ function Navbar() {
           <Link
             to={link.to}
             role="menuitem"
-            className={`relative px-2 py-6 pb-2 transition-colors ${
-              activeLink === 'landing' ? 'text-sky-900' : 'text-gray-700'
-            } after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:opacity-100`}
+            className="relative px-2 py-6 pb-2 after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:opacity-100"
           >
             {link.text}
           </Link>
@@ -302,7 +298,7 @@ function Navbar() {
       className={`fixed left-0 top-0 z-10 w-full ${
         activeLink === 'landing'
           ? 'bg-primary-400 text-sky-900'
-          : 'bg-white shadow-lg'
+          : 'bg-white text-gray-700 shadow-lg'
       }`}
     >
       {/* Screen Reader Announcements */}
@@ -331,8 +327,8 @@ function Navbar() {
           aria-controls="mobile-navigation"
           className={`touch-manipulation rounded border-2 px-4 py-2 transition-colors xl:hidden ${
             activeLink === 'landing'
-              ? 'border-sky-900 text-sky-900 hover:bg-primary-300 active:bg-primary-200'
-              : 'border-gray-300 text-gray-700 hover:bg-gray-100 active:bg-gray-200'
+              ? 'border-sky-900 hover:bg-primary-300 active:bg-primary-200'
+              : 'border-gray-300 hover:bg-gray-100 active:bg-gray-200'
           }`}
           onClick={(e) => {
             e.preventDefault()
