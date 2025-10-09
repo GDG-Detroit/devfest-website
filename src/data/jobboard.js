@@ -1,0 +1,52 @@
+// Job Board data for displaying companies and their job opportunities
+import ccsLogo from '@/assets/images/job-board/Copy-of-CCS_logo-scaled.jpg'
+import dteLogo from '@/assets/images/job-board/DTE_Lettermark_RGB.jpg'
+import grandCircusLogo from '@/assets/images/job-board/Grand Circus Logo-03.png'
+import compassLogo from '@/assets/images/job-board/compassLogo_Final.svg'
+import googleLogo from '@/assets/images/job-board/google-logo-3872642517.png'
+import ibmLogo from '@/assets/images/job-board/rebus_blue70_on_blue20.svg'
+
+export const jobBoardData = [
+  {
+    id: 1,
+    name: 'CCS',
+    logo: ccsLogo,
+    website: 'https://www.ccsdetroit.com/careers/',
+    careersPage: 'https://www.ccsdetroit.com/careers/',
+  },
+  {
+    id: 2,
+    name: 'DTE',
+    logo: dteLogo,
+    website: 'https://bit.ly/dte-jobs-25',
+    careersPage: 'https://bit.ly/dte-jobs-25',
+  },
+  {
+    id: 3,
+    name: 'Google',
+    logo: googleLogo,
+    website: 'https://bit.ly/google-jobs-25',
+    careersPage: 'https://bit.ly/google-jobs-25',
+  },
+  {
+    id: 4,
+    name: 'Grand Circus',
+    logo: grandCircusLogo,
+    website: 'https://bit.ly/grandcircus-jobs-25',
+    careersPage: 'https://bit.ly/grandcircus-jobs-25',
+  },
+  {
+    id: 5,
+    name: 'IBM',
+    logo: ibmLogo,
+    website: 'https://bit.ly/ibm-jobs-25',
+    careersPage: 'https://bit.ly/ibm-jobs-25',
+  },
+  {
+    id: 6,
+    name: 'Resume Drop',
+    logo: compassLogo,
+    website: 'https://bit.ly/midevfest-resume-drop',
+    careersPage: 'https://bit.ly/midevfest-resume-drop',
+  },
+]
