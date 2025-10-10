@@ -1,5 +1,3 @@
-//import detroitSkyline from '@/assets/images/Frame 2 - Detroit Skyline.png'
-
 import datePng from '@/assets/images/date2025.png'
 import dateWebp from '@/assets/images/date2025.webp'
 import eventLogoSvg from '@/assets/images/midevfest2025.svg'
