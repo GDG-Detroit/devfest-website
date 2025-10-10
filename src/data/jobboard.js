@@ -11,8 +11,8 @@ export const jobBoardData = [
     id: 1,
     name: 'CCS',
     logo: ccsLogo,
-    website: 'https://www.ccsdetroit.com/careers/',
-    careersPage: 'https://www.ccsdetroit.com/careers/',
+    website: 'https://bit.ly/ccs-jobs-25',
+    careersPage: 'https://bit.ly/ccs-jobs-25',
   },
   {
     id: 2,
