@@ -27,15 +27,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
       id="speakers"
       className="flex flex-col justify-center border-b border-primary bg-sky-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
-      <div className="relative w-full pt-0">
-        <h2 className="w-full text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
-          {year} Speakers
-        </h2>
-        <img
-          src={SpeakersLogo}
-          alt="Speakers"
-          className="absolute right-2 top-6 h-8 sm:right-10 sm:h-10 md:right-14 md:top-8 md:h-12 lg:right-16 lg:top-12 lg:h-12"
-        />
+      <div className="flex w-full justify-between pt-0">
         <button
           aria-label={
             isExpanded ? `Collapse ${year} Speakers` : `Expand ${year} Speakers`
@@ -49,6 +41,14 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
             } transition-transform duration-100 ease-linear`}
           />
         </button>
+        <h2 className="w-full text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
+          {year} Speakers
+        </h2>
+        <img
+          src={SpeakersLogo}
+          alt="Speakers"
+          className="h-8 sm:h-10 md:h-12 lg:h-12"
+        />
       </div>
       <div
         className={`overflow-hidden transition-all duration-500 ease-in-out ${

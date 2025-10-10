@@ -8,14 +8,14 @@ function OrganizersSection() {
       id="organizers"
       className="flex flex-col justify-center bg-sky-100 p-8 sm:px-10 md:px-14 lg:px-16"
     >
-      <div className="relative w-full pt-0">
+      <div className="relative flex w-full justify-between pt-0">
         <h2 className="w-full text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
           Organizers
         </h2>
         <img
           src={Arrow}
           alt="Organizers"
-          className="absolute right-2 top-6 h-6 -scale-x-100 sm:right-10 sm:h-8 md:right-14 md:top-8 md:h-10 lg:right-16 lg:top-12 lg:h-12"
+          className="h-6 -scale-x-100 sm:h-8 md:h-10 lg:h-12"
           loading="lazy"
         />
       </div>
