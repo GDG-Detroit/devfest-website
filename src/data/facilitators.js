@@ -1,8 +1,8 @@
-import HudaHussaini from '@/assets/images/facilitators/HudaHussaini.webp'
-import ZavaarShah from '@/assets/images/facilitators/Zavaar Shah.webp'
-import JingranWang from '@/assets/images/facilitators/Jingran Wang.webp'
-import JuanLinaresOrihuela from '@/assets/images/facilitators/Juan Linares Orihuela.webp'
-import SumiaSaleh from '@/assets/images/facilitators/Sumia Saleh.webp'
+import HudaHussaini from '@/assets/images/facilitators/Huda_Hussaini.webp'
+import ZavaarShah from '@/assets/images/facilitators/Zavaar_Shah.webp'
+import JingranWang from '@/assets/images/facilitators/Jingran_Wang.webp'
+import JuanLinaresOrihuela from '@/assets/images/facilitators/Juan_Linares_Orihuela.webp'
+import SumiaSaleh from '@/assets/images/facilitators/Sumia_Saleh.webp'
 
 export const facilitatorsData = [
   {

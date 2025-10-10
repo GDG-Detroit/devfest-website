@@ -1,5 +1,5 @@
-import BrianMcKeiver from '@/assets/images/speakers/BrianMcKeiver.png'
-import ChrisDemars from '@/assets/images/speakers/ChrisDemars.jpg'
+import BrianMcKeiver from '@/assets/images/speakers/Brian_McKeiver.png'
+import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
 
 export const SpeakersData = [
   {

@@ -1,10 +1,10 @@
-import AnikaRaisaChowdhury from '@/assets/images/facilitators/Anika Raisa Chowdhury.webp'
-import AnikaTabassum from '@/assets/images/facilitators/Anika Tabassum.webp'
-import HudaHussaini from '@/assets/images/facilitators/Huda Hussaini.webp'
-import KanikaMohan from '@/assets/images/facilitators/Kanika Mohan.webp'
-import RosyShrestha from '@/assets/images/facilitators/Rosy Shrestha.webp'
-import ShamsAhson from '@/assets/images/facilitators/Shams Ahson.webp'
-import ShashankaPrajapati from '@/assets/images/facilitators/Shashanka Prajapati.jpeg'
+import AnikaRaisaChowdhury from '@/assets/images/facilitators/Anika_Raisa_Chowdhury.webp'
+import AnikaTabassum from '@/assets/images/facilitators/Anika_Tabassum.webp'
+import HudaHussaini from '@/assets/images/facilitators/Huda_Hussaini_23.webp'
+import KanikaMohan from '@/assets/images/facilitators/Kanika_Mohan.webp'
+import RosyShrestha from '@/assets/images/facilitators/Rosy_Shrestha.webp'
+import ShamsAhson from '@/assets/images/facilitators/Shams_Ahson.webp'
+import ShashankaPrajapati from '@/assets/images/facilitators/Shashanka_Prajapati.jpeg'
 
 export const facilitatorsData = [
   {
