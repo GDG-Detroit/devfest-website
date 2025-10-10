@@ -1,6 +1,7 @@
 import { SpeakersData as Speakers2024 } from '@/data/2024/speakers'
 import { SpeakersData as Speakers2023 } from '@/data/2023/speakers'
 import { sponsorsData as Sponsors2024 } from '@/data/2024/sponsors'
+import { sponsorsData as Sponsors2023 } from '@/data/2023/sponsors'
 
 const EVENT_YEARS = {
   2024: {
@@ -9,7 +10,7 @@ const EVENT_YEARS = {
   },
   2023: {
     speakers: Speakers2023,
-    sponsors: [],
+    sponsors: Sponsors2023,
   },
 }
 
