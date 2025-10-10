@@ -23,30 +23,34 @@ function SessionCard({
     }
   }
 
-  let startTime, endTime
+  const getSessionTimes = () => {
+    if (!sessionTime) return { startTime: '', endTime: '' }
 
-  if (!sessionTime) {
-    startTime = 'TBD'
-    endTime = 'TBD'
-  } else if (sessionTime.includes('-')) {
-    const [startStr, endStr] = sessionTime.split('-').map((str) => str.trim())
-    const parsedStartTime = parse(startStr, 'h:mm', new Date())
-    const parsedEndTime = parse(endStr, 'h:mm', new Date())
+    if (sessionTime.includes('-')) {
+      const [startStr, endStr] = sessionTime.split('-').map((str) => str.trim())
+      return {
+        startTime: format(parse(startStr, 'h:mm', new Date()), 'h:mm'),
+        endTime: format(parse(endStr, 'h:mm', new Date()), 'h:mm'),
+      }
+    }
 
-    startTime = format(parsedStartTime, 'h:mm')
-    endTime = format(parsedEndTime, 'h:mm')
-  } else {
     const parsedStartTime = parse(sessionTime, 'h:mm', new Date())
-
-    startTime = format(parsedStartTime, 'h:mm')
-    endTime = format(addHours(parsedStartTime, 1), 'h:mm')
+    return {
+      startTime: format(parsedStartTime, 'h:mm'),
+      endTime: format(addHours(parsedStartTime, 1), 'h:mm'),
+    }
   }
+
+  const { startTime, endTime } = getSessionTimes()
+  const isExpanded = direction === DIRECTION.TOP
+  const hasTimeInfo = startTime && endTime
+  const hasSessionInfo = hasTimeInfo || sessionRoom
 
   return (
     <div className="rounded-xl border bg-white shadow-lg transition duration-200 hover:shadow-2xl">
       <button
         onClick={() => sessionDesc && toggle()}
-        aria-expanded={sessionDesc ? direction === DIRECTION.TOP : undefined}
+        aria-expanded={sessionDesc ? isExpanded : undefined}
         aria-controls={
           sessionTitle
             ? `session-${sessionTitle.replace(/\s+/g, '-').toLowerCase()}`
@@ -60,39 +64,47 @@ function SessionCard({
         className="flex w-full items-center justify-between p-3 text-black md:px-8 lg:px-14"
       >
         <div className="flex items-center text-left">
-          <div className="hidden shrink-0 overflow-hidden rounded-full md:flex">
-            {speakerAvatars.map((avatar, index) => (
-              <img
-                key={index}
-                src={
-                  avatar == ''
-                    ? `https://ui-avatars.com/api/?name=${speakers[index]}&background=random`
-                    : avatar
-                }
-                alt={`Headshot of ${speakers[index]}`}
-                className="h-40 w-40 object-cover"
-              />
-            ))}
-          </div>
-          <div className="ml-5">
-            <h3 className="font-bold text-primary-950 md:text-xl lg:text-2xl xl:text-3xl">
-              {sessionTitle}
-            </h3>
-            <p className="text-gray-700">by {speakers.join(' & ')}</p>
-            <div className="mt-2.5 flex items-center space-x-4 text-sm sm:space-x-2 sm:text-base">
-              <div className="flex flex-col items-center justify-center sm:flex-row sm:space-x-2">
-                <p>at</p>
-                <p className="whitespace-nowrap font-bold text-slate-500 sm:text-xl md:block lg:text-2xl">
-                  {startTime} - {endTime}
-                </p>
-              </div>
-              <div className="flex flex-col items-center justify-center sm:flex-row sm:space-x-2">
-                <p>in</p>
-                <p className="whitespace-nowrap">
-                  {sessionRoom ? sessionRoom : 'TBD'}
-                </p>
-              </div>
+          {speakerAvatars?.length && (
+            <div className="hidden shrink-0 overflow-hidden rounded-full md:flex">
+              {speakerAvatars.map((avatar, index) => (
+                <img
+                  key={index}
+                  src={
+                    !avatar
+                      ? `https://ui-avatars.com/api/?name=${speakers[index]}&background=random`
+                      : avatar
+                  }
+                  alt={`Headshot of ${speakers[index]}`}
+                  className="h-40 w-40 object-cover"
+                />
+              ))}
             </div>
+          )}
+          <div className="ml-5">
+            {sessionTitle && (
+              <h3 className="font-bold text-primary-950 md:text-xl lg:text-2xl xl:text-3xl">
+                {sessionTitle}
+              </h3>
+            )}
+            <p className="text-gray-700">by {speakers.join(' & ')}</p>
+            {hasSessionInfo && (
+              <div className="mt-2.5 flex items-center space-x-4 text-sm sm:space-x-2 sm:text-base">
+                {hasTimeInfo && (
+                  <div className="flex flex-col items-center justify-center sm:flex-row sm:space-x-2">
+                    <p>at</p>
+                    <p className="whitespace-nowrap font-bold text-slate-500 sm:text-xl md:block lg:text-2xl">
+                      {startTime} - {endTime}
+                    </p>
+                  </div>
+                )}
+                {sessionRoom && (
+                  <div className="flex flex-col items-center justify-center sm:flex-row sm:space-x-2">
+                    <p>in</p>
+                    <p className="whitespace-nowrap">{sessionRoom}</p>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
         {sessionDesc && (
@@ -103,16 +115,14 @@ function SessionCard({
           />
         )}
       </button>
-      {direction == DIRECTION.TOP ? (
+      {isExpanded && sessionDesc && (
         <div
           id={`session-${sessionTitle.replace(/\s+/g, '-').toLowerCase()}`}
-          className="mt-5 w-10/12 pl-12"
+          className="border-t border-gray-600 px-3 pb-10 pt-5 md:px-8 lg:px-14"
         >
-          <p className="whitespace-pre-wrap border-t border-gray-800 pb-10 pt-5 text-justify text-primary-950">
-            {sessionDesc}
-          </p>
+          <p className="whitespace-pre-wrap text-primary-950">{sessionDesc}</p>
         </div>
-      ) : null}
+      )}
     </div>
   )
 }

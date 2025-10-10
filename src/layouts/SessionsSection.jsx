@@ -137,12 +137,12 @@ const SessionsSection = ({
       </div>
 
       <div
-        className={`flex items-center justify-center ${
+        className={`flex w-full  items-center justify-center px-[10%] ${
           isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         {combinedSpeakerData && combinedSpeakerData.length ? (
-          <ul className="grid w-5/6 grid-cols-1 gap-10 py-7">
+          <ul className="grid w-full grid-cols-1 gap-10 py-7">
             {combinedSpeakerData
               .filter((session) => session.track === tabs[activeTab])
               .sort((a, b) => {
@@ -151,7 +151,7 @@ const SessionsSection = ({
                 return timeA < timeB ? -1 : 1
               })
               .map((session) => (
-                <li key={session.id}>
+                <li key={session.id} className="w-full">
                   <SessionCard
                     speakers={session.speakers}
                     speakerAvatars={session.speakerAvatars}
