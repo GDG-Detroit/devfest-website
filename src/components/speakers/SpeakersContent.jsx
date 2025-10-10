@@ -57,9 +57,12 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
       >
         {uniqueSpeakersSortedByFirstName &&
         uniqueSpeakersSortedByFirstName.length ? (
-          <div className="mt-32 grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:mt-36 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="my-16 grid w-full grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {uniqueSpeakersSortedByFirstName.map((speaker, index) => (
-              <div key={speaker.id || `speaker-${index}`}>
+              <div
+                className="flex justify-center"
+                key={speaker.id || `speaker-${index}`}
+              >
                 <SpeakerCard
                   id={speaker.id}
                   name={speaker.name}

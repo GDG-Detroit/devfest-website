@@ -57,7 +57,7 @@ function SessionCard({
             ? `Toggle session details for ${sessionTitle}`
             : `Session: ${sessionTitle}`
         }
-        className="flex w-full items-center justify-between p-3 md:px-8 lg:px-14"
+        className="flex w-full items-center justify-between p-3 text-black md:px-8 lg:px-14"
       >
         <div className="flex items-center text-left">
           <div className="hidden shrink-0 overflow-hidden rounded-full md:flex">
