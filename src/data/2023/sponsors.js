@@ -1,8 +1,8 @@
 import Composables from '@/assets/images/sponsors/Composables.webp'
-import JetBrains from '@/assets/images/sponsors/Jet Brains.webp'
-import LittleCaesars from '@/assets/images/sponsors/Little Caesars.webp'
+import JetBrains from '@/assets/images/sponsors/Jet_Brains.webp'
+import LittleCaesars from '@/assets/images/sponsors/Little_Caesars.webp'
 import MongoDB from '@/assets/images/sponsors/MongoDB.webp'
-import GrandCircus from '@/assets/images/sponsors/Grand Circus.webp'
+import GrandCircus from '@/assets/images/sponsors/Grand_Circus.webp'
 import COMPES from '@/assets/images/sponsors/Compes.webp'
 
 export const sponsorsData = [

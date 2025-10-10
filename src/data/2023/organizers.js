@@ -1,5 +1,5 @@
-import DaveKoziel from '@/assets/images/organizers/Dave Koziol.png'
-import DonWard from '@/assets/images/organizers/Don Ward.png'
+import DaveKoziel from '@/assets/images/organizers/Dave_Koziol.png'
+import DonWard from '@/assets/images/organizers/Don_Ward.png'
 
 export const organizersData = [
   {

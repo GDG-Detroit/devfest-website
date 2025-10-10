@@ -1,4 +1,4 @@
-import LittleCaesars from '@/assets/images/sponsors/Little Caesars.webp'
+import LittleCaesars from '@/assets/images/sponsors/Little_Caesars.webp'
 import AKKODiS from '@/assets/images/sponsors/Akkodis.webp'
 import AXIOM from '@/assets/images/sponsors/AXIOM.webp'
 import SpinDance from '@/assets/images/sponsors/SpinDance.webp'
