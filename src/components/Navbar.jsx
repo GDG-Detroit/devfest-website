@@ -298,7 +298,7 @@ function Navbar() {
       className={`fixed left-0 top-0 z-10 w-full ${
         activeLink === 'landing'
           ? 'bg-primary-400 text-sky-900'
-          : 'bg-white shadow-lg'
+          : 'bg-white text-gray-700 shadow-lg'
       }`}
     >
       {/* Screen Reader Announcements */}
@@ -325,7 +325,11 @@ function Navbar() {
           aria-label={isNavVisible ? 'Close Main Menu' : 'Open Main Menu'}
           aria-expanded={isNavVisible}
           aria-controls="mobile-navigation"
-          className="touch-manipulation rounded border-2 px-4 py-2 transition-colors hover:bg-gray-100 active:bg-gray-200 xl:hidden"
+          className={`touch-manipulation rounded border-2 px-4 py-2 transition-colors xl:hidden ${
+            activeLink === 'landing'
+              ? 'border-sky-900 hover:bg-primary-300 active:bg-primary-200'
+              : 'border-gray-300 hover:bg-gray-100 active:bg-gray-200'
+          }`}
           onClick={(e) => {
             e.preventDefault()
             e.stopPropagation()

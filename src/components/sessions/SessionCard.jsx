@@ -72,7 +72,7 @@ function SessionCard({
             ))}
           </div>
           <div className="ml-5">
-            <h3 className="font-bold md:text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="font-bold text-primary-950 md:text-xl lg:text-2xl xl:text-3xl">
               {sessionTitle}
             </h3>
             <p className="text-gray-700">by {speakers.join(' & ')}</p>
@@ -103,7 +103,7 @@ function SessionCard({
           id={`session-${sessionTitle.replace(/\s+/g, '-').toLowerCase()}`}
           className="mt-5 w-10/12 pl-12"
         >
-          <p className="whitespace-pre-wrap border-t border-gray-700 pb-10 pt-5 text-justify">
+          <p className="whitespace-pre-wrap border-t border-gray-800 pb-10 pt-5 text-justify text-primary-950">
             {sessionDesc}
           </p>
         </div>

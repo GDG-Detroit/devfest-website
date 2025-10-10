@@ -87,7 +87,7 @@ const SessionsSection = ({
             isExpanded ? `Collapse ${year} Sessions` : `Expand ${year} Sessions`
           }
           onClick={toggleExpanded}
-          className="flex cursor-pointer items-center hover:text-gray-600"
+          className="flex cursor-pointer items-center text-black transition-colors hover:text-gray-600"
         >
           <IoChevronDown
             className={`h-10 w-10 shrink-0 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 ${

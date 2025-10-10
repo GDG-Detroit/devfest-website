@@ -22,7 +22,7 @@ const EventList = () => {
           >
             Michigan DevFest Past Events
           </h1>
-          <p className="mx-auto w-5/6 text-center text-lg leading-relaxed lg:w-2/3">
+          <p className="mx-auto w-5/6 text-center text-lg leading-relaxed text-primary-950 lg:w-2/3">
             Michigan DevFest, hosted by GDG-Detroit, has been putting on an
             event for developers in the region for the last decade. It is a
             community-driven event focused on bringing together tech
