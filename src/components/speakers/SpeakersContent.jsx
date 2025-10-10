@@ -25,10 +25,10 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
   return (
     <section
       id="speakers"
-      className="flex flex-col justify-center border-b border-primary p-8 sm:px-10 md:px-14 lg:px-16"
+      className="flex flex-col justify-center border-b border-primary bg-sky-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="relative w-full pt-0">
-        <h2 className="w-full text-center font-russell text-4xl text-white md:text-5xl lg:text-6xl">
+        <h2 className="w-full text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
           {year} Speakers
         </h2>
         <img
@@ -41,10 +41,10 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
             isExpanded ? `Collapse ${year} Speakers` : `Expand ${year} Speakers`
           }
           onClick={toggleExpanded}
-          className="flex cursor-pointer items-center hover:text-gray-600"
+          className="flex cursor-pointer items-center text-black transition-colors hover:text-gray-600"
         >
           <IoChevronDown
-            className={`h-10 w-10 shrink-0 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 ${
+            className={`h-10 w-10 shrink-0 text-sky-900 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 ${
               direction === DIRECTION.TOP && '-scale-y-100'
             } transition-transform duration-100 ease-linear`}
           />

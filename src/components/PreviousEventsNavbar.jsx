@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link, useLocation } from 'react-router-dom'
-import gdgDetroitLogo from '@/assets/images/gdg-detroit-logo.png'
+import gdgDetroitLogo from '@/assets/images/gdg-detroit-logo.svg'
 
 function PreviousEventsNavbar() {
   const [isNavVisible, setIsNavVisible] = useState(false)
@@ -31,7 +31,7 @@ function PreviousEventsNavbar() {
       ref={navRef}
       role="navigation"
       aria-label="Main navigation"
-      className="fixed left-0 top-0 z-10 w-full bg-white shadow-lg"
+      className="fixed left-0 top-0 z-10 w-full bg-white text-gray-700 shadow-lg"
     >
       {/* Screen Reader Announcements */}
       <div aria-live="polite" aria-atomic="true" className="sr-only">
@@ -54,7 +54,7 @@ function PreviousEventsNavbar() {
           aria-label={isNavVisible ? 'Close Main Menu' : 'Open Main Menu'}
           aria-expanded={isNavVisible}
           aria-controls="mobile-navigation"
-          className="touch-manipulation rounded border-2 px-4 py-2 transition-colors hover:bg-gray-100 active:bg-gray-200 xl:hidden"
+          className="touch-manipulation rounded border-2 border-gray-300 px-4 py-2 transition-colors hover:bg-gray-100 active:bg-gray-200 xl:hidden"
           onClick={(e) => {
             e.preventDefault()
             e.stopPropagation()

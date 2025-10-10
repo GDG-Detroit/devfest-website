@@ -6,7 +6,7 @@ function FacilitatorsSection() {
   return (
     <section
       id="facilitators"
-      className="flex flex-col justify-center p-8 sm:px-10 md:px-14 lg:px-16"
+      className="flex flex-col justify-center bg-primary-100 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="relative w-full pt-0">
         <h2 className="w-full text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
