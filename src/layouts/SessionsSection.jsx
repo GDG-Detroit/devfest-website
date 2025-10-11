@@ -72,16 +72,7 @@ const SessionsSection = ({
       id="sessions"
       className="flex flex-col items-center justify-center bg-primary-100 p-8 sm:px-10 md:px-14 lg:px-16"
     >
-      <div className="relative w-full pt-0">
-        <h2 className="w-full text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
-          {year} Sessions
-        </h2>
-        <img
-          src={SessionsLogo}
-          alt="Sessions"
-          className="absolute right-2 top-6 h-10 sm:right-10 sm:h-12 md:right-14 md:top-8 md:h-14 lg:right-16 lg:top-12 lg:h-16"
-          loading="lazy"
-        />
+      <div className="flex w-full justify-between pt-0">
         <button
           aria-label={
             isExpanded ? `Collapse ${year} Sessions` : `Expand ${year} Sessions`
@@ -90,11 +81,20 @@ const SessionsSection = ({
           className="flex cursor-pointer items-center text-black transition-colors hover:text-gray-600"
         >
           <IoChevronDown
-            className={`h-10 w-10 shrink-0 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 ${
+            className={`h-10 w-10 shrink-0 text-sky-900 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 ${
               direction === DIRECTION.TOP && '-scale-y-100'
             } transition-transform duration-100 ease-linear`}
           />
         </button>
+        <h2 className="text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
+          {year} Sessions
+        </h2>
+        <img
+          src={SessionsLogo}
+          alt="Sessions"
+          className="h-10 sm:h-12 md:h-14 lg:h-16"
+          loading="lazy"
+        />
       </div>
       <div
         className={`mt-4 inline-flex w-5/6 items-center justify-between rounded-md bg-black md:w-auto ${
@@ -137,12 +137,12 @@ const SessionsSection = ({
       </div>
 
       <div
-        className={`flex items-center justify-center ${
+        className={`flex w-full  items-center justify-center px-[10%] ${
           isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         {combinedSpeakerData && combinedSpeakerData.length ? (
-          <ul className="grid w-5/6 grid-cols-1 gap-10 py-7">
+          <ul className="grid w-full grid-cols-1 gap-10 py-7">
             {combinedSpeakerData
               .filter((session) => session.track === tabs[activeTab])
               .sort((a, b) => {
@@ -151,7 +151,7 @@ const SessionsSection = ({
                 return timeA < timeB ? -1 : 1
               })
               .map((session) => (
-                <li key={session.id}>
+                <li key={session.id} className="w-full">
                   <SessionCard
                     speakers={session.speakers}
                     speakerAvatars={session.speakerAvatars}
