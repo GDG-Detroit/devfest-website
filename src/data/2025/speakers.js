@@ -1,12 +1,13 @@
 import BrianMcKeiver from '@/assets/images/speakers/Brian_McKeiver.png'
 import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
+import MichaelBower from '@/assets/images/speakers/Michael_Bower.jpg'
 
 export const SpeakersData = [
   {
     id: 1,
     name: 'Michael Bower',
     email: 'thebowershow@gmail.com',
-    avatar: 'https://placehold.co/600x400/DB4437/FFFFFF?text=Michael+Bower',
+    avatar: MichaelBower,
     bio: "Michael Bower is a veteran broadcaster, podcaster, and audiobook narrator with 30+ years behind the mic. He's covered 9/11, the Boston Marathon bombing, and Uvalde for outlets like NBC News Radio, ESPN, and WDFN Detroit. As an audiobook narrator, he's produced more than 150 titles on Audible and brings stories to life with clarity and authenticity. Today, he helps businesses, teams, and audiences understand how AI is reshaping communication and why authenticity has become the most radical—and essential—tool we have.",
     twitter: 'thebowershow',
     linkedIn: 'linkedin.com/in/thebowershow',
