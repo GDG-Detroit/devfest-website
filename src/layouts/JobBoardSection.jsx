@@ -2,7 +2,7 @@
 // This is the Job Board section component for the DevFest website.
 import PropTypes from 'prop-types'
 
-import Kite from '@/assets/images/kite.png'
+import Kite from '@/assets/images/icn-kite.png'
 import { jobBoardData } from '@/data/jobboard'
 
 const JobBoardSection = ({ year = new Date().getFullYear() }) => {
@@ -20,20 +20,19 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
         <img
           src={Kite}
           alt=""
-          className="absolute right-2 top-6 h-12 sm:right-10 md:right-14 md:top-8 lg:right-16 lg:top-12 lg:h-16"
+          className="absolute right-2 top-0 h-12 sm:right-10 md:right-14 md:top-0 lg:right-16 lg:top-0 lg:h-16"
         />
       </div>
 
-      <div className="mx-auto mb-12 max-w-4xl text-center">
+      <div className="mx-auto mb-12 max-w-4xl">
         <p className="mt-6 text-lg leading-8 text-gray-600">
-          This job board is made possible by our generous sponsors spanning from
-          local organizations and regional companies founded in the heart of
-          Detroit to some of the best top global tech companies. They help
-          involuntary provide exclusive opportunities to you, so that you can
-          grow your career in the tech industry. You also get the chance to
-          share your resume online so that our sponsors from Google Developer
-          Groups in Detroit can see your amazing work and be able to reach out
-          to you for exicitng job opportunities to come.
+          This job board is made possible by our generous sponsors, ranging from
+          local Detroit organizations and regional companies to some of the
+          world&apos;s best global tech companies. They voluntarily provide
+          exclusive opportunities so you can grow your tech career. You can
+          share your resume online, allowing sponsors from Google Developer
+          Groups in Detroit to see your work and reach out about exciting job
+          opportunities.
         </p>
       </div>
 
@@ -50,11 +49,11 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
               className="group block"
               aria-label={
                 company.name === 'Resume Drop'
-                  ? "Don't forget to submit your resume so that our awesome sponsors can reach out to you in the future"
-                  : `Make sure to visit ${company.name}'s careers page to find job openings and valuable opportunities`
+                  ? 'Submit your resume at https://bit.ly/midevfest-resume-drop (opens in a new tab)'
+                  : `Visit ${company.name}'s careers page at ${company.website} (opens in a new tab)`
               }
             >
-              <div className="rounded-2xl bg-yellow-200 p-12 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl">
+              <div className="rounded-2xl bg-primary-200 p-12 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl">
                 {/* Circular logo container */}
                 <div className="mx-auto mb-6 flex h-36 w-36 items-center justify-center overflow-hidden rounded-full bg-white shadow-md">
                   <img
