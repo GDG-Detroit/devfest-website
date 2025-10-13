@@ -26,10 +26,14 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
 
       <div className="mx-auto mb-12 max-w-4xl text-center">
         <p className="mt-6 text-lg leading-8 text-gray-600">
-          This job board is made possible by our generous sponsors. It features
-          exclusive opportunities from leading companies in the tech industry.
-          Only sponsors at the Platinum level and above have the privilege of
-          being featured here, giving you direct access to top employers.
+          This job board is made possible by our generous sponsors spanning from
+          local organizations and regional companies founded in the heart of
+          Detroit to some of the best top global tech companies. They help
+          involuntary provide exclusive opportunities to you, so that you can
+          grow your career in the tech industry. You also get the chance to
+          share your resume online so that our sponsors from Google Developer
+          Groups in Detroit can see your amazing work and be able to reach out
+          to you for exicitng job opportunities to come.
         </p>
       </div>
 
