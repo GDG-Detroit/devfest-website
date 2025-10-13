@@ -24,6 +24,15 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
         />
       </div>
 
+      <div className="mx-auto mb-12 max-w-4xl text-center">
+        <p className="mt-6 text-lg leading-8 text-gray-600">
+          This job board is made possible by our generous sponsors. It features
+          exclusive opportunities from leading companies in the tech industry.
+          Only sponsors at the Platinum level and above have the privilege of
+          being featured here, giving you direct access to top employers.
+        </p>
+      </div>
+
       {/* Job Board Grid - 3x2 layout */}
       <div className="mx-auto mt-8 max-w-4xl sm:mt-10 md:mt-14 lg:mt-16">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
