@@ -52,11 +52,11 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
             >
               <div className="rounded-2xl bg-yellow-200 p-12 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl">
                 {/* Circular logo container */}
-                <div className="mx-auto mb-6 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full bg-white shadow-md">
+                <div className="mx-auto mb-6 flex h-36 w-36 items-center justify-center overflow-hidden rounded-full bg-white shadow-md">
                   <img
                     src={company.logo}
                     alt={`${company.name} logo`}
-                    className="h-20 w-20 object-contain"
+                    className="h-24 w-24 object-contain"
                   />
                 </div>
                 {/* Company name */}
