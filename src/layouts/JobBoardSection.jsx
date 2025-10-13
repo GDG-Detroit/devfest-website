@@ -19,7 +19,7 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
         </h2>
         <img
           src={Kite}
-          alt="Job Board"
+          alt=""
           className="absolute right-2 top-6 h-12 sm:right-10 md:right-14 md:top-8 lg:right-16 lg:top-12 lg:h-16"
         />
       </div>
@@ -31,23 +31,27 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
           {jobBoardData.map((company) => (
             <a
               key={company.id}
-              href={company.careersPage}
+              href={company.website}
               target="_blank"
               rel="noopener noreferrer"
               className="group block"
-              aria-label={`Visit ${company.name} careers page`}
+              aria-label={
+                company.name === 'Resume Drop'
+                  ? "Don't forget to submit your resume so that our awesome sponsors can reach out to you in the future"
+                  : `Make sure to visit ${company.name}'s careers page to find job openings and valuable opportunities`
+              }
             >
-              <div className="rounded-2xl bg-yellow-200 p-8 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl">
+              <div className="rounded-2xl bg-yellow-200 p-12 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl">
                 {/* Circular logo container */}
-                <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-white shadow-md">
+                <div className="mx-auto mb-6 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full bg-white shadow-md">
                   <img
                     src={company.logo}
                     alt={`${company.name} logo`}
-                    className="h-16 w-16 object-contain"
+                    className="h-20 w-20 object-contain"
                   />
                 </div>
                 {/* Company name */}
-                <h3 className="text-center text-lg font-semibold text-gray-800">
+                <h3 className="flex h-14 items-center justify-center text-center text-lg font-semibold text-gray-800">
                   {company.name}
                 </h3>
               </div>
