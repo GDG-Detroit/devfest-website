@@ -1,10 +1,10 @@
 // Job Board data for displaying companies and their job opportunities
-import ccsLogo from '@/assets/images/job-board/Copy-of-CCS_logo-scaled.jpg'
-import dteLogo from '@/assets/images/job-board/DTE_Lettermark_RGB.jpg'
-import grandCircusLogo from '@/assets/images/job-board/Grand Circus Logo-03.png'
-import compassLogo from '@/assets/images/job-board/compassLogo_Final.svg'
-import googleLogo from '@/assets/images/job-board/google-logo-3872642517.png'
-import ibmLogo from '@/assets/images/job-board/rebus_blue70_on_blue20.svg'
+import ccsLogo from '@/assets/images/job-board/ccs-logo.png'
+import dteLogo from '@/assets/images/job-board/dte-logo.png'
+import grandCircusLogo from '@/assets/images/job-board/grand-circus-logo.png'
+import compassLogo from '@/assets/images/job-board/compass-logo.svg'
+import googleLogo from '@/assets/images/job-board/google-logo.png'
+import ibmLogo from '@/assets/images/job-board/ibm-logo.svg'
 
 export const jobBoardData = [
   {
