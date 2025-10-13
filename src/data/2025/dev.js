@@ -53,6 +53,7 @@ export const devTeamData = [
   },
   {
     name: 'Kaylee Busenbark',
+    linkedin: 'https://www.linkedin.com/in/kaylee-busenbark',
     github: 'https://github.com/kaybusenbark',
     university: 'University Of Michigan Dearborn',
     organization: '',
