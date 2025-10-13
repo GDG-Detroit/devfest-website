@@ -9,6 +9,8 @@ import date300Webp from '@/assets/images/date2-300x100.webp'
 import date400Png from '@/assets/images/date2-400x141.png'
 import date400Webp from '@/assets/images/date2-400x141.webp'
 import ResponsiveImage from '@/components/ui/ResponsiveImage'
+import CTAButton from '@/components/ui/CTAButton'
+import { FaTicketAlt, FaPenAlt } from 'react-icons/fa'
 
 function LandingSection() {
   return (
@@ -51,15 +53,21 @@ function LandingSection() {
               weekend of networking, innovation, and knowledge sharing for all
               involved.
             </p>
-            <a
-              href="https://www.papercall.io/midevfest2025"
-              target="_blank"
-              className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
-              rel="noreferrer"
-            >
-              {' '}
-              APPLY TO SPEAK
-            </a>
+            <div className="flex flex-row gap-8">
+              <CTAButton
+                href="https://bit.ly/midevfest25"
+                label="GET TICKETS"
+                icon={<FaTicketAlt />}
+                ariaLabel="Get your tickets today for Michigan DevFest 2025"
+              />
+              <CTAButton
+                href="https://www.papercall.io/midevfest2025"
+                label="APPLY TO SPEAK"
+                icon={<FaPenAlt />}
+                variant="secondary"
+                ariaLabel="Apply to speak at Michigan DevFest 2025"
+              />
+            </div>
           </div>
         </div>
       </div>
