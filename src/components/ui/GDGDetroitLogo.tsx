@@ -6,6 +6,7 @@ function GDGDetroitLogo({ textColor = '#404040', className = '' }) {
       width="211"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      title="GDG Detroit Logo"
     >
       <clipPath id="a">
         <path d="m0 0h211v64h-211z" />
