@@ -6,7 +6,7 @@ import PartnersSection from '@/layouts/PartnersSection'
 import SessionsSection from '@/layouts/SessionsSection'
 import SpeakersSection from '@/layouts/SpeakersSection'
 
-import { partnersData } from '@/data/partners'
+import { partnersData } from '@/data/2025/partners'
 import { SpeakersData as Speakers2025 } from '@/data/2025/speakers'
 
 function Home() {
