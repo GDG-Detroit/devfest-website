@@ -3,7 +3,7 @@
 import PropTypes from 'prop-types'
 
 import Kite from '@/assets/images/icn-kite.png'
-import { jobBoardData } from '@/data/jobboard'
+import { jobBoardData } from '@/data/2025/jobboard'
 
 const JobBoardSection = ({ year = new Date().getFullYear() }) => {
   const isCurrentYear = year === new Date().getFullYear()
