@@ -58,7 +58,7 @@ const GenericCard = ({
 
           {onOpen && (
             <button
-              className={`inline-flex items-center rounded-lg bg-gray-50 px-3 py-2 text-xs font-medium text-gray-700 opacity-0 transition-all duration-200 hover:bg-gray-100 group-hover:opacity-100 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600  ${
+              className={`inline-flex items-center rounded-lg bg-gray-50 px-3 py-2 text-xs font-medium text-gray-700 opacity-0 transition-all duration-200 hover:bg-gray-100 group-hover:opacity-100 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 ${
                 onOpen &&
                 'cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-[1.025]'
               }`}
