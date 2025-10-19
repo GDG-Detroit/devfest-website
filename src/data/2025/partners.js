@@ -1,6 +1,18 @@
 import CompassDetroit from '@/assets/images/sponsors/Compass_Detroit_logo.webp'
 import Google from '@/assets/images/sponsors/Google_logo.webp'
-
+import SHPEDetroit from '@/assets/images/organizations/shpe.png'
+import WomenTechmakers from '@/assets/images/organizations/women-techmakers-140h.webp'
+import GDGDetroit from '@/assets/images/organizations/org-gdg-detroit.png'
+import GDGAnnArbor from '@/assets/images/organizations/org-gdg-a2.png'
+import GDGToledo from '@/assets/images/organizations/org-gdg-toledo.png'
+import GDGWindsor from '@/assets/images/organizations/org-gdg-windsor.png'
+import GDGUofMDearborn from '@/assets/images/organizations/org-gdg-umd.png'
+import GDGWSU from '@/assets/images/organizations/org-gdg-wsu.png'
+import NSBEDetroit from '@/assets/images/organizations/National_Society_of_Black_Engineers_logo.webp'
+import WSU from '@/assets/images/organizations/Wayne_State_University_seal.webp'
+import IBM from '@assets/images/sponsors/rebus_blue70_on_blue20-260h.webp'
+import DTE from '@assets/images/sponsors/DTE_Lettermark_RGB.webp'
+import CCS from '@assets/images/sponsors/CCS_logo.webp'
 // Partners data combining sponsors and organizations
 // Organized by tier: Platinum, Diamond, Gold, and Organizations
 
@@ -29,7 +41,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 3,
       name: 'Wayne State University',
-      logo: '', // Logo to be added
+      logo: WSU, // Logo to be added
       desc: 'Wayne State University is a premier urban research university offering more than 380 academic programs through 13 schools and colleges.',
       url: 'https://wayne.edu/',
       tier: 'Diamond Sponsor',
@@ -39,7 +51,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 4,
       name: 'IBM',
-      logo: '', // Logo to be added
+      logo: IBM, // Logo to be added
       desc: 'IBM is a global technology and innovation company with expertise in hybrid cloud, AI, and consulting services.',
       url: 'https://www.ibm.com/',
       tier: 'Gold Sponsor',
@@ -47,7 +59,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 5,
       name: 'DTE',
-      logo: '', // Logo to be added
+      logo: DTE, // Logo to be added
       desc: 'DTE Energy is a Detroit-based diversified energy company involved in the development and management of energy-related businesses and services.',
       url: 'https://www.dteenergy.com/',
       tier: 'Gold Sponsor',
@@ -55,7 +67,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 6,
       name: 'CCS',
-      logo: '', // Logo to be added
+      logo: CCS, // Logo to be added
       desc: 'College for Creative Studies is a private art and design school in Detroit, Michigan.',
       url: 'https://www.collegeforcreativestudies.edu/',
       tier: 'Gold Sponsor',
@@ -65,7 +77,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 7,
       name: 'GDG Detroit',
-      logo: '', // Logo to be added
+      logo: GDGDetroit,
       desc: 'Google Developer Group Detroit is a community of developers interested in Google technologies.',
       url: 'https://gdg.community.dev/gdg-detroit/',
       tier: 'Organization',
@@ -73,7 +85,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 8,
       name: 'GDG Ann Arbor',
-      logo: '', // Logo to be added
+      logo: GDGAnnArbor,
       desc: 'Google Developer Group Ann Arbor is a community of developers interested in Google technologies.',
       url: 'https://gdg.community.dev/gdg-ann-arbor/',
       tier: 'Organization',
@@ -81,7 +93,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 9,
       name: 'GDG Toledo',
-      logo: '', // Logo to be added
+      logo: GDGToledo,
       desc: 'Google Developer Group Toledo is a community of developers interested in Google technologies.',
       url: 'https://gdg.community.dev/gdg-toledo/',
       tier: 'Organization',
@@ -89,7 +101,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 10,
       name: 'GDG Windsor',
-      logo: '', // Logo to be added
+      logo: GDGWindsor,
       desc: 'Google Developer Group Windsor is a community of developers interested in Google technologies.',
       url: 'https://gdg.community.dev/gdg-windsor/',
       tier: 'Organization',
@@ -97,15 +109,15 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 11,
       name: 'GDG UofM Dearborn',
-      logo: '', // Logo to be added
+      logo: GDGUofMDearborn,
       desc: 'Google Developer Group at University of Michigan-Dearborn is a student chapter interested in Google technologies.',
       url: 'https://gdg.community.dev/gdg-uofm-dearborn/',
       tier: 'Organization',
     },
     {
       id: 12,
-      name: 'GDG WSU',
-      logo: '', // Logo to be added
+      name: 'GDG Wayne State University',
+      logo: GDGWSU,
       desc: 'Google Developer Group at Wayne State University is a student chapter interested in Google technologies.',
       url: 'https://gdg.community.dev/gdg-wsu/',
       tier: 'Organization',
@@ -113,7 +125,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 13,
       name: 'Women Techmakers',
-      logo: '', // Logo to be added
+      logo: WomenTechmakers, // Logo to be added
       desc: 'Women Techmakers is a global program providing visibility, community, and resources for women in technology.',
       url: 'https://www.womentechmakers.com/',
       tier: 'Organization',
@@ -121,7 +133,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 14,
       name: 'NSBE Detroit',
-      logo: '', // Logo to be added
+      logo: NSBEDetroit, // Logo to be added
       desc: 'National Society of Black Engineers Detroit Professional Chapter supports Black engineers and their communities.',
       url: 'https://www.nsbedetroit.org/',
       tier: 'Organization',
@@ -129,7 +141,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 15,
       name: 'SHPE Detroit',
-      logo: '', // Logo to be added
+      logo: SHPEDetroit, // Logo to be added
       desc: 'Society of Hispanic Professional Engineers Detroit chapter empowers the Hispanic community to realize their full potential.',
       url: 'https://www.shpe.org/',
       tier: 'Organization',
