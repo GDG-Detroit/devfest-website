@@ -10,9 +10,9 @@ import GDGUofMDearborn from '@/assets/images/organizations/org-gdg-umd.png'
 import GDGWSU from '@/assets/images/organizations/org-gdg-wsu.png'
 import NSBEDetroit from '@/assets/images/organizations/National_Society_of_Black_Engineers_logo.webp'
 import WSU from '@/assets/images/organizations/Wayne_State_University_seal.webp'
-import IBM from '@assets/images/sponsors/rebus_blue70_on_blue20-260h.webp'
-import DTE from '@assets/images/sponsors/DTE_Lettermark_RGB.webp'
-import CCS from '@assets/images/sponsors/CCS_logo.webp'
+import IBM from '@/assets/images/sponsors/rebus_blue70_on_blue20-260h.webp'
+import DTE from '@/assets/images/sponsors/DTE_Lettermark_RGB.webp'
+import CCS from '@/assets/images/sponsors/CCS_logo.webp'
 // Partners data combining sponsors and organizations
 // Organized by tier: Platinum, Diamond, Gold, and Organizations
 
@@ -41,7 +41,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 3,
       name: 'Wayne State University',
-      logo: WSU, // Logo to be added
+      logo: WSU,
       desc: 'Wayne State University is a premier urban research university offering more than 380 academic programs through 13 schools and colleges.',
       url: 'https://wayne.edu/',
       tier: 'Diamond Sponsor',
@@ -51,7 +51,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 4,
       name: 'IBM',
-      logo: IBM, // Logo to be added
+      logo: IBM,
       desc: 'IBM is a global technology and innovation company with expertise in hybrid cloud, AI, and consulting services.',
       url: 'https://www.ibm.com/',
       tier: 'Gold Sponsor',
@@ -59,7 +59,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 5,
       name: 'DTE',
-      logo: DTE, // Logo to be added
+      logo: DTE,
       desc: 'DTE Energy is a Detroit-based diversified energy company involved in the development and management of energy-related businesses and services.',
       url: 'https://www.dteenergy.com/',
       tier: 'Gold Sponsor',
@@ -67,7 +67,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 6,
       name: 'CCS',
-      logo: CCS, // Logo to be added
+      logo: CCS,
       desc: 'College for Creative Studies is a private art and design school in Detroit, Michigan.',
       url: 'https://www.collegeforcreativestudies.edu/',
       tier: 'Gold Sponsor',
@@ -125,7 +125,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 13,
       name: 'Women Techmakers',
-      logo: WomenTechmakers, // Logo to be added
+      logo: WomenTechmakers,
       desc: 'Women Techmakers is a global program providing visibility, community, and resources for women in technology.',
       url: 'https://www.womentechmakers.com/',
       tier: 'Organization',
@@ -133,7 +133,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 14,
       name: 'NSBE Detroit',
-      logo: NSBEDetroit, // Logo to be added
+      logo: NSBEDetroit,
       desc: 'National Society of Black Engineers Detroit Professional Chapter supports Black engineers and their communities.',
       url: 'https://www.nsbedetroit.org/',
       tier: 'Organization',
@@ -141,7 +141,7 @@ We are committed to significantly improving the lives of as many people as possi
     {
       id: 15,
       name: 'SHPE Detroit',
-      logo: SHPEDetroit, // Logo to be added
+      logo: SHPEDetroit,
       desc: 'Society of Hispanic Professional Engineers Detroit chapter empowers the Hispanic community to realize their full potential.',
       url: 'https://www.shpe.org/',
       tier: 'Organization',
