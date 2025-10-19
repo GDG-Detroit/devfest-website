@@ -26,7 +26,7 @@ export const devTeamData = [
     devfest: 'devteam',
     university: '',
     organization: 'Shrinkray Interactive + GDG Toledo + Toledo Codes',
-    role: 'UX Engineer',
+    role: 'SeniorUX Engineer',
     avatar: GregMiller,
   },
   {
