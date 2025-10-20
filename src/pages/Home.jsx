@@ -1,5 +1,6 @@
 import { PageLayout } from '@/layouts/PageLayout'
 import TeamSection from '@/layouts/TeamSection'
+import JobBoardSection from '@/layouts/JobBoardSection'
 import LandingSection from '@/layouts/LandingSection'
 import LocationSection from '@/layouts/LocationSection'
 import PartnersSection from '@/layouts/PartnersSection'
@@ -24,6 +25,7 @@ function Home() {
         defaultExpanded
       />
       <PartnersSection year={2025} partnersData={partnersData} />
+      <JobBoardSection year={2025} />
       <SpeakersSection
         year={2025}
         speakersData={Speakers2025}

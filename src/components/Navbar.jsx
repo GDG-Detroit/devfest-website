@@ -78,7 +78,7 @@ function Navbar() {
       { id: 'location', text: 'Location' },
       { id: 'sessions', text: 'Sessions' },
       { id: 'partners', text: 'Partners' },
-      // { id: 'jobboard', text: 'Job Board' },
+      { id: 'jobboard', text: 'Job Board' },
       { id: 'speakers', text: 'Speakers' },
       { id: 'devteam', text: 'Dev Team' },
     ],
