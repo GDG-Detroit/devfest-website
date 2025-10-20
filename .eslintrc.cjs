@@ -31,6 +31,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'tailwindcss/no-custom-classname': 'off',
+    'tailwindcss/classnames-order': 'off',
   },
   globals: {
     __dirname: true,
