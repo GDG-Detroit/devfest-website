@@ -65,7 +65,7 @@ function SessionCard({
       >
         <div className="flex items-center text-left">
           {speakerAvatars?.length && (
-            <div className="hidden shrink-0 overflow-hidden rounded-full md:flex">
+            <div className="shrink-0 overflow-hidden rounded-full md:flex">
               {speakerAvatars.map((avatar, index) => (
                 <img
                   key={index}

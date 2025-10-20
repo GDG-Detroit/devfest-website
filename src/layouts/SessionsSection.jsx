@@ -72,7 +72,7 @@ const SessionsSection = ({
   return (
     <section
       id="sessions"
-      className="flex flex-col items-center justify-center bg-primary-100 p-8 sm:px-10 md:px-14 lg:px-16"
+      className="flex flex-col items-center justify-center bg-primary-100 p-4 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="flex w-full justify-between pt-0">
         <button
@@ -99,7 +99,7 @@ const SessionsSection = ({
         />
       </div>
       <div
-        className={`mt-4 inline-flex w-5/6 items-center justify-between rounded-md bg-black md:w-full ${
+        className={`mt-4 flex w-full flex-wrap items-center justify-between rounded-md bg-black md:inline-flex md:flex-nowrap ${
           isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
@@ -107,7 +107,7 @@ const SessionsSection = ({
           <React.Fragment key={tab}>
             {index !== 0 && (
               <div
-                className={`h-5 w-1 bg-primary-400 ${
+                className={`hidden h-5 w-1 bg-primary-400 md:block ${
                   [activeTab, activeTab + 1].includes(index) && 'invisible'
                 }`}
               />
@@ -115,7 +115,7 @@ const SessionsSection = ({
 
             <button
               key={tab}
-              className={`relative grow rounded-md px-1 py-2 text-lg font-medium transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 ${
+              className={`relative rounded-md px-1 py-2 text-sm font-medium transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 lg:text-lg ${
                 activeTab === index
                   ? 'bg-primary-400 text-black'
                   : 'bg-black text-white'
@@ -131,7 +131,7 @@ const SessionsSection = ({
                 tab
               )}
               {activeTab === index && (
-                <div className="absolute -bottom-3 left-1/2 h-0 w-0 -translate-x-1/2 border-x-[12px] border-t-[12px] border-primary-400 border-x-transparent"></div>
+                <div className="absolute -bottom-3 left-1/2 h-0 w-0 -translate-x-1/2 border-x-[12px] border-t-[12px] border-primary-400 border-x-transparent md:block"></div>
               )}
             </button>
           </React.Fragment>
@@ -139,7 +139,7 @@ const SessionsSection = ({
       </div>
 
       <div
-        className={`flex w-full  items-center justify-center px-[10%] ${
+        className={`flex w-full  items-center justify-center px-[2.5%] md:px-[5%] ${
           isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
