@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react'
 import DevLogo from '@/assets/images/icn-dev.png'
 import { devTeamData } from '@/data/dev'
 import LinkedInHandle from '@/components/ui/LinkedInHandle'
@@ -5,6 +6,40 @@ import GithubHandle from '@/components/ui/GithubHandle'
 import TwitterHandle from '@/components/ui/TwitterHandleDev'
 
 const DevTeamSection = () => {
+  const [selectedBio, setSelectedBio] = useState(null)
+  const modalRef = useRef(null)
+  const closeButtonRef = useRef(null)
+
+  // Handle Escape key to close modal
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && selectedBio) {
+        setSelectedBio(null)
+      }
+    }
+
+    document.addEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape)
+  }, [selectedBio])
+
+  // Focus management and body scroll lock
+  useEffect(() => {
+    if (selectedBio) {
+      // Lock body scroll
+      document.body.style.overflow = 'hidden'
+
+      // Focus the close button when modal opens
+      closeButtonRef.current?.focus()
+    } else {
+      // Restore body scroll
+      document.body.style.overflow = ''
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [selectedBio])
+
   return (
     <section
       id="devteam"
@@ -34,7 +69,7 @@ const DevTeamSection = () => {
             {devTeamData.map((dev) => (
               <li
                 key={`dev-${dev.id}`}
-                className="relative rounded-xl border border-gray-200 bg-white p-4 shadow-lg"
+                className="relative rounded-xl border border-gray-200 bg-white p-4 pb-12 shadow-lg"
               >
                 <div className="flex">
                   <div className="flex w-24 shrink-0 flex-col items-center">
@@ -70,11 +105,72 @@ const DevTeamSection = () => {
                     </p>
                   </div>
                 </div>
+                {dev.bio && (
+                  <button
+                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-primary-500 px-4 py-1.5 text-sm font-medium text-white shadow-md transition-colors hover:bg-primary-600"
+                    onClick={() =>
+                      setSelectedBio({ name: dev.name, bio: dev.bio })
+                    }
+                  >
+                    View Bio
+                  </button>
+                )}
               </li>
             ))}
           </ul>
         </div>
       </div>
+
+      {/* Bio Modal */}
+      {selectedBio && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+          role="presentation"
+          onClick={(e) => {
+            // Only close if clicking the backdrop, not the modal content
+            if (e.target === e.currentTarget) {
+              setSelectedBio(null)
+            }
+          }}
+        >
+          <div
+            ref={modalRef}
+            className="relative max-w-lg rounded-lg bg-white p-6 shadow-xl"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+          >
+            <button
+              ref={closeButtonRef}
+              className="absolute right-4 top-4 text-gray-400 transition-colors hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+              onClick={() => setSelectedBio(null)}
+              aria-label="Close dialog"
+            >
+              <svg
+                className="size-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <h3
+              id="modal-title"
+              className="mb-4 pr-8 text-xl font-semibold text-gray-900"
+            >
+              {selectedBio.name}
+            </h3>
+            <p className="text-gray-700">{selectedBio.bio}</p>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
