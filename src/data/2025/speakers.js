@@ -1,10 +1,16 @@
+import BandhanKaur from '@/assets/images/speakers/Bandhan_Kaur.jpeg'
 import BrianMcKeiver from '@/assets/images/speakers/Brian_McKeiver.png'
 import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
-import MichaelBower from '@/assets/images/speakers/Michael_Bower.jpg'
-import BandhanKaur from '@/assets/images/speakers/Bandhan_Kaur.jpeg'
+import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
 import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
-import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.jpeg'
+import JC_Escalante from '@/assets/images/speakers/JC_Escalante.jpeg'
+import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpeg'
 import KavithaBangalore from '@/assets/images/speakers/Kavitha_Bangalore.jpg'
+import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.jpeg'
+import MichaelBower from '@/assets/images/speakers/Michael_Bower.jpg'
+import StephanieFrantz from '@/assets/images/speakers/Stephanie_Frantz.jpeg'
+import WEDaCruz from '@/assets/images/speakers/WE_Da_Cruz.jpeg'
+import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
 
 export const SpeakersData = [
   {
@@ -87,8 +93,7 @@ export const SpeakersData = [
   {
     name: 'W. Scott Richardson',
     email: 'zurielseven@gmail.com',
-    avatar:
-      'https://placehold.co/600x400/0F9D58/FFFFFF?text=W.+Scott+Richardson',
+    avatar: WScottRichardson,
     bio: `
       W. Scott Richardson is an award-winning Aerospace Engineer, working for Altair Engineering as an Architect of Learning Experience Design for Computer Aided Engineering.  Scott has been an active volunteer both as the Global Community Outreach chair for Altair's ABERN ERG community development as well as with the National Society of Black Engineers Metro Detroit chapter over the past half decade.
 
@@ -240,13 +245,13 @@ export const SpeakersData = [
   {
     name: 'W.E. Da’ Cruz',
     email: null,
-    avatar: 'https://placehold.co/600x400/0F9D58/FFFFFF?text=W.E.+Da%27+Cruz',
+    avatar: WEDaCruz,
     bio: null,
     twitter: null,
-    linkedIn: null,
+    linkedIn: 'https://www.linkedin.com/in/wedacruz/',
     url: null,
-    organization: null,
-    position: 'Digital Diplomat and Entrepreneur',
+    organization: 'The Digital Diplomat',
+    position: 'Entrepreneur',
     session: {
       title: 'Women Shaping the Future Panel',
       abstract:
@@ -262,10 +267,10 @@ export const SpeakersData = [
   {
     name: 'Jeseekia Vaughn',
     email: null,
-    avatar: 'https://placehold.co/600x400/0F9D58/FFFFFF?text=Jeseekia+Vaughn',
+    avatar: JeseekiaVaughn,
     bio: null,
     twitter: null,
-    linkedIn: null,
+    linkedIn: 'https://www.linkedin.com/in/jeseekiavaughn/',
     url: null,
     organization: 'Detroit Black Tech and 313 Connect at TechTown',
     position: null,
@@ -282,15 +287,15 @@ export const SpeakersData = [
     },
   },
   {
-    name: 'Stephaine Frantz',
+    name: 'Stephanie Frantz',
     email: null,
-    avatar: 'https://placehold.co/600x400/0F9D58/FFFFFF?text=Stephaine+Frantz',
+    avatar: StephanieFrantz,
     bio: null,
     twitter: null,
-    linkedIn: null,
+    linkedIn: 'https://www.linkedin.com/in/stephanielage/',
     url: null,
     organization: 'Cengage Education',
-    position: null,
+    position: 'Lead DevOps Engineer',
     session: {
       title: 'Women Shaping the Future Panel',
       abstract:
@@ -306,13 +311,13 @@ export const SpeakersData = [
   {
     name: 'Cynthia Respert',
     email: null,
-    avatar: 'https://placehold.co/600x400/0F9D58/FFFFFF?text=Cynthia+Respert',
+    avatar: CynthiaRespert,
     bio: null,
     twitter: null,
-    linkedIn: null,
+    linkedIn: 'https://www.linkedin.com/in/cynthiarespert/',
     url: null,
     organization: 'BuildHer Academy and Rebrand City',
-    position: null,
+    position: 'Founder & COO + Strategic Partner',
     session: {
       title: 'Women Shaping the Future Panel',
       abstract:
@@ -328,7 +333,7 @@ export const SpeakersData = [
   {
     name: 'JC Escalante',
     email: 'jcskalant@gmail.com',
-    avatar: 'https://placehold.co/600x400/0F9D58/FFFFFF?text=JC+Escalante',
+    avatar: JC_Escalante,
     bio: `
       Hi, I'm JC. For over 20 years, my focus has been translating deep technical vision into tangible business value and guiding products from concept to launch.
       
@@ -340,7 +345,7 @@ export const SpeakersData = [
     linkedIn: null,
     url: null,
     organization: 'Ipsos',
-    position: null,
+    position: 'President, of Artificial Intelligence',
     session: {
       title:
         'Beyond the Black Box - Designing for trust and transparency with Google Cloud',
