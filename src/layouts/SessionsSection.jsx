@@ -131,7 +131,7 @@ const SessionsSection = ({
                 tab
               )}
               {activeTab === index && (
-                <div className="absolute -bottom-3 left-1/2 h-0 w-0 -translate-x-1/2 border-x-[12px] border-t-[12px] border-primary-400 border-x-transparent md:block"></div>
+                <div className="absolute -bottom-3 left-1/2 hidden h-0 w-0 -translate-x-1/2 border-x-[12px] border-t-[12px] border-primary-400 border-x-transparent md:block"></div>
               )}
             </button>
           </React.Fragment>
