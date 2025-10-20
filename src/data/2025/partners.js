@@ -1,6 +1,6 @@
 import CompassDetroit from '@/assets/images/sponsors/Compass_Detroit_logo.webp'
 import Google from '@/assets/images/sponsors/Google_logo.webp'
-import SHPEDetroit from '@/assets/images/organizations/shpe.png'
+import SHPEDetroit from '@/assets/images/organizations/org-shpe-logo.webp'
 import WomenTechmakers from '@/assets/images/organizations/org-wtm-logo.webp'
 import GDGDetroit from '@/assets/images/organizations/org-gdg-detroit.png'
 import GDGAnnArbor from '@/assets/images/organizations/org-gdg-a2.png'
