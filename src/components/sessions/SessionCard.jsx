@@ -75,7 +75,7 @@ function SessionCard({
                       : avatar
                   }
                   alt={`Headshot of ${speakers[index]}`}
-                  className="h-40 w-40 object-cover"
+                  className={`${speakerAvatars?.length >= 3 ? 'h-20 w-20 lg:h-32 lg:w-32' : 'h-40 w-40'} object-cover`}
                 />
               ))}
             </div>
