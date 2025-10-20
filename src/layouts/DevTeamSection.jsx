@@ -10,6 +10,16 @@ const DevTeamSection = () => {
   const modalRef = useRef(null)
   const closeButtonRef = useRef(null)
 
+  // Get ribbon color based on role
+  const getRibbonColor = (role) => {
+    const colors = {
+      organizer: 'bg-blue-600',
+      facilitator: 'bg-green-600',
+      devteam: 'bg-amber-500',
+    }
+    return colors[role] || 'bg-primary-500'
+  }
+
   // Handle Escape key to close modal
   useEffect(() => {
     const handleEscape = (e) => {
@@ -47,7 +57,7 @@ const DevTeamSection = () => {
     >
       <div className="flex w-full justify-center pt-0">
         <h2 className="mb-4 w-full text-center font-russell text-4xl text-black md:mb-6 md:text-5xl lg:text-6xl">
-          Dev Team
+          DevFest Team
         </h2>
         <img
           src={DevLogo}
@@ -58,8 +68,10 @@ const DevTeamSection = () => {
       </div>
       <div className="mx-auto max-w-2xl lg:mx-0">
         <p className="prose mt-6 text-lg/8 text-gray-600">
-          We&apos;re a dynamic group of individuals who collaborated to deliver
-          the best results for this event.
+          Our team of 14 includes GDG organizers, session facilitators, and web
+          developers— a mix of university students and industry professionals
+          from companies like IBM, Little Caesars, and local tech agencies.
+          Together, we are bringing DevFest Michigan 2025 to life.
         </p>
       </div>
 
@@ -69,42 +81,59 @@ const DevTeamSection = () => {
             {devTeamData.map((dev) => (
               <li
                 key={`dev-${dev.id}`}
-                className="relative rounded-xl border border-gray-200 bg-white p-4 pb-12 shadow-lg"
+                className="relative rounded-xl border border-gray-200 bg-white shadow-lg"
               >
-                <div className="flex">
-                  <div className="flex w-24 shrink-0 flex-col items-center">
-                    <img
-                      alt=""
-                      src={dev.avatar}
-                      className="size-24 rounded-full outline outline-1 -outline-offset-1 outline-black/5"
-                    />
-                    <div className="mt-2 flex gap-1">
-                      {dev.linkedin && (
-                        <LinkedInHandle
-                          handle={dev.linkedin}
-                          absolute={false}
-                        />
-                      )}
-                      {dev.github && (
-                        <GithubHandle handle={dev.github} absolute={false} />
-                      )}
-                      {dev.twitter && (
-                        <TwitterHandle handle={dev.twitter} absolute={false} />
-                      )}
+                {/* Content wrapper with overflow hidden for ribbon clipping */}
+                <div className="relative overflow-hidden rounded-xl p-4 pb-12">
+                  {/* Ribbon Label */}
+                  <div
+                    className={`ribbon-${
+                      dev.devfest
+                    } z-8 absolute -right-10 top-6 w-40 rotate-45 ${getRibbonColor(
+                      dev.devfest
+                    )} py-1 text-center text-xs font-semibold uppercase tracking-wide text-white shadow-md`}
+                  >
+                    {dev.devfest}
+                  </div>
+                  <div className="flex">
+                    <div className="flex w-24 shrink-0 flex-col items-center">
+                      <img
+                        alt=""
+                        src={dev.avatar}
+                        className="size-24 rounded-full outline outline-1 -outline-offset-1 outline-black/5"
+                      />
+                      <div className="mt-2 flex gap-1">
+                        {dev.linkedin && (
+                          <LinkedInHandle
+                            handle={dev.linkedin}
+                            absolute={false}
+                          />
+                        )}
+                        {dev.github && (
+                          <GithubHandle handle={dev.github} absolute={false} />
+                        )}
+                        {dev.twitter && (
+                          <TwitterHandle
+                            handle={dev.twitter}
+                            absolute={false}
+                          />
+                        )}
+                      </div>
+                    </div>
+                    <div className="ml-4 flex flex-col items-start justify-center gap-2">
+                      <h3 className="mt-6 text-base/7 font-semibold tracking-tight text-gray-900">
+                        {dev.name}
+                      </h3>
+                      <p className="text-left text-sm/6 text-gray-600">
+                        {dev.organization}
+                      </p>
+                      <p className="text-left text-sm/6 text-gray-600">
+                        {dev.role}
+                      </p>
                     </div>
                   </div>
-                  <div className="ml-4 flex flex-col items-start justify-center gap-2">
-                    <h3 className="mt-6 text-base/7 font-semibold tracking-tight text-gray-900">
-                      {dev.name}
-                    </h3>
-                    <p className="text-left text-sm/6 text-gray-600">
-                      {dev.organization}
-                    </p>
-                    <p className="text-left text-sm/6 text-gray-600">
-                      {dev.role}
-                    </p>
-                  </div>
                 </div>
+                {/* Button positioned relative to card, outside overflow container */}
                 {dev.bio && (
                   <button
                     className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-primary-500 px-4 py-1.5 text-sm font-medium text-white shadow-md transition-colors hover:bg-primary-600"
