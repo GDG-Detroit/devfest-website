@@ -51,7 +51,7 @@ const PartnersSection = ({
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="size-full max-w-72 object-contain transition-opacity duration-200 group-hover:opacity-90"
+                  className="size-full object-contain transition-opacity duration-200 group-hover:opacity-90"
                 />
               ) : (
                 <div className="flex h-24 items-center justify-center rounded-lg border-2 border-gray-300 bg-gray-50 px-6">

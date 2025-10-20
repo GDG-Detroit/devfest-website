@@ -79,7 +79,7 @@ const TeamSection = () => {
 
       <div className="">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <ul className="mx-auto mt-20 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-16 text-center sm:grid-cols-2  lg:mx-0 lg:max-w-none xl:grid-cols-3">
+          <ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-center  lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
             {teamData.map((dev) => (
               <li
                 key={`dev-${dev.id}`}
