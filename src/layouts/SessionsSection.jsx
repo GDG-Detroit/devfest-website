@@ -8,6 +8,8 @@ import { DIRECTION } from '@/constants/directions'
 import { IoChevronDown } from 'react-icons/io5'
 
 const convertTo24Hour = (time) => {
+  if (!time) return ''
+
   const [hour, minute] = time.split(':').map(Number)
 
   if (hour === 12) {
