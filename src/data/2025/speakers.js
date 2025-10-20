@@ -345,7 +345,7 @@ export const SpeakersData = [
     linkedIn: null,
     url: null,
     organization: 'Ipsos',
-    position: 'President, of Artificial Intelligence',
+    position: 'President of Artificial Intelligence',
     session: {
       title:
         'Beyond the Black Box - Designing for trust and transparency with Google Cloud',
