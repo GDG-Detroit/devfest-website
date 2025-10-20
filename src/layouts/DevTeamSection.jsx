@@ -2,6 +2,7 @@ import DevLogo from '@/assets/images/icn-dev.png'
 import { devTeamData } from '@/data/dev'
 import LinkedInHandle from '@/components/ui/LinkedInHandle'
 import GithubHandle from '@/components/ui/GithubHandle'
+import TwitterHandle from '@/components/ui/TwitterHandleDev'
 
 const DevTeamSection = () => {
   return (
@@ -15,7 +16,7 @@ const DevTeamSection = () => {
         </h2>
         <img
           src={DevLogo}
-          alt="Dev Team"
+          alt=""
           className="h-10 sm:h-12 md:h-14 lg:h-16"
           loading="lazy"
         />
@@ -42,7 +43,7 @@ const DevTeamSection = () => {
                       src={dev.avatar}
                       className="size-24 rounded-full outline outline-1 -outline-offset-1 outline-black/5"
                     />
-                    <div className="mt-2 flex gap-2">
+                    <div className="mt-2 flex gap-1">
                       {dev.linkedin && (
                         <LinkedInHandle
                           handle={dev.linkedin}
@@ -51,6 +52,9 @@ const DevTeamSection = () => {
                       )}
                       {dev.github && (
                         <GithubHandle handle={dev.github} absolute={false} />
+                      )}
+                      {dev.twitter && (
+                        <TwitterHandle handle={dev.twitter} absolute={false} />
                       )}
                     </div>
                   </div>
