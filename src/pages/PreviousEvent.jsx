@@ -73,7 +73,7 @@ const PreviousEvent = () => {
               className="flex items-center text-primary-950 transition-colors hover:text-primary-800"
             >
               <svg
-                className="mr-2 h-4 w-4"
+                className="mr-2 size-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

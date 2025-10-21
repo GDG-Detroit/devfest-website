@@ -11,8 +11,8 @@ function LocationSection() {
         {/* When Section */}
         <div className="flex justify-center">
           <div className="flex items-center">
-            <div className="mx-2 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
-              <FaClock className="h-6 w-6 text-white" aria-hidden="true" />
+            <div className="mx-2 flex size-11 items-center justify-center rounded-full bg-yellow-500">
+              <FaClock className="size-6 text-white" aria-hidden="true" />
             </div>
             <h2
               id="location-heading"
@@ -46,9 +46,9 @@ function LocationSection() {
           {/* Friday Location Info */}
           <div className="mb-4 flex flex-col lg:mb-0 lg:w-1/2">
             <div className="mb-4 flex items-center">
-              <div className="mx-2 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
+              <div className="mx-2 flex size-11 items-center justify-center rounded-full bg-yellow-500">
                 <FaMapMarkerAlt
-                  className="h-6 w-6 text-white"
+                  className="size-6 text-white"
                   aria-hidden="true"
                 />
               </div>
@@ -117,9 +117,9 @@ function LocationSection() {
           {/* Saturday Location Info */}
           <div className="mb-4 flex flex-col lg:mb-0 lg:w-1/2">
             <div className="mb-4 flex items-center">
-              <div className="mx-2 flex h-11 w-11 items-center justify-center rounded-full bg-yellow-500">
+              <div className="mx-2 flex size-11 items-center justify-center rounded-full bg-yellow-500">
                 <FaMapMarkerAlt
-                  className="h-6 w-6 text-white"
+                  className="size-6 text-white"
                   aria-hidden="true"
                 />
               </div>

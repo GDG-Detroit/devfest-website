@@ -75,7 +75,11 @@ function SessionCard({
                       : avatar
                   }
                   alt={`Headshot of ${speakers[index]}`}
-                  className={`${speakerAvatars?.length >= 3 ? 'h-20 w-20 lg:h-32 lg:w-32' : 'h-40 w-40'} object-cover`}
+                  className={`${
+                    speakerAvatars?.length >= 3
+                      ? 'size-20 lg:size-32'
+                      : 'size-40'
+                  } object-cover`}
                 />
               ))}
             </div>
@@ -109,7 +113,7 @@ function SessionCard({
         </div>
         {sessionDesc && (
           <IoChevronDown
-            className={`h-10 w-10 shrink-0 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 ${
+            className={`size-10 shrink-0 sm:size-14 md:size-16 lg:size-20 ${
               direction === DIRECTION.TOP && '-scale-y-100'
             } transition-transform duration-100 ease-linear`}
           />

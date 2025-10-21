@@ -27,10 +27,10 @@ const GenericCard = ({
 
         <div className="relative -mt-12 flex justify-center">
           <div className="relative">
-            <div className="h-44 w-44 rounded-full bg-white p-1 shadow-lg">
+            <div className="size-44 rounded-full bg-white p-1 shadow-lg">
               <img
                 src={avatar}
-                className="h-full w-full rounded-full object-cover"
+                className="size-full rounded-full object-cover"
                 alt={`${name} portrait`}
                 loading="lazy"
               />
@@ -69,7 +69,7 @@ const GenericCard = ({
               aria-label={onOpen ? `View details for ${name}` : undefined}
             >
               View Details
-              <IoChevronForward className="ml-1 h-3 w-3" />
+              <IoChevronForward className="ml-1 size-3" />
             </button>
           )}
         </div>

@@ -5,7 +5,7 @@ import Mic from '@/assets/images/Mic.svg'
 const SessionTitle = (props) => {
   return (
     <div
-      className="group relative flex h-28 w-28 cursor-pointer flex-row items-center justify-center rounded-full bg-blue-500 p-4 transition-all duration-300 ease-in-out hover:w-full hover:justify-start"
+      className="group relative flex size-28 cursor-pointer flex-row items-center justify-center rounded-full bg-blue-500 p-4 transition-all duration-300 ease-in-out hover:w-full hover:justify-start"
       title="View session title"
     >
       <img className="group-hover:ml-2" src={Mic} alt="Microphone Icon" />

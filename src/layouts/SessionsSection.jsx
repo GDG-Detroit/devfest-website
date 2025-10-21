@@ -83,7 +83,7 @@ const SessionsSection = ({
           className="flex cursor-pointer items-center text-black transition-colors hover:text-gray-600"
         >
           <IoChevronDown
-            className={`h-10 w-10 shrink-0 text-sky-900 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 ${
+            className={`size-10 shrink-0 text-sky-900 sm:size-14 md:size-16 lg:size-20 ${
               direction === DIRECTION.TOP && '-scale-y-100'
             } transition-transform duration-100 ease-linear`}
           />
@@ -131,7 +131,7 @@ const SessionsSection = ({
                 tab
               )}
               {activeTab === index && (
-                <div className="absolute -bottom-3 left-1/2 hidden h-0 w-0 -translate-x-1/2 border-x-[12px] border-t-[12px] border-primary-400 border-x-transparent md:block"></div>
+                <div className="absolute -bottom-3 left-1/2 hidden size-0 -translate-x-1/2 border-x-[12px] border-t-[12px] border-primary-400 border-x-transparent md:block"></div>
               )}
             </button>
           </React.Fragment>

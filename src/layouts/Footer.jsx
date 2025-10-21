@@ -45,7 +45,7 @@ function Footer() {
           }
         >
           <svg
-            className="h-5 w-5 fill-current"
+            className="size-5 fill-current"
             role="img"
             alt="LinkedIn icon"
             title="Share on LinkedIn"

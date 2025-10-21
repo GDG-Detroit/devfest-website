@@ -1,14 +1,13 @@
 import { PageLayout } from '@/layouts/PageLayout'
-import DevTeamSection from '@/layouts/DevTeamSection'
-import FacilitatorsSection from '@/layouts/FacilitatorsSection'
+import TeamSection from '@/layouts/TeamSection'
+import JobBoardSection from '@/layouts/JobBoardSection'
 import LandingSection from '@/layouts/LandingSection'
 import LocationSection from '@/layouts/LocationSection'
-import OrganizersSection from '@/layouts/OrganizersSection'
+import PartnersSection from '@/layouts/PartnersSection'
 import SessionsSection from '@/layouts/SessionsSection'
 import SpeakersSection from '@/layouts/SpeakersSection'
-import SponsorsSection from '@/layouts/SponsorsSection'
 
-import { sponsorsData } from '@/data/sponsors'
+import { partnersData } from '@/data/2025/partners'
 import { SpeakersData as Speakers2025 } from '@/data/2025/speakers'
 
 function Home() {
@@ -33,15 +32,14 @@ function Home() {
         ]}
         defaultExpanded
       />
-      <SponsorsSection year={2025} sponsorsData={sponsorsData} />
-      <OrganizersSection />
-      <FacilitatorsSection />
+      <PartnersSection year={2025} partnersData={partnersData} />
+      <JobBoardSection year={2025} />
       <SpeakersSection
         year={2025}
         speakersData={Speakers2025}
         defaultExpanded
       />
-      <DevTeamSection />
+      <TeamSection />
     </PageLayout>
   )
 }

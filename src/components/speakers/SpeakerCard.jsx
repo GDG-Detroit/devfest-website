@@ -79,7 +79,7 @@ const SpeakerCard = ({
           aria-label="Speaker details modal"
         >
           <button
-            className="absolute inset-0 h-full w-full cursor-default"
+            className="absolute inset-0 size-full cursor-default"
             onClick={handleOverlayClick}
             onKeyDown={handleKeyDown}
             aria-label="Close modal"

@@ -40,7 +40,7 @@ const SponsorsSection = ({
                     alt={sponsor.name}
                     className="h-32 object-contain transition-opacity duration-200 group-hover:opacity-90"
                   />
-                  <div className="invisible absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center overflow-y-hidden rounded bg-black/50 p-4 text-white backdrop-blur-sm transition-all duration-200 group-hover:visible">
+                  <div className="invisible absolute left-0 top-0 flex size-full flex-col items-center justify-center overflow-y-hidden rounded bg-black/50 p-4 text-white backdrop-blur-sm transition-all duration-200 group-hover:visible">
                     <h1 className="mb-2 text-2xl font-semibold md:text-3xl">
                       {sponsor.name}
                     </h1>

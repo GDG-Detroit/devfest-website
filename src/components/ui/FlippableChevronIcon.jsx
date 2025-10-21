@@ -30,7 +30,7 @@ function AnimatedChevronIcon({
       viewBox="0 0 24 24"
       strokeWidth={strokeWidth}
       stroke={strokeColor}
-      className={`transition-transform ${getRotationClass()} h-10 w-10 shrink-0 duration-300 md:h-12 md:w-12 xl:h-20 xl:w-20`}
+      className={`transition-transform ${getRotationClass()} size-10 shrink-0 duration-300 md:size-12 xl:size-20`}
     >
       <path
         strokeLinecap="round"
