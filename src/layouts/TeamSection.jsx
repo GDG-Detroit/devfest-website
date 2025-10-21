@@ -50,6 +50,8 @@ const TeamSection = () => {
     }
   }, [selectedBio])
 
+  const teamCount = teamData.length
+
   return (
     <section
       id="devteam"
@@ -69,11 +71,11 @@ const TeamSection = () => {
 
       <div className="mx-auto flex max-w-full justify-center lg:mx-0">
         <p className="prose mt-6 max-w-2xl text-start text-lg/8 text-gray-600">
-          Our team of 14 includes GDG organizers, session facilitators, and web
-          developers—a mix of university students and industry professionals
-          from companies like IBM, Little Caesars, and tech entrepreneurs with
-          deep expertise in the tech industry. Together, we are bringing{' '}
-          <strong>DevFest Michigan</strong> to life.
+          Our team of {teamCount} includes GDG organizers, session facilitators,
+          and web developers — a mix of university students and industry
+          professionals from companies like IBM, Little Caesars, and tech
+          entrepreneurs with deep expertise in the tech industry. Together, we
+          are bringing <strong>DevFest Michigan</strong> to life.
         </p>
       </div>
 
