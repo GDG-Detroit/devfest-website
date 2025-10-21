@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import DevLogo from '@/assets/images/icn-dev.png'
 import { teamData } from '@/data/team'
 import ProfileCard from '@/components/ui/ProfileCard'
+import CloseIcon from '@/components/ui/CloseIcon'
 
 const TeamSection = () => {
   const [selectedBio, setSelectedBio] = useState(null)
@@ -111,27 +112,12 @@ const TeamSection = () => {
             aria-modal="true"
             aria-labelledby="modal-title"
           >
-            <button
+            <CloseIcon
               ref={closeButtonRef}
-              className="absolute right-4 top-4 text-gray-400 transition-colors hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
               onClick={() => setSelectedBio(null)}
-              aria-label="Close dialog"
-            >
-              <svg
-                className="size-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
+              className="absolute right-4 top-4"
+              label="Close dialog"
+            />
             <h3
               id="modal-title"
               className="mb-4 pr-8 text-xl font-semibold text-gray-900"
