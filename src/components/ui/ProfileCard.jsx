@@ -63,7 +63,9 @@ const ProfileCard = ({
         {/* Ribbon Label */}
         {ribbonLabel && (
           <div
-            className={`ribbon-${devfest} absolute -right-10 top-6 z-10 w-40 rotate-45 ${ribbonColor} py-1 text-center text-xs font-semibold uppercase tracking-wide text-white shadow-md`}
+            className={`${
+              devfest ? `ribbon-${devfest}` : `ribbon-${track}`
+            } absolute -right-10 top-6 z-10 w-40 rotate-45 ${ribbonColor} py-1 text-center text-xs font-semibold uppercase tracking-wide text-white shadow-md`}
           >
             {ribbonLabel}
           </div>

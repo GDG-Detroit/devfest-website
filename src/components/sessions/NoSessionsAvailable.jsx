@@ -25,8 +25,8 @@ const NoSessionsAvailable = ({ currentSession }) => {
   )
 }
 
-export default NoSessionsAvailable
-
 NoSessionsAvailable.propTypes = {
   currentSession: PropTypes.string.isRequired,
 }
+
+export default NoSessionsAvailable
