@@ -128,8 +128,8 @@ const SessionsSection = ({
 
       {/* Track Description */}
       {isExpanded && currentSession && trackDescriptions[currentSession] && (
-        <div className="mt-6 w-full max-w-4xl text-center">
-          <p className="text-base leading-relaxed text-gray-700 md:text-lg">
+        <div className="mt-6 w-full px-[10%] md:px-[25%]">
+          <p className="text-left text-base leading-relaxed text-gray-700 md:text-lg">
             {trackDescriptions[currentSession]}
           </p>
         </div>
