@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 import SessionsLogo from '@/assets/images/icn-sessions.png'
+import NoSessionsAvailable from '@/components/sessions/NoSessionsAvailable'
 import SessionCard from '@/components/sessions/SessionCard'
 
 import { DIRECTION } from '@/constants/directions'
@@ -23,6 +24,24 @@ const convertTo24Hour = (time) => {
   return `${hour.toString().padStart(2, '0')}:${minute
     .toString()
     .padStart(2, '0')}`
+}
+
+// Track descriptions
+const trackDescriptions = {
+  'Build with AI':
+    'Explore cutting-edge AI development, from machine learning to generative models. Learn how to build intelligent applications that push the boundaries of innovation.',
+  Innovation:
+    'Discover groundbreaking ideas and emerging technologies that are shaping the future. Join us for sessions that challenge conventional thinking and inspire creativity.',
+  'Tech+Design':
+    'Where technology meets user experience. Dive into sessions covering frontend development, design systems, accessibility, and creating delightful user interfaces.',
+  Workshops:
+    'Get hands-on with interactive workshops. Build, code, and create alongside experts in intimate learning sessions designed for practical skill development.',
+  'Level Up':
+    'Advance your career and personal growth. From mentorship to leadership, explore sessions that help you level up professionally and personally in tech.',
+  Hackathon:
+    'Put your skills to the test in our collaborative hackathon. Build innovative solutions, network with fellow developers, and compete for amazing prizes.',
+  Miscellaneous:
+    "A diverse collection of sessions covering various topics that don't fit into a single category. Expect the unexpected and discover something new.",
 }
 
 const SessionsSection = ({
@@ -69,6 +88,13 @@ const SessionsSection = ({
     }
   })
 
+  // Get sessions for current track
+  const currentTrackSessions = combinedSpeakerData.filter(
+    (session) => session.track === tabs[activeTab]
+  )
+
+  const hasSessionsForTrack = currentTrackSessions.length > 0
+
   return (
     <section
       id="sessions"
@@ -98,6 +124,16 @@ const SessionsSection = ({
           loading="lazy"
         />
       </div>
+
+      {/* Track Description */}
+      {isExpanded && tabs[activeTab] && trackDescriptions[tabs[activeTab]] && (
+        <div className="mt-6 w-full max-w-4xl text-center">
+          <p className="text-base leading-relaxed text-gray-700 md:text-lg">
+            {trackDescriptions[tabs[activeTab]]}
+          </p>
+        </div>
+      )}
+
       <div
         className={`mt-4 flex w-full flex-wrap items-center justify-between rounded-md bg-black md:inline-flex md:flex-nowrap ${
           isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
@@ -145,25 +181,28 @@ const SessionsSection = ({
       >
         {combinedSpeakerData && combinedSpeakerData.length ? (
           <ul className="grid w-full grid-cols-1 gap-10 py-7">
-            {combinedSpeakerData
-              .filter((session) => session.track === tabs[activeTab])
-              .sort((a, b) => {
-                const timeA = convertTo24Hour(a.sessionTime)
-                const timeB = convertTo24Hour(b.sessionTime)
-                return timeA < timeB ? -1 : 1
-              })
-              .map((session) => (
-                <li key={session.id} className="w-full">
-                  <SessionCard
-                    speakers={session.speakers}
-                    speakerAvatars={session.speakerAvatars}
-                    sessionTitle={session.sessionTitle}
-                    sessionDesc={session.sessionDesc}
-                    sessionTime={session.sessionTime}
-                    sessionRoom={session.sessionRoom}
-                  />
-                </li>
-              ))}
+            {hasSessionsForTrack ? (
+              currentTrackSessions
+                .sort((a, b) => {
+                  const timeA = convertTo24Hour(a.sessionTime)
+                  const timeB = convertTo24Hour(b.sessionTime)
+                  return timeA < timeB ? -1 : 1
+                })
+                .map((session) => (
+                  <li key={session.id} className="w-full">
+                    <SessionCard
+                      speakers={session.speakers}
+                      speakerAvatars={session.speakerAvatars}
+                      sessionTitle={session.sessionTitle}
+                      sessionDesc={session.sessionDesc}
+                      sessionTime={session.sessionTime}
+                      sessionRoom={session.sessionRoom}
+                    />
+                  </li>
+                ))
+            ) : (
+              <NoSessionsAvailable tabs={tabs} activeTab={activeTab} />
+            )}
           </ul>
         ) : (
           <div className="col-span-1 my-4 flex flex-col items-center justify-center space-y-8 text-center text-lg leading-relaxed">
@@ -178,7 +217,6 @@ const SessionsSection = ({
               className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
               rel="noreferrer"
             >
-              {' '}
               APPLY TO SPEAK
             </a>
           </div>
