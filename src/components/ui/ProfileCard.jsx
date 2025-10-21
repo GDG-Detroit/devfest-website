@@ -53,7 +53,7 @@ const ProfileCard = ({
   const ribbonLabel = getRibbonLabel()
 
   const isSpeaker = Boolean(track)
-  const teamBioColors = `bg-primary-500  hover:bg-primary-600`
+  const teamBioColors = `bg-primary-500 hover:bg-primary-600`
   const speakerDetailColors = `bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600`
 
   return (
