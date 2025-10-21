@@ -394,4 +394,237 @@ export const SpeakersData = [
       room: '',
     },
   },
+  {
+    id: 14,
+    name: 'Alex Patterson',
+    email: 'alex@codingcat.dev',
+    avatar: null,
+    bio: `
+      Alex has over a decade of development experience within Enterprise.  Founder of CodingCatDev, a community for Web development, podcasts, and courses. He specializes in Firebase Web development in and React (Next.js).
+    `,
+    twitter: 'codingcatdev',
+    linkedIn: null,
+    url: 'https://codingcat.dev',
+    organization: 'CodingCatDev',
+    position: null,
+    session: {
+      title:
+        'Building Your First AI Tool Server with Firebase Auth & Cloud Functions',
+      abstract: `
+        Connect your app to AI securely. In this session, I'll show you how to build a serverless "tool server" with Firebase Auth & Cloud Functions. You'll learn how to let LLMs and AI agents safely call your app's functions through a secure API, complete with a live demo.
+      `,
+      description: `
+        The rise of Large Language Models and AI agents has created a massive opportunity for developers to make their applications smarter and more integrated. But how can we securely expose our app's core functions—like fetching user data or posting a message—to these external services? The answer lies in building a dedicated "tool server," and this session will show you exactly how to do it, step-by-step.
+        This talk provides a practical, hands-on guide to building a secure, serverless tool server using the powerhouse combination of Firebase Authentication and Google Cloud Functions. We will start from a blank canvas and architect a simple, yet robust, API that allows authenticated clients to execute predefined functions.
+        Attendees will leave with actionable knowledge and the confidence to:
+        Structure a simple Machine-to-Machine Communication (MCP) API from scratch.
+        Implement a bulletproof authentication layer using Firebase Auth ID tokens to protect their endpoints.
+        Write, deploy, and manage a scalable "tool" using a Google Cloud Function.
+        Understand the token validation flow required for any external service to securely interact with their backend.
+        The session will culminate in a live demo where we will call our newly built, secure tool from an external client, showcasing a complete, end-to-end workflow. Join this session to learn how to unlock your application's potential in the new era of connected intelligence.
+      `,
+      tags: ['AI', 'Firebase', 'Google Cloud'],
+      track: 'Build with AI',
+      time: '',
+      room: '',
+    },
+  },
+  {
+    id: 15,
+    name: 'Boris-Wilfried Nyasse',
+    email: 'risbonyasse@gmail.com',
+    avatar: null,
+    bio: `
+      Passionate Developer & Google Developer Expert
+      I enjoy my journey to ensure that the engineering trains run on time by creating an ideal environment for passionate people.
+      My goal is just to inspire others to continuously improve and raise their standards at all levels of the team.
+    `,
+    twitter: 'bwnyasse',
+    linkedIn: 'https://www.linkedin.com/in/bwnyasse/',
+    url: null,
+    organization: null,
+    position: null,
+    session: {
+      title:
+        'Building the Chain of Trust: A Google ADK Blueprint for Grounded Legal AI Agents',
+      abstract: `
+        Transform unreliable AI into trustworthy legal assistants. Learn to build a "Chain of Trust" using Google ADK + Vertex AI Search + Cloud Run + Flutter to eliminate hallucinations and prove every AI claim with verifiable sources.
+      `,
+      description: `
+        Legal AI demands zero tolerance for hallucinations. When legal professionals rely on an AI assistant for document analysis, "creative" answers aren't innovative—they're liability risks waiting to happen. How do you transform a Gemini model from an eloquent improviser into a rigorous legal expert? How do you build an AI system that doesn't just cite sources, but *proves* every claim with verifiable documentation?
+
+        This session reveals the architecture of a "Chain of Trust"—a production-tested pipeline for building AI agents that earn credibility through verification. Drawing from a real-world legal assistant project, we'll trace the complete journey of a fact-checked response, from document ingestion to the final Flutter interface.
+
+        **You will learn how to:**
+
+        - **Engineer a grounded agent with Google ADK**, constraining a Gemini model to reason exclusively over your private legal corpus using Vertex AI Search, eliminating hallucinations at the source
+        - **Architect a hybrid AI backend** that orchestrates lightweight Cloud Functions for rapid document classification alongside a powerful Cloud Run agent for complex multi-step legal analysis
+        - **Build a critical Python validation pipeline** that acts as an automated fact-checker, mapping AI outputs to canonical sources in Firestore and providing an audit trail for every claim
+        - **Design a trust-first Flutter UI** that uses reactive services to asynchronously enrich responses with source verification, ensuring users see proof alongside every answer
+        - **Orchestrate bulletproof data flows** across Firestore and Cloud Storage that maintain data integrity throughout the entire pipeline
+
+        This isn't academic theory—it's a battle-tested playbook from the legal domain. Walk away with the architectural blueprint and practical knowledge to build AI applications that don't just answer questions, but earn institutional trust through verifiable proof.
+
+        **Key Takeaways:**
+
+        - Production-ready architecture for grounded AI agents using Google ADK
+
+        - Hybrid backend patterns for AI workloads (Cloud Functions vs Cloud Run)
+
+        - Validation pipelines that eliminate hallucinations through source verification
+
+        - Trust-first UI patterns that display proof alongside AI responses
+
+        - Real-world lessons from high-stakes AI deployment in legal domain
+      `,
+      tags: [
+        'AI',
+        'Machine Learning',
+        'Google Cloud',
+        'Flutter',
+        'Vertex AI',
+        'Google ADK',
+        'Legal Tech',
+        'Grounding',
+        'Production AI',
+      ],
+      track: 'Build with AI',
+      time: '',
+      room: '',
+    },
+  },
+  {
+    id: 16,
+    name: 'Adonai Vera',
+    email: 'adonai.vera@gmail.com',
+    avatar: null,
+    bio: `
+      I'm Adonaí Vera, a Machine Learning Engineer with VIII years of expertise. Specialized in computer vision models and machine learning algorithms using TensorFlow, Docker, OpenCV, and more.
+
+      Career journey: Software Developer ➡️AI Developer ➡️ AI Leader ➡️ CTO. My diverse roles have sharpened my skills in creating customer-focused AI products. 
+
+      Proudly one of Google's top 10 TensorFlow certified Developers in Colombia.  Author of “Curso Profesional de Redes neuronales con TensorFlow” & “Curso Profesional de computer vision con TensorFlow” at Platzi. Winner of Covid19 Hackathon & Innovate2019 with Ecopetrol Colombia. 
+
+      Passionate about contributing to open-source projects like FiftyOne, Keras, and Supervision. 🤖 Constantly learning and growing in the ever-evolving field of AI and Machine Learning.
+    `,
+    twitter: 'AdonaiVera19',
+    linkedIn: null,
+    url: 'https://www.adonaivera.com/',
+    organization: 'Voxel51',
+    position: null,
+    session: {
+      title:
+        'From Data Gaps to Data Gold: Boosting Computer Vision with Nano Banana (Gemini) + FiftyOne',
+      abstract: `
+        Most autonomous vehicle failures happen on rare edge cases like night, rain, glare, unusual viewpoints. In this session, we’ll build an end-to-end vision pipeline: audit datasets with FiftyOne, generate missing cases using Gemini “Nano Banana”, retrain models and evaluate safety on edge cases.
+      `,
+      description: `
+        Most autonomous vehicle failures don’t happen on the common cases, they happen on the rare ones:
+        a pedestrian crossing in heavy rain, a cyclist at night under glare, or an object half-hidden at the edge of the frame.
+        These are exactly the scenarios datasets miss and models struggle with.
+
+        In this talk, we’ll explore how to close that gap by combining **FiftyOne**, the open-source dataset curation tool, with **Gemini “Nano Banana”**, Google’s synthetic image generator. You’ll see how to:
+
+        - Audit and explore your dataset to uncover blind spots  
+        - Identify the edge cases that put safety at risk  
+        - Generate realistic, high-quality synthetic images to fill those gaps  
+        - Retrain and validate models to track measurable improvements on tough scenarios
+
+        This is a practical, hands-on session focused on building a **vision pipeline that turns data weaknesses into strengths**. Expect real examples from autonomous vehicle datasets, code you can reuse, and lessons learned from applying this workflow in the field.
+
+        By the end, you’ll leave with a new toolkit for creating **smarter, safer computer vision systems, without waiting weeks to collect data.**
+      `,
+      tags: [
+        'Computer Vision',
+        'Machine Learning',
+        'AI',
+        'Synthetic Data',
+        'Gemini',
+        'Nano Banana',
+        'FiftyOne',
+        'Autonomous Vehicles',
+        'Dataset Curation',
+        'Edge Cases',
+      ],
+      track: 'Build with AI',
+      time: '',
+      room: '',
+    },
+  },
+  {
+    id: 17,
+    name: 'Stephen Wylie',
+    email: 't3h.stevo@gmail.com',
+    avatar: null,
+    bio: `
+      Stephen is a Google Developer Expert in Machine Learning who has found himself taking on some very interesting projects over the years, owing to a bit of creativity and entrepreneurial spirit. Having worked on all sorts of hardware from tiny 8-bit microcontrollers to big-iron blade servers for enterprises, and in age from PDP-11 clones to cloud-based GPU instances, he has co-authored over 110 granted US patents in the realm of AR/VR, AI/ML, IoT, and blockchain. He enjoys speaking on topics such as machine learning, cloud-native applications, hardware hacking old computers and video game systems, or whatever other tech topic he can make slides on in due time. When it’s time to de-stress, Stephen can be found tending to his collection of vintage computers and pinball machines or watching classic television game shows.
+    `,
+    twitter: 'SWebCEO',
+    linkedIn: null,
+    url: 'https://goshtastic.blogspot.com/',
+    organization: 'OpenBrite, LLC',
+    position: null,
+    session: {
+      title: 'The Universal Adapter: Building and Scaling MCP Servers',
+      abstract: `
+        Go beyond REST. Learn to build secure, scalable MCP (Model Context Protocol) servers that give AI agents and applications real-time access to your tools and data. From protocol design to enterprise-grade security, it's time to join the agentic revolution.
+      `,
+      description: `
+        ## Abstract
+
+        Giving AI agents access to real-world tools is powerful, but how do you do it safely and at scale? Model Context Protocol (MCP) provides a standard, but building a robust server is key. Learn how to build and deploy MCP servers, integrate them with clients, and address the critical challenges of security, data governance, and scalability.
+
+        ## Specifics
+
+        First, we will cover the foundational components of the MCP client-server architecture, defining a clear contract between server and client based on a minimal MCP server in Python with FastAPI and/or Google's ADK. You will see how a client connects, discovers these capabilities, and invokes them, forming the core of agentic interaction.
+
+        It is fun enough to build a local MCP server, but it is exciting to deploy one that runs remotely. In addition, we will explore communication patterns that unlock more sophisticated, real-time interactions, such as Server-Sent Events (SSE) or WebSockets for bidirectional communication, allowing servers to push updates to clients within dynamic applications like live dashboards or collaborative tools.
+
+        Finally, we touch on the critical concerns around deploying your MCP server to a production-ready service. This includes:
+
+        * Security: essential protections like Transport Layer Security (TLS) and OAuth 2.1
+        * Data governance strategies: how to limit AI agents to specific data they are permitted to, while creating an auditable and compliant system
+        * Scalability: how to handle thousands of concurrent clients efficiently and with resilience by using containerized MCP services
+
+        ## Audience
+
+        This session is designed for developers and platform engineers looking to explore the world of MCP and agentic workflows. It is not an exhaustive guide to every feature of the MCP specification but serves as a practical introduction to building servers that can prove the value of agentic AI. As attendees explore their own use cases, they should continue to ask questions about security, safety, and scalability using the knowledge presented here as a framework to guide the discussion.
+      `,
+      tags: [],
+      track: 'Build with AI',
+      time: '',
+      room: '',
+    },
+  },
+  {
+    id: 18,
+    name: 'Joel Vasallo',
+    email: 'joelvasallo@gmail.com',
+    avatar: null,
+    bio: `
+      Joel is the Senior Director of Platform Engineering at TAG - The Aspen Group where he leads teams focused on DevOps, SRE, and Delivery Engineering. Together, these teams aim to build and architect highly available cloud environments, develop infrastructure and development tools, and empower developers through fully automated deployment pipelines. In his spare time, he runs monthly meetups in Chicago through the Google Developers program. When he isn’t working, he loves exploring Sweet Home Chicago!
+    `,
+    twitter: 'justjoelv',
+    linkedIn: null,
+    url: 'https://joelvasallo.com',
+    organization: 'TAG - The Aspen Group',
+    position: 'Senior Director of Platform Engineering',
+    session: {
+      title: 'Practical AI: Within SRE, Delivery and Cloud Engineering',
+      abstract: `
+        I gave this talk to students, and with a little bit more work, I can probably deliver this for the general audience around industry professionals!
+      `,
+      description: `
+        While AI conversations often center on data science and machine learning teams, the reality is that SRE, delivery, and cloud engineering teams are sitting on a goldmine of opportunities to leverage AI in their daily workflows—no ML expertise required. This talk bridges the gap between AI hype and practical implementation, demonstrating how infrastructure and operations teams can harness AI tools today to eliminate toil, accelerate incident response, and optimize cloud operations.
+
+        Through real-world examples and live demonstrations, we'll explore creative applications of AI that go beyond basic chatbot assistance: using LLMs for intelligent runbook generation and execution, implementing AI-powered log analysis that actually reduces MTTR, automating post-mortem creation with context-aware insights, and leveraging AI for capacity planning and cost optimization.
+
+        We'll also address common pitfalls, security considerations, and how to measure the actual impact of AI adoption in operations. Whether you're skeptical about AI or eager to adopt it, this session provides a pragmatic roadmap for enhancing your engineering effectiveness without waiting for your organization's official AI strategy.
+      `,
+      tags: ['AI', 'SRE', 'DevOps', 'Platform Engineering', 'Delivery'],
+      track: 'Build with AI',
+      time: '',
+      room: '',
+    },
+  },
 ]
