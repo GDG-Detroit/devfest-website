@@ -56,7 +56,7 @@ const EventCard = ({ eventMetadata }) => {
       <div className="flex items-center text-sm text-primary-900 group-hover:text-primary-800">
         <span>View Details</span>
         <svg
-          className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
+          className="ml-1 size-4 transition-transform group-hover:translate-x-1"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

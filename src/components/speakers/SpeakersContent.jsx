@@ -36,7 +36,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
           className="flex cursor-pointer items-center text-black transition-colors hover:text-gray-600"
         >
           <IoChevronDown
-            className={`h-10 w-10 shrink-0 text-sky-900 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 ${
+            className={`size-10 shrink-0 text-sky-900 sm:size-14 md:size-16 lg:size-20 ${
               direction === DIRECTION.TOP && '-scale-y-100'
             } transition-transform duration-100 ease-linear`}
           />

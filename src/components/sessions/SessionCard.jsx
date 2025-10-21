@@ -75,14 +75,14 @@ function SessionCard({
                       : avatar
                   }
                   alt={`Headshot of ${speakers[index]}`}
-                  className="h-40 w-40 object-cover"
+                  className="size-40 object-cover"
                 />
               ))}
             </div>
           )}
           <div className="ml-5">
             {sessionTitle && (
-              <h3 className="font-bold text-gray-900 dark:text-white md:text-xl lg:text-2xl xl:text-3xl">
+              <h3 className="font-bold text-gray-900 md:text-xl lg:text-2xl xl:text-3xl dark:text-white">
                 {sessionTitle}
               </h3>
             )}
@@ -94,7 +94,7 @@ function SessionCard({
                 {hasTimeInfo && (
                   <div className="flex flex-col items-center justify-center sm:flex-row sm:space-x-2">
                     <p className="text-gray-900 dark:text-gray-100">at</p>
-                    <p className="whitespace-nowrap font-bold text-slate-500 dark:text-slate-400 sm:text-xl md:block lg:text-2xl">
+                    <p className="whitespace-nowrap font-bold text-slate-500 sm:text-xl md:block lg:text-2xl dark:text-slate-400">
                       {startTime} - {endTime}
                     </p>
                   </div>
@@ -113,7 +113,7 @@ function SessionCard({
         </div>
         {sessionDesc && (
           <IoChevronDown
-            className={`h-10 w-10 shrink-0 text-gray-900 transition-transform duration-100 ease-linear dark:text-gray-100 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 ${
+            className={`size-10 shrink-0 text-gray-900 transition-transform duration-100 ease-linear sm:size-14 md:size-16 lg:size-20 dark:text-gray-100 ${
               direction === DIRECTION.TOP && '-scale-y-100'
             }`}
           />
@@ -122,7 +122,7 @@ function SessionCard({
       {isExpanded && sessionDesc && (
         <div
           id={`session-${sessionTitle.replace(/\s+/g, '-').toLowerCase()}`}
-          className="border-t border-gray-600 px-3 pb-10 pt-5 dark:border-gray-600 md:px-8 lg:px-14"
+          className="border-t border-gray-600 px-3 pb-10 pt-5 md:px-8 lg:px-14 dark:border-gray-600"
         >
           <p className="whitespace-pre-wrap text-gray-900 dark:text-gray-100">
             {sessionDesc}

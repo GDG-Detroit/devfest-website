@@ -1,7 +1,7 @@
 const CloseIcon = () => (
-  <button className="absolute right-[0px] top-[0px] mr-[18px] mt-[20px]">
+  <button className="absolute right-0 top-0 mr-[18px] mt-[20px]">
     <svg
-      className="h-16 w-16 text-black"
+      className="size-16 text-black"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"

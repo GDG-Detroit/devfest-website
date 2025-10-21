@@ -87,24 +87,24 @@ function SpeakerDetails(props) {
       <div className="relative bg-gradient-to-r from-sky-600 to-blue-900 px-8 py-12">
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
 
-        <div className="absolute -right-12 -top-12 h-24 w-24 rounded-full bg-white/10"></div>
-        <div className="absolute -bottom-6 -left-6 h-16 w-16 rounded-full bg-white/5"></div>
+        <div className="absolute -right-12 -top-12 size-24 rounded-full bg-white/10"></div>
+        <div className="absolute -bottom-6 -left-6 size-16 rounded-full bg-white/5"></div>
 
         <button
           onClick={props.onClose}
           className="absolute right-6 top-6 z-20 rounded-full bg-white/20 p-2 text-white transition-all hover:scale-110 hover:bg-white/30"
           aria-label="Close speaker details"
         >
-          <IoClose className="h-6 w-6" />
+          <IoClose className="size-6" />
         </button>
 
         <div className="relative z-10 flex flex-col items-center text-center text-white">
           <div className="relative mb-6">
-            <div className="h-64 w-64 rounded-full bg-white/20 p-3">
+            <div className="size-64 rounded-full bg-white/20 p-3">
               <img
                 src={props.avatar}
                 alt={`${props.name} portrait`}
-                className="h-full w-full rounded-full object-cover"
+                className="size-full rounded-full object-cover"
               />
             </div>
           </div>
@@ -128,7 +128,7 @@ function SpeakerDetails(props) {
               className="mt-4 inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30"
               onClick={(e) => e.stopPropagation()}
             >
-              <IoLogoTwitter className="mr-2 h-4 w-4" />@{props.twitter}
+              <IoLogoTwitter className="mr-2 size-4" />@{props.twitter}
             </a>
           )}
         </div>
@@ -190,7 +190,7 @@ function SpeakerDetails(props) {
           className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
           aria-label="Previous speaker"
         >
-          <IoChevronBack className="h-6 w-6 text-gray-600" />
+          <IoChevronBack className="size-6 text-gray-600" />
         </button>
 
         <button
@@ -198,7 +198,7 @@ function SpeakerDetails(props) {
           className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
           aria-label="Next speaker"
         >
-          <IoChevronForward className="h-6 w-6 text-gray-600" />
+          <IoChevronForward className="size-6 text-gray-600" />
         </button>
       </div>
 

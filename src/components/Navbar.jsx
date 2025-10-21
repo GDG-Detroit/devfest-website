@@ -74,10 +74,8 @@ function Navbar() {
       { id: 'landing', text: 'Landing' },
       { id: 'location', text: 'Location' },
       { id: 'sessions', text: 'Sessions' },
-      { id: 'sponsors', text: 'Sponsors' },
+      { id: 'partners', text: 'Partners' },
       { id: 'jobboard', text: 'Job Board' },
-      { id: 'organizers', text: 'Organizers' },
-      { id: 'facilitators', text: 'Facilitators' },
       { id: 'speakers', text: 'Speakers' },
       { id: 'devteam', text: 'Dev Team' },
     ],
@@ -365,9 +363,9 @@ function Navbar() {
           }}
         >
           {isNavVisible ? (
-            <FaTimes className="h-6 w-6" />
+            <FaTimes className="size-6" />
           ) : (
-            <FaBars className="h-6 w-6" />
+            <FaBars className="size-6" />
           )}
         </button>
 
