@@ -47,7 +47,7 @@ function SessionCard({
   const hasSessionInfo = hasTimeInfo || sessionRoom
 
   return (
-    <div className="rounded-xl border bg-white shadow-lg transition duration-200 hover:shadow-2xl">
+    <div className="rounded-xl border border-gray-200 bg-white shadow-lg transition duration-200 hover:shadow-2xl dark:border-gray-700 dark:bg-gray-800">
       <button
         onClick={() => sessionDesc && toggle()}
         aria-expanded={sessionDesc ? isExpanded : undefined}
@@ -61,7 +61,7 @@ function SessionCard({
             ? `Toggle session details for ${sessionTitle}`
             : `Session: ${sessionTitle}`
         }
-        className="flex w-full items-center justify-between p-3 text-black md:px-8 lg:px-14"
+        className="flex w-full items-center justify-between p-3 md:px-8 lg:px-14"
       >
         <div className="flex items-center text-left">
           {speakerAvatars?.length && (
@@ -86,25 +86,29 @@ function SessionCard({
           )}
           <div className="ml-5">
             {sessionTitle && (
-              <h3 className="font-bold text-primary-950 md:text-xl lg:text-2xl xl:text-3xl">
+              <h3 className="font-bold text-gray-900 md:text-xl lg:text-2xl xl:text-3xl dark:text-white">
                 {sessionTitle}
               </h3>
             )}
-            <p className="text-gray-700">by {speakers.join(' & ')}</p>
+            <p className="text-gray-700 dark:text-gray-300">
+              by {speakers.join(' & ')}
+            </p>
             {hasSessionInfo && (
               <div className="mt-2.5 flex items-center space-x-4 text-sm sm:space-x-2 sm:text-base">
                 {hasTimeInfo && (
                   <div className="flex flex-col items-center justify-center sm:flex-row sm:space-x-2">
-                    <p>at</p>
-                    <p className="whitespace-nowrap font-bold text-slate-500 sm:text-xl md:block lg:text-2xl">
+                    <p className="text-gray-900 dark:text-gray-100">at</p>
+                    <p className="whitespace-nowrap font-bold text-slate-500 sm:text-xl md:block lg:text-2xl dark:text-slate-400">
                       {startTime} - {endTime}
                     </p>
                   </div>
                 )}
                 {sessionRoom && (
                   <div className="flex flex-col items-center justify-center sm:flex-row sm:space-x-2">
-                    <p>in</p>
-                    <p className="whitespace-nowrap">{sessionRoom}</p>
+                    <p className="text-gray-900 dark:text-gray-100">in</p>
+                    <p className="whitespace-nowrap text-gray-900 dark:text-gray-100">
+                      {sessionRoom}
+                    </p>
                   </div>
                 )}
               </div>
@@ -113,18 +117,20 @@ function SessionCard({
         </div>
         {sessionDesc && (
           <IoChevronDown
-            className={`size-10 shrink-0 sm:size-14 md:size-16 lg:size-20 ${
+            className={`size-10 shrink-0 text-gray-900 transition-transform duration-100 ease-linear sm:size-14 md:size-16 lg:size-20 dark:text-gray-100 ${
               direction === DIRECTION.TOP && '-scale-y-100'
-            } transition-transform duration-100 ease-linear`}
+            }`}
           />
         )}
       </button>
       {isExpanded && sessionDesc && (
         <div
           id={`session-${sessionTitle.replace(/\s+/g, '-').toLowerCase()}`}
-          className="border-t border-gray-600 px-3 pb-10 pt-5 md:px-8 lg:px-14"
+          className="border-t border-gray-600 px-3 pb-10 pt-5 md:px-8 lg:px-14 dark:border-gray-600"
         >
-          <p className="whitespace-pre-wrap text-primary-950">{sessionDesc}</p>
+          <p className="whitespace-pre-wrap text-gray-900 dark:text-gray-100">
+            {sessionDesc}
+          </p>
         </div>
       )}
     </div>

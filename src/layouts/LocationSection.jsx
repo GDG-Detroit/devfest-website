@@ -4,7 +4,7 @@ function LocationSection() {
   return (
     <section
       id="location"
-      className="flex h-auto items-center justify-center bg-slate-100 py-16 text-black md:py-28"
+      className="flex h-auto items-center justify-center bg-slate-100 py-16 text-black md:py-28 dark:bg-gray-900 dark:text-white"
       aria-labelledby="location-heading"
     >
       <div className="mx-4 flex flex-col space-y-8 sm:mx-6 lg:mx-8">
@@ -57,7 +57,7 @@ function LocationSection() {
               </h3>
             </div>
             <div className="ml-16">
-              <h4 className="mb-2 text-base font-semibold text-gray-800">
+              <h4 className="mb-2 text-base font-semibold text-gray-800 dark:text-white">
                 IBM Agentic AI Hackathon
               </h4>
               <p>Friday, November 21st - 9:00 AM - 9:00 PM</p>
@@ -93,7 +93,7 @@ function LocationSection() {
 
           {/* Friday Map */}
           <div className="mx-2 w-full max-w-full overflow-hidden lg:w-1/2">
-            <h4 className="mb-2 text-sm font-semibold text-gray-700">
+            <h4 className="mb-2 text-sm font-semibold text-gray-700 dark:text-white">
               Friday - Wayne State University Location
             </h4>
             <div className="">
@@ -128,7 +128,7 @@ function LocationSection() {
               </h3>
             </div>
             <div className="ml-16">
-              <h4 className="mb-2 text-base font-semibold text-gray-800">
+              <h4 className="mb-2 text-base font-semibold text-gray-800 dark:text-white">
                 Michigan DevFest Event
               </h4>
               <p>Saturday, November 22nd - 9:00 AM - 5:00 PM</p>
@@ -161,7 +161,7 @@ function LocationSection() {
 
           {/* Saturday Map */}
           <div className="mx-2 w-full max-w-full overflow-hidden lg:w-1/2">
-            <h4 className="mb-2 text-sm font-semibold text-gray-700">
+            <h4 className="mb-2 text-sm font-semibold text-gray-700 dark:text-white">
               Saturday - MotorCity Casino Hotel Location
             </h4>
             <div className="">

@@ -2,13 +2,13 @@ function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="flex h-28 flex-col items-center justify-center bg-gray-100 text-black"
+      className="flex h-28 flex-col items-center justify-center bg-gray-100 text-black dark:bg-gray-800 dark:text-white"
     >
       <h3 className="mb-3">Contact us</h3>
       <div className="flex space-x-4">
         <button
           type="button"
-          className="mb-2 inline-block rounded-full bg-white p-3 text-xs font-medium uppercase leading-normal text-black shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          className="mb-2 inline-block rounded-full bg-white p-3 text-xs font-medium uppercase leading-normal text-black shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg dark:bg-gray-700 dark:text-white"
           onClick={() =>
             window.open(
               'https://twitter.com/intent/tweet?text=I%27m%20attending%20Google%20Developer%20Groups%20GDG%20Detroit%20w%2F%20Michigan%20DevFest%20on%20Dec%202.',
@@ -36,7 +36,7 @@ function Footer() {
 
         <button
           type="button"
-          className="mb-2 inline-block rounded-full bg-white p-3 text-xs font-medium uppercase leading-normal text-black shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          className="mb-2 inline-block rounded-full bg-white p-3 text-xs font-medium uppercase leading-normal text-black shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg dark:bg-gray-700 dark:text-white"
           onClick={() =>
             window.open(
               'https://www.linkedin.com/shareArticle?mini=true&url=https://gdg.community.dev/e/m8hffb/',

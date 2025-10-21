@@ -1,13 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import gdgDetroitLogo from '@/assets/images/gdg-detroit-logo.svg'
+import GDGDetroitLogo from './ui/GDGDetroitLogo'
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState('landing')
   const [isNavVisible, setIsNavVisible] = useState(false)
   const [isManualNavigation, setIsManualNavigation] = useState(false)
   const [isNavigating, setIsNavigating] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  )
 
   const navRef = useRef(null)
   const mobileButtonRef = useRef(null)
@@ -66,12 +69,6 @@ function Navbar() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  // TODO: Update navigation once Aaron's PR is merged
-  // TODO: Customize navigation if it's the previous-events route
-  // Add a link to previous-events
-  // Don't need the links to the different sections
-  // Need a link back to the home page
-  // Create a separate component for the previous-events navbar?
   const sections = useMemo(
     () => [
       { id: 'landing', text: 'Landing' },
@@ -215,6 +212,16 @@ function Navbar() {
     }
   }, [])
 
+  // Check if color scheme preference was updated
+  useEffect(() => {
+    const colorSchemePref = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleChange = (event) => setIsDarkMode(event.matches)
+
+    colorSchemePref.addEventListener('change', handleChange)
+
+    return () => colorSchemePref.removeEventListener('change', handleChange)
+  }, [])
+
   // Desktop Navigation List
   const desktopNavList = (
     <ul
@@ -256,7 +263,7 @@ function Navbar() {
 
   // Mobile Navigation List
   const mobileNavList = (
-    <ul className="flex flex-col space-y-2 p-4">
+    <ul className="flex flex-col space-y-2 p-4 dark:bg-gray-700 dark:text-white">
       {sections.map((section) => (
         <li
           key={section.id}
@@ -266,10 +273,10 @@ function Navbar() {
             to={`#${section.id}`}
             onClick={(event) => handleNavigation(event, section.id)}
             aria-current={activeLink === section.id ? 'page' : undefined}
-            className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 ${
+            className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 dark:hover:bg-primary-400 ${
               activeLink === section.id
                 ? 'bg-primary-100 font-semibold text-primary-700'
-                : 'text-gray-700'
+                : 'text-gray-700 dark:text-white dark:hover:text-gray-900'
             }`}
           >
             {section.text}
@@ -280,7 +287,7 @@ function Navbar() {
         <li key={link.to}>
           <Link
             to={link.to}
-            className="block rounded-lg px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-100"
+            className="block rounded-lg px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-primary-400 dark:hover:text-gray-900"
           >
             {link.text}
           </Link>
@@ -296,7 +303,7 @@ function Navbar() {
       className={`fixed left-0 top-0 z-10 w-full ${
         activeLink === 'landing'
           ? 'bg-primary-400 text-sky-900'
-          : 'bg-white text-gray-700 shadow-lg'
+          : 'bg-white text-gray-700 shadow-lg dark:bg-gray-700 dark:text-gray-100'
       }`}
     >
       {/* Screen Reader Announcements */}
@@ -313,7 +320,12 @@ function Navbar() {
           onClick={handleHomeNavigation}
           aria-label="Go to home page"
         >
-          <img src={gdgDetroitLogo} alt="GDG Detroit Logo" className="h-16" />
+          <GDGDetroitLogo
+            textColor={
+              isDarkMode && activeLink !== 'landing' ? '#FFFFFF' : '#0c4a6e'
+            }
+            className="h-16"
+          />
         </Link>
 
         {/* Mobile NavBar Hamburger Button */}
@@ -326,7 +338,7 @@ function Navbar() {
           className={`touch-manipulation rounded border-2 px-4 py-2 transition-colors xl:hidden ${
             activeLink === 'landing'
               ? 'border-sky-900 hover:bg-primary-300 active:bg-primary-200'
-              : 'border-gray-300 hover:bg-gray-100 active:bg-gray-200'
+              : 'border-gray-300 hover:bg-gray-100 active:bg-gray-200 dark:text-gray-100 dark:hover:bg-primary-400'
           }`}
           onClick={(e) => {
             e.preventDefault()
@@ -368,7 +380,9 @@ function Navbar() {
             id="mobile-navigation"
             aria-labelledby="mobile-menu-button"
             className={`block w-full overflow-hidden bg-white shadow-lg ${
-              activeLink === 'landing' ? 'bg-primary-400' : 'bg-white'
+              activeLink === 'landing'
+                ? 'bg-primary-400'
+                : 'bg-white dark:bg-gray-900 dark:text-white'
             }`}
             style={{
               transform: 'translateZ(0)',
