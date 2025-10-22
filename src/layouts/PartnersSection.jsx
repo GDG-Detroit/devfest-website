@@ -92,6 +92,14 @@ const PartnersSection = ({
         />
       </div>
 
+      <div className="mx-auto mt-6 max-w-3xl text-left">
+        <p className="text-base text-gray-700 md:text-lg">
+          DevFest wouldn&apos;t be possible without the support of our amazing
+          partners. Thank you for helping us create an unforgettable experience
+          for the tech community.
+        </p>
+      </div>
+
       <div className="mt-8 overflow-hidden transition-all duration-500 ease-in-out sm:mt-10 md:mt-14 lg:mt-16">
         {hasPartners ? (
           <>

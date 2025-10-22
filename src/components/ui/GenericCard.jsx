@@ -28,15 +28,22 @@ const GenericCard = ({
         <div className="relative -mt-12 flex justify-center">
           <div className="relative">
             <div className="size-44 rounded-full bg-white p-1 shadow-lg dark:bg-gray-700">
-              <img
-                src={avatar}
-                className="size-full rounded-full object-cover"
-                alt={`${name} portrait`}
-                loading="lazy"
-              />
+              {avatar && (
+                <img
+                  src={avatar}
+                  className="size-full rounded-full object-cover"
+                  alt={`${name || ''} portrait`}
+                  loading="lazy"
+                />
+              )}
               {twitter && (
                 <div className="absolute inset-x-0 bottom-0">
-                  <TwitterHandle handle={twitter} name={name} />
+                  <TwitterHandle
+                    handle={twitter}
+                    name={name || ''}
+                    variant="avatar"
+                    absolute={false}
+                  />
                 </div>
               )}
             </div>
@@ -44,17 +51,23 @@ const GenericCard = ({
         </div>
 
         <div className="px-6 pb-6 pt-4 text-center">
-          <h3 className="mb-1 line-clamp-2 text-lg font-semibold text-gray-900 dark:text-white">
-            {name}
-          </h3>
+          {name && (
+            <h3 className="mb-1 line-clamp-2 text-lg font-semibold text-gray-900 dark:text-white">
+              {name}
+            </h3>
+          )}
 
-          <p className="mb-1 line-clamp-2 text-sm font-medium text-blue-600 dark:text-blue-300">
-            {position}
-          </p>
+          {position && (
+            <p className="mb-1 line-clamp-2 text-sm font-medium text-blue-600 dark:text-blue-300">
+              {position}
+            </p>
+          )}
 
-          <p className="mb-4 line-clamp-2 text-xs text-gray-500 dark:text-gray-300">
-            {organization}
-          </p>
+          {organization && (
+            <p className="mb-4 line-clamp-2 text-xs text-gray-500 dark:text-gray-300">
+              {organization}
+            </p>
+          )}
 
           {onOpen && (
             <button
@@ -79,11 +92,11 @@ const GenericCard = ({
 }
 
 GenericCard.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   twitter: PropTypes.string,
-  avatar: PropTypes.string.isRequired,
-  organization: PropTypes.string.isRequired,
-  position: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
+  organization: PropTypes.string,
+  position: PropTypes.string,
   onOpen: PropTypes.func,
 }
 
