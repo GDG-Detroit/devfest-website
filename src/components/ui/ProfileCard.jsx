@@ -17,32 +17,29 @@ const ProfileCard = ({
   onViewBioOrDetails,
   showBioButton = true,
 }) => {
-  // Get ribbon color based on role or track
   const getRibbonColor = (type) => {
-    // For team members (role-based)
+    // Team members
     const roleColors = {
       organizer: 'bg-blue-600',
       facilitator: 'bg-green-600',
       devteam: 'bg-amber-500',
     }
 
-    // For speakers (track-based)
+    // Speakers
     const trackColors = {
       'Build with AI': 'bg-purple-600',
       Innovation: 'bg-indigo-600',
+      'Level Up': 'bg-emerald-600',
+      Startups: 'bg-yellow-600',
       'Tech+Design': 'bg-pink-600',
       Workshops: 'bg-orange-600',
-      'Level Up': 'bg-emerald-600',
     }
 
-    // Return track color if track exists, otherwise role color
-    if (track) {
-      return trackColors[track] || 'bg-sky-600'
-    }
-    return roleColors[type] || 'bg-primary-500'
+    if (track) return trackColors[track] || 'bg-sky-600'
+    if (role) return roleColors[type] || 'bg-primary-500'
+    return 'bg-gray-600'
   }
 
-  // Get display label for ribbon
   const getRibbonLabel = () => {
     if (track) return track
     if (devfest) return devfest
@@ -56,80 +53,177 @@ const ProfileCard = ({
   const teamBioColors = `bg-primary-500 hover:bg-primary-600`
   const speakerDetailColors = `bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600`
 
+  const cardIsVertical = isSpeaker
+
+  const getGradientColors = (bgColor) => {
+    const colorMap = {
+      'bg-purple-600': 'from-purple-600/100 via-purple-600/15',
+      'bg-indigo-600': 'from-indigo-600/100 via-indigo-600/15',
+      'bg-emerald-600': 'from-emerald-600/100 via-emerald-600/15',
+      'bg-yellow-600': 'from-yellow-600/100 via-yellow-600/15',
+      'bg-pink-600': 'from-pink-600/100 via-pink-600/15',
+      'bg-orange-600': 'from-orange-600/100 via-orange-600/15',
+      'bg-blue-600': 'from-blue-600/100 via-blue-600/15',
+      'bg-green-600': 'from-green-600/100 via-green-600/15',
+      'bg-amber-500': 'from-amber-500/100 via-amber-500/15',
+      'bg-sky-600': 'from-sky-600/100 via-sky-600/15',
+      'bg-primary-500': 'from-primary-500/100 via-primary-500/15',
+      'bg-gray-600': 'from-gray-600/100 via-gray-600/15',
+    }
+
+    return colorMap[bgColor] || 'from-gray-600/90 via-gray-600/30'
+  }
+
+  const renderBadge = ribbonLabel && (
+    <div className="absolute right-6 top-6 z-0">
+      <span
+        className={`inline-block rounded-md ${ribbonColor} px-3 py-1.5 text-sm font-bold uppercase tracking-wider text-white shadow-lg`}
+      >
+        {ribbonLabel}
+      </span>
+    </div>
+  )
+
+  const renderImageGradient = (
+    <>
+      {/* Top gradient */}
+      <div
+        className={`absolute inset-x-0 top-0 z-0 h-1/2 bg-gradient-to-b ${getGradientColors(
+          ribbonColor
+        )} pointer-events-none via-10% to-transparent`}
+      ></div>
+      {/* Bottom gradient */}
+      <div
+        className={`absolute inset-x-0 bottom-0 z-0 h-1/2 bg-gradient-to-t ${getGradientColors(
+          ribbonColor
+        )} pointer-events-none via-10% to-transparent`}
+      ></div>
+      {/* Left gradient */}
+      <div
+        className={`absolute inset-y-0 left-0 z-0 w-1/2 bg-gradient-to-r ${getGradientColors(
+          ribbonColor
+        )} pointer-events-none via-10% to-transparent`}
+      ></div>
+      {/* Right gradient */}
+      <div
+        className={`absolute inset-y-0 right-0 z-0 w-1/2 bg-gradient-to-l ${getGradientColors(
+          ribbonColor
+        )} pointer-events-none via-10% to-transparent`}
+      ></div>
+    </>
+  )
+
+  const renderBadgeAndGradient = ribbonLabel && (
+    <>
+      {renderImageGradient}
+      {renderBadge}
+    </>
+  )
+
+  const renderRibbon = ribbonLabel && (
+    <div
+      className={`${
+        devfest ? `ribbon-${devfest}` : `ribbon-${track}`
+      } absolute -right-10 top-6 z-0 w-40 rotate-45 ${ribbonColor} py-1 text-center text-xs font-semibold uppercase tracking-wide text-white shadow-md`}
+    >
+      {ribbonLabel}
+    </div>
+  )
+
+  const renderSocialLinks = (linkedin || github || twitter) && (
+    <ul className={`flex ${cardIsVertical ? 'mt-6' : 'mt-2'}`}>
+      {linkedin && <LinkedInHandle handle={linkedin} absolute={false} />}
+      {github && <GithubHandle handle={github} absolute={false} />}
+      {twitter && (
+        <TwitterHandle
+          handle={twitter}
+          name={name}
+          variant="default"
+          absolute={false}
+        />
+      )}
+    </ul>
+  )
+
+  const renderInfo = (
+    <div className="ml-4 flex flex-col items-start justify-center gap-2">
+      <h3 className="mt-3 text-base/7 font-semibold tracking-tight text-gray-900 dark:text-white">
+        {name}
+      </h3>
+      {organization && (
+        <p className="text-left text-sm text-gray-600 dark:text-gray-400">
+          {organization}
+        </p>
+      )}
+      {position && (
+        <p className="text-left text-sm text-gray-600 dark:text-gray-400">
+          {position}
+        </p>
+      )}
+      {role && (
+        <p className="text-left text-sm text-gray-600 dark:text-gray-400">
+          {role}
+        </p>
+      )}
+    </div>
+  )
+
+  const renderButton = showBioButton && onViewBioOrDetails && (
+    <button
+      className={`${
+        cardIsVertical
+          ? 'my-3 inline-flex items-center rounded-lg px-4 py-2'
+          : 'absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full px-4 py-1.5'
+      } text-sm font-medium text-white shadow-md transition-colors ${
+        isSpeaker ? speakerDetailColors : teamBioColors
+      }`}
+      onClick={onViewBioOrDetails}
+      aria-label={`View details for ${name}`}
+    >
+      View {isSpeaker ? 'Details' : 'Bio'}
+    </button>
+  )
+
+  const renderSpeakerCard = (
+    <>
+      <div className="relative w-full overflow-hidden rounded-t-xl">
+        <img
+          alt=""
+          src={avatar}
+          className="size-full object-cover"
+          loading="lazy"
+        />
+        {renderBadgeAndGradient}
+      </div>
+      <div className="mt-3 flex flex-col justify-between px-2">
+        {renderInfo}
+        {renderSocialLinks}
+      </div>
+    </>
+  )
+
+  const renderTeamMemberCard = (
+    <div className="relative overflow-hidden rounded-xl p-4 pb-12">
+      {renderRibbon}
+      <div className="flex">
+        <div className="flex w-24 shrink-0 flex-col items-center">
+          <img
+            alt=""
+            src={avatar}
+            className="size-24 rounded-full outline outline-1 -outline-offset-1 outline-black/5 dark:outline-white/10"
+            loading="lazy"
+          />
+          {renderSocialLinks}
+        </div>
+        {renderInfo}
+      </div>
+    </div>
+  )
+
   return (
     <li className="relative rounded-xl border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800">
-      {/* Content wrapper with overflow hidden for ribbon clipping */}
-      <div className="relative overflow-hidden rounded-xl p-4 pb-12">
-        {/* Ribbon Label */}
-        {ribbonLabel && (
-          <div
-            className={`${
-              devfest ? `ribbon-${devfest}` : `ribbon-${track}`
-            } absolute -right-10 top-6 z-10 w-40 rotate-45 ${ribbonColor} py-1 text-center text-xs font-semibold uppercase tracking-wide text-white shadow-md`}
-          >
-            {ribbonLabel}
-          </div>
-        )}
-
-        <div className="flex">
-          <div className="flex w-24 shrink-0 flex-col items-center">
-            <img
-              alt=""
-              src={avatar}
-              className="size-24 rounded-full outline outline-1 -outline-offset-1 outline-black/5 dark:outline-white/10"
-              loading="lazy"
-            />
-            <div className="mt-2 flex gap-1">
-              {linkedin && (
-                <LinkedInHandle handle={linkedin} absolute={false} />
-              )}
-              {github && <GithubHandle handle={github} absolute={false} />}
-              {twitter && (
-                <TwitterHandle
-                  handle={twitter}
-                  name={name}
-                  variant="default"
-                  absolute={false}
-                />
-              )}
-            </div>
-          </div>
-
-          <div className="ml-4 flex flex-col items-start justify-center gap-2">
-            <h3 className="mt-6 text-base/7 font-semibold tracking-tight text-gray-900 dark:text-white">
-              {name}
-            </h3>
-            {organization && (
-              <p className="text-left text-sm/6 text-gray-600 dark:text-gray-400">
-                {organization}
-              </p>
-            )}
-            {position && (
-              <p className="text-left text-sm/6 text-gray-600 dark:text-gray-400">
-                {position}
-              </p>
-            )}
-            {role && (
-              <p className="text-left text-sm/6 text-gray-600 dark:text-gray-400">
-                {role}
-              </p>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {/* Button positioned relative to card, outside overflow container */}
-      {showBioButton && onViewBioOrDetails && (
-        <button
-          className={`absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full px-4 py-1.5 text-sm font-medium text-white shadow-md transition-colors ${
-            isSpeaker ? speakerDetailColors : teamBioColors
-          }`}
-          onClick={onViewBioOrDetails}
-          aria-label={`View details for ${name}`}
-        >
-          View {isSpeaker ? 'Details' : 'Bio'}
-        </button>
-      )}
+      {cardIsVertical ? renderSpeakerCard : renderTeamMemberCard}
+      {renderButton}
     </li>
   )
 }
