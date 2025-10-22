@@ -55,6 +55,20 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
           isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
+        <div className="mx-auto mt-6 max-w-3xl text-left">
+          <p className="text-base text-gray-700 md:text-lg">
+            Join us for engaging and inspiring talks from industry leaders,
+            innovators, and experts who are shaping the future of technology.
+            Our speakers bring real-world experience and cutting-edge insights
+            across AI, cloud, design, development, robotics, startups, and more.
+          </p>
+        </div>
+      </div>
+      <div
+        className={`overflow-hidden transition-all duration-500 ease-in-out ${
+          isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
         {uniqueSpeakersSortedByFirstName &&
         uniqueSpeakersSortedByFirstName.length ? (
           <div className="mx-auto my-8 grid max-w-2xl grid-cols-1 gap-8 text-center sm:grid-cols-2 md:grid-cols-3 lg:mx-0 lg:max-w-none lg:grid-cols-4 xl:grid-cols-5">
