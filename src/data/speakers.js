@@ -1,3 +1,4 @@
+import AdonaiVera from '@/assets/images/speakers/Adonai_Vera.jpeg'
 import AlexPatterson from '@/assets/images/speakers/Alex_Patterson.png'
 import BandhanKaur from '@/assets/images/speakers/Bandhan_Kaur.jpeg'
 import BorisWilfriedNyasse from '@/assets/images/speakers/Boris_Wilfried_Nyasse.png'
@@ -7,10 +8,12 @@ import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
 import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
 import JC_Escalante from '@/assets/images/speakers/JC_Escalante.jpeg'
 import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpeg'
+import JoelVasallo from '@/assets/images/speakers/Joel_Vasallo.jpg'
 import KavithaBangalore from '@/assets/images/speakers/Kavitha_Bangalore.jpg'
 import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.jpeg'
 import MichaelBower from '@/assets/images/speakers/Michael_Bower.jpg'
 import StephanieFrantz from '@/assets/images/speakers/Stephanie_Frantz.jpeg'
+import StephenWylie from '@/assets/images/speakers/Stephen_Wylie.jpeg'
 import WEDaCruz from '@/assets/images/speakers/WE_Da_Cruz.jpeg'
 import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
 
@@ -405,7 +408,7 @@ export const SpeakersData = [
       Alex has over a decade of development experience within Enterprise.  Founder of CodingCatDev, a community for Web development, podcasts, and courses. He specializes in Firebase Web development in and React (Next.js).
     `,
     twitter: 'codingcatdev',
-    linkedIn: null,
+    linkedIn: 'https://www.linkedin.com/in/codercatdev/',
     url: 'https://codingcat.dev',
     organization: 'CodingCatDev',
     position: null,
@@ -443,9 +446,9 @@ export const SpeakersData = [
     `,
     twitter: 'bwnyasse',
     linkedIn: 'https://www.linkedin.com/in/bwnyasse/',
-    url: null,
+    url: 'https://bwnyasse.net/',
     organization: null,
-    position: null,
+    position: 'Google Developer Expert',
     session: {
       title:
         'Building the Chain of Trust: A Google ADK Blueprint for Grounded Legal AI Agents',
@@ -499,7 +502,7 @@ export const SpeakersData = [
     id: 16,
     name: 'Adonai Vera',
     email: 'adonai.vera@gmail.com',
-    avatar: 'https://placehold.co/600x400/0F9D58/FFFFFF?text=Adonai+Vera',
+    avatar: AdonaiVera,
     bio: `
       I'm Adonaí Vera, a Machine Learning Engineer with VIII years of expertise. Specialized in computer vision models and machine learning algorithms using TensorFlow, Docker, OpenCV, and more.
 
@@ -513,7 +516,7 @@ export const SpeakersData = [
     linkedIn: null,
     url: 'https://www.adonaivera.com/',
     organization: 'Voxel51',
-    position: null,
+    position: 'Machine Learning and DevRel',
     session: {
       title:
         'From Data Gaps to Data Gold: Boosting Computer Vision with Nano Banana (Gemini) + FiftyOne',
@@ -557,12 +560,12 @@ export const SpeakersData = [
     id: 17,
     name: 'Stephen Wylie',
     email: 't3h.stevo@gmail.com',
-    avatar: 'https://placehold.co/600x400/0F9D58/FFFFFF?text=Stephen+Wylie',
+    avatar: StephenWylie,
     bio: `
       Stephen is a Google Developer Expert in Machine Learning who has found himself taking on some very interesting projects over the years, owing to a bit of creativity and entrepreneurial spirit. Having worked on all sorts of hardware from tiny 8-bit microcontrollers to big-iron blade servers for enterprises, and in age from PDP-11 clones to cloud-based GPU instances, he has co-authored over 110 granted US patents in the realm of AR/VR, AI/ML, IoT, and blockchain. He enjoys speaking on topics such as machine learning, cloud-native applications, hardware hacking old computers and video game systems, or whatever other tech topic he can make slides on in due time. When it’s time to de-stress, Stephen can be found tending to his collection of vintage computers and pinball machines or watching classic television game shows.
     `,
     twitter: 'SWebCEO',
-    linkedIn: null,
+    linkedIn: 'https://www.linkedin.com/in/stephen-wylie-009a631b/',
     url: 'https://goshtastic.blogspot.com/',
     organization: 'OpenBrite, LLC',
     position: null,
@@ -602,12 +605,12 @@ export const SpeakersData = [
     id: 18,
     name: 'Joel Vasallo',
     email: 'joelvasallo@gmail.com',
-    avatar: 'https://placehold.co/600x400/0F9D58/FFFFFF?text=Joel+Vasallo',
+    avatar: JoelVasallo,
     bio: `
       Joel is the Senior Director of Platform Engineering at TAG - The Aspen Group where he leads teams focused on DevOps, SRE, and Delivery Engineering. Together, these teams aim to build and architect highly available cloud environments, develop infrastructure and development tools, and empower developers through fully automated deployment pipelines. In his spare time, he runs monthly meetups in Chicago through the Google Developers program. When he isn’t working, he loves exploring Sweet Home Chicago!
     `,
     twitter: 'justjoelv',
-    linkedIn: null,
+    linkedIn: 'https://www.linkedin.com/in/joelvasallo/',
     url: 'https://joelvasallo.com',
     organization: 'TAG - The Aspen Group',
     position: 'Senior Director of Platform Engineering',
