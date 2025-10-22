@@ -130,7 +130,7 @@ const ProfileCard = ({
   )
 
   const renderSpecialBadges = (
-    <div className="absolute left-5 top-5 z-10 flex flex-col gap-1">
+    <div className="absolute left-5 top-5 z-0 flex flex-col gap-1">
       {renderGDEBadge}
       {renderWTMBadge}
     </div>
