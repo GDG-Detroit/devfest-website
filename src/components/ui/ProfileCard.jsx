@@ -28,10 +28,10 @@ const ProfileCard = ({
     // Speakers
     const trackColors = {
       'Build with AI': 'bg-purple-600',
-      Innovation: 'bg-indigo-600',
+      Innovation: 'bg-primary-600',
       'Level Up': 'bg-emerald-600',
-      Startups: 'bg-yellow-600',
-      'Tech+Design': 'bg-pink-600',
+      Startups: 'bg-sky-600',
+      'Tech+Design': 'bg-red-600',
       Workshops: 'bg-orange-600',
     }
 
@@ -51,17 +51,16 @@ const ProfileCard = ({
 
   const isSpeaker = Boolean(track)
   const teamBioColors = `bg-primary-500 hover:bg-primary-600`
-  const speakerDetailColors = `bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600`
+  const speakerDetailColors = `bg-white text-sky-950 border-[1px] border-sky-900 shadow-xl hover:bg-primary-400 hover:border-primary-900 hover:text-sky-900`
 
   const cardIsVertical = isSpeaker
 
   const getGradientColors = (bgColor) => {
     const colorMap = {
       'bg-purple-600': 'from-purple-600/100 via-purple-600/15',
-      'bg-indigo-600': 'from-indigo-600/100 via-indigo-600/15',
+      'bg-primary-600': 'from-primary-600/100 via-primary-600/15',
       'bg-emerald-600': 'from-emerald-600/100 via-emerald-600/15',
-      'bg-yellow-600': 'from-yellow-600/100 via-yellow-600/15',
-      'bg-pink-600': 'from-pink-600/100 via-pink-600/15',
+      'bg-red-600': 'from-red-600/100 via-red-600/15',
       'bg-orange-600': 'from-orange-600/100 via-orange-600/15',
       'bg-blue-600': 'from-blue-600/100 via-blue-600/15',
       'bg-green-600': 'from-green-600/100 via-green-600/15',
@@ -75,9 +74,9 @@ const ProfileCard = ({
   }
 
   const renderBadge = ribbonLabel && (
-    <div className="absolute right-6 top-6 z-0">
+    <div className="absolute right-5 top-5 z-0">
       <span
-        className={`inline-block rounded-md ${ribbonColor} px-3 py-1.5 text-sm font-bold uppercase tracking-wider text-white shadow-lg`}
+        className={`inline-block rounded-xl ${ribbonColor} px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-white shadow-lg`}
       >
         {ribbonLabel}
       </span>
@@ -145,23 +144,36 @@ const ProfileCard = ({
     </div>
   )
 
+  {
+    /* Show fields to maintain size */
+  }
   const renderInfo = (
-    <div className="ml-4 flex flex-col items-start justify-center gap-2">
-      <h3 className="mt-3 text-base/7 font-semibold tracking-tight text-gray-900 dark:text-white">
+    <div className="ml-4 flex flex-col items-start justify-center">
+      <h3
+        className={`mt-1 ${
+          cardIsVertical ? 'line-clamp-2 text-xl' : 'text-base/7'
+        } font-semibold tracking-tight text-gray-900 dark:text-white`}
+      >
         {name}
       </h3>
-      {organization && (
-        <p className="text-left text-sm text-gray-600 dark:text-gray-400">
-          {organization}
-        </p>
-      )}
-      {position && (
-        <p className="text-left text-sm text-gray-600 dark:text-gray-400">
-          {position}
-        </p>
-      )}
+      <div
+        className={`mt-1 text-left ${
+          cardIsVertical ? 'line-clamp-2 text-base' : 'text-sm'
+        } text-gray-600 dark:text-gray-400`}
+      >
+        {organization || '\u00A0'}
+      </div>
+      <div
+        className={`mt-1 text-left ${
+          cardIsVertical ? 'line-clamp-2 text-base' : 'text-base/7'
+        } text-gray-600 dark:text-gray-400`}
+      >
+        {position || '\u00A0'}
+      </div>
       {role && (
-        <p className="text-left text-sm text-gray-600 dark:text-gray-400">
+        <p
+          className={`mt-1 text-left text-sm text-gray-600 dark:text-gray-400`}
+        >
           {role}
         </p>
       )}
@@ -186,7 +198,7 @@ const ProfileCard = ({
 
   const renderSpeakerCard = (
     <>
-      <div className="relative w-full overflow-hidden rounded-t-xl">
+      <div className="relative aspect-[16/15] w-full overflow-hidden rounded-t-2xl">
         <img
           alt=""
           src={avatar}
@@ -221,7 +233,11 @@ const ProfileCard = ({
   )
 
   return (
-    <div className="relative rounded-xl border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800">
+    <div
+      className={`relative ${
+        cardIsVertical ? 'rounded-2xl' : 'rounded-xl'
+      } border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800`}
+    >
       {cardIsVertical ? renderSpeakerCard : renderTeamMemberCard}
       {renderButton}
     </div>
