@@ -9,7 +9,17 @@ import {
 
 import { SpeakerContext } from './SpeakerContext'
 
-function SpeakerDetails(props) {
+function SpeakerDetails({
+  name,
+  bio,
+  organization,
+  avatar,
+  twitter,
+  sessionTitle,
+  onClose,
+  position,
+  id,
+}) {
   const {
     speakerID,
     setSpeakerID,
@@ -60,7 +70,7 @@ function SpeakerDetails(props) {
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
-        props.onClose()
+        onClose()
       } else if (event.key === 'ArrowLeft') {
         goToPreviousSpeaker()
       } else if (event.key === 'ArrowRight') {
@@ -75,7 +85,7 @@ function SpeakerDetails(props) {
       document.removeEventListener('keydown', handleKeyDown)
       document.body.style.overflow = 'auto'
     }
-  }, [props, goToPreviousSpeaker, goToNextSpeaker])
+  }, [onClose, goToPreviousSpeaker, goToNextSpeaker])
 
   const currentIndex = uniqueSpeakersSortedByFirstName.findIndex(
     (speaker) => speaker.id === speakerID
@@ -91,7 +101,7 @@ function SpeakerDetails(props) {
         <div className="absolute -bottom-6 -left-6 size-16 rounded-full bg-white/5"></div>
 
         <button
-          onClick={props.onClose}
+          onClick={onClose ? onClose : () => {}}
           className="absolute right-6 top-6 z-20 rounded-full bg-white/20 p-2 text-white transition-all hover:scale-110 hover:bg-white/30"
           aria-label="Close speaker details"
         >
@@ -102,33 +112,39 @@ function SpeakerDetails(props) {
           <div className="relative mb-6">
             <div className="size-64 rounded-full bg-white/20 p-3">
               <img
-                src={props.avatar}
-                alt={`${props.name} portrait`}
+                src={
+                  avatar
+                    ? avatar
+                    : `https://placehold.co/600x400/0F9D58/FFFFFF?text=${
+                        name.charAt(0) + name.charAt(name.length - 1)
+                      }`
+                }
+                alt={`${name} portrait`}
                 className="size-full rounded-full object-cover"
               />
             </div>
           </div>
 
           <h2
-            id={`speaker-modal-title-${props.id}`}
+            id={`speaker-modal-title-${id}`}
             className="mb-3 text-3xl font-bold"
           >
-            {props.name}
+            {name}
           </h2>
-          <p className="mb-2 text-lg font-medium text-blue-100">
-            {props.position}
-          </p>
-          <p className="text-blue-200">{props.organization}</p>
+          {position && (
+            <p className="mb-2 text-lg font-medium text-blue-100">{position}</p>
+          )}
+          {organization && <p className="text-blue-200">{organization}</p>}
 
-          {props.twitter && (
+          {twitter && (
             <a
-              href={`https://twitter.com/${props.twitter}`}
+              href={`https://twitter.com/${twitter}`}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30"
               onClick={(e) => e.stopPropagation()}
             >
-              <IoLogoTwitter className="mr-2 size-4" />@{props.twitter}
+              <IoLogoTwitter className="mr-2 size-4" />@{twitter}
             </a>
           )}
         </div>
@@ -137,16 +153,20 @@ function SpeakerDetails(props) {
       <div className="p-8">
         <div className="grid gap-8 lg:grid-cols-5">
           <div className="lg:col-span-3">
-            <h3 className="mb-4 text-2xl font-bold text-gray-900">
-              About {props.name.split(' ')[0]}
-            </h3>
+            {name && (
+              <h3 className="mb-4 text-2xl font-bold text-gray-900">
+                About {name.split(' ')[0]}
+              </h3>
+            )}
             <div className="max-h-64 overflow-y-auto pr-4">
-              <p
-                id={`speaker-modal-bio-${props.id}`}
-                className="leading-relaxed text-gray-700"
-              >
-                {props.bio}
-              </p>
+              {bio && (
+                <p
+                  id={`speaker-modal-bio-${id}`}
+                  className="leading-relaxed text-gray-700"
+                >
+                  {bio}
+                </p>
+              )}
             </div>
           </div>
 
@@ -154,9 +174,11 @@ function SpeakerDetails(props) {
             <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-sky-50 p-6">
               <h3 className="mb-3 text-lg font-bold text-gray-900">Session</h3>
               <div className="rounded-xl bg-white p-4 shadow-sm">
-                <p className="text-sm font-semibold leading-relaxed text-gray-900">
-                  {props.sessionTitle}
-                </p>
+                {sessionTitle && (
+                  <p className="text-sm font-semibold leading-relaxed text-gray-900">
+                    {sessionTitle}
+                  </p>
+                )}
               </div>
             </div>
           </div>
