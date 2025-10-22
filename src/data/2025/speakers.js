@@ -1,4 +1,4 @@
-import AdonaiVera from '@/assets/images/speakers/Adonai_Vera.jpeg'
+import AdonaiVera from '@/assets/images/speakers/Adonai_Vera.png'
 import AlexPatterson from '@/assets/images/speakers/Alex_Patterson.png'
 import BandhanKaur from '@/assets/images/speakers/Bandhan_Kaur.jpeg'
 import BorisWilfriedNyasse from '@/assets/images/speakers/Boris_Wilfried_Nyasse.png'
