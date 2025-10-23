@@ -29,20 +29,10 @@ function SpeakerDetails({
     uniqueSpeakersSortedByFirstName,
   } = useContext(SpeakerContext)
 
-  const validateUrl = (urlString) => {
-    if (!urlString || typeof urlString !== 'string') return null
-
-    let tempUrl = urlString.trim()
-
-    // Add https:// if no protocol is present
-    if (!/^https?:\/\//i.test(tempUrl)) {
-      tempUrl = `https://${tempUrl}`
-    }
-
-    // Validate the URL
+  const validateUrl = (url) => {
     try {
-      new URL(tempUrl)
-      return tempUrl
+      new URL(url)
+      return url
     } catch {
       return null
     }
@@ -180,24 +170,20 @@ function SpeakerDetails({
             )}
             {urls.length > 0 &&
               urls.map((link, index) => {
-                try {
-                  const domain = new URL(link).hostname.replace('www.', '')
-                  return (
-                    <a
-                      key={index}
-                      href={link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <IoLinkOutline className="mr-2 size-4" />
-                      {domain}
-                    </a>
-                  )
-                } catch {
-                  return null
-                }
+                const domain = new URL(link).hostname.replace('www.', '')
+                return (
+                  <a
+                    key={index}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <IoLinkOutline className="mr-2 size-4" />
+                    {domain}
+                  </a>
+                )
               })}
           </div>
         </div>
