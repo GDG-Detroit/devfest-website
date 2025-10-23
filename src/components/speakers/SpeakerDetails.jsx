@@ -39,9 +39,7 @@ function SpeakerDetails({
   }
 
   const getUrlArray = () => {
-    if (!url) return []
     const urlList = Array.isArray(url) ? url : [url]
-
     return urlList.map(validateUrl).filter(Boolean)
   }
 
