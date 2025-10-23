@@ -60,11 +60,11 @@ const PartnersSection = ({
                   </p>
                 </div>
               )}
-              <div className="invisible absolute left-0 top-0 flex size-full flex-col items-center justify-center overflow-y-hidden rounded bg-black/50 p-4 text-white backdrop-blur-sm transition-all duration-200 group-hover:visible">
-                <h4 className="mb-2 text-xl font-semibold md:text-2xl">
+              <div className="invisible absolute left-0 top-0 flex size-full flex-col items-center justify-center overflow-y-hidden rounded bg-black/50 p-8 text-center text-white backdrop-blur-lg transition-all duration-200 group-hover:visible">
+                <h4 className="mb-2 text-xl font-bold md:text-2xl">
                   {partner.name}
                 </h4>
-                <p className="overflow-y-auto text-left text-sm md:text-base">
+                <p className="text-md overflow-y-auto text-left font-bold md:text-base">
                   {partner.desc}
                 </p>
               </div>
