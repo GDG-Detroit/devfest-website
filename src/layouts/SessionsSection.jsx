@@ -152,7 +152,7 @@ const SessionsSection = ({
 
             <button
               key={tab}
-              className={`relative whitespace-normal rounded-md px-0.5 py-2 text-sm font-black uppercase transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 lg:text-lg ${
+              className={`relative whitespace-normal rounded-md px-0.5 py-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 lg:text-lg ${
                 tab === 'Innovation' ? 'mx-1 py-5 md:w-24 lg:w-40' : ''
               } ${tab === 'Startup' ? 'py-5' : ''} ${
                 activeTab === index
