@@ -5,6 +5,7 @@ import BorisWilfriedNyasse from '@/assets/images/speakers/Boris_Wilfried_Nyasse.
 import BrianMcKeiver from '@/assets/images/speakers/Brian_McKeiver.png'
 import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
 import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
+import DavidGiard from '@/assets/images/speakers/David_Giard.jpeg'
 import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
 import JC_Escalante from '@/assets/images/speakers/JC_Escalante.jpeg'
 import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpeg'
@@ -667,5 +668,35 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: true,
+  },
+  {
+    id: 19,
+    name: 'David Giard',
+    email: 'davidjgiard@yahoo.com',
+    avatar: DavidGiard,
+    bio: `
+      David Giard is a former accountant and a former biochemist, who has been developing solutions using Microsoft technologies for over three decades. Currently, David helps people design and build solutions in his role as a Partner Solution Architect at Microsoft. David has been very active in the developer community, speaking at numerous major conferences, code camps, and user groups around the world; helping to lead user groups; and helping to organize conferences and other geek events. He is the host and producer of the mildly popular online TV shows Technology and Friends and GCast. He is the co-author of the Wrox book Real World .NET, C#, and Silverlight. You can read his latest thoughts at DavidGiard.com. His hobbies include video, photography, sports, and embarrassing his sons.
+    `,
+    twitter: 'davidgiard',
+    linkedIn: 'https://www.linkedin.com/in/davidgiard/',
+    url: 'https://davidgiard.com/',
+    organization: 'Microsoft',
+    position: 'Partner Solution Architect',
+    session: {
+      title: 'Blood, Sweat, & Code Reviews',
+      abstract:
+        'In this session, I will discuss the importance of Code Reviews and show some ways you can make your code reviews more productive, enjoyable, and successful.',
+      description: `
+        Code Reviews can sometimes be painful and time-consuming, but they are an important part of delivering quality software. A Code Review provides an opportunity to share knowledge, improve code and catch potential problems before they go to production. This can be a positive experience or a negative experience.
+
+        In this session, I will discuss the importance of Code Reviews and show some ways you can make your code reviews more productive, enjoyable, and successful.
+      `,
+      tags: ['Code Reviews', 'ALM', 'DevOps', 'Pull Requests'],
+      track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
   },
 ]

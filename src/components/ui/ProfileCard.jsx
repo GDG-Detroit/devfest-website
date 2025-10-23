@@ -11,19 +11,15 @@ const ProfileCard = ({
   avatar,
   organization,
   position,
-  role,
-  devfest,
   track,
   linkedin,
   github,
   twitter,
-  onViewBioOrDetails,
-  showBioButton = true,
+  onViewDetails,
   isWTM = false,
   isGDE = false,
 }) => {
-  const getRibbonColor = () => {
-    // Speakers
+  const getBadgeColor = () => {
     const trackColors = {
       'Build with AI': 'bg-purple-800',
       Innovation: 'bg-primary-900',
@@ -37,20 +33,9 @@ const ProfileCard = ({
     return 'bg-gray-600'
   }
 
-  const getRibbonLabel = () => {
-    if (track) return track
-    if (devfest) return devfest
-    return null
-  }
+  const badgeColor = getBadgeColor(track)
 
-  const ribbonColor = getRibbonColor(devfest || track)
-  const ribbonLabel = getRibbonLabel()
-
-  const isSpeaker = Boolean(track)
-  const teamBioColors = `bg-primary-500 hover:bg-primary-600 text-white`
   const speakerDetailColors = `bg-white text-sky-800 border-[1px] border-sky-900 shadow-xl hover:bg-primary-400 hover:border-primary-900 hover:text-sky-900`
-
-  const cardIsVertical = isSpeaker
 
   const getGradientColors = (bgColor) => {
     const colorMap = {
@@ -76,12 +61,12 @@ const ProfileCard = ({
     return colorMap[bgColor] || 'from-gray-400/60 via-gray-400/5'
   }
 
-  const renderBadge = ribbonLabel && (
+  const renderBadge = track && (
     <div className="absolute bottom-5 right-5 z-0">
       <span
-        className={`inline-flex items-center gap-2 rounded-xl ${ribbonColor} px-3 py-1.5 text-sm font-bold uppercase tracking-wider text-white shadow-lg`}
+        className={`inline-flex items-center gap-2 rounded-xl ${badgeColor} px-3 py-1.5 text-sm font-bold uppercase tracking-wider text-white shadow-lg`}
       >
-        {ribbonLabel}
+        {track}
         {isGDE && (
           <img
             src={GDEIcon}
@@ -111,53 +96,39 @@ const ProfileCard = ({
       {/* Top gradient */}
       <div
         className={`absolute inset-x-0 top-0 z-0 h-1/2 bg-gradient-to-b ${getGradientColors(
-          ribbonColor
+          badgeColor
         )} pointer-events-none via-10% to-transparent`}
       ></div>
       {/* Bottom gradient */}
       <div
         className={`absolute inset-x-0 bottom-0 z-0 h-1/2 bg-gradient-to-t ${getGradientColors(
-          ribbonColor
+          badgeColor
         )} pointer-events-none via-10% to-transparent`}
       ></div>
       {/* Left gradient */}
       <div
         className={`absolute inset-y-0 left-0 z-0 w-1/2 bg-gradient-to-r ${getGradientColors(
-          ribbonColor
+          badgeColor
         )} pointer-events-none via-10% to-transparent`}
       ></div>
       {/* Right gradient */}
       <div
         className={`absolute inset-y-0 right-0 z-0 w-1/2 bg-gradient-to-l ${getGradientColors(
-          ribbonColor
+          badgeColor
         )} pointer-events-none via-10% to-transparent`}
       ></div>
     </>
   )
 
-  const renderBadgeAndGradient = ribbonLabel && (
+  const renderBadgeAndGradient = track && (
     <>
       {renderImageGradient}
       {renderBadge}
     </>
   )
 
-  const renderTeamRibbon = ribbonLabel && (
-    <div
-      className={`${
-        devfest ? `ribbon-${devfest}` : `ribbon-${track}`
-      } absolute -right-10 top-6 z-0 w-40 rotate-45 ${ribbonColor} py-1 text-center text-xs font-semibold uppercase tracking-wide text-white shadow-md`}
-    >
-      {ribbonLabel}
-    </div>
-  )
-
   const renderSocialLinks = (linkedin || github || twitter) && (
-    <div
-      className={`${
-        cardIsVertical ? 'inline-flex items-center gap-2' : 'mt-2 flex'
-      }`}
-    >
+    <div className="inline-flex items-center gap-2">
       {linkedin && <LinkedInHandle handle={linkedin} absolute={false} />}
       {github && <GithubHandle handle={github} absolute={false} />}
       {twitter && (
@@ -176,50 +147,25 @@ const ProfileCard = ({
   }
   const renderInfo = (
     <div className="ml-4 flex flex-col items-start justify-center">
-      <h3
-        className={`mt-1 ${
-          cardIsVertical ? 'line-clamp-2 text-xl' : 'text-base/7'
-        } font-semibold tracking-tight text-gray-900 dark:text-white`}
-      >
+      <h3 className="mt-1 line-clamp-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
         {name}
       </h3>
-      <div
-        className={`mt-1 text-left ${
-          cardIsVertical ? 'line-clamp-2 text-base' : 'text-sm'
-        } text-gray-600 dark:text-white`}
-      >
+      <div className="mt-1 line-clamp-2 text-left text-base text-gray-600 dark:text-white">
         {organization || '\u00A0'}
       </div>
-      <div
-        className={`mt-1 text-left ${
-          cardIsVertical ? 'line-clamp-2 text-base' : 'text-base/7'
-        } text-gray-600 dark:text-white`}
-      >
+      <div className="mt-1 line-clamp-2 text-left text-base text-gray-600 dark:text-white">
         {position || '\u00A0'}
       </div>
-      {role && (
-        <p
-          className={`mt-1 text-left text-sm text-gray-600 dark:text-gray-400`}
-        >
-          {role}
-        </p>
-      )}
     </div>
   )
 
-  const renderButton = showBioButton && onViewBioOrDetails && (
+  const renderButton = onViewDetails && (
     <button
-      className={`${
-        cardIsVertical
-          ? 'my-3 inline-flex items-center rounded-lg px-4 py-2'
-          : 'absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full px-4 py-1.5'
-      } whitespace-nowrap text-sm font-medium shadow-md transition-colors dark:text-black ${
-        isSpeaker ? speakerDetailColors : teamBioColors
-      }`}
-      onClick={onViewBioOrDetails}
+      className={`my-3 inline-flex items-center whitespace-nowrap rounded-lg px-4 py-2 text-sm font-medium shadow-md transition-colors dark:text-black ${speakerDetailColors}`}
+      onClick={onViewDetails}
       aria-label={`View details for ${name}`}
     >
-      View {isSpeaker ? 'Details' : 'Bio'}
+      View Details
     </button>
   )
 
@@ -244,34 +190,9 @@ const ProfileCard = ({
     </>
   )
 
-  const renderTeamMemberCard = (
-    <>
-      <div className="relative overflow-hidden rounded-xl p-4 pb-12">
-        {renderTeamRibbon}
-        <div className="flex">
-          <div className="flex w-24 shrink-0 flex-col items-center">
-            <img
-              alt=""
-              src={avatar}
-              className="size-24 rounded-full outline outline-1 -outline-offset-1 outline-black/5 dark:outline-white/10"
-              loading="lazy"
-            />
-            {renderSocialLinks}
-          </div>
-          {renderInfo}
-        </div>
-      </div>
-      {renderButton}
-    </>
-  )
-
   return (
-    <div
-      className={`relative ${
-        cardIsVertical ? 'rounded-2xl' : 'rounded-xl'
-      } border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800`}
-    >
-      {cardIsVertical ? renderSpeakerCard : renderTeamMemberCard}
+    <div className="relative rounded-2xl border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800">
+      {renderSpeakerCard}
     </div>
   )
 }
@@ -281,14 +202,11 @@ ProfileCard.propTypes = {
   avatar: PropTypes.string.isRequired,
   organization: PropTypes.string,
   position: PropTypes.string,
-  role: PropTypes.string,
-  devfest: PropTypes.string, // For team members: 'organizer', 'facilitator', 'devteam'
   track: PropTypes.string, // For speakers: 'Build with AI', 'Innovation', etc.
   linkedin: PropTypes.string,
   github: PropTypes.string,
   twitter: PropTypes.string,
-  onViewBioOrDetails: PropTypes.func,
-  showBioButton: PropTypes.bool,
+  onViewDetails: PropTypes.func,
   isWTM: PropTypes.bool,
   isGDE: PropTypes.bool,
 }

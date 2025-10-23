@@ -76,7 +76,7 @@ const SpeakerCard = ({
         track={track}
         twitter={twitter}
         linkedin={linkedin}
-        onViewBioOrDetails={open}
+        onViewDetails={open}
         isGDE={isGDE}
         isWTM={isWTM}
       />

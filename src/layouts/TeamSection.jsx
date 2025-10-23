@@ -93,7 +93,7 @@ const TeamSection = () => {
                   <div
                     className={`ribbon-${
                       dev.devfest
-                    } z-8 absolute -right-10 top-6 w-40 rotate-45 ${getRibbonColor(
+                    } absolute -right-10 top-6 z-0 w-40 rotate-45 ${getRibbonColor(
                       dev.devfest
                     )} py-1 text-center text-sm font-bold uppercase tracking-wide text-white shadow-md`}
                   >

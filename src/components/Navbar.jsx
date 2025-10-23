@@ -300,7 +300,7 @@ function Navbar() {
     <nav
       ref={navRef}
       aria-label="Main navigation"
-      className={`max-w-screen fixed left-0 top-0 z-10 w-screen overflow-hidden ${
+      className={`fixed left-0 top-0 z-10 w-screen overflow-hidden ${
         activeLink === 'landing'
           ? 'bg-primary-400 text-sky-900'
           : 'bg-white text-gray-700 shadow-lg dark:bg-gray-700 dark:text-gray-100'
