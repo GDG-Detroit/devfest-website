@@ -679,7 +679,7 @@ export const SpeakersData = [
     `,
     twitter: 'davidgiard',
     linkedIn: 'https://www.linkedin.com/in/davidgiard/',
-    url: 'http://davidgiard.com/',
+    url: 'https://davidgiard.com/',
     organization: 'Microsoft',
     position: 'Partner Solution Architect',
     session: {
