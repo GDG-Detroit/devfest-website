@@ -17,6 +17,8 @@ const DevTeamSection = () => {
           alt="Dev Team"
           className="h-10 sm:h-12 md:h-14 lg:h-16"
           loading="lazy"
+          width={82}
+          height={57}
         />
       </div>
       <div className="mt-32 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">

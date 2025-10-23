@@ -120,8 +120,10 @@ const SessionsSection = ({
         </h2>
         <img
           src={SessionsLogo}
-          alt="Sessions"
+          alt=""
           className="h-10 sm:h-12 md:h-14 lg:h-16"
+          width={82}
+          height={69}
           loading="lazy"
         />
       </div>

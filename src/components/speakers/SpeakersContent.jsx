@@ -42,8 +42,11 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
       </h2>
       <img
         src={SpeakersLogo}
-        alt="Speakers"
+        alt=""
         className="h-8 sm:h-10 md:h-12 lg:h-12"
+        width={96}
+        height={45}
+        loading="lazy"
       />
     </div>
   )

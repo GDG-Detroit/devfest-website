@@ -60,6 +60,7 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
                     src={company.logo}
                     alt={`${company.name} logo`}
                     className="size-24 object-contain"
+                    loading="lazy"
                   />
                 </div>
                 {/* Company name */}

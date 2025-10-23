@@ -84,8 +84,26 @@ const ProfileCard = ({
         className={`inline-flex items-center gap-2 rounded-xl ${ribbonColor} px-3 py-1.5 text-sm font-bold uppercase tracking-wider text-white shadow-lg`}
       >
         {ribbonLabel}
-        {isGDE && <img src={GDEIcon} alt="GDE" className="size-6" />}
-        {isWTM && <img src={WTMLogo} alt="WTM" className="size-5" />}
+        {isGDE && (
+          <img
+            src={GDEIcon}
+            alt="GDE"
+            className="size-6"
+            loading="lazy"
+            width={24}
+            height={24}
+          />
+        )}
+        {isWTM && (
+          <img
+            src={WTMLogo}
+            alt="WTM"
+            className="size-5"
+            loading="lazy"
+            width={20}
+            height={20}
+          />
+        )}
       </span>
     </div>
   )
