@@ -5,7 +5,7 @@ import BorisWilfriedNyasse from '@/assets/images/speakers/Boris_Wilfried_Nyasse.
 import BrianMcKeiver from '@/assets/images/speakers/Brian_McKeiver.png'
 import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
 import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
-import DavidGiard from '@/assets/images/speakers/David_Giard.png'
+import DavidGiard from '@/assets/images/speakers/David_Giard.jpeg'
 import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
 import JC_Escalante from '@/assets/images/speakers/JC_Escalante.jpeg'
 import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpeg'
