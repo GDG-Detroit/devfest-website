@@ -61,7 +61,7 @@ export const SpeakersData = [
     avatar: BrianMcKeiver,
     bio: 'Brian McKeiver is Co-Owner at BizStream, a digital agency in Allendale, MI. He is a solution architect, visionary, Microsoft Azure AI MVP, and Kentico MVP. He has 23 years of experience leading his agency of more than 40 employees and about a hundred clients spread out across North America. In addition to his expertise in web development, cloud, integration, and digital marketing, Brian is active with the tech community via his blog at Mcbeev.com.',
     twitter: 'mcbeev',
-    url: 'mcbeev.com',
+    url: 'https://www.mcbeev.com/',
     organization: 'BizStream',
     position: 'Co-Owner',
     session: {
@@ -147,7 +147,7 @@ export const SpeakersData = [
     bio: `I am a Robotics Engineer with active research in teaching robots how to see and move. More importantly, I love to teach and break down seemingly hard concepts into simple bits for people to understand.`,
     twitter: 'jimohhafeezco',
     linkedIn: 'https://www.linkedin.com/in/jimohafeezco/',
-    url: '',
+    url: null,
     organization: 'Lawrence Technological University',
     position: 'Robotics Engineer & Instructor',
     session: {
