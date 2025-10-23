@@ -33,11 +33,11 @@ const ProfileCard = ({
     // Speakers
     const trackColors = {
       'Build with AI': 'bg-purple-800',
-      Innovation: 'bg-primary-800',
+      Innovation: 'bg-primary-900',
       'Level Up': 'bg-emerald-800',
       Startups: 'bg-sky-800',
       'Tech+Design': 'bg-red-800',
-      Workshops: 'bg-orange-800',
+      Workshops: 'bg-orange-900',
     }
 
     if (track) return trackColors[track] || 'bg-sky-800'
@@ -84,8 +84,8 @@ const ProfileCard = ({
         className={`inline-flex items-center gap-2 rounded-xl ${ribbonColor} px-3 py-1.5 text-sm font-bold uppercase tracking-wider text-white shadow-lg`}
       >
         {ribbonLabel}
-        {isGDE && <img src={GDEIcon} alt="GDE" className="size-4" />}
-        {isWTM && <img src={WTMLogo} alt="WTM" className="size-4" />}
+        {isGDE && <img src={GDEIcon} alt="GDE" className="size-6" />}
+        {isWTM && <img src={WTMLogo} alt="WTM" className="size-5" />}
       </span>
     </div>
   )
