@@ -43,7 +43,7 @@ const Yoda404 = () => {
         <div className="flex size-48 items-center justify-center">
           <img
             src={yodaHead}
-            alt="Yoda-like head"
+            alt="Decorative Yoda head for 404 page"
             className="size-full object-contain"
             loading="eager"
             width="192"
@@ -73,6 +73,7 @@ const Yoda404 = () => {
             setRandomQuote(newQuote)
           }}
           className="rounded-lg bg-primary-500 px-8 py-3 font-semibold text-black shadow-lg transition-colors duration-200 hover:bg-primary-600 hover:shadow-xl"
+          aria-label="Get another Yoda quote"
         >
           Another Quote
         </button>
