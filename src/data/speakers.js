@@ -331,15 +331,18 @@ export const SpeakersData = [
     isWTM: true,
     isGDE: false,
   },
+  // For future reference, Stephanie Frantz does not want her email listed
   {
     id: 11,
     name: 'Stephanie Frantz',
     email: null,
     avatar: StephanieFrantz,
-    bio: null,
+    bio: `
+      Stephanie Frantz, a Lead DevOps Engineer at Cengage Group, combines a 'dreamer's' vision with a 'creator's' drive. As a neighborhood friendly DevOps engineer who hangs out in security spaces, she brings a unique blend of development operations and security awareness to cloud infrastructure. Specializing in containerization and pipeline automation, she crafts robust and scalable cloud solutions, working closely with developers to ensure seamless deployments. She is passionate about leveraging technology to build efficient and impactful systems, and strives to make the cloud a safer place, one container at a time.
+    `,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/stephanielage/',
-    url: null,
+    url: 'https://www.stephaniefrantz.com/',
     organization: 'Cengage Education',
     position: 'Lead DevOps Engineer',
     session: {
