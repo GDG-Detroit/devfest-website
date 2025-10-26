@@ -53,6 +53,7 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: false,
+    mastodon: null,
   },
   {
     id: 2,
@@ -77,6 +78,7 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: false,
+    mastodon: null,
   },
   {
     id: 3,
@@ -101,6 +103,7 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: false,
+    mastodon: null,
   },
   {
     id: 4,
@@ -138,6 +141,7 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: false,
+    mastodon: null,
   },
   {
     id: 5,
@@ -176,6 +180,7 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: false,
+    mastodon: null,
   },
   {
     id: 6,
@@ -201,6 +206,7 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: true,
+    mastodon: null,
   },
   {
     id: 7,
@@ -243,6 +249,7 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: false,
+    mastodon: null,
   },
   {
     id: 8,
@@ -268,6 +275,7 @@ export const SpeakersData = [
     },
     isWTM: true,
     isGDE: false,
+    mastodon: null,
   },
   {
     id: 9,
@@ -358,6 +366,7 @@ export const SpeakersData = [
     },
     isWTM: true,
     isGDE: false,
+    mastodon: 'https://defcon.social/@handsomezebra',
   },
   {
     id: 12,
@@ -383,6 +392,7 @@ export const SpeakersData = [
     },
     isWTM: true,
     isGDE: false,
+    mastodon: null,
   },
   {
     id: 13,
@@ -428,6 +438,7 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: true,
+    mastodon: null,
   },
   {
     id: 14,
@@ -465,6 +476,7 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: true,
+    mastodon: null,
   },
   {
     id: 15,
@@ -531,6 +543,7 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: true,
+    mastodon: null,
   },
   {
     id: 16,
@@ -591,6 +604,7 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: true,
+    mastodon: null,
   },
   {
     id: 17,
@@ -638,6 +652,7 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: true,
+    mastodon: null,
   },
   {
     id: 18,
@@ -671,6 +686,7 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: true,
+    mastodon: null,
   },
   {
     id: 19,
@@ -701,5 +717,6 @@ export const SpeakersData = [
     },
     isWTM: false,
     isGDE: false,
+    mastodon: null,
   },
 ]

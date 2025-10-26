@@ -86,6 +86,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
           isGDE={speaker.isGDE}
           isWTM={speaker.isWTM}
           url={speaker.url}
+          mastodon={speaker.mastodon}
         />
       ))}
     </div>

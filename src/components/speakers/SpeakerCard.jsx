@@ -19,6 +19,7 @@ const SpeakerCard = ({
   isGDE,
   isWTM,
   url,
+  mastodon,
 }) => {
   const { isModalOpen, openModal, closeModal, setSpeakerID, speakerID } =
     useContext(SpeakerContext)
@@ -79,6 +80,7 @@ const SpeakerCard = ({
         onViewDetails={open}
         isGDE={isGDE}
         isWTM={isWTM}
+        mastodon={mastodon}
       />
 
       {isModalOpen && id === speakerID && (
@@ -138,6 +140,7 @@ SpeakerCard.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
   ]),
+  mastodon: PropTypes.string,
 }
 
 export default SpeakerCard

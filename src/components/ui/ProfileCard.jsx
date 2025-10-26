@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
-import LinkedInHandle from '@/components/ui/LinkedInHandle'
 import GithubHandle from '@/components/ui/GithubHandle'
+import LinkedInHandle from '@/components/ui/LinkedInHandle'
+import MastodonHandle from '@/components/ui//MastadonHandle'
 import TwitterHandle from '@/components/ui/TwitterHandle'
 
 import GDEIcon from '@/assets/images/icons/gdge.svg'
@@ -13,6 +14,7 @@ const ProfileCard = ({
   position,
   track,
   linkedin,
+  mastodon,
   github,
   twitter,
   onViewDetails,
@@ -127,10 +129,11 @@ const ProfileCard = ({
     </>
   )
 
-  const renderSocialLinks = (linkedin || github || twitter) && (
+  const renderSocialLinks = (linkedin || github || twitter || mastodon) && (
     <div className="inline-flex items-center gap-2">
-      {linkedin && <LinkedInHandle handle={linkedin} absolute={false} />}
       {github && <GithubHandle handle={github} absolute={false} />}
+      {linkedin && <LinkedInHandle handle={linkedin} absolute={false} />}
+      {mastodon && <MastodonHandle handle={mastodon} absolute={false} />}
       {twitter && (
         <TwitterHandle
           handle={twitter}
@@ -209,6 +212,7 @@ ProfileCard.propTypes = {
   onViewDetails: PropTypes.func,
   isWTM: PropTypes.bool,
   isGDE: PropTypes.bool,
+  mastodon: PropTypes.string,
 }
 
 export default ProfileCard
