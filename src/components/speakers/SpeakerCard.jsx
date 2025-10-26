@@ -6,18 +6,19 @@ import ProfileCard from '@/components/ui/ProfileCard'
 import { SpeakerContext } from './SpeakerContext'
 
 const SpeakerCard = ({
-  id,
-  name,
-  twitter,
-  linkedin,
   avatar,
-  organization,
-  position,
   bio,
-  sessionTitle,
-  track,
+  id,
   isGDE,
   isWTM,
+  linkedin,
+  mastodon,
+  name,
+  organization,
+  position,
+  sessionTitle,
+  track,
+  twitter,
   url,
 }) => {
   const { isModalOpen, openModal, closeModal, setSpeakerID, speakerID } =
@@ -69,16 +70,17 @@ const SpeakerCard = ({
   return (
     <>
       <ProfileCard
-        name={name}
         avatar={avatar}
+        isGDE={isGDE}
+        isWTM={isWTM}
+        linkedin={linkedin}
+        mastodon={mastodon}
+        name={name}
+        onViewDetails={open}
         organization={organization}
         position={position}
         track={track}
         twitter={twitter}
-        linkedin={linkedin}
-        onViewDetails={open}
-        isGDE={isGDE}
-        isWTM={isWTM}
       />
 
       {isModalOpen && id === speakerID && (
@@ -102,15 +104,16 @@ const SpeakerCard = ({
           <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center p-4">
             <div className="pointer-events-auto">
               <SpeakerDetails
-                name={name}
-                bio={bio}
-                organization={organization}
                 avatar={avatar}
-                twitter={twitter}
-                sessionTitle={sessionTitle}
+                bio={bio}
+                id={id}
+                mastodon={mastodon}
+                name={name}
+                organization={organization}
                 onClose={closeModal}
                 position={position}
-                id={id}
+                sessionTitle={sessionTitle}
+                twitter={twitter}
                 url={url}
               />
             </div>
@@ -122,18 +125,19 @@ const SpeakerCard = ({
 }
 
 SpeakerCard.propTypes = {
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  twitter: PropTypes.string,
-  linkedin: PropTypes.string,
   avatar: PropTypes.string.isRequired,
-  organization: PropTypes.string,
-  position: PropTypes.string,
   bio: PropTypes.string,
-  sessionTitle: PropTypes.string.isRequired,
-  track: PropTypes.string,
+  id: PropTypes.number.isRequired,
   isGDE: PropTypes.bool,
   isWTM: PropTypes.bool,
+  linkedin: PropTypes.string,
+  mastodon: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  organization: PropTypes.string,
+  position: PropTypes.string,
+  sessionTitle: PropTypes.string.isRequired,
+  track: PropTypes.string,
+  twitter: PropTypes.string,
   url: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),

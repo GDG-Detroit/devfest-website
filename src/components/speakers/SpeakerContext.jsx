@@ -29,7 +29,7 @@ export const SpeakerProvider = ({ children, speakersData = [] }) => {
   const uniqueSpeakers = useMemo(() => {
     return speakersData.filter(
       (speaker, index, self) =>
-        index === self.findIndex((s) => s.email === speaker.email)
+        index === self.findIndex((s) => s.name === speaker.name)
     )
   }, [speakersData])
 

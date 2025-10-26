@@ -1,23 +1,25 @@
 import PropTypes from 'prop-types'
-import LinkedInHandle from '@/components/ui/LinkedInHandle'
 import GithubHandle from '@/components/ui/GithubHandle'
+import LinkedInHandle from '@/components/ui/LinkedInHandle'
+import MastodonHandle from '@/components/ui//MastadonHandle'
 import TwitterHandle from '@/components/ui/TwitterHandle'
 
 import GDEIcon from '@/assets/images/icons/gdge.svg'
 import WTMLogo from '@/assets/images/icons/wtm.svg'
 
 const ProfileCard = ({
-  name,
   avatar,
+  github,
+  isGDE = false,
+  isWTM = false,
+  linkedin,
+  mastodon,
+  name,
+  onViewDetails,
   organization,
   position,
   track,
-  linkedin,
-  github,
   twitter,
-  onViewDetails,
-  isWTM = false,
-  isGDE = false,
 }) => {
   const getBadgeColor = () => {
     const trackColors = {
@@ -127,10 +129,11 @@ const ProfileCard = ({
     </>
   )
 
-  const renderSocialLinks = (linkedin || github || twitter) && (
+  const renderSocialLinks = (linkedin || github || twitter || mastodon) && (
     <div className="inline-flex items-center gap-2">
-      {linkedin && <LinkedInHandle handle={linkedin} absolute={false} />}
       {github && <GithubHandle handle={github} absolute={false} />}
+      {linkedin && <LinkedInHandle handle={linkedin} absolute={false} />}
+      {mastodon && <MastodonHandle handle={mastodon} absolute={false} />}
       {twitter && (
         <TwitterHandle
           handle={twitter}
@@ -146,7 +149,7 @@ const ProfileCard = ({
     /* Show fields to maintain size */
   }
   const renderInfo = (
-    <div className="ml-4 flex flex-col items-start justify-center">
+    <div className="ml-4 flex flex-col items-start justify-start">
       <h3 className="mt-1 line-clamp-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
         {name}
       </h3>
@@ -198,17 +201,18 @@ const ProfileCard = ({
 }
 
 ProfileCard.propTypes = {
-  name: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
+  github: PropTypes.string,
+  isGDE: PropTypes.bool,
+  isWTM: PropTypes.bool,
+  linkedin: PropTypes.string,
+  onViewDetails: PropTypes.func,
+  mastodon: PropTypes.string,
+  name: PropTypes.string.isRequired,
   organization: PropTypes.string,
   position: PropTypes.string,
   track: PropTypes.string, // For speakers: 'Build with AI', 'Innovation', etc.
-  linkedin: PropTypes.string,
-  github: PropTypes.string,
   twitter: PropTypes.string,
-  onViewDetails: PropTypes.func,
-  isWTM: PropTypes.bool,
-  isGDE: PropTypes.bool,
 }
 
 export default ProfileCard
