@@ -7,6 +7,7 @@ import {
   IoLinkOutline,
   IoLogoTwitter,
 } from 'react-icons/io5'
+import { FaMastodon } from 'react-icons/fa'
 
 import { SpeakerContext } from './SpeakerContext'
 
@@ -14,6 +15,7 @@ function SpeakerDetails({
   avatar,
   bio,
   id,
+  mastodon,
   name,
   onClose,
   organization,
@@ -155,6 +157,17 @@ function SpeakerDetails({
           {organization && <p className="text-blue-200">{organization}</p>}
 
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+            {mastodon && (
+              <a
+                href={`${mastodon}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <FaMastodon className="mr-2 size-4" />@{mastodon}
+              </a>
+            )}
             {twitter && (
               <a
                 href={`https://twitter.com/${twitter}`}
@@ -271,8 +284,9 @@ function SpeakerDetails({
 SpeakerDetails.propTypes = {
   avatar: PropTypes.string.isRequired,
   bio: PropTypes.string,
-  name: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
+  mastodon: PropTypes.string,
+  name: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
   organization: PropTypes.string,
   position: PropTypes.string,

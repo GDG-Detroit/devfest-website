@@ -107,6 +107,7 @@ const SpeakerCard = ({
                 avatar={avatar}
                 bio={bio}
                 id={id}
+                mastodon={mastodon}
                 name={name}
                 organization={organization}
                 onClose={closeModal}
