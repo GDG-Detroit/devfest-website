@@ -149,7 +149,7 @@ const ProfileCard = ({
     /* Show fields to maintain size */
   }
   const renderInfo = (
-    <div className="ml-4 flex flex-col items-start justify-center">
+    <div className="ml-4 flex flex-col items-start justify-start">
       <h3 className="mt-1 line-clamp-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
         {name}
       </h3>
