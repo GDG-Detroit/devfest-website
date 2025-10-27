@@ -139,7 +139,7 @@ const SessionsSection = ({
 
       <div
         className={`flex w-full flex-col overflow-hidden transition-all duration-500 ease-in-out ${
-          isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <nav
@@ -213,7 +213,7 @@ const SessionsSection = ({
         </nav>
 
         <div
-          className={`flex min-h-[800px] w-full items-start justify-start px-[2.5%] md:px-[5%] ${
+          className={`flex w-full items-start justify-start px-[2.5%] md:px-[5%] ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
