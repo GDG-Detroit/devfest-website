@@ -135,7 +135,7 @@ We are committed to significantly improving the lives of as many people as possi
       name: 'NSBE Detroit',
       logo: NSBEDetroit,
       desc: 'National Society of Black Engineers Detroit Professional Chapter supports Black engineers and their communities.',
-      url: 'https://www.nsbedetroit.org/',
+      url: 'https://nsbedetroitprofessionals.org/',
       tier: 'Organization',
     },
     {
