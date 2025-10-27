@@ -74,9 +74,9 @@ function Navbar() {
       { id: 'landing', text: 'Landing' },
       { id: 'location', text: 'Location' },
       { id: 'sessions', text: 'Sessions' },
+      { id: 'speakers', text: 'Speakers' },
       { id: 'partners', text: 'Partners' },
       { id: 'jobboard', text: 'Job Board' },
-      { id: 'speakers', text: 'Speakers' },
       { id: 'devteam', text: 'Dev Team' },
     ],
     []
