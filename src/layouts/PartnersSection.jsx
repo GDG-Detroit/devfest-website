@@ -45,7 +45,7 @@ const PartnersSection = ({
             <button
               key={partner.id}
               className="group relative flex justify-center p-4 transition-transform duration-200 hover:scale-105"
-              onClick={() => window.open(partner.url, '_blank')}
+              onClick={() => partner.url && window.open(partner.url, '_blank')}
             >
               {partner.logo ? (
                 <img

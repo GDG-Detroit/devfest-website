@@ -119,7 +119,7 @@ We are committed to significantly improving the lives of as many people as possi
       name: 'GDG Wayne State University',
       logo: GDGWSU,
       desc: 'Google Developer Group at Wayne State University is a student chapter interested in Google technologies.',
-      url: 'https://gdg.community.dev/gdg-wsu/',
+      url: null,
       tier: 'Organization',
     },
     {
