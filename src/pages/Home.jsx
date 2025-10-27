@@ -32,13 +32,13 @@ function Home() {
         ]}
         defaultExpanded
       />
-      <PartnersSection year={2025} partnersData={partnersData} />
-      <JobBoardSection year={2025} />
       <SpeakersSection
         year={2025}
         speakersData={Speakers2025}
-        defaultExpanded
+        defaultExpanded={false}
       />
+      <PartnersSection year={2025} partnersData={partnersData} />
+      <JobBoardSection year={2025} />
       <TeamSection />
     </PageLayout>
   )
