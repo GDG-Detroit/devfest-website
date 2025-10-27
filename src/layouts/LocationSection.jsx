@@ -62,8 +62,7 @@ function LocationSection() {
                 <dt className="sr-only">Venue</dt>
                 <dd className="font-medium">
                   <strong>
-                    Wayne State University - Saint Andrew&apos;s Memorial
-                    Episcopal Church
+                    STEM Innovation Learning Center (SILC) 7th Floor
                   </strong>
                 </dd>
                 <dt className="sr-only">Address</dt>
@@ -72,16 +71,16 @@ function LocationSection() {
                     className="not-italic"
                     aria-label="Hackathon venue address"
                   >
-                    5105 Anthony Wayne Dr, Detroit, MI 48202
+                    5048 Gullen Mall, Detroit, MI 48202
                   </address>
                 </dd>
               </dl>
               <a
-                href="https://www.google.com/maps/dir//Saint+Andrew's+Memorial+Episcopal+Church,+Detroit,+MI/@42.355556,-83.0730112,881m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8824d2a41779eb09:0xee199848d652faba!8m2!3d42.355556!4d-83.0730112!16s%2Fm%2F04f4ds4?entry=ttu"
+                href="https://www.google.com/maps/dir//5048+Gullen+Mall,+Detroit,+MI+48202/@42.3580,-83.0686,17z"
                 target="_blank"
                 className="mb-4 mt-3 inline-flex items-center whitespace-nowrap rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2"
                 rel="noreferrer"
-                aria-label="Get directions to Wayne State University Saint Andrew's Memorial Episcopal Church (opens in new tab)"
+                aria-label="Get directions to STEM Innovation Learning Center (opens in new tab)"
               >
                 GET HACKATHON DIRECTIONS
               </a>
@@ -91,28 +90,28 @@ function LocationSection() {
           {/* Friday Map */}
           <div className="mx-2 w-full max-w-full overflow-hidden lg:w-1/2">
             <h4 className="mb-2 text-sm font-semibold text-gray-700 dark:text-white">
-              Friday - Wayne State University Location
+              Friday - STEM Innovation Learning Center (SILC)
             </h4>
             <div className="">
               <iframe
-                title="Wayne State University - Saint Andrew's Memorial Episcopal Church"
-                aria-label="Interactive map showing Wayne State University - Saint Andrew's Memorial Episcopal Church location"
+                title="STEM Innovation Learning Center (SILC)"
+                aria-label="Interactive map showing STEM Innovation Learning Center location"
                 className="aspect-[4/3]  rounded-lg border-8 border-sky-200"
                 style={{
                   maxWidth: '95%',
                   width: '95%',
                   boxSizing: 'border-box',
                 }}
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.5!2d-83.0730112!3d42.355556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824d2a41779eb09%3A0xee199848d652faba!2sSaint%20Andrew%27s%20Memorial%20Episcopal%20Church!5e1!3m2!1sen!2sus!4v1757466338342!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.3!2d-83.0686!3d42.3580!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDIxJzI4LjgiTiA4M8KwMDQnMDYuOSJX!5e1!3m2!1sen!2sus!4v1757466338342!5m2!1sen!2sus"
                 allowFullScreen
                 loading="lazy"
                 sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
               >
                 <p>
-                  Interactive map showing Wayne State University - Saint
-                  Andrew&apos;s Memorial Episcopal Church location.
+                  Interactive map showing STEM Innovation Learning Center (SILC)
+                  location.
                   <a
-                    href="https://www.google.com/maps/dir//Saint+Andrew's+Memorial+Episcopal+Church,+Detroit,+MI/@42.355556,-83.0730112,881m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8824d2a41779eb09:0xee199848d652faba!8m2!3d42.355556!4d-83.0730112!16s%2Fm%2F04f4ds4?entry=ttu"
+                    href="https://www.google.com/maps/dir//5048+Gullen+Mall,+Detroit,+MI+48202/@42.3580,-83.0686,17z"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
