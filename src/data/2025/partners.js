@@ -111,7 +111,7 @@ We are committed to significantly improving the lives of as many people as possi
       name: 'GDG UofM Dearborn',
       logo: GDGUofMDearborn,
       desc: 'Google Developer Group at University of Michigan-Dearborn is a student chapter interested in Google technologies.',
-      url: 'https://gdg.community.dev/gdg-uofm-dearborn/',
+      url: 'https://gdg.community.dev/gdg-on-campus-university-of-michigan-dearborn-dearborn-united-states/',
       tier: 'Organization',
     },
     {
