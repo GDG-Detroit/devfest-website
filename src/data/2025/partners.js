@@ -35,7 +35,7 @@ We are committed to significantly improving the lives of as many people as possi
       name: 'Compass Detroit',
       logo: CompassDetroit,
       desc: `The Collective of Minority Professionals and STEAM Societies (formerly COMPES) was formed in 2000 as an initiative between the NSBE, SHPE, and SWE Detroit professional chapters. The mission of this collaborative partnership is to support the local Detroit community in upskilling, career growth, networking, and to provide access to new opportunities.`,
-      url: 'https://compesdetroit.wixsite.com/compes2023',
+      url: 'hhttps://bit.ly/bhm-summit-website',
       tier: 'Diamond Sponsor',
     },
     {
