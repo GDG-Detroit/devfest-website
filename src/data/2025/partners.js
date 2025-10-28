@@ -35,7 +35,7 @@ We are committed to significantly improving the lives of as many people as possi
       name: 'Compass Detroit',
       logo: CompassDetroit,
       desc: `The Collective of Minority Professionals and STEAM Societies (formerly COMPES) was formed in 2000 as an initiative between the NSBE, SHPE, and SWE Detroit professional chapters. The mission of this collaborative partnership is to support the local Detroit community in upskilling, career growth, networking, and to provide access to new opportunities.`,
-      url: 'https://compesdetroit.wixsite.com/compes2023',
+      url: 'hhttps://bit.ly/bhm-summit-website',
       tier: 'Diamond Sponsor',
     },
     {
@@ -119,7 +119,7 @@ We are committed to significantly improving the lives of as many people as possi
       name: 'GDG Wayne State University',
       logo: GDGWSU,
       desc: 'Google Developer Group at Wayne State University is a student chapter interested in Google technologies.',
-      url: 'https://gdg.community.dev/gdg-wsu/',
+      url: null,
       tier: 'Organization',
     },
     {
@@ -135,7 +135,7 @@ We are committed to significantly improving the lives of as many people as possi
       name: 'NSBE Detroit',
       logo: NSBEDetroit,
       desc: 'National Society of Black Engineers Detroit Professional Chapter supports Black engineers and their communities.',
-      url: 'https://www.nsbedetroit.org/',
+      url: 'https://nsbedetroitprofessionals.org/',
       tier: 'Organization',
     },
     {

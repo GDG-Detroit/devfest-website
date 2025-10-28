@@ -137,123 +137,129 @@ const SessionsSection = ({
         </div>
       )}
 
-      <nav
-        id="sessions-nav"
-        className={`mt-4 flex w-full flex-wrap items-center justify-center gap-1 rounded-md bg-black md:inline-flex md:flex-nowrap ${
-          isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
-        }`}
-        aria-label="Session track navigation"
-      >
-        {tabs.map((tab, index) => (
-          <React.Fragment key={tab}>
-            {index !== 0 && ![activeTab, activeTab + 1].includes(index) && (
-              <div className="hidden h-5 w-0 bg-primary-400 sm:w-0.5 md:block md:w-1" />
-            )}
-
-            <button
-              key={tab}
-              className={`relative whitespace-normal rounded-md px-0.5 py-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 lg:text-lg ${
-                tab === 'Innovation' ? 'mx-1 py-5 md:w-24 lg:w-40' : ''
-              } ${tab === 'Startup' ? 'py-5' : ''} ${
-                activeTab === index
-                  ? 'bg-primary-400 text-black'
-                  : 'bg-gray-900 text-white hover:bg-gray-800'
-              }`}
-              onClick={() => setActiveTab(index)}
-            >
-              {tab === 'Miscellaneous' ? (
-                <>
-                  <span className="inline max-xs:hidden">Miscellaneous</span>
-                  <span className="hidden max-xs:inline">Misc</span>
-                </>
-              ) : tab === 'Hackathon' ? (
-                <>
-                  Hack-
-                  <br />
-                  athon
-                </>
-              ) : tab === 'Tech+Design' ? (
-                <>
-                  Tech+
-                  <br />
-                  Design
-                </>
-              ) : tab === 'Level Up' ? (
-                <>
-                  Level
-                  <br />
-                  Up
-                </>
-              ) : tab === 'Build with AI' ? (
-                <>
-                  Build
-                  <br />
-                  with AI
-                </>
-              ) : tab === 'Workshops' ? (
-                <>
-                  Work-
-                  <br />
-                  shops
-                </>
-              ) : (
-                tab
-              )}
-              {activeTab === index && (
-                <div className="absolute -bottom-3 left-1/2 hidden size-0 -translate-x-1/2 border-x-[12px] border-t-[12px] border-primary-400 border-x-transparent md:block"></div>
-              )}
-            </button>
-          </React.Fragment>
-        ))}
-      </nav>
-
       <div
-        className={`flex min-h-[800px] w-full items-start justify-start px-[2.5%] md:px-[5%] ${
-          isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
+        className={`flex w-full flex-col overflow-hidden transition-all duration-500 ease-in-out ${
+          isExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        {combinedSpeakerData && combinedSpeakerData.length ? (
-          <ul className="grid w-full grid-cols-1 gap-10 py-7">
-            {hasSessionsForTrack ? (
-              currentTrackSessions
-                .sort((a, b) => {
-                  const timeA = convertTo24Hour(a.sessionTime)
-                  const timeB = convertTo24Hour(b.sessionTime)
-                  return timeA < timeB ? -1 : 1
-                })
-                .map((session) => (
-                  <li key={session.id} className="w-full">
-                    <SessionCard
-                      speakers={session.speakers}
-                      speakerAvatars={session.speakerAvatars}
-                      sessionTitle={session.sessionTitle}
-                      sessionDesc={session.sessionDesc}
-                      sessionTime={session.sessionTime}
-                      sessionRoom={session.sessionRoom}
-                    />
-                  </li>
-                ))
-            ) : (
-              <NoSessionsAvailable currentSession={currentSession} />
-            )}
-          </ul>
-        ) : (
-          <div className="col-span-1 my-4 flex flex-col items-center justify-center space-y-8 text-center text-lg leading-relaxed">
-            <p>
-              We are currently looking for speakers and will update the list of
-              sessions once we have more information. If you are interested in
-              speaking, sign up with the link below.
-            </p>
-            <a
-              href="https://www.papercall.io/midevfest2025"
-              target="_blank"
-              className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
-              rel="noreferrer"
-            >
-              APPLY TO SPEAK
-            </a>
-          </div>
-        )}
+        <nav
+          id="sessions-nav"
+          className={`mt-4 flex w-full flex-wrap items-center justify-center gap-1 rounded-md bg-black md:inline-flex md:flex-nowrap ${
+            isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
+          }`}
+          aria-label="Session track navigation"
+        >
+          {tabs.map((tab, index) => (
+            <React.Fragment key={tab}>
+              {index !== 0 && ![activeTab, activeTab + 1].includes(index) && (
+                <div className="hidden h-5 w-0 bg-primary-400 sm:w-0.5 md:block md:w-1" />
+              )}
+
+              <button
+                key={tab}
+                className={`relative whitespace-normal rounded-md px-0.5 py-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 lg:text-lg ${
+                  tab === 'Innovation' ? 'mx-1 py-5 md:w-24 lg:w-40' : ''
+                } ${tab === 'Startup' ? 'py-5' : ''} ${
+                  activeTab === index
+                    ? 'bg-primary-400 text-black'
+                    : 'bg-gray-900 text-white hover:bg-gray-800'
+                }`}
+                onClick={() => setActiveTab(index)}
+              >
+                {tab === 'Miscellaneous' ? (
+                  <>
+                    <span className="inline max-xs:hidden">Miscellaneous</span>
+                    <span className="hidden max-xs:inline">Misc</span>
+                  </>
+                ) : tab === 'Hackathon' ? (
+                  <>
+                    Hack-
+                    <br />
+                    athon
+                  </>
+                ) : tab === 'Tech+Design' ? (
+                  <>
+                    Tech+
+                    <br />
+                    Design
+                  </>
+                ) : tab === 'Level Up' ? (
+                  <>
+                    Level
+                    <br />
+                    Up
+                  </>
+                ) : tab === 'Build with AI' ? (
+                  <>
+                    Build
+                    <br />
+                    with AI
+                  </>
+                ) : tab === 'Workshops' ? (
+                  <>
+                    Work-
+                    <br />
+                    shops
+                  </>
+                ) : (
+                  tab
+                )}
+                {activeTab === index && (
+                  <div className="absolute -bottom-3 left-1/2 hidden size-0 -translate-x-1/2 border-x-[12px] border-t-[12px] border-primary-400 border-x-transparent md:block"></div>
+                )}
+              </button>
+            </React.Fragment>
+          ))}
+        </nav>
+
+        <div
+          className={`flex w-full items-start justify-start px-[2.5%] md:px-[5%] ${
+            isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          {combinedSpeakerData && combinedSpeakerData.length ? (
+            <ul className="grid w-full grid-cols-1 gap-10 py-7">
+              {hasSessionsForTrack ? (
+                currentTrackSessions
+                  .sort((a, b) => {
+                    const timeA = convertTo24Hour(a.sessionTime)
+                    const timeB = convertTo24Hour(b.sessionTime)
+                    return timeA < timeB ? -1 : 1
+                  })
+                  .map((session) => (
+                    <li key={session.id} className="w-full">
+                      <SessionCard
+                        speakers={session.speakers}
+                        speakerAvatars={session.speakerAvatars}
+                        sessionTitle={session.sessionTitle}
+                        sessionDesc={session.sessionDesc}
+                        sessionTime={session.sessionTime}
+                        sessionRoom={session.sessionRoom}
+                      />
+                    </li>
+                  ))
+              ) : (
+                <NoSessionsAvailable currentSession={currentSession} />
+              )}
+            </ul>
+          ) : (
+            <div className="col-span-1 my-4 flex flex-col items-center justify-center space-y-8 text-center text-lg leading-relaxed">
+              <p>
+                We are currently looking for speakers and will update the list
+                of sessions once we have more information. If you are interested
+                in speaking, sign up with the link below.
+              </p>
+              <a
+                href="https://www.papercall.io/midevfest2025"
+                target="_blank"
+                className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
+                rel="noreferrer"
+              >
+                APPLY TO SPEAK
+              </a>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   )
