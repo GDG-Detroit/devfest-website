@@ -8,11 +8,13 @@ import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
 import DavidGiard from '@/assets/images/speakers/David_Giard.jpeg'
 import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
 import JC_Escalante from '@/assets/images/speakers/JC_Escalante.jpeg'
+import JayWhitsitt from '@/assets/images/speakers/Jay_Whitsitt.jpeg'
 import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpeg'
 import JoelVasallo from '@/assets/images/speakers/Joel_Vasallo.jpg'
 import KavithaBangalore from '@/assets/images/speakers/Kavitha_Bangalore.jpg'
 import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.jpeg'
 import MichaelBower from '@/assets/images/speakers/Michael_Bower.jpg'
+import NileshPatel from '@assets/images/speakers/Nilesh_Patel.jpg'
 import StephanieFrantz from '@/assets/images/speakers/Stephanie_Frantz.jpeg'
 import StephenWylie from '@/assets/images/speakers/Stephen_Wylie.jpeg'
 import WEDaCruz from '@/assets/images/speakers/WE_Da_Cruz.jpeg'
@@ -711,6 +713,71 @@ export const SpeakersData = [
         In this session, I will discuss the importance of Code Reviews and show some ways you can make your code reviews more productive, enjoyable, and successful.
       `,
       tags: ['Code Reviews', 'ALM', 'DevOps', 'Pull Requests'],
+      track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 20,
+    name: 'Jay Whitsitt',
+    email: 'jay.whitsitt@gmail.com',
+    avatar: JayWhitsitt,
+    bio: `
+      Jay Whitsitt is an experienced mobile app developer with a passion for crafting user-centric experiences across platforms for users wherever they are. Since starting a career as a native iOS developer, he has released both personal and professional apps for iOS, Android, Wear OS, Google Assistant, and the web, leveraging both native and multiplatform tools like Flutter.
+
+      Jay is also a community leader, co-organizing GDG Kansas City and DevFest KC, connecting developers with the latest in and around Googletechnologies.
+    `,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/davidgiard/',
+    url: 'https://jaywhitsitt.com',
+    organization: 'Commerce Bank',
+    position: null,
+    session: {
+      title: 'Iterating on Applications from a Browser with Firebase Studio',
+      abstract:
+        'You just realized you forgot a semicolon or maybe you want to change that one word in your app. Normally you would have to open your computer, sign in, launch your IDE, make the change, then push to your repo. Is there a better way? Introducing Firebase Studio!',
+      description: `
+        You just realized you forgot a semicolon or maybe you want to change that one word in your app. Normally you would have to open your computer, sign in, launch your IDE, make the change, then push to your repo. Is there a better way?
+
+        Absolutely! Google released IDX which has now become Firebase Studio and it has been a game charger for the times when you don't need a full dev machine, and sometimes even when you do. Join this session to see how to quickly make changes to an application from just your browser, even your phone!
+      `,
+      tags: ['Firebase', 'AI', 'coding assistant'],
+      track: 'Build with AI',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 21,
+    name: 'Nilesh Patel',
+    email: 'patelnilesh@google.com',
+    avatar: NileshPatel,
+    bio: `
+      Nilesh Patel has been at Google since 2019. He is an Engineer Specialist, focusing on Infrastructure modernization and conversational AI. He has helped many businesses develop AI-powered bots at an enterprise scale and transform their contact center with AI capabilities.\nNilesh  has worn different hats in the past 24+ years. He began his career as an developer and transitioned into a cloud architect role helping enterprises with their digital transformation journey. He is  passionate about using technologies to solve the business challenges to drive outcomes for the customers. Most importantly, Nilesh loves telling stories based on his recent experience and sharing his excitement about new technologies with other devs.\nBesides his work at Google, he enjoys spending time traveling with his family and participating in local cultural dance events.
+    `,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/nilesh-patel/',
+    url: null,
+    organization: 'Google',
+    position: 'Customer Engineer Specialist',
+    session: {
+      title: 'The Agentic Shift - From Prompt to Action',
+      abstract: `Welcome to The Agentic Shift—the evolution of AI from passive tools into active partners. In this new reality, we move From Prompt to Action, creating systems that don't just answer questions, but get things done. This session is your practical guide to building Agentic AI with Google's powerful agentic platform and Google Cloud's latest GenAI ecosystem. We will demystify what makes an AI Agent truly “agentic”—its ability to reason, use tools, and work autonomously to help users. Through a live, hands-on demonstration, you will learn how to construct a smart agent from the ground up, proving that you have the power to build the next generation of AI.`,
+      description: `Welcome to The Agentic Shift—the evolution of AI from passive tools into active partners. In this new reality, we move From Prompt to Action, creating systems that don't just answer questions, but get things done. This session is your practical guide to building Agentic AI with Google's powerful agentic platform and Google Cloud's latest GenAI ecosystem. We will demystify what makes an AI Agent truly “agentic”—its ability to reason, use tools, and work autonomously to help users. Through a live, hands-on demonstration, you will learn how to construct a smart agent from the ground up, proving that you have the power to build the next generation of AI.`,
+      tags: [
+        'AI',
+        'Machine Learning',
+        'Google',
+        'Google Cloud',
+        'Generative AI',
+      ],
       track: 'Level Up',
       time: '',
       room: '',
