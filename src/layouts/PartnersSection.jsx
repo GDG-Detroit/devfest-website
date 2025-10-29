@@ -205,7 +205,7 @@ PartnersSection.propTypes = {
         name: PropTypes.string.isRequired,
         logo: PropTypes.string,
         desc: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
+        url: PropTypes.string,
         tier: PropTypes.string.isRequired,
       })
     ),

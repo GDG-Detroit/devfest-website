@@ -212,7 +212,7 @@ function SpeakerDetails({
               {bio && (
                 <p
                   id={`speaker-modal-bio-${id}`}
-                  className="leading-relaxed text-gray-700"
+                  className="whitespace-pre-line text-left leading-relaxed text-gray-700"
                 >
                   {bio}
                 </p>

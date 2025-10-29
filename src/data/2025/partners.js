@@ -143,7 +143,7 @@ We are committed to significantly improving the lives of as many people as possi
       name: 'SHPE Detroit',
       logo: SHPEDetroit,
       desc: 'Society of Hispanic Professional Engineers Detroit chapter empowers the Hispanic community to realize their full potential.',
-      url: 'https://www.shpe.org/',
+      url: 'https://www.shpedetroit.org/',
       tier: 'Organization',
     },
   ],
