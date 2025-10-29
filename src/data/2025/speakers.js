@@ -805,9 +805,7 @@ export const SpeakersData = [
       title:
         'Experience Innovation: Designing for Engagement in Immersive Environments',
       abstract: null,
-      description: `Design is no longer just about aesthetics or usability, it’s about crafting memorable and meaningful experiences. As immersive technologies like AR and VR evolve, designers are challenged to think beyond screens and start shaping how people feel within digital spaces. This session introduces the concept of Experience Innovation, a mindset that blends creativity, empathy, and strategy to design experiences that are not only functional but emotionally engaging and deeply human. 
-      
-      We’ll explore the core principles of experience innovation and how they can transform the way we design for immersive environments. Attendees will learn how to use these principles to create interactions that feel natural, intuitive, and inspiring, while balancing novelty with user comfort.`,
+      description: `Design is no longer just about aesthetics or usability, it’s about crafting memorable and meaningful experiences. As immersive technologies like AR and VR evolve, designers are challenged to think beyond screens and start shaping how people feel within digital spaces. This session introduces the concept of Experience Innovation, a mindset that blends creativity, empathy, and strategy to design experiences that are not only functional but emotionally engaging and deeply human. \n\nWe’ll explore the core principles of experience innovation and how they can transform the way we design for immersive environments. Attendees will learn how to use these principles to create interactions that feel natural, intuitive, and inspiring, while balancing novelty with user comfort.`,
       tags: ['Design', 'User Experience', 'User Interface', 'AR', 'VR'],
       track: 'Tech+Design',
       time: '',
