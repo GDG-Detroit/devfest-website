@@ -82,14 +82,14 @@ export const getTeamData = async (year) => {
 export const getEventMetadata = async (year) => {
   const speakers = getSpeakersData(year)
   const sponsors = getSponsorsData(year)
-  const team = getTeamData(year)
+  const team = await getTeamData(year)
 
   if (!speakers) {
     return {
       available: false,
       sessionCount: 0,
       speakerCount: 0,
-      teamCount: 0,
+      teamCount: (await team) ? team.length : 0,
       tracks: [],
       year,
     }
@@ -109,7 +109,7 @@ export const getEventMetadata = async (year) => {
     sessionCount: speakers.filter((speaker) => speaker.session).length,
     speakerCount: speakers.length,
     sponsorsCount: sponsors?.length ?? 0,
-    teamCount: team ? team.length : 0,
+    teamCount: (await team) ? team.length : 0,
     tracks,
     year,
   }

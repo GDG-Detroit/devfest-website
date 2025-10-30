@@ -210,8 +210,8 @@ const TeamSection = ({ teamData, year }) => {
 }
 
 TeamSection.propTypes = {
-  teamData: PropTypes.array,
-  year: PropTypes.number,
+  teamData: PropTypes.array.isRequired,
+  year: PropTypes.number.isRequired,
 }
 
 export default TeamSection

@@ -43,7 +43,7 @@ export const devTeamData = [
     avatar: Heba_Sayed,
   },
   {
-    id: 8,
+    id: 4,
     name: 'Rahul Varma Alluri',
     bio: '',
     linkedin: 'https://www.linkedin.com/in/rahul-alluri/',
@@ -54,7 +54,7 @@ export const devTeamData = [
     avatar: RahulVarmaAlluri,
   },
   {
-    id: 4,
+    id: 5,
     name: 'Tejas Vaity',
     bio: '',
     linkedin: 'www.linkedin.com/in/tejas-vaity-832972147',
@@ -65,7 +65,7 @@ export const devTeamData = [
     avatar: TejasVaity,
   },
   {
-    id: 5,
+    id: 6,
     name: 'Juan Linares Orihuela',
     bio: '',
     linkedin: 'https://www.linkedin.com/in/juanlinaresorihuela/',
@@ -76,7 +76,7 @@ export const devTeamData = [
     avatar: JuanLinaresOrihuela,
   },
   {
-    id: 6,
+    id: 7,
     name: 'Abhijay Das',
     bio: '',
     linkedin: 'https://www.linkedin.com/in/abhijaydas/',
@@ -87,7 +87,7 @@ export const devTeamData = [
     avatar: AbhijayDas,
   },
   {
-    id: 7,
+    id: 8,
     name: 'Sohan Ketireddy',
     bio: '',
     linkedin: 'https://www.linkedin.com/in/sohan-k',
@@ -98,7 +98,7 @@ export const devTeamData = [
     avatar: SohanKetireddy,
   },
   {
-    id: 7,
+    id: 9,
     name: 'Irwin Patcharaput',
     bio: '',
     linkedin: 'https://www.linkedin.com/in/irwinpatcharaput/',
