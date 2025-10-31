@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
+import PropTypes from 'prop-types'
 import DevLogo from '@/assets/images/icn-dev.png'
-import { teamData } from '@/data/team'
 import LinkedInHandle from '@/components/ui/LinkedInHandle'
 import GithubHandle from '@/components/ui/GithubHandle'
 import TwitterHandle from '@/components/ui/TwitterHandle'
 
-const TeamSection = () => {
+const TeamSection = ({ teamData, year }) => {
   const [selectedBio, setSelectedBio] = useState(null)
   const modalRef = useRef(null)
   const closeButtonRef = useRef(null)
@@ -59,7 +59,7 @@ const TeamSection = () => {
     >
       <div className="flex w-full justify-center pt-0">
         <h2 className="mb-4 w-full text-center font-russell text-4xl text-black md:mb-6 md:text-5xl lg:text-6xl">
-          DevFest Team
+          {year ? `${year} ` : ''}DevFest Team
         </h2>
         <img
           src={DevLogo}
@@ -207,6 +207,11 @@ const TeamSection = () => {
       )}
     </section>
   )
+}
+
+TeamSection.propTypes = {
+  teamData: PropTypes.array.isRequired,
+  year: PropTypes.number.isRequired,
 }
 
 export default TeamSection

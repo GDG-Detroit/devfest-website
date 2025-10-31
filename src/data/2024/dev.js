@@ -1,0 +1,111 @@
+import Hisham_Odeh from '@/data/2024/assets/images/dev/Hisham_Odeh.jpg'
+import TejasVaity from '@/data/2024/assets/images/dev/Tejas_Vaity.jpg'
+import MohamadAlabudi from '@/data/2024/assets/images/dev/Mohamad_Alabudi.jpg'
+import RahulVarmaAlluri from '@/data/2024/assets/images/dev/Rahul_Varma_Alluri.jpg'
+import JuanLinaresOrihuela from '@/data/2024/assets/images/dev/Juan_Linares_Orihuela.jpg'
+import Heba_Sayed from '@/data/2024/assets/images/dev/Heba_Sayed.jpg'
+import SohanKetireddy from '@/data/2024/assets/images/dev/Sohan_Ketireddy.png'
+import AbhijayDas from '@/data/2024/assets/images/dev/Abhijay_Das.jpg'
+import IrwinPatcharaput from '@/data/2024/assets/images/dev/Irwin_Patcharaput.jpeg'
+
+export const devTeamData = [
+  {
+    id: 1,
+    name: 'Hisham Odeh',
+    bio: '',
+    linkedin: 'https://www.linkedin.com/in/hisham-odeh-4611081b0',
+    github: 'https://github.com/Heshoo-ksh',
+    university: 'University Of Michigan - Dearborn',
+    organization: 'Ancor Automotive',
+    position: 'Junior Software Engineer And Student',
+    avatar: Hisham_Odeh,
+  },
+  {
+    id: 2,
+    name: 'Mohamad Alabudi',
+    bio: '',
+    linkedin: 'https://www.linkedin.com/in/malabudi',
+    github: 'https://malabudi.github.io/',
+    avatar: MohamadAlabudi,
+    university: 'University of Michigan Dearborn',
+    organization: '',
+    position: 'Student',
+  },
+  {
+    id: 3,
+    name: 'Heba Sayed',
+    bio: '',
+    linkedin: 'https://www.linkedin.com/in/heba-sayed6/',
+    github: 'https://github.com/hebz26',
+    university: 'University Of Michigan Dearborn',
+    organization: '',
+    position: 'Student',
+    avatar: Heba_Sayed,
+  },
+  {
+    id: 4,
+    name: 'Rahul Varma Alluri',
+    bio: '',
+    linkedin: 'https://www.linkedin.com/in/rahul-alluri/',
+    github: 'https://github.com/RahulAlluriUmd',
+    university: 'University Of Michigan Dearborn',
+    organization: '',
+    position: 'Graduate Student',
+    avatar: RahulVarmaAlluri,
+  },
+  {
+    id: 5,
+    name: 'Tejas Vaity',
+    bio: '',
+    linkedin: 'www.linkedin.com/in/tejas-vaity-832972147',
+    github: 'https://github.com/Tej619',
+    university: 'University of Michigan Dearborn',
+    organization: '',
+    position: 'Graduate Student',
+    avatar: TejasVaity,
+  },
+  {
+    id: 6,
+    name: 'Juan Linares Orihuela',
+    bio: '',
+    linkedin: 'https://www.linkedin.com/in/juanlinaresorihuela/',
+    github: 'https://github.com/JuanLinaresOrihuela',
+    university: 'Georgia Institute of Technology',
+    organization: '',
+    position: 'Software Engineer - Graduate Student',
+    avatar: JuanLinaresOrihuela,
+  },
+  {
+    id: 7,
+    name: 'Abhijay Das',
+    bio: '',
+    linkedin: 'https://www.linkedin.com/in/abhijaydas/',
+    github: 'https://github.com/abhijaythethinker',
+    university: 'University Of Michigan Dearborn',
+    organization: '',
+    position: 'Student',
+    avatar: AbhijayDas,
+  },
+  {
+    id: 8,
+    name: 'Sohan Ketireddy',
+    bio: '',
+    linkedin: 'https://www.linkedin.com/in/sohan-k',
+    github: 'https://github.com/sohank1',
+    university: 'University Of Michigan Dearborn',
+    organization: '',
+    position: 'Student',
+    avatar: SohanKetireddy,
+  },
+  {
+    id: 9,
+    name: 'Irwin Patcharaput',
+    bio: '',
+    linkedin: 'https://www.linkedin.com/in/irwinpatcharaput/',
+    github: 'https://github.com/irwinpp',
+    university: 'University Of Michigan Dearborn',
+    organization: '',
+    position: 'Student',
+    avatar: IrwinPatcharaput,
+  },
+]

@@ -9,6 +9,7 @@ import SpeakersSection from '@/layouts/SpeakersSection'
 
 import { partnersData } from '@/data/2025/partners'
 import { SpeakersData as Speakers2025 } from '@/data/2025/speakers'
+import { teamData } from '@/data/2025/team'
 
 function Home() {
   return (
@@ -39,7 +40,7 @@ function Home() {
       />
       <PartnersSection year={2025} partnersData={partnersData} />
       <JobBoardSection year={2025} />
-      <TeamSection />
+      <TeamSection year={2025} teamData={teamData} />
     </PageLayout>
   )
 }

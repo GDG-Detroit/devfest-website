@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import SessionsSection from '@/layouts/SessionsSection'
 import SpeakersSection from '@/layouts/SpeakersSection'
 import SponsorsSection from '@/layouts/SponsorsSection'
+import TeamSection from '@/layouts/TeamSection'
 import { getEventData, getEventMetadata } from '@/utils/eventData'
 import PreviousEventsNavbar from '@/components/PreviousEventsNavbar'
 import Footer from '@/layouts/Footer'
@@ -9,7 +10,6 @@ import Footer from '@/layouts/Footer'
 const PreviousEvent = () => {
   const { year } = useParams()
   const yearNumber = parseInt(year, 10)
-
   const eventData = getEventData(yearNumber)
   const eventMetadata = getEventMetadata(yearNumber)
 
@@ -50,6 +50,7 @@ const PreviousEvent = () => {
 
   const speakersData = eventData.speakers
   const sponsorsData = eventData.sponsors || []
+  const teamData = eventData.team || []
 
   return (
     <>
@@ -129,6 +130,7 @@ const PreviousEvent = () => {
             collapsible
           />
         )}
+        <TeamSection teamData={teamData} year={yearNumber} />
       </main>
 
       <Footer />
