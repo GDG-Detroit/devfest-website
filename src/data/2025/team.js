@@ -123,7 +123,9 @@ export const teamData = [
     github: 'https://github.com/shrinkray',
     devfest: 'devteam',
     university: '',
-    bio: ``,
+    bio: `
+	  Hello, I am the founder of Shrinkray Interactive, a web development studio in Toledo, Ohio, leaning-in on accessible, high-performance, and user-friendly web experiences. As part of GDG Toledo, I connect developers and designers through events and hackathons. Collaborating with the devteam, I oversaw UX engineering and redesign for the Michigan DevFest website—creating a fast, inclusive experience for speakers, partners, and attendees. If you are seeking a friendly and talented developer for your project, let's connect.
+	`,
     organization: 'Shrinkray Interactive + GDG Toledo + Toledo Codes',
     role: 'Senior UX Engineer + Frontend',
     avatar: GregMiller,
