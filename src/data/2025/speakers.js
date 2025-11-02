@@ -3,6 +3,7 @@ import AlexPatterson from '@/assets/images/speakers/Alex_Patterson.png'
 import AnkitaGuha from '@/assets/images/speakers/Ankita_Guha.jpg'
 import AnnieHedgpeth from '@/assets/images/speakers/Annie_Hedgpeth.png'
 import BandhanKaur from '@/assets/images/speakers/Bandhan_Kaur.jpeg'
+import BernadetteAtanga from '@/assets/images/speakers/Bernadette_Atanga.jpeg'
 import BorisWilfriedNyasse from '@/assets/images/speakers/Boris_Wilfried_Nyasse.png'
 import BrianMcKeiver from '@/assets/images/speakers/Brian_McKeiver.png'
 import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
@@ -10,14 +11,18 @@ import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
 import DavidGiard from '@/assets/images/speakers/David_Giard.jpeg'
 import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
 import HodaSolati from '@/assets/images/speakers/Hoda_Solati.jpg'
+import IdaByrdHill from '@/assets/images/speakers/Ida_Byrd-Hill.jpeg'
 import JC_Escalante from '@/assets/images/speakers/JC_Escalante.jpeg'
 import JayWhitsitt from '@/assets/images/speakers/Jay_Whitsitt.jpeg'
 import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpeg'
 import JoelVasallo from '@/assets/images/speakers/Joel_Vasallo.jpg'
 import KavithaBangalore from '@/assets/images/speakers/Kavitha_Bangalore.jpg'
+import LauraBlersch from '@/assets/images/speakers/Laura_Blersch.jpeg'
+import LorrenaBlack from '@/assets/images/speakers/Lorrena_Black.jpeg'
 import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.jpeg'
 import MichaelBower from '@/assets/images/speakers/Michael_Bower.jpg'
 import NileshPatel from '@assets/images/speakers/Nilesh_Patel.jpg'
+import ShamsAhson from '@/assets/images/speakers/Shams_Ahson.jpeg'
 import ShimaSolati from '@/assets/images/speakers/Shima_Solati.jpg'
 import ShugmiShumunov from '@/data/2025/assets/images/dev/shugmi_shumunov.webp'
 import StephanieFrantz from '@/assets/images/speakers/Stephanie_Frantz.jpeg'
@@ -560,7 +565,7 @@ export const SpeakersData = [
     avatar: JayWhitsitt,
     bio: `Jay Whitsitt is an experienced mobile app developer with a passion for crafting user-centric experiences across platforms for users wherever they are. Since starting a career as a native iOS developer, he has released both personal and professional apps for iOS, Android, Wear OS, Google Assistant, and the web, leveraging both native and multiplatform tools like Flutter.\n\nJay is also a community leader, co-organizing GDG Kansas City and DevFest KC, connecting developers with the latest in and around Googletechnologies.`,
     twitter: null,
-    linkedIn: 'https://www.linkedin.com/in/davidgiard/',
+    linkedIn: 'https://www.linkedin.com/in/jaywhitsitt/',
     url: 'https://jaywhitsitt.com',
     organization: 'Commerce Bank',
     position: null,
@@ -662,7 +667,7 @@ export const SpeakersData = [
     id: 24,
     name: 'Shams Ahson',
     email: 'sahson456@gmail.com',
-    avatar: 'https://placehold.co/600x400/0F9D58/FFFFFF?text=Shams+Ahson',
+    avatar: ShamsAhson,
     bio: `Shams Ahson is an (ethical) hacker. She has presented at various cybersecurity conferences, including DEFCON, in the past. She is interested in sharing the intersection between cybersecurity, embedded systems and the creativity in the age of AI.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/shams-ahson/',
@@ -711,10 +716,10 @@ export const SpeakersData = [
     id: 26,
     name: 'Bernadette Atanga, MD',
     email: 'atangabmd@gmail.com',
-    avatar: 'https://placehold.co/600x400/0F9D58/FFFFFF?text=Bernadette+Atanga',
+    avatar: BernadetteAtanga,
     bio: `Hi, I’m Dr. Bernadette Atanga — physician, leadership strategist, and author of Beneath the Armor: 8 Practical Strategies for Men to Embrace Vulnerability and Lead with Authentic Strength.\n\nAfter 30+ years working with high-performing professionals—including two decades at the VA—I’ve seen the personal cost of emotional suppression: burnout, chronic illness, broken relationships, and silent suffering. My mission is to help leaders, especially in male-dominated fields like tech, drop the armor and lead with clarity and calm.\n\nI’ve spoken at NAMI Michigan, Black Tech Saturdays, MSU, U-M Flint, and been featured on ABC and CBS for my work on men's mental health, suicide prevention, and emotionally intelligent leadership. I’ve also shared the stage with Kim Walsh Phillips and was interviewed by Justin Guarini.\n\nBeyond the stage, I’m the author of an upcoming book on grief and legacy, and I’m co-authoring a new guide with my daughter on navigating the transition from high school to college with emotional wellness and identity intact.\n\nWhen I’m not speaking, you’ll find me singing in a choir or attending my daughter’s opera concerts—where I’m reminded that vulnerability, voice, and presence are just as essential off stage as they are on it.\n\nMore at: https://client.atangamd.com/meet-your-speaker`,
     twitter: null,
-    linkedIn: null,
+    linkedIn: 'https://www.linkedin.com/in/bernadette-atanga-md-083274327/',
     url: 'https://client.atangamd.com/meet-your-speaker#new-menu-item',
     organization: 'AtangaMD Consulting LLC',
     position: null,
@@ -745,7 +750,7 @@ export const SpeakersData = [
     id: 27,
     name: 'Laura Blersch',
     email: 'lblersch001@gmail.com',
-    avatar: 'https://placehold.co/600x400/0F9D58/FFFFFF?text=Laura+Blersch',
+    avatar: LauraBlersch,
     bio: `As a late-diagnosed individual with combined ADHD, I've navigated a unique path that's led me to where I am today. I hold an MBA with a focus on leadership and a few professional certifications. I found my way into agile through Scrum and project management while in cultural exchange. My diverse experiences outside my professional life extend to being a kids' ski instructor and race coach, reflecting my love for mentorship and skill development. In my free time, I'm an avid skier with an extreme fear of heights, I am making the most of the slopes and facing fears whenever I can. In the summer, I enjoy helping on my sister's farm, where we grow about 2 acres and about 10 varieties of heirloom tomatoes. I embrace the joys of outdoor life and family connections.`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/laurablersch/',
@@ -796,10 +801,10 @@ export const SpeakersData = [
     id: 29,
     name: 'Lorrena Black',
     email: 'lorrena@lorrenablack.com',
-    avatar: 'https://placehold.co/600x400/0F9D58/FFFFFF?text=Lorrena+Black',
+    avatar: LorrenaBlack,
     bio: `Lorrena Black is a retired U.S. Army Major with 25 years of service, speaker, facilitator, and founder of She Served LLC. She’s on a mission to help people thrive through change by turning self-doubt into confidence, setbacks into resilience, and emotions into leadership power.\n\nDrawing from her military career and years of leadership development work, Lorrena brings energy, humor, and authenticity to every stage. She’s delivered keynotes and workshops across the country, empowering veterans, professionals, and leaders to unlock their fullest potential.\n\nWhen she’s not speaking or coaching, Lorrena is a proud wife and mom of four, a board member for multiple nonprofits, and an unapologetic book lover who dreams of learning ballroom dance.\n\nAnd in case you’re wondering—her favorite member of One Direction? She’ll say Harry Styles… but only because they didn’t let her pick Beyoncé. 😉`,
     twitter: null,
-    linkedIn: null,
+    linkedIn: 'https://www.linkedin.com/in/lorrenablack/',
     url: 'https://www.lorrenablack.com/',
     organization: 'She Served LLC',
     position: 'Founder',
@@ -853,6 +858,39 @@ export const SpeakersData = [
         'Web Development',
       ],
       track: 'Workshops',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 31,
+    name: 'Ida Byrd-Hill',
+    email: 'ida@autoworkz.org',
+    avatar: IdaByrdHill,
+    bio: `Ida Byrd-Hill, MBA is CEO of Automation Workz, a behavior informatics firm, best known for implementing culture audits, executive coaching and training over 16,520 front-liners in AI, Cybersecurity, Data Analytics, Network Engineering, Tech Support and strategic sales.\n\nIda Byrd-Hill is a graduate of the University of Michigan - Ann Arbor with a BA, Economics and Jack Welch Management Institute with an MBA. Ida&#39;s career has been a wealth manager, an executive search consultant, Human Resources manager and a programmer.\n\nIda Byrd-Hill is a member of Detroit Regional Chamber, CEO Talent Council, SHRM, Society of Automotive Analysts and Automotive Press Association.\n\nIda is the author of Culture Re-Wired: Unleash Your Inner AI CEO. https://www.autoworkz.org/culture-re-wired`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/idabyrdhill/',
+    url: 'https://www.autoworkz.org/',
+    organization: 'Automation Workz',
+    position: 'Founder & CEO',
+    session: {
+      title: 'Forget Your Grand Dad: Adopt The Next-Gen Executive Playbook',
+      abstract: `WHAT YOU&#39;LL TAKE AWAY\n\nCatapult Your Career - Master the mindset and leadership skills that move executives from stagnant to standout in this AI era.\n\nLead AI Transformation - Discover how to position yourself as an indispensable leader.\n\nUnlock Hidden Knowledge - Learn proven strategies to unleash your team&#39;s institutional wisdom, driving innovation and profitability.`,
+      description: `The AI gold rush is here. Yet, an MIT study highlights 95% of companies are seeing ZERO ROI on their $30–40 billion GenAI investments while a quiet 5% of leaders are turning cutting-edge technology into millions.\n\nWhat separates them? Next-gen executives know AI and cutting-edge tech success starts with people, not just code. Employees fearful of being replaced by AI and cutting-edge tech are hoarding institutional knowledge, stalling innovation, and blocking ROI. Next-Gen executives who confront this truth are the ones getting promoted, recognized, and fast-tracked to the C-suite.\n\nThe gap between leaders who &quot;get it&quot; and those left behind is widening daily. This isn&#39;t about becoming a technical expert — it&#39;s about mastering the human side of transformation that determines whether AI and cutting-edge tech initiatives thrive or die. The question isn&#39;t whether AI and cutting-edge tech will reshape your industry. The question is: Will you be leading that change, or scrambling to keep up?\n\nThis high-impact workshop, powered by MIT NANDA research and 22 real-world case studies, reveals a new leadership playbook how to turn AI and cutting-edge tech into measurable profit—and accelerate your personal career trajectory.\n\nCome learn how Ida Byrd-Hill, CEO of Automation Workz, assisted Dr. Bronner&#39;s soap manufacturer boost revenue 45%, accelerate a diverse culture while propelling their HR Manager Lilia Vergara to Vice President and Corporate Board Member.`,
+      tags: [
+        'leadership',
+        'career-growth',
+        'AI-transformation',
+        'executive-skills',
+        'professional-development',
+        'change-management',
+        'innovation',
+        'organizational-development',
+      ],
+      track: 'Level Up',
       time: '',
       room: '',
     },
