@@ -805,7 +805,7 @@ export const SpeakersData = [
     bio: `Lorrena Black is a retired U.S. Army Major with 25 years of service, speaker, facilitator, and founder of She Served LLC. She’s on a mission to help people thrive through change by turning self-doubt into confidence, setbacks into resilience, and emotions into leadership power.\n\nDrawing from her military career and years of leadership development work, Lorrena brings energy, humor, and authenticity to every stage. She’s delivered keynotes and workshops across the country, empowering veterans, professionals, and leaders to unlock their fullest potential.\n\nWhen she’s not speaking or coaching, Lorrena is a proud wife and mom of four, a board member for multiple nonprofits, and an unapologetic book lover who dreams of learning ballroom dance.\n\nAnd in case you’re wondering—her favorite member of One Direction? She’ll say Harry Styles… but only because they didn’t let her pick Beyoncé. 😉`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/lorrenablack/',
-    url: 'https://www.lorrenablack.com/',
+    url: 'https://www.sheserved.co/',
     organization: 'She Served LLC',
     position: 'Founder',
     session: {
