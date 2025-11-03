@@ -150,15 +150,15 @@ const ProfileCard = ({
   }
   const renderInfo = (
     <div className="ml-4 flex flex-col items-start justify-start">
-      <h3 className="mt-1 line-clamp-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+      <h3 className="mt-1 line-clamp-2 text-left text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
         {name}
       </h3>
-      <div className="mt-1 line-clamp-2 text-left text-base text-gray-600 dark:text-white">
+      <p className="mt-1 line-clamp-2 text-left text-base text-gray-600 dark:text-white">
         {organization || '\u00A0'}
-      </div>
-      <div className="mt-1 line-clamp-2 text-left text-base text-gray-600 dark:text-white">
+      </p>
+      <p className="mt-1 line-clamp-2 text-left text-base text-gray-600 dark:text-white">
         {position || '\u00A0'}
-      </div>
+      </p>
     </div>
   )
 
