@@ -17,7 +17,6 @@ import JayWhitsitt from '@/assets/images/speakers/Jay_Whitsitt.jpeg'
 import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpeg'
 import JoelVasallo from '@/assets/images/speakers/Joel_Vasallo.jpg'
 import KavithaBangalore from '@/assets/images/speakers/Kavitha_Bangalore.jpg'
-import LauraBlersch from '@/assets/images/speakers/Laura_Blersch.jpeg'
 import LorrenaBlack from '@/assets/images/speakers/Lorrena_Black.jpeg'
 import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.jpeg'
 import MichaelBower from '@/assets/images/speakers/Michael_Bower.jpg'
@@ -748,31 +747,6 @@ export const SpeakersData = [
   },
   {
     id: 27,
-    name: 'Laura Blersch',
-    email: 'lblersch001@gmail.com',
-    avatar: LauraBlersch,
-    bio: `As a late-diagnosed individual with combined ADHD, I've navigated a unique path that's led me to where I am today. I hold an MBA with a focus on leadership and a few professional certifications. I found my way into agile through Scrum and project management while in cultural exchange. My diverse experiences outside my professional life extend to being a kids' ski instructor and race coach, reflecting my love for mentorship and skill development. In my free time, I'm an avid skier with an extreme fear of heights, I am making the most of the slopes and facing fears whenever I can. In the summer, I enjoy helping on my sister's farm, where we grow about 2 acres and about 10 varieties of heirloom tomatoes. I embrace the joys of outdoor life and family connections.`,
-    twitter: null,
-    linkedIn: 'https://www.linkedin.com/in/laurablersch/',
-    url: null,
-    organization: null,
-    position: null,
-    session: {
-      title: 'Bridging the Gap: Understanding Communication Differences',
-      abstract:
-        'Explore how culture, generation, gender, and neurodivergence shape communication. Learn about high/low-context styles, non-verbal cues, and miscommunication risks. Gain practical strategies for inclusive, empathetic, and effective personal and professional dialogue.',
-      description: `Communication is at the heart of every human interaction, yet it is far from universal. Explore the diverse ways people express and interpret meaning across cultural, generational, gender, and neurodivergent contexts. Gain insight into how high- and low-context cultures shape communication styles, how generational and gender norms influence tone and medium, and how neurodivergent individuals, such as those with autism or ADHD, may experience and engage in communication differently from neurotypical peers. The session also examines the role of non-verbal cues and the potential for miscommunication when assumptions go unchallenged. Leave with practical strategies to foster more inclusive, empathetic, and effective communication in both personal and professional environments.`,
-      tags: ['Communication', 'People', 'leadership', 'human-centered'],
-      track: 'Level Up',
-      time: '',
-      room: '',
-    },
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
-    id: 28,
     name: 'Annie Hedgpeth',
     email: 'annie@hedge-ops.com',
     avatar: AnnieHedgpeth,
@@ -798,7 +772,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 29,
+    id: 28,
     name: 'Lorrena Black',
     email: 'lorrena@lorrenablack.com',
     avatar: LorrenaBlack,
@@ -834,7 +808,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 30,
+    id: 29,
     name: 'Shugmi Shumunov',
     email: null,
     avatar: ShugmiShumunov,
@@ -867,7 +841,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 31,
+    id: 30,
     name: 'Ida Byrd-Hill',
     email: 'ida@autoworkz.org',
     avatar: IdaByrdHill,
