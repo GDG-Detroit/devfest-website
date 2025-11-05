@@ -36,7 +36,7 @@ function Home() {
       <SpeakersSection
         year={2025}
         speakersData={Speakers2025}
-        defaultExpanded={false}
+        defaultExpanded
       />
       <PartnersSection year={2025} partnersData={partnersData} />
       <JobBoardSection year={2025} />
