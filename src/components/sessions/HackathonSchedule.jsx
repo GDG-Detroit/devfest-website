@@ -1,3 +1,5 @@
+import HackathonEventCard from './HackathonEventCard'
+
 // 2025 schedule - grouped by time
 const hackathonSchedule = [
   {
@@ -103,60 +105,24 @@ export const HackathonSchedule = () => {
                 <div className="ml-24 space-y-4 md:ml-0">
                   {timeSlot.events.length === 1 ? (
                     // Single event - alternate sides
-                    <div
-                      className={`group relative w-full cursor-pointer rounded-lg bg-white p-4 shadow-md transition-all duration-300 hover:shadow-xl md:w-5/12 ${
-                        timeIndex % 2 === 0
-                          ? 'md:mr-auto md:pr-12'
-                          : 'md:ml-auto md:pl-12'
-                      }`}
-                    >
-                      <h4 className="text-lg font-semibold text-gray-900">
-                        {timeSlot.events[0].title}
-                      </h4>
-
-                      {/* Tooltip */}
-                      <div className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 w-64 -translate-x-1/2 rounded-lg bg-gray-900 p-3 text-left text-xs font-normal leading-relaxed text-white opacity-0 shadow-xl transition-opacity duration-300 group-hover:opacity-100">
-                        <div className="text-gray-300">
-                          {timeSlot.events[0].description}
-                        </div>
-                        {/* Arrow */}
-                        <div className="absolute left-1/2 top-full -mt-1 size-0 -translate-x-1/2 border-x-8 border-t-8 border-x-transparent border-t-gray-900" />
-                      </div>
-                    </div>
+                    <HackathonEventCard
+                      title={timeSlot.events[0].title}
+                      description={timeSlot.events[0].description}
+                      alignRight={timeIndex % 2 !== 0}
+                    />
                   ) : (
                     // Multiple events for a single time slot - show on both sides
                     <div className="flex flex-col gap-4 md:flex-row md:justify-between md:gap-8">
-                      {/* Left */}
-                      <div className="group relative w-full cursor-pointer rounded-lg bg-white p-4 shadow-md transition-all duration-300 hover:shadow-xl md:w-5/12 md:pr-12">
-                        <h4 className="text-lg font-semibold text-gray-900">
-                          {timeSlot.events[0].title}
-                        </h4>
-
-                        {/* Tooltip */}
-                        <div className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 w-64 -translate-x-1/2 rounded-lg bg-gray-900 p-3 text-left text-xs font-normal leading-relaxed text-white opacity-0 shadow-xl transition-opacity duration-300 group-hover:opacity-100">
-                          <div className="text-gray-300">
-                            {timeSlot.events[0].description}
-                          </div>
-                          {/* Arrow */}
-                          <div className="absolute left-1/2 top-full -mt-1 size-0 -translate-x-1/2 border-x-8 border-t-8 border-x-transparent border-t-gray-900" />
-                        </div>
-                      </div>
-
-                      {/* Right */}
-                      <div className="group relative w-full cursor-pointer rounded-lg bg-white p-4 shadow-md transition-all duration-300 hover:shadow-xl md:w-5/12 md:pl-12">
-                        <h4 className="text-lg font-semibold text-gray-900">
-                          {timeSlot.events[1].title}
-                        </h4>
-
-                        {/* Tooltip */}
-                        <div className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 w-64 -translate-x-1/2 rounded-lg bg-gray-900 p-3 text-left text-xs font-normal leading-relaxed text-white opacity-0 shadow-xl transition-opacity duration-300 group-hover:opacity-100">
-                          <div className="text-gray-300">
-                            {timeSlot.events[1].description}
-                          </div>
-                          {/* Arrow */}
-                          <div className="absolute left-1/2 top-full -mt-1 size-0 -translate-x-1/2 border-x-8 border-t-8 border-x-transparent border-t-gray-900" />
-                        </div>
-                      </div>
+                      <HackathonEventCard
+                        title={timeSlot.events[0].title}
+                        description={timeSlot.events[0].description}
+                        alignRight={false}
+                      />
+                      <HackathonEventCard
+                        title={timeSlot.events[1].title}
+                        description={timeSlot.events[1].description}
+                        alignRight={true}
+                      />
                     </div>
                   )}
                 </div>
