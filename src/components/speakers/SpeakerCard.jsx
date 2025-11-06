@@ -27,6 +27,7 @@ const SpeakerCard = ({
 
   const modalRef = useRef(null)
   const previousActiveElement = useRef(null)
+  const scrollPosition = useRef(0)
 
   const open = () => {
     // Store the currently focused element before opening modal
@@ -47,18 +48,31 @@ const SpeakerCard = ({
     }
   }
 
-  // Focus management for modal
+  // Focus management and scroll lock for modal
   useEffect(() => {
-    if (isModalOpen && id === speakerID && modalRef.current) {
-      // Focus the modal when it opens
-      modalRef.current.focus()
+    if (isModalOpen && id === speakerID) {
+      // Store current scroll position
+      scrollPosition.current =
+        window.pageYOffset || document.documentElement.scrollTop
 
-      // Prevent body scroll when modal is open
-      document.body.style.overflow = 'hidden'
+      // Lock body scroll
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollPosition.current}px`
+      document.body.style.width = '100%'
+
+      // Focus the modal when it opens
+      if (modalRef.current) {
+        modalRef.current.focus()
+      }
 
       return () => {
-        // Restore body scroll when modal closes
-        document.body.style.overflow = 'auto'
+        // Restore body position and scroll
+        document.body.style.position = ''
+        document.body.style.top = ''
+        document.body.style.width = ''
+
+        // Restore scroll position
+        window.scrollTo(0, scrollPosition.current)
 
         // Return focus to the element that opened the modal
         if (previousActiveElement.current) {
@@ -91,7 +105,7 @@ const SpeakerCard = ({
           aria-modal="true"
           aria-labelledby={`speaker-modal-title-${id}`}
           aria-describedby={`speaker-modal-bio-${id}`}
-          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm dark:bg-black/80"
+          className="fixed inset-0 z-40 overflow-y-auto bg-black/60 backdrop-blur-sm dark:bg-black/80"
           tabIndex={-1}
           ref={modalRef}
           aria-label="Speaker details modal"
@@ -103,8 +117,8 @@ const SpeakerCard = ({
             aria-label="Close modal"
             tabIndex={-1}
           />
-          <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center p-4">
-            <div className="pointer-events-auto">
+          <div className="pointer-events-none flex min-h-full items-center justify-center p-4">
+            <div className="pointer-events-auto my-8">
               <SpeakerDetails
                 avatar={avatar}
                 bio={bio}
