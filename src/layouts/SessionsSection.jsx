@@ -97,6 +97,24 @@ const SessionsSection = ({
 
   const hasSessionsForTrack = currentTrackSessions.length > 0
 
+  const renderNoSessionsOrSpeakersMessage = () => (
+    <div className="col-span-1 my-4 flex flex-col items-center justify-center space-y-8 text-center text-lg leading-relaxed">
+      <p>
+        We are currently looking for speakers and will update the list of
+        sessions once we have more information. If you are interested in
+        speaking, sign up with the link below.
+      </p>
+      <a
+        href="https://www.papercall.io/midevfest2025"
+        target="_blank"
+        className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
+        rel="noreferrer"
+      >
+        APPLY TO SPEAK
+      </a>
+    </div>
+  )
+
   return (
     <section
       id="sessions"
@@ -214,8 +232,10 @@ const SessionsSection = ({
         </nav>
 
         <div
-          className={`flex w-full items-start justify-start px-[2.5%] md:px-[5%] ${
+          className={`flex w-full items-start px-[2.5%] md:px-[5%] ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
+          } ${
+            currentTrackSessions.length > 0 ? 'justify-start' : 'justify-center'
           }`}
         >
           {currentSession === 'Hackathon' ? (
@@ -246,21 +266,7 @@ const SessionsSection = ({
               )}
             </ul>
           ) : (
-            <div className="col-span-1 my-4 flex flex-col items-center justify-center space-y-8 text-center text-lg leading-relaxed">
-              <p>
-                We are currently looking for speakers and will update the list
-                of sessions once we have more information. If you are interested
-                in speaking, sign up with the link below.
-              </p>
-              <a
-                href="https://www.papercall.io/midevfest2025"
-                target="_blank"
-                className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
-                rel="noreferrer"
-              >
-                APPLY TO SPEAK
-              </a>
-            </div>
+            renderNoSessionsOrSpeakersMessage()
           )}
         </div>
       </div>
