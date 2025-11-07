@@ -1,7 +1,6 @@
 import AdonaiVera from '@/assets/images/speakers/Adonai_Vera.png'
 import AlexPatterson from '@/assets/images/speakers/Alex_Patterson.png'
 import AnkitaGuha from '@/assets/images/speakers/Ankita_Guha.jpg'
-import AnnieHedgpeth from '@/assets/images/speakers/Annie_Hedgpeth.png'
 import BandhanKaur from '@/assets/images/speakers/Bandhan_Kaur.jpeg'
 import BernadetteAtanga from '@/assets/images/speakers/Bernadette_Atanga.jpeg'
 import BorisWilfriedNyasse from '@/assets/images/speakers/Boris_Wilfried_Nyasse.png'
@@ -9,6 +8,7 @@ import BrianMcKeiver from '@/assets/images/speakers/Brian_McKeiver.png'
 import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
 import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
 import DavidGiard from '@/assets/images/speakers/David_Giard.jpeg'
+import DaveKoziol from '@/assets/images/speakers/Dave.webp'
 import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
 import HodaSolati from '@/assets/images/speakers/Hoda_Solati.jpg'
 import IdaByrdHill from '@/assets/images/speakers/Ida_Byrd-Hill.jpeg'
@@ -604,7 +604,7 @@ export const SpeakersData = [
         'Google Cloud',
         'Generative AI',
       ],
-      track: 'Level Up',
+      track: 'Build with AI',
       time: '',
       room: '',
     },
@@ -747,32 +747,6 @@ export const SpeakersData = [
   },
   {
     id: 27,
-    name: 'Annie Hedgpeth',
-    email: 'annie@hedge-ops.com',
-    avatar: AnnieHedgpeth,
-    bio: `From film to engineering, Annie's career has seen many iterations. She is a keen observer of what works and what doesn't, striving always to make the right thing to do the easy thing to do. Annie and her husband, Michael, are raising their three teenagers in Boulder, CO. She's currently working on software that empowers folks with the people side of their jobs. Find out more at people-work.io.`,
-    twitter: 'anniehedgie',
-    linkedIn: null,
-    url: 'https://people-work.io/',
-    organization: 'People Work',
-    position: null,
-    session: {
-      title:
-        'Firewalls and Friendships: Building a Balanced Professional Network',
-      abstract:
-        'In this uncertain economy, our authentic human networks remain our most powerful asset. In networking, we engineer systems with purpose—the same approach works for professional connections.',
-      description: `Many technology professionals excel at designing technical systems but struggle with intentionally designing their professional networks. Some find networking overwhelming or inauthentic. Others maintain relationships only with their immediate circle. Some become "takers" rather than "givers," while others fear asking for anything. When AI can write your Terraform configs, what makes you invaluable is your ability to influence, collaborate, and navigate complex human systems.\n\nI'll demonstrate how to apply systems networking concepts to professional relationship-building through three key phases:\n\n**1. Define & Segment:**\n\n* System architecture goals => career objectives\n\n* Subnetting by function => relationship categories (Stakeholders, First Team, Direct Reports, Base)\n\n* Principle of least privilege => intentional relationship investment\n\n* Case studies of "The Builder," "The Anchor," "The Advocate," and other common patterns\n\n**2. Firewall & Automate:**\n\n* Setting inbound/outbound rules => establishing interaction patterns\n\n* Creating automated checks => systematic relationship maintenance\n\n* Building CI/CD pipelines => scheduling regular check-ins\n\n* Avoiding the boundary deficit (saying "no") and just-in-time networking traps\n\n* Communication fidelity: when Slack isn't enough\n\n**3. Monitor & Adjust:**\n\n* Tracking system health => relationship health metrics\n\n* Monitoring threats => identifying reciprocity imbalances\n\n* Analyzing performance patterns => energy and influence flows\n\n* Creating a simple non-weird system for relationship data collection\n\n* Internal vs. external network balance`,
-      tags: ['devops', 'platform engineering', 'culture'],
-      track: 'Tech+Design',
-      time: '',
-      room: '',
-    },
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
-    id: 28,
     name: 'Lorrena Black',
     email: 'lorrena@lorrenablack.com',
     avatar: LorrenaBlack,
@@ -808,7 +782,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 29,
+    id: 28,
     name: 'Shugmi Shumunov',
     email: null,
     avatar: ShugmiShumunov,
@@ -841,7 +815,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 30,
+    id: 29,
     name: 'Ida Byrd-Hill',
     email: 'ida@autoworkz.org',
     avatar: IdaByrdHill,
@@ -865,6 +839,30 @@ export const SpeakersData = [
         'innovation',
         'organizational-development',
       ],
+      track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 30,
+    name: 'Dave Koziol',
+    email: 'dave@davekoziol.com',
+    avatar: DaveKoziol,
+    bio: `GDG-A2 & Detroit Co-Organizer, and Director, Software Engineering IT Innovation & Back of House at Little Caesars. Prior to joining Little Caesars Dave spent over 25 years in the Software Consulting world. His teams have submitted over 250 apps to the app stores, but he now leads teams focused on web development, embedded development and software administration. He's been helping run community organizations and conferences for decades and has spoken in a number of different states and countries.`,
+    twitter: 'DaveKoziol',
+    linkedIn: 'https://www.linkedin.com/in/davekoziol/',
+    url: null,
+    organization: 'Little Caesars',
+    position: 'Director, Software Engineering IT Innovation & Back of House',
+    session: {
+      title: 'Strategies & Tips for Growing Your Career',
+      abstract: `Dave has been a hiring manager in the tech industry for over 30 years and in this talk he will share his tips and strategies for growing your career not just with advice but with the stories that support the advice. This talk is intended for all audience levels interested in their career.`,
+      description: `Dave has been a hiring manager in the tech industry for over 30 years and in this talk he will share his tips and strategies for growing your career not just with advice but with the stories that support the advice. This talk is intended for all audience levels interested in their career.`,
+      tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
       track: 'Level Up',
       time: '',
       room: '',

@@ -26,12 +26,12 @@ function LandingSection() {
             <p className="prose text-justify text-sm font-normal lg:text-base xl:text-lg">
               Join us on Friday, November 21st for an{' '}
               <strong>Agentic AI Hackathon</strong> at Wayne State
-              University&apos;s Saint Andrew&apos;s Memorial Episcopal Church in
-              Detroit, followed by <strong>Michigan DevFest</strong> sessions on
-              Saturday, November 22nd at <strong>Motor City Casino</strong>.
-              With this year&apos;s DevFest, we aim to put together a great
-              weekend of networking, innovation, and knowledge sharing for all
-              involved.
+              University&apos;s STEM Innovation Learning Center (SILC) on the
+              7th Floor in Detroit, followed by{' '}
+              <strong>Michigan DevFest</strong> sessions on Saturday, November
+              22nd at <strong>Motor City Casino</strong>. With this year&apos;s
+              DevFest, we aim to put together a great weekend of networking,
+              innovation, and knowledge sharing for all involved.
             </p>
             <div className="flex flex-row gap-8">
               <CTAButton

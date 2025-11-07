@@ -122,10 +122,10 @@ function SpeakerDetails({
 
         <button
           onClick={onClose ? onClose : () => {}}
-          className="absolute right-6 top-6 z-20 rounded-full bg-white/20 p-2 text-white transition-all hover:scale-110 hover:bg-white/30"
+          className="absolute right-6 top-6 z-20 rounded-full bg-white/20 p-2 text-white transition-all hover:scale-110 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sky-600"
           aria-label="Close speaker details"
         >
-          <IoClose className="size-6" />
+          <IoClose className="size-6" aria-hidden="true" />
         </button>
 
         <div className="relative z-10 flex flex-col items-center text-center text-white">
@@ -162,10 +162,12 @@ function SpeakerDetails({
                 href={`${mastodon}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30"
+                className="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sky-600"
                 onClick={(e) => e.stopPropagation()}
+                aria-label={`${name}'s Mastodon profile - opens in new tab`}
               >
-                <FaMastodon className="mr-2 size-4" />@{mastodon}
+                <FaMastodon className="mr-2 size-4" aria-hidden="true" />@
+                {mastodon}
               </a>
             )}
             {twitter && (
@@ -173,10 +175,12 @@ function SpeakerDetails({
                 href={`https://twitter.com/${twitter}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30"
+                className="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sky-600"
                 onClick={(e) => e.stopPropagation()}
+                aria-label={`${name}'s Twitter profile - opens in new tab`}
               >
-                <IoLogoTwitter className="mr-2 size-4" />@{twitter}
+                <IoLogoTwitter className="mr-2 size-4" aria-hidden="true" />@
+                {twitter}
               </a>
             )}
             {urls.length > 0 &&
@@ -188,10 +192,11 @@ function SpeakerDetails({
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30"
+                    className="inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sky-600"
                     onClick={(e) => e.stopPropagation()}
+                    aria-label={`Visit ${name}'s website ${domain} - opens in new tab`}
                   >
-                    <IoLinkOutline className="mr-2 size-4" />
+                    <IoLinkOutline className="mr-2 size-4" aria-hidden="true" />
                     {domain}
                   </a>
                 )
@@ -259,18 +264,21 @@ function SpeakerDetails({
       <div className="mb-8">
         <button
           onClick={goToPreviousSpeaker}
-          className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
+          className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
           aria-label="Previous speaker"
         >
-          <IoChevronBack className="size-6 text-gray-600" />
+          <IoChevronBack className="size-6 text-gray-600" aria-hidden="true" />
         </button>
 
         <button
           onClick={goToNextSpeaker}
-          className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl"
+          className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg transition-all hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
           aria-label="Next speaker"
         >
-          <IoChevronForward className="size-6 text-gray-600" />
+          <IoChevronForward
+            className="size-6 text-gray-600"
+            aria-hidden="true"
+          />
         </button>
       </div>
 

@@ -47,6 +47,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
         width={96}
         height={45}
         loading="lazy"
+        aria-hidden="true"
       />
     </div>
   )

@@ -10,6 +10,10 @@ const TeamSection = ({ teamData, year }) => {
   const modalRef = useRef(null)
   const closeButtonRef = useRef(null)
 
+  const sortedTeamData = [...teamData].sort((a, b) =>
+    a.name.localeCompare(b.name)
+  )
+
   // Get ribbon color based on role
   const getRibbonColor = (role) => {
     const colors = {
@@ -66,6 +70,7 @@ const TeamSection = ({ teamData, year }) => {
           alt=""
           className="h-10 sm:h-12 md:h-14 lg:h-16"
           loading="lazy"
+          aria-hidden="true"
         />
       </div>
 
@@ -82,7 +87,7 @@ const TeamSection = ({ teamData, year }) => {
       <div className="">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-center  lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
-            {teamData.map((dev) => (
+            {sortedTeamData.map((dev) => (
               <li
                 key={`dev-${dev.id}`}
                 className="relative rounded-xl border border-gray-200 bg-white shadow-lg"
@@ -96,13 +101,14 @@ const TeamSection = ({ teamData, year }) => {
                     } absolute -right-10 top-6 z-0 w-40 rotate-45 ${getRibbonColor(
                       dev.devfest
                     )} py-1 text-center text-sm font-bold uppercase tracking-wide text-white shadow-md`}
+                    aria-label={`Role: ${dev.devfest}`}
                   >
                     {dev.devfest}
                   </div>
                   <div className="flex">
                     <div className="flex w-24 shrink-0 flex-col items-center">
                       <img
-                        alt=""
+                        alt={`${dev.name} avatar`}
                         src={dev.avatar}
                         className="size-24 rounded-full outline outline-1 -outline-offset-1 outline-black/5"
                       />
@@ -141,10 +147,11 @@ const TeamSection = ({ teamData, year }) => {
                 {/* Button positioned relative to card, outside overflow container */}
                 {dev.bio && (
                   <button
-                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-primary-700 px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-white shadow-md transition-colors hover:bg-primary-800"
+                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-primary-700 px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-white shadow-md transition-colors hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
                     onClick={() =>
                       setSelectedBio({ name: dev.name, bio: dev.bio })
                     }
+                    aria-label={`View bio for ${dev.name}`}
                   >
                     View Bio
                   </button>

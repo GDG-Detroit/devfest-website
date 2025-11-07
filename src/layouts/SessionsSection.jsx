@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import SessionsLogo from '@/assets/images/icn-sessions.png'
 import NoSessionsAvailable from '@/components/sessions/NoSessionsAvailable'
 import SessionCard from '@/components/sessions/SessionCard'
+import HackathonSchedule from '@/components/sessions/HackathonSchedule'
 
 import { DIRECTION } from '@/constants/directions'
 import { IoChevronDown } from 'react-icons/io5'
@@ -95,6 +96,25 @@ const SessionsSection = ({
   )
 
   const hasSessionsForTrack = currentTrackSessions.length > 0
+
+  const renderNoSessionsOrSpeakersMessage = () => (
+    <div className="col-span-1 my-4 flex flex-col items-center justify-center space-y-8 text-center text-lg leading-relaxed">
+      <p>
+        We are currently looking for speakers and will update the list of
+        sessions once we have more information. If you are interested in
+        speaking, sign up with the link below.
+      </p>
+      <a
+        href="https://www.papercall.io/midevfest2025"
+        target="_blank"
+        aria-label="Apply to speak at Michigan DevFest 2025 - opens in new tab"
+        className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        rel="noreferrer"
+      >
+        APPLY TO SPEAK
+      </a>
+    </div>
+  )
 
   return (
     <section
@@ -213,11 +233,15 @@ const SessionsSection = ({
         </nav>
 
         <div
-          className={`flex w-full items-start justify-start px-[2.5%] md:px-[5%] ${
+          className={`flex w-full items-start px-[2.5%] md:px-[5%] ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
+          } ${
+            currentTrackSessions.length > 0 ? 'justify-start' : 'justify-center'
           }`}
         >
-          {combinedSpeakerData && combinedSpeakerData.length ? (
+          {currentSession === 'Hackathon' ? (
+            <HackathonSchedule />
+          ) : currentTrackSessions.length > 0 ? (
             <ul className="grid w-full grid-cols-1 gap-10 py-7">
               {hasSessionsForTrack ? (
                 currentTrackSessions
@@ -243,21 +267,7 @@ const SessionsSection = ({
               )}
             </ul>
           ) : (
-            <div className="col-span-1 my-4 flex flex-col items-center justify-center space-y-8 text-center text-lg leading-relaxed">
-              <p>
-                We are currently looking for speakers and will update the list
-                of sessions once we have more information. If you are interested
-                in speaking, sign up with the link below.
-              </p>
-              <a
-                href="https://www.papercall.io/midevfest2025"
-                target="_blank"
-                className="flex items-center rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
-                rel="noreferrer"
-              >
-                APPLY TO SPEAK
-              </a>
-            </div>
+            renderNoSessionsOrSpeakersMessage()
           )}
         </div>
       </div>

@@ -26,15 +26,24 @@ const TwitterHandle = ({
     return variant === 'avatar' ? 'size-6' : 'size-5 text-black'
   }
 
+  const getLinkClassName = () => {
+    const baseClass = getClassName()
+    const focusClass =
+      'focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2'
+    return `${baseClass} ${focusClass}`
+  }
+
   return (
     <a
       href={`https://twitter.com/${handle}`}
       target="_blank"
       rel="noreferrer"
-      className={getClassName()}
-      aria-label={`${name ? `${name}'s` : ''} Twitter handle - @${handle}`}
+      className={getLinkClassName()}
+      aria-label={`${
+        name ? `${name}'s` : ''
+      } Twitter handle - @${handle} - opens in new tab`}
     >
-      <FaXTwitter className={getIconClassName()} />
+      <FaXTwitter className={getIconClassName()} aria-hidden="true" />
     </a>
   )
 }
