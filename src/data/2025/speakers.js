@@ -912,12 +912,12 @@ export const SpeakersData = [
     name: 'Erik Blancas',
     email: 'blancaer9@gmail.com',
     avatar: ErikBlancas,
-    bio: `I am an electrical engineer with roots in embedded systems, firmware development, and microcontroller design, now expanding into full-stack engineering and the evolving field of generative AI. I currently serve as a Software Developer I focused on generative AI, following a prior role as an Associate Software Developer where I built a strong foundation in modern engineering practices. Beyond my technical work, I’m proud to serve as the Community Engagement Co-Director for the SHPE Detroit Professional Chapter, supporting programs that strengthen connection, opportunity, and representation in STEM. I enjoy bridging deep technical expertise with community impact and look forward to contributing to meaningful conversations around innovation and leadership.`,
+    bio: `Born in California, he moved to southwest Detroit at age 10 to pursue his dreams. Through strife and struggle, he eventually obtained his Bachelor’s in Electrical Engineering from the University of Michigan-Dearborn. His professional journey began with an internship at DENSO, followed by four years specializing in embedded firmware. Today, he is a key innovator at United Wholesale Mortgage, where he works in web application development and Generative AI in addition to promoting Hispanic heritage as chair of community outreach at La Familia United, UWM’s Team Member Resource Group.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/erikblancas/',
-    url: null,
-    organization: '',
-    position: '',
+    url: 'https://www.shpedetroit.org/',
+    organization: 'United Wholesale Manager',
+    position: 'Software Developer I - Generative AI',
     session: {
       title:
         'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
@@ -928,7 +928,7 @@ export const SpeakersData = [
 \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
 \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
 \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
-      tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
+      tags: [],
       track: 'Level Up',
       time: '',
       room: '',
@@ -942,12 +942,13 @@ export const SpeakersData = [
     name: 'Maridy Mazaira',
     email: 'maridymazaira@gmail.com',
     avatar: MaridyMazaira,
-    bio: `I serve as President of the SHPE Detroit Professional Chapter, where I focus on expanding opportunities, visibility, and community impact for Hispanic professionals in STEM across Southeast Michigan. Alongside this role, I bring nearly six years of leadership and engineering experience at DTE Energy, spanning emergency preparedness, damage-claims and reliability investigations, and continuous-improvement initiatives within Distribution Operations. My work includes guiding productivity teams, leading cross-organizational improvement projects, and securing stakeholder alignment through clear communication, data-driven business cases, and structured project management. Earlier roles included work as a staff engineer and associate engineer, where I applied Six Sigma methodologies, facilitated huddles and problem-solving sessions, and developed dashboards to support operational performance.\n\nAcross both SHPE and DTE, I am committed to advancing excellence, promoting representation in engineering, and building collaborative environments where people and projects thrive.`,
+    bio: `Maridy Mazaira graduated with Distinction from the University of Michigan–Dearborn with a B.S. in Industrial and Systems Engineering. She previously served as Supervisor of Engineering Continuous Improvement at DTE Energy, where she led initiatives in Tree Trimming, Damage Claims, Emergency Preparedness and Response and more.\n\nToday, Maridy serves as President of the Society of Hispanic Professional Engineers – Detroit Chapter. Passionate about education and community impact, she is dedicated to creating opportunities, fostering representation, and inspiring the next generation of Hispanic students to pursue STEM careers.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/maridy-mazaira/',
-    url: null,
-    organization: '',
-    position: '',
+    url: 'https://www.shpedetroit.org/',
+    organization:
+      'Society of Hispanic Professional Engineers - Detroit Chapter',
+    position: 'President',
     session: {
       title:
         'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
@@ -958,7 +959,7 @@ export const SpeakersData = [
 \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
 \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
 \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
-      tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
+      tags: [],
       track: 'Level Up',
       time: '',
       room: '',
@@ -988,7 +989,7 @@ export const SpeakersData = [
 \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
 \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
 \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
-      tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
+      tags: [],
       track: 'Level Up',
       time: '',
       room: '',
@@ -1002,12 +1003,12 @@ export const SpeakersData = [
     name: 'Raquel Estrada',
     email: 'raquel.estrada8@gmail.com',
     avatar: RaquelEstrada,
-    bio: `Experienced Project Manager, Business Process, and Continuous Improvement leader with over 12 years of expertise spanning various industries, including manufacturing, automobile, retail, and consumer goods. Proficient in leading cross-functional teams and projects across diverse areas within companies, spanning over 15 countries. Recognized for being results-focused and innovative, with strong analytical capabilities. Skilled in navigating complex projects with multiple stakeholders worldwide, consistently identifying opportunities for process and system enhancements to improve operations and add value. Known for employing a leadership style characterized by positive influence and teamwork to drive initiatives to success.`,
+    bio: `Raquel Estrada is the Vice President of Internal Relations for SHPE Detroit and a proud Salvadoran who is passionate about empowering the Hispanic community. She believes in the power of unity and collaboration to open doors for others in STEM.\n\nRaquel is a Process Transformation Manager – VP at Comerica Bank and holds three master’s degrees, along with a Bachelor’s in Industrial Engineering. With more than twelve years of international experience in financial services, consumer goods, and automotive, Raquel has built her career around driving change, leading with impact, and a deep passion for Continuous Improvement.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/raquel-estrada/',
-    url: null,
-    organization: '',
-    position: '',
+    url: 'https://www.shpedetroit.org/',
+    organization: 'Comerica Bank',
+    position: 'Enterprise Process Transformation Manager',
     session: {
       title:
         'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
@@ -1018,7 +1019,7 @@ export const SpeakersData = [
 \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
 \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
 \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
-      tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
+      tags: [],
       track: 'Level Up',
       time: '',
       room: '',
@@ -1048,7 +1049,7 @@ export const SpeakersData = [
 \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
 \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
 \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
-      tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
+      tags: [],
       track: 'Level Up',
       time: '',
       room: '',
