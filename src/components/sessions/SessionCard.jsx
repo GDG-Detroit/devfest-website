@@ -65,7 +65,11 @@ function SessionCard({
       >
         <div className="flex items-center text-left">
           {speakerAvatars?.length && (
-            <div className="shrink-0 overflow-hidden rounded-full md:flex">
+            <div
+              className={`flex flex-wrap overflow-hidden ${
+                speakerAvatars?.length >= 3 ? 'gap-1' : 'rounded-full'
+              }`}
+            >
               {speakerAvatars.map((avatar, index) => (
                 <img
                   key={index}
@@ -77,7 +81,7 @@ function SessionCard({
                   alt={`Headshot of ${speakers[index]}`}
                   className={`${
                     speakerAvatars?.length >= 3
-                      ? 'size-20 lg:size-32'
+                      ? 'align-center mx-auto my-1 size-20 justify-center rounded-full lg:size-32'
                       : 'size-40'
                   } object-cover`}
                 />
