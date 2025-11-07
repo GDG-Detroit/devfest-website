@@ -1,5 +1,6 @@
 import AdonaiVera from '@/assets/images/speakers/Adonai_Vera.png'
 import AlexPatterson from '@/assets/images/speakers/Alex_Patterson.png'
+import AngelPorras from '@/assets/images/speakers/AngelPorras.webp'
 import AnkitaGuha from '@/assets/images/speakers/Ankita_Guha.jpg'
 import BandhanKaur from '@/assets/images/speakers/Bandhan_Kaur.jpeg'
 import BernadetteAtanga from '@/assets/images/speakers/Bernadette_Atanga.jpeg'
@@ -7,8 +8,9 @@ import BorisWilfriedNyasse from '@/assets/images/speakers/Boris_Wilfried_Nyasse.
 import BrianMcKeiver from '@/assets/images/speakers/Brian_McKeiver.png'
 import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
 import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
-import DavidGiard from '@/assets/images/speakers/David_Giard.jpeg'
 import DaveKoziol from '@/assets/images/speakers/Dave.webp'
+import DavidGiard from '@/assets/images/speakers/David_Giard.jpeg'
+import ErikBlancas from '@/assets/images/speakers/ErikBlancas.webp'
 import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
 import HodaSolati from '@/assets/images/speakers/Hoda_Solati.jpg'
 import IdaByrdHill from '@/assets/images/speakers/Ida_Byrd-Hill.jpeg'
@@ -19,13 +21,17 @@ import JoelVasallo from '@/assets/images/speakers/Joel_Vasallo.jpg'
 import KavithaBangalore from '@/assets/images/speakers/Kavitha_Bangalore.jpg'
 import LorrenaBlack from '@/assets/images/speakers/Lorrena_Black.jpeg'
 import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.jpeg'
+import MaridyMazaira from '@/assets/images/speakers/MaridyMazaira.webp'
+import MartezColeman from '@/assets/images/speakers/MartezColeman.webp'
 import MichaelBower from '@/assets/images/speakers/Michael_Bower.jpg'
 import NileshPatel from '@assets/images/speakers/Nilesh_Patel.jpg'
+import RaquelEstrada from '@/assets/images/speakers/RaquelEstrada.webp'
 import ShamsAhson from '@/assets/images/speakers/Shams_Ahson.jpeg'
 import ShimaSolati from '@/assets/images/speakers/Shima_Solati.jpg'
 import ShugmiShumunov from '@/data/2025/assets/images/dev/shugmi_shumunov.webp'
 import StephanieFrantz from '@/assets/images/speakers/Stephanie_Frantz.jpeg'
 import StephenWylie from '@/assets/images/speakers/Stephen_Wylie.jpeg'
+import TriviaBarnes from '@/assets/images/speakers/TriviaBarnes.webp'
 import WEDaCruz from '@/assets/images/speakers/WE_Da_Cruz.jpeg'
 import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
 
@@ -862,6 +868,186 @@ export const SpeakersData = [
       title: 'Strategies & Tips for Growing Your Career',
       abstract: `Dave has been a hiring manager in the tech industry for over 30 years and in this talk he will share his tips and strategies for growing your career not just with advice but with the stories that support the advice. This talk is intended for all audience levels interested in their career.`,
       description: `Dave has been a hiring manager in the tech industry for over 30 years and in this talk he will share his tips and strategies for growing your career not just with advice but with the stories that support the advice. This talk is intended for all audience levels interested in their career.`,
+      tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
+      track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 32,
+    name: 'Angel Porras',
+    email: 'aporras3@ford.com',
+    avatar: AngelPorras,
+    bio: `I am a long-time engineering leader at Ford Motor Company with nearly two decades of experience in powertrain, hybrid, and advanced control systems. Since 2016, I have served as Supervisor of Hybrid Control Systems in Dearborn, guiding engineering teams working at the forefront of electrification. My career began in powertrain controls, where I spent more than nine years shaping the development and calibration of next-generation propulsion technologies. I was recently honored with Ford’s 2025 Innovator of the Year Award, a recognition that reflects both my technical contributions and my commitment to continuous improvement.\n\nThis year I joined the Ford team at the SHPE National Convention in Philadelphia to help recruit the next generation of STEM talent—an experience that reinforced my pride as a SHPE Lifetime Member. I am passionate about mentorship, innovation in mobility, and supporting pathways that bring more diverse voices into engineering.`,
+    twitter: '',
+    linkedIn: 'https://www.linkedin.com/in/angel-porras-1150372/',
+    url: null,
+    organization: 'Ford Motor Company',
+    position: 'Software Engineer',
+    session: {
+      title:
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+      abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+\nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
+\nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
+\nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
+\nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
+\nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      tags: [],
+      track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 33,
+    name: 'Erik Blancas',
+    email: 'blancaer9@gmail.com',
+    avatar: ErikBlancas,
+    bio: `I am an electrical engineer with roots in embedded systems, firmware development, and microcontroller design, now expanding into full-stack engineering and the evolving field of generative AI. I currently serve as a Software Developer I focused on generative AI, following a prior role as an Associate Software Developer where I built a strong foundation in modern engineering practices. Beyond my technical work, I’m proud to serve as the Community Engagement Co-Director for the SHPE Detroit Professional Chapter, supporting programs that strengthen connection, opportunity, and representation in STEM. I enjoy bridging deep technical expertise with community impact and look forward to contributing to meaningful conversations around innovation and leadership.`,
+    twitter: '',
+    linkedIn: 'https://www.linkedin.com/in/erikblancas/',
+    url: null,
+    organization: '',
+    position: '',
+    session: {
+      title:
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+      abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+\nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
+\nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
+\nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
+\nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
+\nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
+      track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 34,
+    name: 'Maridy Mazaira',
+    email: 'maridymazaira@gmail.com',
+    avatar: MaridyMazaira,
+    bio: `I serve as President of the SHPE Detroit Professional Chapter, where I focus on expanding opportunities, visibility, and community impact for Hispanic professionals in STEM across Southeast Michigan. Alongside this role, I bring nearly six years of leadership and engineering experience at DTE Energy, spanning emergency preparedness, damage-claims and reliability investigations, and continuous-improvement initiatives within Distribution Operations. My work includes guiding productivity teams, leading cross-organizational improvement projects, and securing stakeholder alignment through clear communication, data-driven business cases, and structured project management. Earlier roles included work as a staff engineer and associate engineer, where I applied Six Sigma methodologies, facilitated huddles and problem-solving sessions, and developed dashboards to support operational performance.\n\nAcross both SHPE and DTE, I am committed to advancing excellence, promoting representation in engineering, and building collaborative environments where people and projects thrive.`,
+    twitter: '',
+    linkedIn: 'https://www.linkedin.com/in/maridy-mazaira/',
+    url: null,
+    organization: '',
+    position: '',
+    session: {
+      title:
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+      abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+\nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
+\nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
+\nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
+\nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
+\nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
+      track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 35,
+    name: 'Martez Coleman',
+    email: 'nsbedetroitpcichair@gmail.com',
+    avatar: MartezColeman,
+    bio: `An experienced office assistant with a strong background in higher education, I combine administrative expertise with technical skill in Siemens NX and Microsoft Office. I bring a collaborative approach to team building, clear communication, and public speaking, supported by hands-on leadership experience. I am currently pursuing a master’s degree in Robotics at Wayne State University, connecting advanced engineering studies with real-world organizational and project support.`,
+    twitter: '',
+    linkedIn: 'https://www.linkedin.com/in/martez-coleman-jr-27107212b/',
+    url: null,
+    organization: '',
+    position: '',
+    session: {
+      title:
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+      abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+\nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
+\nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
+\nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
+\nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
+\nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
+      track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 36,
+    name: 'Raquel Estrada',
+    email: 'raquel.estrada8@gmail.com',
+    avatar: RaquelEstrada,
+    bio: `Experienced Project Manager, Business Process, and Continuous Improvement leader with over 12 years of expertise spanning various industries, including manufacturing, automobile, retail, and consumer goods. Proficient in leading cross-functional teams and projects across diverse areas within companies, spanning over 15 countries. Recognized for being results-focused and innovative, with strong analytical capabilities. Skilled in navigating complex projects with multiple stakeholders worldwide, consistently identifying opportunities for process and system enhancements to improve operations and add value. Known for employing a leadership style characterized by positive influence and teamwork to drive initiatives to success.`,
+    twitter: '',
+    linkedIn: 'https://www.linkedin.com/in/raquel-estrada/',
+    url: null,
+    organization: '',
+    position: '',
+    session: {
+      title:
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+      abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+\nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
+\nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
+\nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
+\nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
+\nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
+      track: 'Level Up',
+      time: '',
+      room: '',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 37,
+    name: 'Trivia Barnes',
+    email: 'trivia.barnes@zf.com ',
+    avatar: TriviaBarnes,
+    bio: `A member of the National Society of Black Engineers, I currently serve as the Collegiate Initiative Chair for 2023–24 and the Pre-Collegiate Initiative Chair for 2024–25 with the NSBE Detroit Professional Chapter. I am also a NASA Community College Aerospace Scholar. I bring more than fifteen years of manufacturing and automotive experience, including assembly, quality, and line-lead responsibilities. I am familiar with 3-D modeling tools such as Fusion 360 for CAD, CAM, and CAE, as well as SolidWorks and Catia. My background includes experience with KUKA robotic production systems and GD&T, along with leadership roles focused on training and delivering quality service. I also have extensive experience interpreting technical data related to manufacturing equipment and processes.`,
+    twitter: '',
+    linkedIn: 'https://www.linkedin.com/in/triviabarnes/',
+    url: null,
+    organization: '',
+    position: '',
+    session: {
+      title:
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+      abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+\nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
+\nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
+\nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
+\nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
+\nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
       tags: ['Career Growth', 'Networking', 'Community', 'Servant Leadership'],
       track: 'Level Up',
       time: '',
