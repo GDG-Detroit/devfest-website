@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { useCallback, useContext, useEffect, useMemo } from 'react'
+import { useCallback, useContext, useEffect, useMemo, useRef } from 'react'
 import {
   IoChevronBack,
   IoChevronForward,
@@ -232,6 +232,7 @@ function SpeakerDetails({
     (speaker) => speaker.id === speakerID
   )
   const displayPosition = currentIndex + 1
+  const bioRegionRef = useRef(null)
 
   return (
     <div className="relative max-h-[90vh] w-full max-w-4xl overflow-hidden rounded-3xl bg-white shadow-2xl">
@@ -251,7 +252,7 @@ function SpeakerDetails({
           <IoClose className="size-6" aria-hidden="true" />
         </button>
 
-        <div className="relative z-20 flex flex-col items-center text-center text-white">
+        <div className="relative z-20 flex flex-col items-center text-center">
           <div className="relative mb-6">
             <div className="relative size-64 rounded-full bg-black/30 p-3">
               <img
@@ -364,13 +365,22 @@ function SpeakerDetails({
                 About {name.split(' ')[0]}
               </h3>
             )}
-            <div
+            <button
+              type="button"
+              className="sr-only rounded px-2 py-1 ring-2 ring-offset-2 focus:not-sr-only focus:mb-2"
+              onClick={() => bioRegionRef.current?.focus()}
+              aria-controls={`speaker-modal-bio-region-${id}`}
+            >
+              Focus biography content (for keyboard scrolling)
+            </button>
+            <section
+              id={`speaker-modal-bio-region-${id}`}
+              ref={bioRegionRef}
               className="max-h-64 overflow-y-auto rounded-xl pr-4 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-              tabIndex={0}
-              role="textbox"
-              aria-readonly="true"
               aria-labelledby={`speaker-modal-about-${id}`}
+              aria-label={`Biography content for ${name}`}
               style={bioFocusStyle}
+              tabIndex={-1}
             >
               {bio && (
                 <p
@@ -380,7 +390,7 @@ function SpeakerDetails({
                   {bio}
                 </p>
               )}
-            </div>
+            </section>
           </div>
 
           <div className="lg:col-span-2">
