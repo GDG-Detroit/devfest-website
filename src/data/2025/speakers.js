@@ -882,12 +882,12 @@ export const SpeakersData = [
     name: 'Angel Porras',
     email: 'aporras3@ford.com',
     avatar: AngelPorras,
-    bio: `I am a long-time engineering leader at Ford Motor Company with nearly two decades of experience in powertrain, hybrid, and advanced control systems. Since 2016, I have served as Supervisor of Hybrid Control Systems in Dearborn, guiding engineering teams working at the forefront of electrification. My career began in powertrain controls, where I spent more than nine years shaping the development and calibration of next-generation propulsion technologies. I was recently honored with Ford’s 2025 Innovator of the Year Award, a recognition that reflects both my technical contributions and my commitment to continuous improvement.\n\nThis year I joined the Ford team at the SHPE National Convention in Philadelphia to help recruit the next generation of STEM talent—an experience that reinforced my pride as a SHPE Lifetime Member. I am passionate about mentorship, innovation in mobility, and supporting pathways that bring more diverse voices into engineering.`,
+    bio: `Born in Guatemala City, Angel F. Porras immigrated to the U.S. in the late 1990s, overcoming language and cultural barriers to pursue his passion for engineering.  After earning degrees from UC Berkeley and San Jose State Universities, he joined Ford Motor Company through the Ford College Graduate program and discovered his calling in electric vehicle innovation.  Now Technical Specialist for Electric Vehicle Controls, Angel holds nearly 80 patents spanning EV Charging, Thermal Management, and Intelligent scheduling.\n\nAngel received the 2025 Star Innovator Award at the SHPE National Convention in Philadelphia where he also helped recruit the next generation of STEM talent.  Now as a SHPE Lifetime Member Angel is passionate about mentorship, innovation in mobility, and supporting pathways that bring more diverse voices into engineering.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/angel-porras-1150372/',
-    url: null,
+    url: 'https://www.shpedetroit.org/',
     organization: 'Ford Motor Company',
-    position: 'Software Engineer',
+    position: 'Electrification Systems and Controls Technicial Specialist',
     session: {
       title:
         'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
@@ -973,10 +973,10 @@ export const SpeakersData = [
     name: 'Martez Coleman',
     email: 'nsbedetroitpcichair@gmail.com',
     avatar: MartezColeman,
-    bio: `An experienced office assistant with a strong background in higher education, I combine administrative expertise with technical skill in Siemens NX and Microsoft Office. I bring a collaborative approach to team building, clear communication, and public speaking, supported by hands-on leadership experience. I am currently pursuing a master’s degree in Robotics at Wayne State University, connecting advanced engineering studies with real-world organizational and project support.`,
+    bio: `Martez Coleman is a Manufacturing Project Engineer at FANUC America and a self-described servant leader who approaches engineering with service at the forefront. He holds a master’s degree in robotics from Wayne State University and a bachelor’s degree in industrial engineering from Central Michigan University. As a first-generation college graduate from Flint, Martez is committed to empowering the next generation of STEM leaders. Through his involvement with programs such as GEAR UP, AmeriCorps, and the National Society of Black Engineers, he continues to mentor students and create pathways for youth to pursue engineering and technology.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/martez-coleman-jr-27107212b/',
-    url: null,
+    url: 'https://nsbedetroitprofessionals.org/',
     organization: '',
     position: '',
     session: {
@@ -1036,7 +1036,7 @@ export const SpeakersData = [
     bio: `A member of the National Society of Black Engineers, I currently serve as the Collegiate Initiative Chair for 2023–24 and the Pre-Collegiate Initiative Chair for 2024–25 with the NSBE Detroit Professional Chapter. I am also a NASA Community College Aerospace Scholar. I bring more than fifteen years of manufacturing and automotive experience, including assembly, quality, and line-lead responsibilities. I am familiar with 3-D modeling tools such as Fusion 360 for CAD, CAM, and CAE, as well as SolidWorks and Catia. My background includes experience with KUKA robotic production systems and GD&T, along with leadership roles focused on training and delivering quality service. I also have extensive experience interpreting technical data related to manufacturing equipment and processes.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/triviabarnes/',
-    url: null,
+    url: 'https://nsbedetroitprofessionals.org/',
     organization: '',
     position: '',
     session: {
