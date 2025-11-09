@@ -20,6 +20,7 @@ const TRACK_THEMES = {
     badgeBorder: 'rgba(147,197,253,0.55)',
     badgeText: '#ffffff',
     focusColor: '#60a5fa',
+    focusRingOffset: 'rgba(15, 23, 42, 0.6)',
   },
   'Build with AI': {
     gradient: 'linear-gradient(135deg, #7c3aed 0%, #5b21b6 52%, #1e1b4b 100%)',
@@ -29,6 +30,7 @@ const TRACK_THEMES = {
     badgeBorder: 'rgba(216,180,254,0.6)',
     badgeText: '#ffffff',
     focusColor: '#c084fc',
+    focusRingOffset: 'rgba(76, 29, 149, 0.65)',
   },
   Innovation: {
     gradient:
@@ -39,6 +41,7 @@ const TRACK_THEMES = {
     badgeBorder: 'rgba(253,230,138,0.6)',
     badgeText: '#ffffff',
     focusColor: '#fcd34d',
+    focusRingOffset: 'rgba(161, 98, 4, 0.55)',
   },
   'Tech+Design': {
     gradient:
@@ -49,6 +52,7 @@ const TRACK_THEMES = {
     badgeBorder: 'rgba(251,113,133,0.55)',
     badgeText: '#ffffff',
     focusColor: '#f472b6',
+    focusRingOffset: 'rgba(109, 40, 91, 0.55)',
   },
   Workshops: {
     gradient:
@@ -59,6 +63,7 @@ const TRACK_THEMES = {
     badgeBorder: 'rgba(254,215,170,0.58)',
     badgeText: '#ffffff',
     focusColor: '#fb923c',
+    focusRingOffset: 'rgba(124, 45, 18, 0.6)',
   },
   'Level Up': {
     gradient:
@@ -69,6 +74,7 @@ const TRACK_THEMES = {
     badgeBorder: 'rgba(187,247,208,0.5)',
     badgeText: '#ffffff',
     focusColor: '#34d399',
+    focusRingOffset: 'rgba(15, 58, 34, 0.6)',
   },
   Startups: {
     gradient:
@@ -79,6 +85,7 @@ const TRACK_THEMES = {
     badgeBorder: 'rgba(191,219,254,0.55)',
     badgeText: '#ffffff',
     focusColor: '#38bdf8',
+    focusRingOffset: 'rgba(8, 47, 73, 0.6)',
   },
 }
 
@@ -149,6 +156,14 @@ function SpeakerDetails({
   const bioFocusStyle = useMemo(
     () => ({
       outlineColor: trackTheme.focusColor,
+    }),
+    [trackTheme]
+  )
+
+  const interactiveFocusVars = useMemo(
+    () => ({
+      '--tw-ring-color': trackTheme.focusColor,
+      '--tw-ring-offset-color': trackTheme.focusRingOffset,
     }),
     [trackTheme]
   )
@@ -229,7 +244,8 @@ function SpeakerDetails({
 
         <button
           onClick={onClose ? onClose : () => {}}
-          className="absolute right-6 top-6 z-20 rounded-full bg-black/30 p-2 text-white transition-all hover:scale-110 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sky-600"
+          className="absolute right-6 top-6 z-20 rounded-full bg-black/30 p-2 text-white transition-all hover:scale-110 hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2"
+          style={interactiveFocusVars}
           aria-label="Close speaker details"
         >
           <IoClose className="size-6" aria-hidden="true" />
@@ -291,9 +307,10 @@ function SpeakerDetails({
                 href={`${mastodon}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full border border-white/30 bg-black/30 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sky-600"
+                className="inline-flex items-center rounded-full border border-white/30 bg-black/30 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2"
                 onClick={(e) => e.stopPropagation()}
                 aria-label={`${name}'s Mastodon profile - opens in new tab`}
+                style={interactiveFocusVars}
               >
                 <FaMastodon className="mr-2 size-4" aria-hidden="true" />@
                 {mastodon}
@@ -304,9 +321,10 @@ function SpeakerDetails({
                 href={`https://twitter.com/${twitter}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full border border-white/30 bg-black/30 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sky-600"
+                className="inline-flex items-center rounded-full border border-white/30 bg-black/30 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2"
                 onClick={(e) => e.stopPropagation()}
                 aria-label={`${name}'s Twitter profile - opens in new tab`}
+                style={interactiveFocusVars}
               >
                 <IoLogoTwitter className="mr-2 size-4" aria-hidden="true" />@
                 {twitter}
@@ -321,9 +339,10 @@ function SpeakerDetails({
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center rounded-full border border-white/30 bg-black/30 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sky-600"
+                    className="inline-flex items-center rounded-full border border-white/30 bg-black/30 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2"
                     onClick={(e) => e.stopPropagation()}
                     aria-label={`Visit ${name}'s website ${domain} - opens in new tab`}
+                    style={interactiveFocusVars}
                   >
                     <IoLinkOutline className="mr-2 size-4" aria-hidden="true" />
                     {domain}
