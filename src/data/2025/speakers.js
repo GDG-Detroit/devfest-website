@@ -887,7 +887,7 @@ export const SpeakersData = [
     linkedIn: 'https://www.linkedin.com/in/angel-porras-1150372/',
     url: 'https://www.shpedetroit.org/',
     organization: 'Ford Motor Company',
-    position: 'Electrification Systems and Controls Technicial Specialist',
+    position: 'Electrification Systems and Controls Technical Specialist',
     session: {
       title:
         'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
@@ -916,7 +916,7 @@ export const SpeakersData = [
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/erikblancas/',
     url: 'https://www.shpedetroit.org/',
-    organization: 'United Wholesale Manager',
+    organization: 'United Wholesale Mortgage',
     position: 'Software Developer I - Generative AI',
     session: {
       title:
