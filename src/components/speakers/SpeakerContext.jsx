@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { createContext, useMemo, useState } from 'react'
+import { createContext, useState } from 'react'
 
 // default values for type sense
 export const SpeakerContext = createContext({
@@ -26,18 +26,16 @@ export const SpeakerProvider = ({ children, speakersData = [] }) => {
     setIsModalOpen(false)
   }
 
-  const uniqueSpeakers = useMemo(() => {
-    return speakersData.filter(
-      (speaker, index, self) =>
-        index === self.findIndex((s) => s.name === speaker.name)
-    )
-  }, [speakersData])
+  const uniqueSpeakers = speakersData.filter(
+    (speaker, index, self) =>
+      index === self.findIndex((s) => s.name === speaker.name)
+  )
 
-  const numSpeakers = useMemo(() => uniqueSpeakers.length, [uniqueSpeakers])
+  const numSpeakers = uniqueSpeakers.length
 
-  const uniqueSpeakersSortedByFirstName = useMemo(() => {
-    return [...uniqueSpeakers].sort((a, b) => a.name.localeCompare(b.name))
-  }, [uniqueSpeakers])
+  const uniqueSpeakersSortedByFirstName = [...uniqueSpeakers].sort((a, b) =>
+    a.name.localeCompare(b.name)
+  )
 
   return (
     <SpeakerContext.Provider

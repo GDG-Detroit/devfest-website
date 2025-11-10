@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { useCallback, useContext, useEffect, useMemo, useRef } from 'react'
+import { useCallback, useContext, useEffect, useRef } from 'react'
 import {
   IoChevronBack,
   IoChevronForward,
@@ -128,45 +128,30 @@ function SpeakerDetails({
 
   const urls = getUrlArray()
 
-  const trackTheme = useMemo(() => {
-    return TRACK_THEMES[track] ?? TRACK_THEMES.default
-  }, [track])
+  const trackTheme = TRACK_THEMES[track] ?? TRACK_THEMES.default
 
-  const heroStyle = useMemo(() => {
-    const backgroundImage = [trackTheme.pattern, trackTheme.gradient].join(', ')
+  const heroStyle = {
+    backgroundImage: [trackTheme.pattern, trackTheme.gradient].join(', '),
+    backgroundColor: trackTheme.fallbackColor,
+    backgroundBlendMode: 'overlay, normal',
+    backgroundSize: 'auto, cover',
+    backgroundRepeat: 'repeat, no-repeat',
+    backgroundPosition: 'center, center',
+  }
 
-    return {
-      backgroundImage,
-      backgroundColor: trackTheme.fallbackColor,
-      backgroundBlendMode: 'overlay, normal',
-      backgroundSize: 'auto, cover',
-      backgroundRepeat: 'repeat, no-repeat',
-      backgroundPosition: 'center, center',
-    }
-  }, [trackTheme])
+  const trackBadgeStyle = {
+    borderColor: trackTheme.badgeBorder,
+    color: trackTheme.badgeText,
+  }
 
-  const trackBadgeStyle = useMemo(
-    () => ({
-      borderColor: trackTheme.badgeBorder,
-      color: trackTheme.badgeText,
-    }),
-    [trackTheme]
-  )
+  const bioFocusStyle = {
+    outlineColor: trackTheme.focusColor,
+  }
 
-  const bioFocusStyle = useMemo(
-    () => ({
-      outlineColor: trackTheme.focusColor,
-    }),
-    [trackTheme]
-  )
-
-  const interactiveFocusVars = useMemo(
-    () => ({
-      '--tw-ring-color': trackTheme.focusColor,
-      '--tw-ring-offset-color': trackTheme.focusRingOffset,
-    }),
-    [trackTheme]
-  )
+  const interactiveFocusVars = {
+    '--tw-ring-color': trackTheme.focusColor,
+    '--tw-ring-offset-color': trackTheme.focusRingOffset,
+  }
 
   const goToPreviousSpeaker = useCallback(() => {
     const currentIndex = uniqueSpeakersSortedByFirstName.findIndex(

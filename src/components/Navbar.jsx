@@ -1,7 +1,19 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { FaBars, FaXmark } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 import GDGDetroitLogo from './ui/GDGDetroitLogo'
+
+const externalLinks = [{ to: '/previous-events', text: 'Previous Events' }]
+
+const sections = [
+  { id: 'landing', text: 'Landing' },
+  { id: 'location', text: 'Location' },
+  { id: 'sessions', text: 'Sessions' },
+  { id: 'speakers', text: 'Speakers' },
+  { id: 'partners', text: 'Partners' },
+  { id: 'jobboard', text: 'Job Board' },
+  { id: 'devteam', text: 'DevFest Team' },
+]
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState('landing')
@@ -14,11 +26,6 @@ function Navbar() {
 
   const navRef = useRef(null)
   const mobileButtonRef = useRef(null)
-
-  const externalLinks = useMemo(
-    () => [{ to: '/previous-events', text: 'Previous Events' }],
-    []
-  )
 
   // Helper function to get accurate navbar height
   const getNavbarHeight = () => {
@@ -68,19 +75,6 @@ function Navbar() {
     // Scroll to top of page
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
-
-  const sections = useMemo(
-    () => [
-      { id: 'landing', text: 'Landing' },
-      { id: 'location', text: 'Location' },
-      { id: 'sessions', text: 'Sessions' },
-      { id: 'speakers', text: 'Speakers' },
-      { id: 'partners', text: 'Partners' },
-      { id: 'jobboard', text: 'Job Board' },
-      { id: 'devteam', text: 'DevFest Team' },
-    ],
-    []
-  )
 
   useEffect(() => {
     // Function to set the active link based on scroll position
@@ -148,7 +142,7 @@ function Navbar() {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [sections, isManualNavigation, activeLink])
+  }, [isManualNavigation, activeLink])
 
   const handleNavigation = (event, sectionId) => {
     event.preventDefault()
