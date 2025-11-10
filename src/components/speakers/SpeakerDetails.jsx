@@ -383,7 +383,10 @@ function SpeakerDetails({
           </div>
 
           <div className="lg:col-span-2">
-            <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-sky-50 p-6">
+            <div
+              className="max-h-[400px] overflow-y-auto rounded-2xl border-blue-100 bg-gradient-to-br from-blue-50 to-sky-50 p-6"
+              style={{ border: `3px solid ${trackTheme.focusColor}` }}
+            >
               <h3 className="mb-3 text-lg font-bold text-gray-900">Session</h3>
               <button
                 onClick={() =>
@@ -435,15 +438,24 @@ function SpeakerDetails({
                 </div>
               )}
               {tags && tags.length > 0 && (
-                <div className="mt-4 flex flex-wrap justify-center gap-1">
-                  {tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                <div className="mt-4">
+                  <p className="mb-2 text-xs font-bold uppercase tracking-wide text-gray-500">
+                    Topics
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="rounded-full px-3 py-1 text-xs font-bold text-white shadow-sm"
+                        style={{
+                          backgroundColor: `${trackTheme.focusColor}`,
+                          border: `3px solid ${trackTheme.focusColor}`,
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
