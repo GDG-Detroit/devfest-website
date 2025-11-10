@@ -91,9 +91,15 @@ const SessionsSection = ({
   })
 
   // Get sessions for current track
-  const currentTrackSessions = combinedSpeakerData.filter(
-    (session) => session.track === currentSession
-  )
+  const currentTrackSessions = combinedSpeakerData.filter((session) => {
+    // Handle the Misc/Miscellaneous mapping in eventData.js
+    const normalizeSessionTrack =
+      session.track === 'Miscellaneous' ? 'Misc' : session.track
+    const normalizeCurrentSession =
+      currentSession === 'Miscellaneous' ? 'Misc' : currentSession
+
+    return normalizeSessionTrack === normalizeCurrentSession
+  })
 
   const hasSessionsForTrack = currentTrackSessions.length > 0
 
