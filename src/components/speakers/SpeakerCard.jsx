@@ -17,6 +17,7 @@ const SpeakerCard = ({
   name,
   organization,
   position,
+  sessionDescription,
   sessionTitle,
   track,
   twitter,
@@ -130,6 +131,7 @@ const SpeakerCard = ({
                 organization={organization}
                 onClose={closeModal}
                 position={position}
+                sessionDescription={sessionDescription}
                 sessionTitle={sessionTitle}
                 track={track}
                 twitter={twitter}
@@ -155,6 +157,7 @@ SpeakerCard.propTypes = {
   name: PropTypes.string.isRequired,
   organization: PropTypes.string,
   position: PropTypes.string,
+  sessionDescription: PropTypes.string,
   sessionTitle: PropTypes.string.isRequired,
   track: PropTypes.string,
   twitter: PropTypes.string,

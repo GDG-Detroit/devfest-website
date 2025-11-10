@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
-import { useCallback, useContext, useEffect, useRef } from 'react'
+import { useCallback, useContext, useEffect, useRef, useState } from 'react'
 import {
   IoChevronBack,
+  IoChevronDown,
   IoChevronForward,
   IoClose,
   IoLinkOutline,
@@ -101,6 +102,7 @@ function SpeakerDetails({
   organization,
   position,
   sessionTitle,
+  sessionDescription,
   track,
   twitter,
   url,
@@ -111,6 +113,8 @@ function SpeakerDetails({
     numSpeakers,
     uniqueSpeakersSortedByFirstName,
   } = useContext(SpeakerContext)
+
+  const [sessionExpanded, setSessionExpanded] = useState(true)
 
   const validateUrl = (url) => {
     try {
@@ -380,13 +384,50 @@ function SpeakerDetails({
           <div className="lg:col-span-2">
             <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-sky-50 p-6">
               <h3 className="mb-3 text-lg font-bold text-gray-900">Session</h3>
-              <div className="rounded-xl bg-white p-4 shadow-sm">
-                {sessionTitle && (
-                  <p className="text-sm font-semibold leading-relaxed text-gray-900">
-                    {sessionTitle}
+              <button
+                onClick={() =>
+                  sessionDescription && setSessionExpanded(!sessionExpanded)
+                }
+                aria-expanded={sessionDescription ? sessionExpanded : undefined}
+                aria-controls={
+                  sessionTitle ? `session-description-${id}` : undefined
+                }
+                aria-label={
+                  sessionDescription
+                    ? `Toggle session description for ${sessionTitle}`
+                    : undefined
+                }
+                className={`w-full rounded-xl bg-white p-4 text-left shadow-sm transition-all ${
+                  sessionDescription ? 'cursor-pointer hover:shadow-md' : ''
+                }`}
+                disabled={!sessionDescription}
+              >
+                <div className="flex items-start justify-between gap-2">
+                  {sessionTitle && (
+                    <p className="flex-1 text-sm font-semibold leading-relaxed text-gray-900">
+                      {sessionTitle}
+                    </p>
+                  )}
+                  {sessionDescription && (
+                    <IoChevronDown
+                      className={`size-5 shrink-0 text-gray-600 transition-transform duration-200 ${
+                        sessionExpanded ? '-scale-y-100' : ''
+                      }`}
+                      aria-hidden="true"
+                    />
+                  )}
+                </div>
+              </button>
+              {sessionExpanded && sessionDescription && (
+                <div
+                  id={`session-description-${id}`}
+                  className="mt-3 max-h-48 overflow-y-auto rounded-xl bg-white p-4 shadow-sm"
+                >
+                  <p className="whitespace-pre-wrap text-left text-sm leading-relaxed text-gray-700">
+                    {sessionDescription}
                   </p>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -453,6 +494,7 @@ SpeakerDetails.propTypes = {
   organization: PropTypes.string,
   position: PropTypes.string,
   sessionTitle: PropTypes.string.isRequired,
+  sessionDescription: PropTypes.string,
   track: PropTypes.string,
   twitter: PropTypes.string,
   url: PropTypes.oneOfType([
