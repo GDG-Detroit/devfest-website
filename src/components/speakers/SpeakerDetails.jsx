@@ -371,14 +371,13 @@ function SpeakerDetails({
               onClick={() => bioRegionRef.current?.focus()}
               aria-controls={`speaker-modal-bio-region-${id}`}
             >
-              Focus biography content (for keyboard scrolling)
+              Skip to biography
             </button>
             <section
               id={`speaker-modal-bio-region-${id}`}
               ref={bioRegionRef}
               className="max-h-64 overflow-y-auto rounded-xl pr-4 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               aria-labelledby={`speaker-modal-about-${id}`}
-              aria-label={`Biography content for ${name}`}
               style={bioFocusStyle}
               tabIndex={-1}
             >
