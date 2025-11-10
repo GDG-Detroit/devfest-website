@@ -1041,8 +1041,8 @@ export const SpeakersData = [
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/triviabarnes/',
     url: 'https://nsbedetroitprofessionals.org/',
-    organization: '',
-    position: '',
+    organization: 'ZF Group',
+    position: 'Divisional Electrician in Charge',
     session: {
       title:
         'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
@@ -1074,7 +1074,7 @@ export const SpeakersData = [
     organization: '',
     position: 'IT Specialist & Fitness Instructor',
     session: {
-      title: 'Fitness Yoga',
+      title: 'Morning Meditation & Yoga',
       abstract: `Ignite your body and mind with our Fitness Yoga class — a dynamic blend of yoga, strength training, and cardio designed to build power, flexibility, and endurance. Move with intention, break a sweat, and leave feeling strong, centered, and fully recharged.`,
       description: `This fitness yoga class blends traditional yoga poses with strength training and cardiovascular movements for a balanced, full-body workout. Participants will improve flexibility, build lean muscle, and boost endurance through flowing sequences, bodyweight exercises, and dynamic movement. The class is designed to enhance both physical strength and mindfulness, leaving you energized, focused, and refreshed.`,
       tags: [
