@@ -26,7 +26,7 @@ const ProfileCard = ({
       'Build with AI': 'bg-purple-800',
       Innovation: 'bg-primary-900',
       'Level Up': 'bg-emerald-800',
-      Startups: 'bg-sky-800',
+      Leadership: 'bg-sky-800',
       'Tech+Design': 'bg-red-800',
       Workshops: 'bg-orange-900',
     }

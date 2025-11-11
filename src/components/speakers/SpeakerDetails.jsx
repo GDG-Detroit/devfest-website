@@ -76,7 +76,7 @@ const TRACK_THEMES = {
     focusColor: '#34d399',
     focusRingOffset: 'rgba(15, 58, 34, 0.6)',
   },
-  Startups: {
+  Leadership: {
     gradient:
       'linear-gradient(135deg, #38bdf8 0%, #0ea5e9 45%, #0369a1 78%, #082f49 100%)',
     pattern:
