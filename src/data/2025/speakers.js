@@ -36,7 +36,6 @@ import StephanieFrantz from '@/assets/images/speakers/Stephanie_Frantz.jpeg'
 import StephenWylie from '@/assets/images/speakers/Stephen_Wylie.jpeg'
 import TriviaBarnes from '@/assets/images/speakers/TriviaBarnes.webp'
 import UmeloOnyejiaka from '@/assets/images/speakers/Umelo_Onyejiaka.webp'
-import WEDaCruz from '@/assets/images/speakers/WE_Da_Cruz.jpeg'
 import WilliamBowen from '@/assets/images/speakers/William_Bowen.webp'
 import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
 
@@ -268,28 +267,27 @@ export const SpeakersData = [
   },
   {
     id: 9,
-    name: 'W.E. Da’Cruz',
-    email: 'wedacruz@thevgcgroup.com',
-    avatar: WEDaCruz,
-    bio: `Wendy Ekua (W.E.) Da’Cruz is widely recognized as The Digital Diplomat™ a global speaker, advisor, & strategist leading at the intersection of entrepreneurship, innovation, and strategy. Currently a doctoral candidate at the University of Michigan-Flint, she is writing her dissertation on nonmarket strategy to explore how influence beyond capital shapes people, policies, and processes in the marketplace.\n\nAs a sought-after global voice, W.E. Da’Cruz has spoken on economic development, innovation, and digital trade at high-level convenings such as the U.S.-Africa Business Summit (Mozambique), World Export Development Forum (Ethiopia), Africa Fintech Summit (Ethiopia), and DHL eCommerce Conference (Ghana). Through the U.S. Department of State’s U.S. Speaker Program, she has led workshops for the Academy of Women Entrepreneurs (AWE) and provided training in Uganda, Kenya, Rwanda, Zimbabwe, Kuwait, & South Africa, helping thousands of entrepreneurs navigate people, policies, & processes in global business.\n\nShe is the co-founder of The Virtual Global Consultant (VGC) Group, a global IT consultancy that helps businesses leverage digital tools to access new revenue and value-producing opportunities. Under her leadership, VGC has generated millions in digital sales and at-will donations for entrepreneurs and organizations, particularly across the U.S. and Africa.\n\nDuring the COVID-19 pandemic, she and her husband launched The Mushroom Angel Company, a tech-forward consumer-packaged goods (CPG) food manufacturer based in Detroit. Their flagship product, Mushroom Burgers, is now available in over 100 retail locations across the Midwest.\n\nDa’Cruz’s influence extends into policy and advisory roles. She was appointed by the U.S. Secretary of Commerce to serve on the District Export Council for Eastern Michigan and elected as an At-Large Board Member for its national association. She was also appointed by the U.S. Secretary of Agriculture to the Agricultural Technical Advisory Committee for Trade in Processed Foods, and selected as a Next Gen Global Leader with the U.S. Global Leadership Coalition, where she continues to shape foreign policy conversations around trade, food, and technology.\n\nA proud Ghanaian-American, wife, and mother of three, Da’Cruz resides in Detroit, Michigan. She is a member of Delta Sigma Theta Sorority, Inc., and a lecturer at the University of Michigan - Dearborn.`,
-    twitter: null,
-    linkedIn: 'https://www.linkedin.com/in/wedacruz/',
-    url: ['https://thevgcgroup.com/', 'https://thedigitaldiplomat.com/home'],
-    organization: 'The Virtual Global Consultant Group',
-    position: 'Cofounder',
+    name: 'Alexis Seiler',
+    email: '',
+    avatar: AlexisSeiler,
+    bio: `Lexy Seiler is an Information Security Consultant with nearly a decade of experience, specializing in ISO 27001:2013 and ISO 27001:2022 frameworks as both a Lead and Internal Auditor. Her passion lies in collaborating with organizations across the globe, learning how each operates as a unique ecosystem, and forging meaningful relationships with the people who drive them. As a young woman in the information security and compliance space, Lexy is committed to demonstrating that authenticity and success can go hand-in-hand. Outside of work, she enjoys training as an equestrian, participating in HEMA, and creating visual art. Lexy welcomes conversations and looks forward to connecting with fellow attendees—don’t hesitate to say hello!`,
+    twitter: '',
+    linkedIn: 'https://www.linkedin.com/in/alexisseiler/',
+    url: 'https://www.stratascale.com/',
+    organization: 'Stratascale',
+    position: 'Senior RIsk & Compliance at Stratascale',
     session: {
       title: 'Women Shaping the Future Panel',
-      abstract:
-        'Join us as we spotlight the powerful role of women in technology. This panel will feature inspiring stories of overcoming challenges, driving innovation, and shaping a more inclusive tech landscape. Gain insights, build connections, and leave empowered to push boundaries in your career!',
-      description:
-        'This panel offers an opportunity for everyone in tech to learn from the experiences of leaders, engineers, entrepreneurs who are driving change in the industry. We’ll discuss strategies for overcoming obstacles, fostering diversity, and creating inclusive environments where all voices are heard. Whether you’re an ally, a mentor, or someone navigating your own career path, you’ll gain valuable insights on how to build a more equitable and innovative tech community.',
+      abstract: `Join us as we spotlight the powerful role of women in technology. This panel will feature inspiring stories of overcoming challenges, driving innovation, and shaping a more inclusive tech landscape. Gain insights, build connections, and leave empowered to push boundaries in your career!`,
+      description: `This panel offers an opportunity for everyone in tech to learn from the experiences of leaders, engineers, entrepreneurs who are driving change in the industry. We’ll discuss strategies for overcoming obstacles, fostering diversity, and creating inclusive environments where all voices are heard. Whether you’re an ally, a mentor, or someone navigating your own career path, you’ll gain valuable insights on how to build a more equitable and innovative tech community.`,
       tags: [],
-      track: 'Level Up',
+      track: 'Leadership',
       time: '',
       room: '',
     },
     isWTM: true,
     isGDE: false,
+    mastodon: null,
   },
   {
     id: 10,
@@ -355,7 +353,7 @@ export const SpeakersData = [
     linkedIn: 'https://www.linkedin.com/in/cynthiarespert/',
     url: null,
     organization: 'BuildHer Academy and Rebrand City',
-    position: 'Founder & COO + Strategic Partner',
+    position: 'AI Solutions Architect + Founder',
     session: {
       title: 'Women Shaping the Future Panel',
       abstract:
@@ -367,7 +365,7 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
-    isWTM: true,
+    isWTM: false,
     isGDE: false,
     mastodon: null,
   },
@@ -1190,30 +1188,6 @@ This high-energy session introduces The Confidence Multiplier Framework, a game-
       room: '',
     },
     isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
-    id: 42,
-    name: 'Alexis Seiler',
-    email: '',
-    avatar: AlexisSeiler,
-    bio: `As a Cyber Security Business Professional, I spend a majority of my time working with ISO 27001 and NIST 800-53. I have two degrees, one in Cyber Security and one for Networking Specialist. My current goal is to become ISO 27001 Lead Auditor Certified and assist clients with continuously improving their ISMS. I enjoy meeting new people and building new relationships. I hope that one day I will be able to implement ISO across the globe.`,
-    twitter: '',
-    linkedIn: 'https://www.linkedin.com/in/alexisseiler/',
-    url: 'https://www.stratascale.com/',
-    organization: 'Stratascale',
-    position: 'Senior Integrated Risk Management and Compliance Analyst',
-    session: {
-      title: 'Women Shaping the Future Panel',
-      abstract: `Join us as we spotlight the powerful role of women in technology. This panel will feature inspiring stories of overcoming challenges, driving innovation, and shaping a more inclusive tech landscape. Gain insights, build connections, and leave empowered to push boundaries in your career!`,
-      description: `This panel offers an opportunity for everyone in tech to learn from the experiences of leaders, engineers, entrepreneurs who are driving change in the industry. We’ll discuss strategies for overcoming obstacles, fostering diversity, and creating inclusive environments where all voices are heard. Whether you’re an ally, a mentor, or someone navigating your own career path, you’ll gain valuable insights on how to build a more equitable and innovative tech community.`,
-      tags: [],
-      track: 'Leadership',
-      time: '',
-      room: '',
-    },
-    isWTM: true,
     isGDE: false,
     mastodon: null,
   },
