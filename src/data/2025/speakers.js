@@ -1097,7 +1097,7 @@ export const SpeakersData = [
   },
   {
     id: 39,
-    name: 'Umelo Onyejiaka ',
+    name: 'Umelo Onyejiaka',
     email: 'kingmellow08@gmail.com',
     avatar: UmeloOnyejiaka,
     bio: `Umelo Onyejiaka is a Cloud Solutions Engineer at Continental AG and the founder of DevOps Detroit, a nonprofit dedicated to empowering Detroit’s tech community through education, mentorship, and collaboration. His journey into tech began in an unexpected place, accounting. After earning his degree and working in finance, Umelo discovered his passion for cloud computing and made a bold pivot into technology, teaching himself automation, DevOps, and cloud architecture from the ground up.\n\nWith five years of experience in cloud engineering, he now designs and manages scalable systems using AWS, Kubernetes, Terraform, and Ansible, helping enterprises automate and innovate with confidence. He also holds multiple certifications including AWS Solutions Architect – Professional, AWS DevOps Engineer – Professional, Certified Kubernetes Administrator (CKA), and Terraform Associate.\n\nThrough DevOps Detroit, Umelo is helping others break into tech, balance growth with purpose, and turn community impact into a collective advantage for Detroit’s tech ecosystem.`,
@@ -1182,10 +1182,15 @@ Drawing from her lived experience as a former foster youth and her professional 
     session: {
       title: 'The Confidence Multiplier: How to Lead Beyond Skills',
       abstract: `Your skills got you in the room confidence keeps you there. Learn how to own your expertise, show up with commanding presence, and break survival-mode patterns holding back your growth. A mind-shift session for pros ready to lead, not just work.`,
-      description: `Your résumé lists your skills. Your confidence decides how far those skills take you.\n\nThis high-energy session introduces The Confidence Multiplier Framework, a game-changing approach to professional growth. Delora Green—The CEO of Confidence—shows attendees how to flip the switch from invisible to undeniable by combining inner belief with outer presence.\n\nHere’s what’s inside:
- \n• Turn Skills into Currency – Stop questioning your value and start cashing in on your expertise.
- \n• Master the Silent Résumé – Posture, voice, and style that tell your story before you speak a word.
- \n• Break Free from Survival Mode – Ditch the overworking, shrinking, and people-pleasing patterns that stall careers.\n\nThis isn’t a pep talk. It’s a career intervention. Attendees will walk away with a playbook to show up, stand out, and scale up. It’s time to lead beyond skills and step into the influence your career deserves.`,
+      description: `Your résumé lists your skills. Your confidence decides how far those skills take you.
+This high-energy session introduces The Confidence Multiplier Framework, a game-changing approach to professional growth. Delora Green—The CEO of Confidence—shows attendees how to flip the switch from invisible to undeniable by combining inner belief with outer presence.
+
+Here’s what’s inside:
+- Turn Skills into Currency – Stop questioning your value and start cashing in on your expertise.
+- Master the Silent Résumé – Posture, voice, and style that tell your story before you speak a word.
+- Break Free from Survival Mode – Ditch the overworking, shrinking, and people-pleasing patterns that stall careers.
+
+This isn’t a pep talk. It’s a career intervention. Attendees will walk away with a playbook to show up, stand out, and scale up. It’s time to lead beyond skills and step into the influence your career deserves.`,
       tags: [],
       track: 'Level Up',
       time: '',
