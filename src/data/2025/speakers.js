@@ -365,7 +365,7 @@ export const SpeakersData = [
       time: '',
       room: '',
     },
-    isWTM: false,
+    isWTM: true,
     isGDE: false,
     mastodon: null,
   },
