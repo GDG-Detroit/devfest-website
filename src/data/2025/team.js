@@ -1,17 +1,18 @@
-import SohanKetireddy from '@/data/2025/assets/images/dev/sohan_ketireddy-x96.webp'
-import GregMiller from '@/data/2025/assets/images/dev/greg_miller-x96.webp'
 import AaronAmano from '@/data/2025/assets/images/dev/aaron_amano-x96.webp'
-import Rehanashri from '@/data/2025/assets/images/dev/rehanashri-x96.webp'
-import ShugmiShumunov from '@/data/2025/assets/images/dev/shugmi_shumunov-x96.webp'
-import KayleeBusenbark from '@/data/2025/assets/images/dev/kaylee_busenbark-x96.webp'
-import JustinBeaudry from '@/data/2025/assets/images/dev/justin_beaudry-x96.webp'
+import DaveKoziol from '@/assets/images/organizers/Dave_Koziol-x96.webp'
+import GregMiller from '@/data/2025/assets/images/dev/greg_miller-x96.webp'
 import HudaHussaini from '@/assets/images/facilitators/Huda_Hussaini-x96.webp'
-import ZavaarShah from '@/assets/images/facilitators/Zavaar_Shah-x96.webp'
+import JennaRitten from '@/assets/images/organizers/Jenna_Ritten-x96.webp'
 import JingranWang from '@/assets/images/facilitators/Jingran_Wang-x96.webp'
 import JuanLinaresOrihuela from '@/assets/images/facilitators/Juan_Linares_Orihuela-x96.webp'
+import JustinBeaudry from '@/data/2025/assets/images/dev/justin_beaudry-x96.webp'
+import KayleeBusenbark from '@/data/2025/assets/images/dev/kaylee_busenbark-x96.webp'
+import Rehanashri from '@/data/2025/assets/images/dev/rehanashri-x96.webp'
+import RishirajSarkar from '@/data/2025/assets/images/dev/rishiraj_sarkar.webp'
+import ShugmiShumunov from '@/data/2025/assets/images/dev/shugmi_shumunov-x96.webp'
+import SohanKetireddy from '@/data/2025/assets/images/dev/sohan_ketireddy-x96.webp'
 import SumiaSaleh from '@/assets/images/facilitators/Sumia_Saleh-x96.webp'
-import DaveKoziol from '@/assets/images/organizers/Dave_Koziol-x96.webp'
-import JennaRitten from '@/assets/images/organizers/Jenna_Ritten-x96.webp'
+import ZavaarShah from '@/assets/images/facilitators/Zavaar_Shah-x96.webp'
 
 export const teamData = [
   {
@@ -195,5 +196,19 @@ export const teamData = [
     organization: 'Actual Reality Technologies + Toledo Codes + GDG Toledo',
     role: 'Director of Engineering',
     avatar: JustinBeaudry,
+  },
+  {
+    id: 15,
+    name: 'Rishiraj Sarkar',
+    twitter: '',
+    linkedin: null,
+    github: null,
+    devfest: 'marketing',
+    university: '',
+    bio: `Cybersecurity graduate student working with AI privacy and network security
+`,
+    organization: 'University of Michigan - Dearborn',
+    role: 'GDGC Dearborn',
+    avatar: RishirajSarkar,
   },
 ]
