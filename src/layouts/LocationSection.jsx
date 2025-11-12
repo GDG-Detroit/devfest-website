@@ -35,7 +35,7 @@ function LocationSection() {
                 dateTime="2025-11-22T09:00:00-05:00/2025-11-22T17:00:00-05:00"
                 className="block text-xl font-semibold"
               >
-                Saturday: 9:00 AM - 5:00 PM
+                Saturday: 8:00 AM - 5:00 PM
               </time>
             </div>
           </div>
@@ -139,7 +139,7 @@ function LocationSection() {
               <h4 className="mb-2 text-base font-semibold text-gray-800 dark:text-white">
                 Michigan DevFest Event
               </h4>
-              <p>Saturday, November 22nd - 9:00 AM - 5:00 PM</p>
+              <p>Saturday, November 22nd - 8:00 AM - 5:00 PM</p>
               <dl>
                 <dt className="sr-only">Venue</dt>
                 <dd className="font-medium xl:whitespace-nowrap">

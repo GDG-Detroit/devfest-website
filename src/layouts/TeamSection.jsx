@@ -20,6 +20,7 @@ const TeamSection = ({ teamData, year }) => {
       organizer: 'bg-red-700',
       facilitator: 'bg-green-700',
       devteam: 'bg-sky-700',
+      marketing: 'bg-fuchsia-700',
     }
     return colors[role] || 'bg-primary-700'
   }
