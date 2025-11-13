@@ -10,6 +10,7 @@ import KayleeBusenbark from '@/data/2025/assets/images/dev/kaylee_busenbark-x96.
 import Rehanashri from '@/data/2025/assets/images/dev/rehanashri-x96.webp'
 import RishirajSarkar from '@/data/2025/assets/images/dev/rishiraj_sarkar.webp'
 import ShugmiShumunov from '@/data/2025/assets/images/dev/shugmi_shumunov-x96.webp'
+import SohamMhatre from '@/data/2025/assets/images/dev/soham_mhatre.webp'
 import SohanKetireddy from '@/data/2025/assets/images/dev/sohan_ketireddy-x96.webp'
 import SumiaSaleh from '@/assets/images/facilitators/Sumia_Saleh-x96.webp'
 import ZavaarShah from '@/assets/images/facilitators/Zavaar_Shah-x96.webp'
@@ -204,11 +205,25 @@ export const teamData = [
     linkedin: null,
     github: null,
     devfest: 'marketing',
-    university: '',
+    university: 'University of Michigan - Dearborn',
     bio: `Cybersecurity graduate student working with AI privacy and network security
 `,
-    organization: 'University of Michigan - Dearborn',
+    organization: '',
     role: 'GDGC Dearborn',
     avatar: RishirajSarkar,
+  },
+  {
+    id: 16,
+    name: 'Soham Mhatre',
+    twitter: '',
+    linkedin: null,
+    github: 'https://github.com/soham02',
+    devfest: 'devteam',
+    university: '',
+    bio: `Soham Mhatre is a developer focused on building practical, human-centered software. He works across the MERN stack with a strong focus on cloud and AI workflows. Recent projects include an image labeling system using AWS Recognition and a financial planning/learning platform with real-time persona generation. Soham enjoys translating complex, real-world requirements into simple, shippable features and cares deeply about clean APIs, accessible UIs, and measurable outcomes. Having recently graduated from Harrisburg University with a Master’s in Software Engineering, he’s now pursuing full-time opportunities where he can contribute end-to-end from backend services and databases to polished frontends that people love to use.  
+`,
+    organization: 'Mhatre Solutions',
+    role: 'Developer',
+    avatar: SohamMhatre,
   },
 ]
