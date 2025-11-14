@@ -11,7 +11,6 @@ import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
 import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
 import DaveKoziol from '@/assets/images/speakers/Dave.webp'
 import DavidGiard from '@/assets/images/speakers/David_Giard.jpeg'
-import DeloraGreen from '@/assets/images/speakers/Delora_Green.webp'
 import ErikBlancas from '@/assets/images/speakers/ErikBlancas.webp'
 import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
 import HodaSolati from '@/assets/images/speakers/Hoda_Solati.jpg'
@@ -28,6 +27,7 @@ import MaridyMazaira from '@/assets/images/speakers/MaridyMazaira.webp'
 import MartezColeman from '@/assets/images/speakers/MartezColeman.webp'
 import MichaelBower from '@/assets/images/speakers/Michael_Bower.jpg'
 import NileshPatel from '@assets/images/speakers/Nilesh_Patel.jpg'
+import PooyaAlavian from '@/assets/images/speakers/Pooya_Alavian.webp'
 import RaquelEstrada from '@/assets/images/speakers/RaquelEstrada.webp'
 import ShamsAhson from '@/assets/images/speakers/Shams_Ahson.jpeg'
 import ShimaSolati from '@/assets/images/speakers/Shima_Solati.jpg'
@@ -730,7 +730,7 @@ export const SpeakersData = [
     linkedIn: 'https://www.linkedin.com/in/bernadette-atanga-md-083274327/',
     url: 'https://client.atangamd.com/meet-your-speaker#new-menu-item',
     organization: 'AtangaMD Consulting LLC',
-    position: null,
+    position: 'Physician, Author, International Speaker',
     session: {
       title:
         'Beneath the Armor: The Cost of Emotional Suppression in Tech Leadership',
@@ -881,7 +881,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 32,
+    id: 31,
     name: 'Angel Porras',
     email: 'aporras3@ford.com',
     avatar: AngelPorras,
@@ -911,7 +911,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 33,
+    id: 32,
     name: 'Erik Blancas',
     email: 'blancaer9@gmail.com',
     avatar: ErikBlancas,
@@ -941,7 +941,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 34,
+    id: 33,
     name: 'Maridy Mazaira',
     email: 'maridymazaira@gmail.com',
     avatar: MaridyMazaira,
@@ -972,7 +972,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 35,
+    id: 34,
     name: 'Martez Coleman',
     email: 'nsbedetroitpcichair@gmail.com',
     avatar: MartezColeman,
@@ -1002,7 +1002,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 36,
+    id: 35,
     name: 'Raquel Estrada',
     email: 'raquel.estrada8@gmail.com',
     avatar: RaquelEstrada,
@@ -1032,7 +1032,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 37,
+    id: 36,
     name: 'Trivia Barnes',
     email: 'trivia.barnes@zf.com ',
     avatar: TriviaBarnes,
@@ -1062,7 +1062,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 38,
+    id: 37,
     name: 'William Bowen',
     email: 'wbowen05@gmail.com',
     avatar: WilliamBowen,
@@ -1094,7 +1094,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 39,
+    id: 38,
     name: 'Umelo Onyejiaka',
     email: 'kingmellow08@gmail.com',
     avatar: UmeloOnyejiaka,
@@ -1134,7 +1134,7 @@ export const SpeakersData = [
     mastodon: null,
   },
   {
-    id: 40,
+    id: 39,
     name: 'Kamille Tynes',
     email: 'kamille@konnectedwithcare.us',
     avatar: KamilleTynes,
@@ -1167,32 +1167,7 @@ Drawing from her lived experience as a former foster youth and her professional 
     mastodon: null,
   },
   {
-    id: 41,
-    name: 'Delora Green',
-    email: 'deloragreenconfidencecoach@gmail.com',
-    avatar: DeloraGreen,
-    bio: `Delora Green is a natural-born creative and lifelong learner who has spent the last eight years building businesses, designing fashion, and creating content that empowers women to show up with confidence. Known as the CEO of Confidence, she helps professionals move from survival mode to center stage—teaching them how to own their skills, command presence, and lead beyond the job description.\n\nBut Delora isn’t all work she’s also a Law & Order: SVU binge-watcher, a confessed peanut butter addict (rehab pending), and a believer in living life out loud. Whether she’s sketching denim designs, editing videos, or coaching leaders, her mission is the same: to help people step fully into the lives they were designed to lead.`,
-    twitter: '',
-    linkedIn: 'https://www.linkedin.com/in/delora-green-53b356231/',
-    url: 'https://boldjourney.com/meet-delora-green-3',
-    organization: 'The Caged Juelz Collection & Juelz Denim Collections',
-    position: 'The CEO of Confidence',
-    session: {
-      title: 'The Confidence Multiplier: How to Lead Beyond Skills',
-      abstract: `Your skills got you in the room confidence keeps you there. Learn how to own your expertise, show up with commanding presence, and break survival-mode patterns holding back your growth. A mind-shift session for pros ready to lead, not just work.`,
-      description: `Your résumé lists your skills. Your confidence decides how far those skills take you.
-This high-energy session introduces The Confidence Multiplier Framework, a game-changing approach to professional growth. Delora Green—The CEO of Confidence—shows attendees how to flip the switch from invisible to undeniable by combining inner belief with outer presence.\n\nHere’s what’s inside:\n\n- Turn Skills into Currency – Stop questioning your value and start cashing in on your expertise.\n\n- Master the Silent Résumé – Posture, voice, and style that tell your story before you speak a word.\n\n- Break Free from Survival Mode\n\n– Ditch the overworking, shrinking, and people-pleasing patterns that stall careers.\n\nThis isn’t a pep talk. It’s a career intervention. Attendees will walk away with a playbook to show up, stand out, and scale up. It’s time to lead beyond skills and step into the influence your career deserves.`,
-      tags: [],
-      track: 'Level Up',
-      time: '',
-      room: '',
-    },
-    isWTM: false,
-    isGDE: false,
-    mastodon: null,
-  },
-  {
-    id: 42,
+    id: 40,
     name: 'JC Escalante',
     email: 'jcskalant@gmail.com',
     avatar: JC_Escalante,
@@ -1216,7 +1191,7 @@ This high-energy session introduces The Confidence Multiplier Framework, a game-
     mastodon: null,
   },
   {
-    id: 43,
+    id: 41,
     name: 'Adonai Vera',
     email: 'adonai.vera@gmail.com',
     avatar: AdonaiVera,
@@ -1240,10 +1215,10 @@ This high-energy session introduces The Confidence Multiplier Framework, a game-
     mastodon: null,
   },
   {
-    id: 44,
+    id: 42,
     name: 'Pooya Alavian',
     email: 'pooyaalavian@microsoft.com',
-    avatar: 'https://placehold.co/600x400/34A853/FFFFFF?text=Pooya+Alavian',
+    avatar: PooyaAlavian,
     bio: `Pooya Alavian is a Solution Engineer at Microsoft, specializing in Azure AI and cloud architecture. With a PhD in Manufacturing Engineering from the University of Michigan, he helps enterprises design and scale intelligent applications on Azure. His work focuses on empowering developers and organizations to build next-generation AI solutions.`,
     twitter: null,
     linkedIn: null,
