@@ -27,9 +27,9 @@ function Home() {
           'Hackathon',
           'Build with AI',
           'Tech+Design',
-          'Innovation',
           'Level Up',
           'Leadership',
+          'Innovation',
           'Workshops',
         ]}
         defaultExpanded
