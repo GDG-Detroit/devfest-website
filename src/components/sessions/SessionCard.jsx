@@ -81,7 +81,7 @@ function SessionCard({
                   alt={`Headshot of ${speakers[index]}`}
                   className={`${
                     speakerAvatars?.length >= 3
-                      ? 'align-center mx-auto my-1 size-20 justify-center rounded-full lg:size-32'
+                      ? 'mx-auto my-1 size-20 justify-center rounded-full text-center lg:size-32'
                       : 'size-40'
                   } object-cover`}
                 />
