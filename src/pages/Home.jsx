@@ -38,8 +38,8 @@ function Home() {
         speakersData={Speakers2025}
         defaultExpanded
       />
-      <PartnersSection year={2025} partnersData={partnersData} />
       <JobBoardSection year={2025} />
+      <PartnersSection year={2025} partnersData={partnersData} />
       <TeamSection year={2025} teamData={teamData} />
     </PageLayout>
   )
