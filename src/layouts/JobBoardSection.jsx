@@ -1,5 +1,3 @@
-// JobBoardSection.jsx
-// This is the Job Board section component for the DevFest website.
 import PropTypes from 'prop-types'
 
 import Kite from '@/assets/images/icn-kite.png'
