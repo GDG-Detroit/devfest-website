@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import DevLogo from '@/assets/images/icn-dev.png'
 import LinkedInHandle from '@/components/ui/LinkedInHandle'
 import GithubHandle from '@/components/ui/GithubHandle'
+import Star from '@/assets/images/icons/star.svg'
 import TwitterHandle from '@/components/ui/TwitterHandle'
 
 const TeamSection = ({ teamData, year }) => {
@@ -95,11 +96,20 @@ const TeamSection = ({ teamData, year }) => {
               >
                 {/* Content wrapper with overflow hidden for ribbon clipping */}
                 <div className="relative overflow-hidden rounded-xl p-4 pb-12">
+                  {/* Star Icon - behind ribbon */}
+                  {dev.star === 'true' && (
+                    <img
+                      src={Star}
+                      alt=""
+                      className="absolute right-1 top-1 z-0 size-8 -rotate-45 opacity-80"
+                      aria-hidden="true"
+                    />
+                  )}
                   {/* Ribbon Label */}
                   <div
                     className={`ribbon-${
                       dev.devfest
-                    } absolute -right-10 top-6 z-0 w-40 rotate-45 ${getRibbonColor(
+                    } z-1 absolute -right-10 top-6 w-40 rotate-45 ${getRibbonColor(
                       dev.devfest
                     )} py-1 text-center text-sm font-bold uppercase tracking-wide text-white shadow-md`}
                     aria-label={`Role: ${dev.devfest}`}
@@ -139,6 +149,11 @@ const TeamSection = ({ teamData, year }) => {
                       <p className="text-left text-sm/6 text-gray-600">
                         {dev.organization}
                       </p>
+                      {dev.university && (
+                        <p className="text-left text-sm/6 text-gray-600">
+                          {dev.university}
+                        </p>
+                      )}
                       <p className="text-left text-sm/6 text-gray-600">
                         {dev.role}
                       </p>
