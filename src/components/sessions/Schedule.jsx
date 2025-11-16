@@ -8,43 +8,69 @@ export const Schedule = () => {
   return (
     <div className="w-full py-8">
       {/* Mobile: Tabs */}
-      <div className="mb-8 flex justify-center gap-3 lg:hidden">
-        <button
-          onClick={() => setActiveSchedule('hackathon')}
-          className={`rounded-lg px-6 py-3 text-base font-bold transition-all ${
-            activeSchedule === 'hackathon'
-              ? 'bg-purple-600 text-white shadow-lg'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-          }`}
-          aria-pressed={activeSchedule === 'hackathon'}
+      <div className="mb-8 flex justify-center lg:hidden">
+        <div
+          role="tablist"
+          aria-label="Event schedule selector"
+          className="flex gap-3"
         >
-          IBM AI Hackathon
-        </button>
-        <button
-          onClick={() => setActiveSchedule('devfest')}
-          className={`rounded-lg px-6 py-3 text-base font-bold transition-all ${
-            activeSchedule === 'devfest'
-              ? 'bg-blue-600 text-white shadow-lg'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-          }`}
-          aria-pressed={activeSchedule === 'devfest'}
-        >
-          DevFest Sessions
-        </button>
+          <button
+            role="tab"
+            aria-selected={activeSchedule === 'hackathon'}
+            aria-controls="hackathon-schedule-panel"
+            id="hackathon-tab"
+            onClick={() => setActiveSchedule('hackathon')}
+            className={`rounded-lg px-6 py-3 text-base font-bold transition-all ${
+              activeSchedule === 'hackathon'
+                ? 'bg-purple-600 text-white shadow-lg'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+            tabIndex={activeSchedule === 'hackathon' ? 0 : -1}
+          >
+            IBM AI Hackathon
+          </button>
+          <button
+            role="tab"
+            aria-selected={activeSchedule === 'devfest'}
+            aria-controls="devfest-schedule-panel"
+            id="devfest-tab"
+            onClick={() => setActiveSchedule('devfest')}
+            className={`rounded-lg px-6 py-3 text-base font-bold transition-all ${
+              activeSchedule === 'devfest'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+            tabIndex={activeSchedule === 'devfest' ? 0 : -1}
+          >
+            DevFest Sessions
+          </button>
+        </div>
       </div>
 
       {/* Mobile: Single Schedule View */}
       <div className="mx-auto max-w-4xl lg:hidden">
-        <h3 className="mb-8 text-center text-2xl font-bold text-gray-900 md:text-3xl">
-          {activeSchedule === 'hackathon'
-            ? 'IBM AI Hackathon Schedule'
-            : 'DevFest Sessions Schedule'}
-        </h3>
-        {activeSchedule === 'hackathon' ? (
+        <div
+          role="tabpanel"
+          id="hackathon-schedule-panel"
+          aria-labelledby="hackathon-tab"
+          hidden={activeSchedule !== 'hackathon'}
+        >
+          <h3 className="mb-8 text-center text-2xl font-bold text-gray-900 md:text-3xl">
+            IBM AI Hackathon Schedule
+          </h3>
           <HackathonSchedule />
-        ) : (
+        </div>
+        <div
+          role="tabpanel"
+          id="devfest-schedule-panel"
+          aria-labelledby="devfest-tab"
+          hidden={activeSchedule !== 'devfest'}
+        >
+          <h3 className="mb-8 text-center text-2xl font-bold text-gray-900 md:text-3xl">
+            DevFest Sessions Schedule
+          </h3>
           <DevFestSchedule />
-        )}
+        </div>
       </div>
 
       {/* Desktop: Side-by-Side View */}
