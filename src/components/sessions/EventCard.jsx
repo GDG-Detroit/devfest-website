@@ -20,7 +20,7 @@ const EventCard = ({
     >
       <h4
         className={`${
-          compact ? 'mb-1 text-sm' : 'mb-2 text-base md:text-lg'
+          compact ? 'text-md mb-1' : 'mb-2 text-base md:text-lg'
         } font-bold text-gray-900`}
       >
         {title}
@@ -51,7 +51,7 @@ const EventCard = ({
 
       {/* Show description inline for compact mode */}
       {compact && (
-        <p className="text-xs leading-relaxed text-gray-600">{description}</p>
+        <p className="text-sm leading-relaxed text-gray-600">{description}</p>
       )}
     </div>
   )

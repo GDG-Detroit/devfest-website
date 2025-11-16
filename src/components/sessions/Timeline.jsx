@@ -9,7 +9,7 @@ const Timeline = ({ schedule, compact = false }) => {
       <div className={compact ? 'space-y-8' : 'space-y-12'}>
         {schedule.map((timeSlot, timeIndex) => (
           <div key={timeSlot.time} className="relative">
-            {/* Vertical line segment - */}
+            {/* Vertical line segment */}
             {timeIndex < schedule.length - 1 && (
               <div
                 className={`absolute ${
