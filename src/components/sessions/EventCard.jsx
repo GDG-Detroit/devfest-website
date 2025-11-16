@@ -20,7 +20,7 @@ const EventCard = ({
     >
       <h4
         className={`${
-          compact ? 'text-md mb-1' : 'mb-2 text-base md:text-lg'
+          compact ? 'mb-1 text-base' : 'mb-2 text-lg md:text-xl'
         } font-bold text-gray-900`}
       >
         {title}
