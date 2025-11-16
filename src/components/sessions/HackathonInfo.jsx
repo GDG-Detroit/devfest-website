@@ -1,9 +1,6 @@
-import HackathonSchedule from './HackathonSchedule'
-
 const HackathonInfo = () => {
   return (
     <div className="mx-auto max-w-6xl space-y-12 py-8">
-      {/* Hero Section */}
       <div className="text-center">
         <h2 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">
           IBM AI Hackathon
@@ -15,7 +12,6 @@ const HackathonInfo = () => {
         </p>
       </div>
 
-      {/* The Challenge */}
       <div className="rounded-2xl border-4 border-purple-500 bg-purple-50 p-8">
         <h3 className="mb-4 text-2xl font-bold text-purple-900">
           The Challenge
@@ -84,7 +80,6 @@ const HackathonInfo = () => {
         </div>
       </div>
 
-      {/* What We're Asking You To Build */}
       <div className="rounded-2xl bg-gradient-to-br from-blue-50 to-sky-50 p-8">
         <h3 className="mb-4 text-2xl font-bold text-gray-900">
           What We&apos;re Asking You To Build
@@ -156,7 +151,6 @@ const HackathonInfo = () => {
         </div>
       </div>
 
-      {/* What We Expect */}
       <div className="rounded-2xl border-4 border-sky-500 bg-sky-50 p-8">
         <h3 className="mb-4 text-2xl font-bold text-sky-900">What We Expect</h3>
         <p className="mb-4 leading-relaxed text-gray-700">
@@ -204,7 +198,6 @@ const HackathonInfo = () => {
         </ul>
       </div>
 
-      {/* Deliverables */}
       <div className="rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 p-8">
         <h3 className="mb-4 text-2xl font-bold text-purple-900">
           Deliverables
@@ -257,19 +250,6 @@ const HackathonInfo = () => {
               </li>
             </ul>
           </div>
-        </div>
-      </div>
-
-      <div className="rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 p-8 text-center text-white">
-        <h3 className="mb-4 text-3xl font-bold">
-          Let&apos;s Build the Future of Michigan Innovation
-        </h3>
-        <p className="mb-6 text-xl">
-          Here at home, by Michiganders, for Michigan. Are you ready to take on
-          the challenge? Check out the hackathon schedule below and join us!
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <HackathonSchedule />
         </div>
       </div>
     </div>
