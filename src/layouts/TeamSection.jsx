@@ -101,7 +101,7 @@ const TeamSection = ({ teamData, year }) => {
                   {/* Content wrapper with overflow hidden for ribbon clipping */}
                   <div className="relative overflow-hidden rounded-xl p-4 pb-12">
                     {/* Star Icon - behind ribbon */}
-                    {dev.star === true && (
+                    {dev.star && (
                       <img
                         src={Star}
                         alt=""
