@@ -97,7 +97,7 @@ export const teamData = [
     name: 'Sumia Saleh',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/sumia-saleh-163741263/',
-    github: '',
+    github: 'https://github.com/Sumias',
     devfest: 'facilitator',
     university: 'University Of Michigan Dearborn',
     bio: ``,
