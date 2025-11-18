@@ -217,14 +217,14 @@ const SessionsSection = ({
           role="tablist"
           aria-label="Session track navigation"
           aria-orientation="horizontal"
-          className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-center justify-center gap-1 overflow-x-auto rounded-md bg-black px-4 md:justify-start md:px-6 ${
+          className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-center justify-center gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black px-4 py-3 md:justify-start md:px-6 ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
           {tabs.map((tab, index) => (
             <React.Fragment key={tab}>
               {index !== 0 && ![activeTab, activeTab + 1].includes(index) && (
-                <div className="hidden h-5 w-0 shrink-0 bg-primary-400 sm:w-0.5 md:block md:w-1" />
+                <div className="hidden h-5 w-0 shrink-0 bg-primary-400 sm:w-0.5 md:mx-2 md:block md:w-1 lg:mx-3" />
               )}
 
               <button
@@ -237,11 +237,9 @@ const SessionsSection = ({
                 aria-controls={`session-panel-${index}`}
                 id={`session-tab-${index}`}
                 tabIndex={activeTab === index ? 0 : -1}
-                className={`relative shrink-0 whitespace-normal rounded-md px-0.5 py-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-black md:w-20 lg:w-36 lg:text-lg ${
-                  tab === 'Innovation' ? 'mx-1 py-5 md:w-24 lg:w-40' : ''
-                } ${
+                className={`relative shrink-0 whitespace-nowrap rounded-md px-0.5 py-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-black md:min-w-20 lg:min-w-36 lg:text-lg  ${
                   activeTab === index
-                    ? 'bg-primary-400 text-black'
+                    ? 'bg-primary-400 text-black after:absolute after:-bottom-3 after:left-1/2 after:hidden after:size-0 after:-translate-x-1/2 after:border-x-[12px] after:border-t-[12px] after:border-primary-400 after:border-x-transparent md:after:block'
                     : 'bg-gray-900 text-white hover:bg-gray-800'
                 }`}
                 onClick={() => setActiveTab(index)}
@@ -253,46 +251,19 @@ const SessionsSection = ({
                     <span className="hidden max-xs:inline">Misc</span>
                   </>
                 ) : tab === 'Hackathon' ? (
-                  <>
-                    Hack-
-                    <br />
-                    athon
-                  </>
+                  <>Hackathon</>
                 ) : tab === 'Tech+Design' ? (
-                  <>
-                    Tech+
-                    <br />
-                    Design
-                  </>
+                  <>Tech+Design</>
                 ) : tab === 'Level Up' ? (
-                  <>
-                    Level
-                    <br />
-                    Up
-                  </>
+                  <>Level Up</>
                 ) : tab === 'Leadership' ? (
-                  <>
-                    Leader
-                    <br />
-                    ship
-                  </>
+                  <>Leadership</>
                 ) : tab === 'Build with AI' ? (
-                  <>
-                    Build
-                    <br />
-                    with AI
-                  </>
+                  <>Build with AI</>
                 ) : tab === 'Workshops' ? (
-                  <>
-                    Work-
-                    <br />
-                    shops
-                  </>
+                  <>Workshops</>
                 ) : (
                   tab
-                )}
-                {activeTab === index && (
-                  <div className="absolute -bottom-3 left-1/2 hidden size-0 -translate-x-1/2 border-x-[12px] border-t-[12px] border-primary-400 border-x-transparent md:block"></div>
                 )}
               </button>
             </React.Fragment>
