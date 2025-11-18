@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import DevLogo from '@/assets/images/icn-dev.png'
 import LinkedInHandle from '@/components/ui/LinkedInHandle'
 import GithubHandle from '@/components/ui/GithubHandle'
+import Star from '@/assets/images/icons/star.svg'
 import TwitterHandle from '@/components/ui/TwitterHandle'
 
 const TeamSection = ({ teamData, year }) => {
@@ -76,7 +77,7 @@ const TeamSection = ({ teamData, year }) => {
       </div>
 
       <div className="mx-auto flex max-w-full justify-center lg:mx-0">
-        <p className="prose mt-6 max-w-2xl text-start text-lg/8 text-gray-600">
+        <p className="prose mt-6 max-w-2xl text-left text-lg/8 text-gray-600 [text-wrap:pretty]">
           Our team of {teamCount} includes GDG organizers, session facilitators,
           and web developers — a mix of university students and industry
           professionals from companies like IBM, Little Caesars, and tech
@@ -88,77 +89,97 @@ const TeamSection = ({ teamData, year }) => {
       <div className="">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-center  lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3">
-            {sortedTeamData.map((dev) => (
-              <li
-                key={`dev-${dev.id}`}
-                className="relative rounded-xl border border-gray-200 bg-white shadow-lg"
-              >
-                {/* Content wrapper with overflow hidden for ribbon clipping */}
-                <div className="relative overflow-hidden rounded-xl p-4 pb-12">
-                  {/* Ribbon Label */}
-                  <div
-                    className={`ribbon-${
-                      dev.devfest
-                    } absolute -right-10 top-6 z-0 w-40 rotate-45 ${getRibbonColor(
-                      dev.devfest
-                    )} py-1 text-center text-sm font-bold uppercase tracking-wide text-white shadow-md`}
-                    aria-label={`Role: ${dev.devfest}`}
-                  >
-                    {dev.devfest}
-                  </div>
-                  <div className="flex">
-                    <div className="flex w-24 shrink-0 flex-col items-center">
+            {sortedTeamData.map((dev) => {
+              // Build ribbon class name - eslint-disable needed for dynamic class
+              // eslint-disable-next-line tailwindcss/no-custom-classname
+              const ribbonClass = `ribbon-${dev.devfest}`
+              return (
+                <li
+                  key={`dev-${dev.id}`}
+                  className="relative rounded-xl border border-gray-200 bg-white shadow-lg"
+                >
+                  {/* Content wrapper with overflow hidden for ribbon clipping */}
+                  <div className="relative overflow-hidden rounded-xl p-4 pb-12">
+                    {/* Star Icon - behind ribbon */}
+                    {dev.star && (
                       <img
-                        alt={`${dev.name} avatar`}
-                        src={dev.avatar}
-                        className="size-24 rounded-full outline outline-1 -outline-offset-1 outline-black/5"
+                        src={Star}
+                        alt=""
+                        className="absolute right-1 top-1 z-0 size-8 -rotate-45 opacity-80"
+                        aria-hidden="true"
                       />
-                      <div className="mt-2 flex gap-1">
-                        {dev.linkedin && (
-                          <LinkedInHandle
-                            handle={dev.linkedin}
-                            absolute={false}
-                          />
+                    )}
+                    {/* Ribbon Label */}
+                    <div
+                      className={`${ribbonClass} absolute -right-10 top-6 z-[1] w-40 rotate-45 ${getRibbonColor(
+                        dev.devfest
+                      )} py-1 text-center text-sm font-bold uppercase tracking-wide text-white shadow-md`}
+                      aria-label={`Role: ${dev.devfest}`}
+                    >
+                      {dev.devfest}
+                    </div>
+                    <div className="flex flex-col items-center xs:flex-row xs:items-start">
+                      <div className="flex shrink-0 flex-col items-center xs:w-24">
+                        <img
+                          alt={`${dev.name} avatar`}
+                          src={dev.avatar}
+                          className="size-24 rounded-full outline outline-1 -outline-offset-1 outline-black/5"
+                        />
+                        <div className="mt-2 flex gap-1">
+                          {dev.linkedin && (
+                            <LinkedInHandle
+                              handle={dev.linkedin}
+                              absolute={false}
+                            />
+                          )}
+                          {dev.github && (
+                            <GithubHandle
+                              handle={dev.github}
+                              absolute={false}
+                            />
+                          )}
+                          {dev.twitter && (
+                            <TwitterHandle
+                              handle={dev.twitter}
+                              name={dev.name}
+                              absolute={false}
+                            />
+                          )}
+                        </div>
+                      </div>
+                      <div className="mt-4 flex flex-col items-center gap-2 xs:ml-4 xs:mt-0 xs:items-start xs:justify-center">
+                        <h3 className="text-base/7 font-semibold tracking-tight text-gray-900 xs:mt-6">
+                          {dev.name}
+                        </h3>
+                        <p className="prose text-center text-sm/6 text-gray-600 [text-wrap:pretty] xs:text-left">
+                          {dev.organization}
+                        </p>
+                        {dev.university && (
+                          <p className="prose text-center text-sm/6 text-gray-600 [text-wrap:pretty] xs:text-left">
+                            {dev.university}
+                          </p>
                         )}
-                        {dev.github && (
-                          <GithubHandle handle={dev.github} absolute={false} />
-                        )}
-                        {dev.twitter && (
-                          <TwitterHandle
-                            handle={dev.twitter}
-                            name={dev.name}
-                            absolute={false}
-                          />
-                        )}
+                        <p className="prose text-center text-sm/6 font-semibold text-gray-600 [text-wrap:pretty] xs:text-left">
+                          {dev.role}
+                        </p>
                       </div>
                     </div>
-                    <div className="ml-4 flex flex-col items-start justify-center gap-2">
-                      <h3 className="mt-6 text-base/7 font-semibold tracking-tight text-gray-900">
-                        {dev.name}
-                      </h3>
-                      <p className="text-left text-sm/6 text-gray-600">
-                        {dev.organization}
-                      </p>
-                      <p className="text-left text-sm/6 text-gray-600">
-                        {dev.role}
-                      </p>
-                    </div>
                   </div>
-                </div>
-                {/* Button positioned relative to card, outside overflow container */}
-                {dev.bio && (
-                  <button
-                    className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-primary-700 px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-white shadow-md transition-colors hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
-                    onClick={() =>
-                      setSelectedBio({ name: dev.name, bio: dev.bio })
-                    }
-                    aria-label={`View bio for ${dev.name}`}
-                  >
-                    View Bio
-                  </button>
-                )}
-              </li>
-            ))}
+                  {/* Button positioned relative to card, outside overflow container */}
+                  {dev.bio && (
+                    <button
+                      className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-primary-700 px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-white shadow-md transition-colors hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                      onClick={() =>
+                        setSelectedBio({ name: dev.name, bio: dev.bio })
+                      }
+                      aria-label={`View bio for ${dev.name}`}
+                    >
+                      View Bio
+                    </button>
+                  )}
+                </li>
+              )
+            })}
           </ul>
         </div>
       </div>
@@ -209,7 +230,9 @@ const TeamSection = ({ teamData, year }) => {
             >
               {selectedBio.name}
             </h3>
-            <p className="text-gray-700">{selectedBio.bio}</p>
+            <p className="prose text-left text-gray-700 [text-wrap:pretty]">
+              {selectedBio.bio}
+            </p>
           </div>
         </div>
       )}
