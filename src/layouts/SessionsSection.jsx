@@ -8,6 +8,7 @@ import SessionsLogo from '@/assets/images/icn-sessions.png'
 
 import { DIRECTION } from '@/constants/directions'
 import { IoChevronDown } from 'react-icons/io5'
+import HackathonSessionHeader from '@/components/sessions/HackathonSessionHeader'
 
 const convertTo24Hour = (time) => {
   if (!time) return ''
@@ -250,36 +251,41 @@ const SessionsSection = ({
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           } ${
             currentTrackSessions.length > 0 ? 'justify-start' : 'justify-center'
-          }`}
+          }
+            ${currentSession === 'Hackathon' ? 'flex-col' : ''}
+          `}
         >
           {currentSession === 'Schedule' ? (
             <Schedule />
           ) : currentTrackSessions.length > 0 ? (
-            <ul className="grid w-full grid-cols-1 gap-10 py-7">
-              {hasSessionsForTrack ? (
-                currentTrackSessions
-                  .sort((a, b) => {
-                    const timeA = convertTo24Hour(a.sessionTime)
-                    const timeB = convertTo24Hour(b.sessionTime)
-                    return timeA < timeB ? -1 : 1
-                  })
-                  .map((session) => (
-                    <li key={session.id} className="w-full">
-                      <SessionCard
-                        speakers={session.speakers}
-                        speakerAvatars={session.speakerAvatars}
-                        sessionTitle={session.sessionTitle}
-                        sessionDesc={session.sessionDesc}
-                        sessionTime={session.sessionTime}
-                        sessionRoom={session.sessionRoom}
-                        sessionDuration={session.sessionDuration}
-                      />
-                    </li>
-                  ))
-              ) : (
-                <NoSessionsAvailable currentSession={currentSession} />
-              )}
-            </ul>
+            <>
+              {currentSession === 'Hackathon' && <HackathonSessionHeader />}
+              <ul className="grid w-full grid-cols-1 gap-10 py-7">
+                {hasSessionsForTrack ? (
+                  currentTrackSessions
+                    .sort((a, b) => {
+                      const timeA = convertTo24Hour(a.sessionTime)
+                      const timeB = convertTo24Hour(b.sessionTime)
+                      return timeA < timeB ? -1 : 1
+                    })
+                    .map((session) => (
+                      <li key={session.id} className="w-full">
+                        <SessionCard
+                          speakers={session.speakers}
+                          speakerAvatars={session.speakerAvatars}
+                          sessionTitle={session.sessionTitle}
+                          sessionDesc={session.sessionDesc}
+                          sessionTime={session.sessionTime}
+                          sessionRoom={session.sessionRoom}
+                          sessionDuration={session.sessionDuration}
+                        />
+                      </li>
+                    ))
+                ) : (
+                  <NoSessionsAvailable currentSession={currentSession} />
+                )}
+              </ul>
+            </>
           ) : (
             renderNoSessionsOrSpeakersMessage()
           )}
