@@ -24,6 +24,7 @@ import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpeg'
 import JoelVasallo from '@/assets/images/speakers/Joel_Vasallo.jpg'
 import KamilleTynes from '@/assets/images/speakers/Kamille_Tynes.webp'
 import KavithaBangalore from '@/assets/images/speakers/Kavitha_Bangalore.webp'
+import KeithFaigin from '@/assets/images/speakers/Keith_Faigin.jpeg'
 import LorrenaBlack from '@/assets/images/speakers/Lorrena_Black.jpeg'
 import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.webp'
 import MaridyMazaira from '@/assets/images/speakers/MaridyMazaira.webp'
@@ -1432,6 +1433,31 @@ export const SpeakersData = [
       track: 'Hackathon',
       time: '09:00',
       room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 51,
+    name: 'Keith Faigin',
+    email: null,
+    avatar: KeithFaigin,
+    bio: `As a technology strategist and business leader, Keith Faigin specializes in harnessing the power of technology to drive operational excellence and unlock transformative results. With a proven track record as an executive, consultant, and founder, Keith has led large-scale technology initiatives, steered digital transformations, and ensured seamless IT operations across every facet of business, where he has amassed a lot of lessons learned in the process.\n\nBeyond delivering projects, Keith loves building high-performing, motivated teams that are energized by the mission and equipped to achieve success. He wants his teams to work in an environment where innovation, collaboration, and growth are the foundation of achievement.`,
+    twitter: null,
+    linkedIn: null,
+    github: null,
+    url: null,
+    organization: 'Little Caesars',
+    position: 'Chief Information Officer',
+    session: {
+      title: 'DevFest Keynote Speaker',
+      abstract: null,
+      description: null,
+      tags: [],
+      track: 'Build with AI',
+      time: '09:00',
+      room: 'Sound Board',
     },
     isWTM: false,
     isGDE: false,
