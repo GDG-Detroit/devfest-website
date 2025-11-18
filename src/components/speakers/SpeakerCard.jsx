@@ -84,6 +84,9 @@ const SpeakerCard = ({
     }
   }, [isModalOpen, id, speakerID])
 
+  // Do not render speaker card for `TBD` speaker
+  if (name === 'TBD') return null
+
   return (
     <>
       <ProfileCard
