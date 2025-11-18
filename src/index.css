@@ -4,8 +4,34 @@
 
 /* Custom CSS using Tailwind's @layer directive */
 @layer utilities {
-  /* Add your custom utility classes here */
-  /* Example: .custom-shadow { box-shadow: ... } */
+  /* Hide scrollbar but allow scrolling */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+  /* Visible scrollbar styling */
+  .scrollbar-visible {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #efb403 #1f2937; /* thumb color, track color */
+  }
+  .scrollbar-visible::-webkit-scrollbar {
+    height: 8px; /* Chrome, Safari and Opera */
+  }
+  .scrollbar-visible::-webkit-scrollbar-track {
+    background: #1f2937; /* track color */
+    border-radius: 4px;
+  }
+  .scrollbar-visible::-webkit-scrollbar-thumb {
+    background: #efb403; /* thumb color (primary-400) */
+    border-radius: 4px;
+  }
+  .scrollbar-visible::-webkit-scrollbar-thumb:hover {
+    background: #ffcb05; /* lighter on hover */
+  }
 }
 
 @layer components {
