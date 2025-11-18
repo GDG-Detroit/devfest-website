@@ -21,7 +21,6 @@ function VenueMaps() {
             <div
               className="rounded-2xl border-4 border-blue-500 bg-white p-1"
               role="region"
-              aria-label="MotorCity Casino Hotel venue map"
             >
               <img
                 src={mapCasino}
@@ -34,7 +33,6 @@ function VenueMaps() {
             <div
               className="rounded-2xl border-4 border-blue-500 bg-white p-1"
               role="region"
-              aria-label="MotorCity Casino Hotel Soundboard Theater map"
             >
               <img
                 src={mapSoundboard}

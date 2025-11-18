@@ -99,6 +99,7 @@ function LocationSection() {
             >
               <iframe
                 title="STEM Innovation Learning Center (SILC)"
+                aria-label="Map showing STEM Innovation Learning Center (SILC) location"
                 className="aspect-[4/3] rounded-xl border-4 border-white"
                 style={{
                   maxWidth: '100%',
@@ -182,6 +183,7 @@ function LocationSection() {
             >
               <iframe
                 title="MotorCity Casino Hotel"
+                aria-label="Map showing MotorCity Casino Hotel location"
                 className="aspect-[4/3] rounded-xl border-4 border-white"
                 style={{
                   maxWidth: '100%',

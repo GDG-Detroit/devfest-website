@@ -211,12 +211,10 @@ const SessionsSection = ({
           isExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div
+        <nav
           ref={navRef}
           id="sessions-nav"
-          role="tablist"
           aria-label="Session track navigation"
-          aria-orientation="horizontal"
           className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-center justify-start gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black py-3 pe-4 ps-4 md:px-6 ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           }`}
@@ -270,7 +268,7 @@ const SessionsSection = ({
               </button>
             </React.Fragment>
           ))}
-        </div>
+        </nav>
 
         <div
           id={`session-panel-${activeTab}`}
