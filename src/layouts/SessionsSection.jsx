@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import HackathonInfo from '@/components/sessions/HackathonInfo'
@@ -58,6 +58,8 @@ const SessionsSection = ({
   const [direction, setDirection] = useState(
     defaultExpanded === true ? DIRECTION.TOP : DIRECTION.BOTTOM
   )
+  const navRef = useRef(null)
+  const buttonRefs = useRef([])
 
   const tabs = [...tracks]
   const currentSession = tabs[activeTab]
@@ -105,6 +107,44 @@ const SessionsSection = ({
   })
 
   const hasSessionsForTrack = currentTrackSessions.length > 0
+
+  // Scroll focused button into view for keyboard navigation
+  useEffect(() => {
+    if (buttonRefs.current[activeTab] && navRef.current) {
+      const button = buttonRefs.current[activeTab]
+      const nav = navRef.current
+      const buttonRect = button.getBoundingClientRect()
+      const navRect = nav.getBoundingClientRect()
+
+      // Check if button is outside visible area
+      if (buttonRect.left < navRect.left) {
+        // Scroll left to show button
+        nav.scrollTo({
+          left: nav.scrollLeft + (buttonRect.left - navRect.left) - 16,
+          behavior: 'smooth',
+        })
+      } else if (buttonRect.right > navRect.right) {
+        // Scroll right to show button
+        nav.scrollTo({
+          left: nav.scrollLeft + (buttonRect.right - navRect.right) + 16,
+          behavior: 'smooth',
+        })
+      }
+    }
+  }, [activeTab])
+
+  // Handle keyboard navigation for horizontal scrolling
+  const handleKeyDown = (event, index) => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault()
+      const nextIndex =
+        event.key === 'ArrowLeft'
+          ? Math.max(0, index - 1)
+          : Math.min(tabs.length - 1, index + 1)
+      setActiveTab(nextIndex)
+      buttonRefs.current[nextIndex]?.focus()
+    }
+  }
 
   const renderNoSessionsOrSpeakersMessage = () => (
     <div className="col-span-1 my-4 flex flex-col items-center justify-center space-y-8 text-center text-lg leading-relaxed">
@@ -167,26 +207,37 @@ const SessionsSection = ({
       )}
 
       <div
-        className={`flex w-full flex-col overflow-hidden transition-all duration-500 ease-in-out ${
+        className={`flex w-full flex-col overflow-hidden transition-all duration-500 ease-in-out md:overflow-x-visible ${
           isExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <nav
+        <div
+          ref={navRef}
           id="sessions-nav"
-          className={`mt-4 flex w-full flex-wrap items-center justify-center gap-1 rounded-md bg-black md:inline-flex md:flex-nowrap ${
+          role="tablist"
+          aria-label="Session track navigation"
+          aria-orientation="horizontal"
+          className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-center justify-center gap-1 overflow-x-auto rounded-md bg-black px-4 md:justify-start md:px-6 ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           }`}
-          aria-label="Session track navigation"
         >
           {tabs.map((tab, index) => (
             <React.Fragment key={tab}>
               {index !== 0 && ![activeTab, activeTab + 1].includes(index) && (
-                <div className="hidden h-5 w-0 bg-primary-400 sm:w-0.5 md:block md:w-1" />
+                <div className="hidden h-5 w-0 shrink-0 bg-primary-400 sm:w-0.5 md:block md:w-1" />
               )}
 
               <button
                 key={tab}
-                className={`relative whitespace-normal rounded-md px-0.5 py-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 lg:text-lg ${
+                ref={(el) => {
+                  buttonRefs.current[index] = el
+                }}
+                role="tab"
+                aria-selected={activeTab === index}
+                aria-controls={`session-panel-${index}`}
+                id={`session-tab-${index}`}
+                tabIndex={activeTab === index ? 0 : -1}
+                className={`relative shrink-0 whitespace-normal rounded-md px-0.5 py-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-black md:w-20 lg:w-36 lg:text-lg ${
                   tab === 'Innovation' ? 'mx-1 py-5 md:w-24 lg:w-40' : ''
                 } ${
                   activeTab === index
@@ -194,6 +245,7 @@ const SessionsSection = ({
                     : 'bg-gray-900 text-white hover:bg-gray-800'
                 }`}
                 onClick={() => setActiveTab(index)}
+                onKeyDown={(e) => handleKeyDown(e, index)}
               >
                 {tab === 'Miscellaneous' ? (
                   <>
@@ -245,9 +297,12 @@ const SessionsSection = ({
               </button>
             </React.Fragment>
           ))}
-        </nav>
+        </div>
 
         <div
+          id={`session-panel-${activeTab}`}
+          role="tabpanel"
+          aria-labelledby={`session-tab-${activeTab}`}
           className={`flex w-full items-start px-[2.5%] md:px-[5%] ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           } ${
