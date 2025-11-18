@@ -92,14 +92,18 @@ function LocationSection() {
             <h4 className="mb-2 text-sm font-semibold text-gray-700 dark:text-white">
               Friday - STEM Innovation Learning Center (SILC)
             </h4>
-            <div className="">
+            <div
+              className="rounded-2xl border-4 border-purple-500 bg-white p-1"
+              role="region"
+              aria-label="Friday location map"
+            >
               <iframe
                 title="STEM Innovation Learning Center (SILC)"
-                aria-label="Interactive map showing STEM Innovation Learning Center location"
-                className="aspect-[4/3]  rounded-lg border-8 border-sky-200"
+                aria-label="Map showing STEM Innovation Learning Center (SILC) location"
+                className="aspect-[4/3] rounded-xl border-4 border-white"
                 style={{
-                  maxWidth: '95%',
-                  width: '95%',
+                  maxWidth: '100%',
+                  width: '100%',
                   boxSizing: 'border-box',
                 }}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.3!2d-83.0686!3d42.3580!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDIxJzI4LjgiTiA4M8KwMDQnMDYuOSJX!5e1!3m2!1sen!2sus!4v1757466338342!5m2!1sen!2sus"
@@ -172,14 +176,18 @@ function LocationSection() {
             <h4 className="mb-2 text-sm font-semibold text-gray-700 dark:text-white">
               Saturday - MotorCity Casino Hotel Location
             </h4>
-            <div className="">
+            <div
+              className="rounded-2xl border-4 border-blue-500 bg-white p-1"
+              role="region"
+              aria-label="Saturday location map"
+            >
               <iframe
                 title="MotorCity Casino Hotel"
-                aria-label="Interactive map showing MotorCity Casino Hotel location"
-                className="aspect-[4/3] rounded-lg border-8 border-sky-200"
+                aria-label="Map showing MotorCity Casino Hotel location"
+                className="aspect-[4/3] rounded-xl border-4 border-white"
                 style={{
-                  maxWidth: '95%',
-                  width: '95%',
+                  maxWidth: '100%',
+                  width: '100%',
                   boxSizing: 'border-box',
                 }}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5043.696479671668!2d-83.07032016920797!3d42.33888511227875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d4d71da8bb1%3A0xe4a8072514ccbe55!2sMotorCity%20Casino%20Hotel!5e1!3m2!1sen!2sus!4v1757466338342!5m2!1sen!2sus"

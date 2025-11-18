@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import HackathonInfo from '@/components/sessions/HackathonInfo'
 import NoSessionsAvailable from '@/components/sessions/NoSessionsAvailable'
 import Schedule from '@/components/sessions/Schedule'
 import SessionCard from '@/components/sessions/SessionCard'
+import VenueMaps from '@/components/sessions/VenueMaps'
 import SessionsLogo from '@/assets/images/icn-sessions.png'
 
 import { DIRECTION } from '@/constants/directions'
@@ -57,6 +58,8 @@ const SessionsSection = ({
   const [direction, setDirection] = useState(
     defaultExpanded === true ? DIRECTION.TOP : DIRECTION.BOTTOM
   )
+  const navRef = useRef(null)
+  const buttonRefs = useRef([])
 
   const tabs = [...tracks]
   const currentSession = tabs[activeTab]
@@ -104,6 +107,44 @@ const SessionsSection = ({
   })
 
   const hasSessionsForTrack = currentTrackSessions.length > 0
+
+  // Scroll focused button into view for keyboard navigation
+  useEffect(() => {
+    if (buttonRefs.current[activeTab] && navRef.current) {
+      const button = buttonRefs.current[activeTab]
+      const nav = navRef.current
+      const buttonRect = button.getBoundingClientRect()
+      const navRect = nav.getBoundingClientRect()
+
+      // Check if button is outside visible area
+      if (buttonRect.left < navRect.left) {
+        // Scroll left to show button
+        nav.scrollTo({
+          left: nav.scrollLeft + (buttonRect.left - navRect.left) - 16,
+          behavior: 'smooth',
+        })
+      } else if (buttonRect.right > navRect.right) {
+        // Scroll right to show button
+        nav.scrollTo({
+          left: nav.scrollLeft + (buttonRect.right - navRect.right) + 16,
+          behavior: 'smooth',
+        })
+      }
+    }
+  }, [activeTab])
+
+  // Handle keyboard navigation for horizontal scrolling
+  const handleKeyDown = (event, index) => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault()
+      const nextIndex =
+        event.key === 'ArrowLeft'
+          ? Math.max(0, index - 1)
+          : Math.min(tabs.length - 1, index + 1)
+      setActiveTab(nextIndex)
+      buttonRefs.current[nextIndex]?.focus()
+    }
+  }
 
   const renderNoSessionsOrSpeakersMessage = () => (
     <div className="col-span-1 my-4 flex flex-col items-center justify-center space-y-8 text-center text-lg leading-relaxed">
@@ -166,33 +207,43 @@ const SessionsSection = ({
       )}
 
       <div
-        className={`flex w-full flex-col overflow-hidden transition-all duration-500 ease-in-out ${
+        className={`flex w-full flex-col overflow-hidden transition-all duration-500 ease-in-out md:overflow-x-visible ${
           isExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <nav
+          ref={navRef}
           id="sessions-nav"
-          className={`mt-4 flex w-full flex-wrap items-center justify-center gap-1 rounded-md bg-black md:inline-flex md:flex-nowrap ${
+          aria-label="Session track navigation"
+          className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-center justify-start gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black py-3 pe-4 ps-4 md:px-6 ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           }`}
-          aria-label="Session track navigation"
         >
           {tabs.map((tab, index) => (
             <React.Fragment key={tab}>
               {index !== 0 && ![activeTab, activeTab + 1].includes(index) && (
-                <div className="hidden h-5 w-0 bg-primary-400 sm:w-0.5 md:block md:w-1" />
+                <div className="hidden h-5 w-0 shrink-0 bg-primary-400 sm:w-0.5 md:mx-2 md:block md:w-1 lg:mx-3" />
               )}
 
               <button
                 key={tab}
-                className={`relative whitespace-normal rounded-md px-0.5 py-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none md:w-20 lg:w-36 lg:text-lg ${
-                  tab === 'Innovation' ? 'mx-1 py-5 md:w-24 lg:w-40' : ''
+                ref={(el) => {
+                  buttonRefs.current[index] = el
+                }}
+                role="tab"
+                aria-selected={activeTab === index}
+                aria-controls={`session-panel-${index}`}
+                id={`session-tab-${index}`}
+                tabIndex={activeTab === index ? 0 : -1}
+                className={`relative shrink-0 whitespace-nowrap rounded-md p-2 text-sm font-black uppercase !leading-5 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-black md:min-w-20 md:px-3 md:py-2 lg:min-w-36 lg:px-4 lg:text-lg ${
+                  index === 0 ? 'md:ml-14' : ''
                 } ${
                   activeTab === index
-                    ? 'bg-primary-400 text-black'
+                    ? 'bg-primary-400 text-black after:absolute after:-bottom-3 after:left-1/2 after:block after:size-0 after:-translate-x-1/2 after:border-x-[12px] after:border-t-[12px] after:border-primary-400 after:border-x-transparent'
                     : 'bg-gray-900 text-white hover:bg-gray-800'
                 }`}
                 onClick={() => setActiveTab(index)}
+                onKeyDown={(e) => handleKeyDown(e, index)}
               >
                 {tab === 'Miscellaneous' ? (
                   <>
@@ -200,46 +251,19 @@ const SessionsSection = ({
                     <span className="hidden max-xs:inline">Misc</span>
                   </>
                 ) : tab === 'Hackathon' ? (
-                  <>
-                    Hack-
-                    <br />
-                    athon
-                  </>
+                  <>Hackathon</>
                 ) : tab === 'Tech+Design' ? (
-                  <>
-                    Tech+
-                    <br />
-                    Design
-                  </>
+                  <>Tech+Design</>
                 ) : tab === 'Level Up' ? (
-                  <>
-                    Level
-                    <br />
-                    Up
-                  </>
+                  <>Level Up</>
                 ) : tab === 'Leadership' ? (
-                  <>
-                    Leader
-                    <br />
-                    ship
-                  </>
+                  <>Leadership</>
                 ) : tab === 'Build with AI' ? (
-                  <>
-                    Build
-                    <br />
-                    with AI
-                  </>
+                  <>Build with AI</>
                 ) : tab === 'Workshops' ? (
-                  <>
-                    Work-
-                    <br />
-                    shops
-                  </>
+                  <>Workshops</>
                 ) : (
                   tab
-                )}
-                {activeTab === index && (
-                  <div className="absolute -bottom-3 left-1/2 hidden size-0 -translate-x-1/2 border-x-[12px] border-t-[12px] border-primary-400 border-x-transparent md:block"></div>
                 )}
               </button>
             </React.Fragment>
@@ -247,6 +271,9 @@ const SessionsSection = ({
         </nav>
 
         <div
+          id={`session-panel-${activeTab}`}
+          role="tabpanel"
+          aria-labelledby={`session-tab-${activeTab}`}
           className={`flex w-full items-start px-[2.5%] md:px-[5%] ${
             isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'
           } ${
@@ -255,6 +282,8 @@ const SessionsSection = ({
         >
           {currentSession === 'Schedule' ? (
             <Schedule />
+          ) : currentSession === 'Map' ? (
+            <VenueMaps />
           ) : currentSession === 'Hackathon' ? (
             <HackathonInfo />
           ) : currentTrackSessions.length > 0 ? (
