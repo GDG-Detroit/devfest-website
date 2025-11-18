@@ -1,19 +1,24 @@
-import AaronAmano from '@/data/2025/assets/images/dev/aaron_amano-x96.webp'
-import DaveKoziol from '@/assets/images/organizers/Dave_Koziol-x96.webp'
-import GregMiller from '@/data/2025/assets/images/dev/greg_miller-x96.webp'
-import HudaHussaini from '@/assets/images/facilitators/Huda_Hussaini-x96.webp'
-import JennaRitten from '@/assets/images/organizers/Jenna_Ritten-x96.webp'
-import JingranWang from '@/assets/images/facilitators/Jingran_Wang-x96.webp'
-import JuanLinaresOrihuela from '@/assets/images/facilitators/Juan_Linares_Orihuela-x96.webp'
-import JustinBeaudry from '@/data/2025/assets/images/dev/justin_beaudry-x96.webp'
-import KayleeBusenbark from '@/data/2025/assets/images/dev/kaylee_busenbark-x96.webp'
-import Rehanashri from '@/data/2025/assets/images/dev/rehanashri-x96.webp'
-import RishirajSarkar from '@/data/2025/assets/images/dev/rishiraj_sarkar.webp'
-import ShugmiShumunov from '@/data/2025/assets/images/dev/shugmi_shumunov-x96.webp'
-import SohamMhatre from '@/data/2025/assets/images/dev/soham_mhatre.webp'
-import SohanKetireddy from '@/data/2025/assets/images/dev/sohan_ketireddy-x96.webp'
-import SumiaSaleh from '@/assets/images/facilitators/Sumia_Saleh-x96.webp'
-import ZavaarShah from '@/assets/images/facilitators/Zavaar_Shah-x96.webp'
+import AaronAmano from '@/data/2025/assets/images/team/aaron_amano-x96.webp'
+import AliElSharif from '@/data/2025/assets/images/team/ali_elsharif.webp'
+import DaveKoziol from '@/data/2025/assets/images/team/dav_koziol.webp'
+import GregMiller from '@/data/2025/assets/images/team/greg_miller-x96.webp'
+import HernandoMalabet from '@/data/2025/assets/images/team/hernando_malabet.webp'
+import HodaSolati from '@/data/2025/assets/images/team/hoda_solati.webp'
+import HudaHussaini from '@/data/2025/assets/images/team/huda_hussaini.webp'
+import JennaRitten from '@/data/2025/assets/images/team/jenna_ritten.webp'
+import JingranWang from '@/data/2025/assets/images/team/Jingran_Wang-x96.webp'
+import JustinBeaudry from '@/data/2025/assets/images/team/justin_beaudry-x96.webp'
+import KayleeBusenbark from '@/data/2025/assets/images/team/kaylee_busenbark-x96.webp'
+import MaridyMazaira from '@/data/2025/assets/images/team/maridy_mazaira.webp'
+import NisaSolano from '@/data/2025/assets/images/team/nisa_solano.webp'
+import RaquelEstrada from '@/data/2025/assets/images/team/raquel_estrada.webp'
+import Rehanashri from '@/data/2025/assets/images/team/rehanashri-x96.webp'
+import RishirajSarkar from '@/data/2025/assets/images/team/rishiraj_sarkar.webp'
+import ShimaSolati from '@/data/2025/assets/images/team/shima_solati.webp'
+import ShugmiShumunov from '@/data/2025/assets/images/team/shugmi_shumunov-x96.webp'
+import SohamMhatre from '@/data/2025/assets/images/team/soham_mhatre.webp'
+import SohanKetireddy from '@/data/2025/assets/images/team/sohan_ketireddy-x96.webp'
+import SumiaSaleh from '@/data/2025/assets/images/team/Sumia_Saleh-x96.webp'
 
 export const teamData = [
   {
@@ -23,6 +28,7 @@ export const teamData = [
     linkedin: 'https://www.linkedin.com/in/davekoziol/',
     github: '',
     devfest: 'organizer',
+    star: true,
     university: '',
     organization: 'Little Caesars',
     role: 'GDG Organizer',
@@ -35,9 +41,10 @@ export const teamData = [
     linkedin: 'https://gdg.community.dev/u/mbhdq6/',
     github: 'https://github.com/jritten',
     devfest: 'organizer',
+    star: true,
     university: '',
     organization: 'IBM',
-    role: 'GDG Organizer',
+    role: 'GDG Organizer + Women Techmakers',
     avatar: JennaRitten,
   },
   {
@@ -46,99 +53,51 @@ export const teamData = [
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/huda-hussaini/',
     github: '',
-    devfest: 'facilitator',
-    university: 'University Of Michigan Dearborn',
-    bio: `Integrating AI and cybersecurity testing for automotive vehicles at ETAS.`,
-    organization: 'ETAS',
-    role: 'Cybersecurity Software Engineer',
+    devfest: 'organizer',
+    star: false,
+    university: '',
+    bio: `Have done a few cool AI project like Integrating AI and cybersecurity testing for automotive vehicles, Creating a Gen AI agent for your car and automating contract processing with IDP!`,
+    organization: 'Ally Financial + Women Techmakers',
+    role: 'GenAI Technical Product Owner',
     avatar: HudaHussaini,
   },
   {
     id: 4,
-    name: 'Juan Linares Orihuela',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/juanlinaresorihuela/',
-    github: '',
-    devfest: 'facilitator',
-    university: 'Georgia Institute of Technology',
-    bio: `After transitioning into tech, I became a software engineer driven by a passion for using data to solve problems and build innovative software. As I pursue my Master’s in Data Analytics at Georgia Tech, I continually seek new opportunities to learn and make a meaningful impact in the tech world.`,
-    organization: '',
-    role: 'Software Engineer ',
-    avatar: JuanLinaresOrihuela,
-  },
-  {
-    id: 5,
-    name: 'Zavaar Shah',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/zavaar-shah/',
-    github: '',
-    devfest: 'facilitator',
-    university: 'Wayne State University',
-    bio: `Hey I'm Zavaar! I'm a student at Wayne State University currently doing my bachelors and masters in Computer Science.`,
-    organization: 'GE Aerospace',
-    role: 'Software Engineering Intern',
-    avatar: ZavaarShah,
-  },
-  {
-    id: 6,
-    name: 'Jingran Wang',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/jingranwang/',
-    github: '',
-    devfest: 'facilitator',
-    university: 'University Of Michigan Dearborn',
-    bio: `Experienced community organizer, including co-organizing GDG Ann Arbor. Android/Flutter Developer passionate about UX, readable, shippable code, accessibility, and teamwork.`,
-    organization: 'Hikari Software',
-    role: 'President',
-    avatar: JingranWang,
-  },
-  {
-    id: 7,
     name: 'Sumia Saleh',
     twitter: '',
-    linkedin: 'https://www.linkedin.com/in/sumia-saleh/',
-    github: '',
-    devfest: 'facilitator',
+    linkedin: 'https://www.linkedin.com/in/sumia-saleh-163741263/',
+    github: 'https://github.com/Sumias',
+    devfest: 'organizer',
+    star: false,
     university: 'University Of Michigan Dearborn',
     bio: ``,
-    organization: 'University of Michigan Dearborn',
-    role: 'GDSC',
+    organization: '',
+    role: 'GDGC Lead',
     avatar: SumiaSaleh,
   },
   {
-    id: 8,
-    name: 'Sohan Ketireddy',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/sohan-k',
-    github: 'https://github.com/sohank1',
-    devfest: 'devteam',
-    university: 'University Of Michigan Dearborn',
-    bio: ``,
-    organization: '',
-    role: 'Student',
-    avatar: SohanKetireddy,
-  },
-  {
-    id: 9,
+    id: 5,
     name: 'Greg Miller',
     linkedin: 'https://www.linkedin.com/in/gregraymiller/',
     github: 'https://github.com/shrinkray',
     devfest: 'devteam',
+    star: false,
     university: '',
     bio: `
-	  Hello, I am the founder of Shrinkray Interactive, a web development studio in Toledo, Ohio, leaning-in on accessible, high-performance, and user-friendly web experiences. As part of GDG Toledo, I connect developers and designers through events and hackathons. Collaborating with the devteam, I oversaw UX engineering and redesign for the Michigan DevFest website—creating a fast, inclusive experience for speakers, partners, and attendees. If you are seeking a friendly and talented developer for your project, let's connect.
+	  Hello, I am the founder of Shrinkray Interactive, a web development studio in Toledo, Ohio, leaning-in on accessible, high-performance, and user-friendly web experiences. As a founding member of GDG Toledo, I connect developers and designers through events and hackathons. Collaborating with the devteam, I oversee UX engineering and redesign for the Michigan DevFest website—creating a fast, inclusive experience for speakers, partners, and attendees. If you are seeking a friendly and talented developer for your project, let's connect.
 	`,
     organization: 'Shrinkray Interactive + GDG Toledo + Toledo Codes',
     role: 'Senior UX Engineer + Frontend',
     avatar: GregMiller,
   },
   {
-    id: 10,
+    id: 6,
     name: 'Aaron Amano',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/aaronamano/',
     github: 'https://github.com/aaronamano',
     devfest: 'devteam',
+    star: false,
     university: 'University Of Michigan Dearborn',
     bio: ``,
     organization: '',
@@ -146,22 +105,13 @@ export const teamData = [
     avatar: AaronAmano,
   },
   {
-    id: 11,
-    name: 'Rehanashri',
-    github: 'https://github.com/rehanashri',
-    devfest: 'devteam',
-    university: 'University Of Michigan Dearborn',
-    organization: '',
-    role: 'Student',
-    avatar: Rehanashri,
-  },
-  {
-    id: 12,
+    id: 7,
     name: 'Shugmi Shumunov',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/shugmishumunov/',
     github: 'https://github.com/ShugKnight24',
     devfest: 'devteam',
+    star: false,
     university: '',
     bio: `
       Shugmi Shumunov is a software developer who believes code is the ultimate storytelling medium. With a primary focus on the JavaScript ecosystem within e-commerce, working across the stack in various industries. Always seeking beautiful, elegant, and performant solutions while collaborating with talented, curious, and passionate engineers and tech enthusiasts.
@@ -173,25 +123,13 @@ export const teamData = [
     avatar: ShugmiShumunov,
   },
   {
-    id: 13,
-    name: 'Kaylee Busenbark',
-    twitter: '',
-    linkedin: 'https://www.linkedin.com/in/kaylee-busenbark',
-    github: 'https://github.com/kaybusenbark',
-    devfest: 'devteam',
-    university: 'University Of Michigan Dearborn',
-    bio: ``,
-    organization: '',
-    role: 'Student',
-    avatar: KayleeBusenbark,
-  },
-  {
-    id: 14,
+    id: 8,
     name: 'Justin Beaudry',
     twitter: '',
     linkedin: 'https://www.linkedin.com/in/justinbeaudry/',
     github: 'https://github.com/justinbeaudry',
     devfest: 'devteam',
+    star: false,
     university: '',
     bio: ``,
     organization: 'Actual Reality Technologies + Toledo Codes + GDG Toledo',
@@ -199,31 +137,186 @@ export const teamData = [
     avatar: JustinBeaudry,
   },
   {
-    id: 15,
+    id: 9,
     name: 'Rishiraj Sarkar',
     twitter: '',
     linkedin: null,
     github: null,
     devfest: 'marketing',
+    star: false,
     university: 'University of Michigan - Dearborn',
-    bio: `Cybersecurity graduate student working with AI privacy and network security
-`,
+    bio: `Cybersecurity graduate student working with AI privacy and network security`,
     organization: '',
-    role: 'GDGC Dearborn',
+    role: 'Student + GDGC Dearborn',
     avatar: RishirajSarkar,
   },
   {
-    id: 16,
+    id: 10,
     name: 'Soham Mhatre',
     twitter: '',
     linkedin: null,
     github: 'https://github.com/soham02',
     devfest: 'devteam',
+    star: false,
     university: '',
-    bio: `Soham Mhatre is a developer focused on building practical, human-centered software. He works across the MERN stack with a strong focus on cloud and AI workflows. Recent projects include an image labeling system using AWS Recognition and a financial planning/learning platform with real-time persona generation. Soham enjoys translating complex, real-world requirements into simple, shippable features and cares deeply about clean APIs, accessible UIs, and measurable outcomes. Having recently graduated from Harrisburg University with a Master’s in Software Engineering, he’s now pursuing full-time opportunities where he can contribute end-to-end from backend services and databases to polished frontends that people love to use.  
+    bio: `Soham Mhatre is a developer focused on building practical, human-centered software. He works across the MERN stack with a strong focus on cloud and AI workflows. Recent projects include an image labeling system using AWS Recognition and a financial planning/learning platform with real-time persona generation. Soham enjoys translating complex, real-world requirements into simple, shippable features and cares deeply about clean APIs, accessible UIs, and measurable outcomes. Having recently graduated from Harrisburg University with a Master's in Software Engineering, he's now pursuing full-time opportunities where he can contribute end-to-end from backend services and databases to polished frontends that people love to use.  
 `,
     organization: 'Mhatre Solutions',
     role: 'Developer',
     avatar: SohamMhatre,
+  },
+  {
+    id: 11,
+    name: 'Shima Solati',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/shima-solati/',
+    github: '',
+    devfest: 'organizer',
+    star: false,
+    university: '',
+    bio: `Shima Solati is an award-winning UX/UI designer and researcher at BraunAbility, leading efforts to advance mobility and accessibility through innovative, user-centered design. With a Master’s in User Experience Design from the College for Creative Studies and dual degrees in fashion and textiles, Shima brings a rare multidisciplinary perspective to solving complex challenges. Her expertise spans immersive and assistive technologies, VR, AR, robotics, and her portfolio includes impactful work for KUKA Robotics, the Augmented Reality Center, General Motors, and Ford. Passionate about inclusive design and emerging technologies, Shima is dedicated to creating intuitive, innovative solutions that empower all users.`,
+    organization: 'BraunAbility',
+    role: 'UX/UI Designer and Researcher',
+    avatar: ShimaSolati,
+  },
+  {
+    id: 12,
+    name: 'Hoda Solati',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/hoda-solati/',
+    github: '',
+    devfest: 'marketing',
+    star: false,
+    university: '',
+    bio: `Hoda Solati is an award-winning UX designer working at BraunAbility blending creativity, technology, and innovation to craft inclusive, user-centered experiences. With advanced degrees in UX Design and Animation, she explores cutting-edge technologies such as VR, AR, and robotics to solve complex design challenges. Recognized at global events including DDX’25 NYC and IEEE Smart Mobility, Hoda is passionate about redefining the future of user experience through innovation and accessibility.`,
+    organization: 'BraunAbility + GDG + Women Techmakers, I/O 2025',
+    role: 'UX/UI Designer and Researcher',
+    avatar: HodaSolati,
+  },
+  {
+    id: 13,
+    name: 'Ali El Sharif',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/ali-el-sharif-76530222b/',
+    github: '',
+    devfest: 'organizer',
+    star: false,
+    university: '',
+    bio: `Ali El-Sharif works as a professor at St. Clair College in Windsor, where he teaches Data Analytics, Cybersecurity, and Cloud Computing. He also teaches at the University of Windsor and the University of Niagara Falls Canada.  Ali is a Google Developers Groups Windsor co-organizer and co-author of the upcoming book "Building Responsible AI with Python - Identify, explain, and mitigate bias with hands-on code examples." https://a.co/d/1O3Up6p`,
+    organization: 'St. Clair College',
+    role: 'Professor',
+    avatar: AliElSharif,
+  },
+  {
+    id: 14,
+    name: 'Hernando Gonzalez Malabet',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/hernando-gonzalez-malabet-baa03625/',
+    github: '',
+    devfest: 'organizer',
+    star: false,
+    university: '',
+    bio: ``,
+    organization:
+      'Society of Hispanic Professional Engineers - SHPE Detroit Professional',
+    role: 'Director of Professional Development',
+    avatar: HernandoMalabet,
+  },
+  {
+    id: 15,
+    name: 'Nisa Solano',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/nisa-solano/',
+    github: '',
+    devfest: 'organizer',
+    star: false,
+    university: 'Wayne State University',
+    bio: ``,
+    organization: 'GDGC | AWS Cloud Club | SHPE Wayne State',
+    role: 'Senior Computer Science Student',
+    avatar: NisaSolano,
+  },
+  {
+    id: 16,
+    name: 'Raquel Estrada',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/raquel-estrada/',
+    github: '',
+    devfest: 'organizer',
+    star: false,
+    university: '',
+    bio: ``,
+    organization:
+      'Society of Hispanic Professional Engineers - SHPE Detroit Professional',
+    role: 'SHPE Detroit Vice President',
+    avatar: RaquelEstrada,
+  },
+  {
+    id: 17,
+    name: 'Maridy Mazaira',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/maridy-mazaira/',
+    github: '',
+    devfest: 'organizer',
+    star: false,
+    university: '',
+    bio: ``,
+    organization:
+      'Society of Hispanic Professional Engineers - SHPE Detroit Professional',
+    role: 'SHPE Detroit President',
+    avatar: MaridyMazaira,
+  },
+  {
+    id: 18,
+    name: 'Jingran Wang',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/jingranwang/',
+    github: '',
+    devfest: 'organizer',
+    star: false,
+    university: 'University Of Michigan Dearborn',
+    bio: `Experienced community organizer, including co-organizing GDG Ann Arbor. Android/Flutter Developer passionate about UX, readable, shippable code, accessibility, and teamwork.`,
+    organization: 'Hikari Software',
+    role: 'President',
+    avatar: JingranWang,
+  },
+  {
+    id: 19,
+    name: 'Sohan Ketireddy',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/sohan-k',
+    github: 'https://github.com/sohank1',
+    devfest: 'devteam',
+    star: false,
+    university: 'University Of Michigan Dearborn',
+    bio: ``,
+    organization: '',
+    role: 'Student',
+    avatar: SohanKetireddy,
+  },
+  {
+    id: 20,
+    name: 'Kaylee Busenbark',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/kaylee-busenbark',
+    github: 'https://github.com/kaybusenbark',
+    devfest: 'devteam',
+    star: false,
+    university: 'University Of Michigan Dearborn',
+    bio: ``,
+    organization: '',
+    role: 'Student',
+    avatar: KayleeBusenbark,
+  },
+  {
+    id: 21,
+    name: 'Rehanashri',
+    github: 'https://github.com/rehanashri',
+    devfest: 'devteam',
+    star: false,
+    university: 'University Of Michigan Dearborn',
+    organization: '',
+    role: 'Student',
+    avatar: Rehanashri,
   },
 ]

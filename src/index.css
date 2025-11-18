@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom CSS using Tailwind's @layer directive */
+@layer utilities {
+  /* Add your custom utility classes here */
+  /* Example: .custom-shadow { box-shadow: ... } */
+}
+
+@layer components {
+  /* Add your custom component classes here */
+  /* Example: .custom-button { ... } */
+}
+
 /* Reset any potential conflicting styles */
 * {
   box-sizing: border-box;
