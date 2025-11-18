@@ -38,7 +38,7 @@ export const teamData = [
     id: 2,
     name: 'Jenna Ritten',
     twitter: 'jritten',
-    linkedin: 'https://gdg.community.dev/u/mbhdq6/',
+    linkedin: 'https://www.linkedin.com/in/jritten/',
     github: 'https://github.com/jritten',
     devfest: 'organizer',
     star: true,

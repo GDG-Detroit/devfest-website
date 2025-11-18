@@ -6,6 +6,7 @@ import AnkitaGuha from '@/assets/images/speakers/Ankita_Guha.jpg'
 import BandhanKaur from '@/assets/images/speakers/Bandhan_Kaur.jpeg'
 import BernadetteAtanga from '@/assets/images/speakers/Bernadette_Atanga.jpeg'
 import BorisWilfriedNyasse from '@/assets/images/speakers/Boris_Wilfried_Nyasse.png'
+import BrandonBrown from '@/assets/images/speakers/Brandon_Brown.jpg'
 import BrianMcKeiver from '@/assets/images/speakers/Brian_McKeiver.png'
 import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
 import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
@@ -16,11 +17,14 @@ import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
 import HodaSolati from '@/assets/images/speakers/Hoda_Solati.jpg'
 import IdaByrdHill from '@/assets/images/speakers/Ida_Byrd-Hill.jpeg'
 import JC_Escalante from '@/assets/images/speakers/JC_Escalante.jpeg'
+import JasonFleming from '@/assets/images/speakers/Jason_Fleming.jpg'
 import JayWhitsitt from '@/assets/images/speakers/Jay_Whitsitt.jpeg'
+import JennaRitten from '@/data/2025/assets/images/team/jenna_ritten.webp'
 import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpeg'
 import JoelVasallo from '@/assets/images/speakers/Joel_Vasallo.jpg'
 import KamilleTynes from '@/assets/images/speakers/Kamille_Tynes.webp'
 import KavithaBangalore from '@/assets/images/speakers/Kavitha_Bangalore.webp'
+import KeithFaigin from '@/assets/images/speakers/Keith_Faigin.jpeg'
 import LorrenaBlack from '@/assets/images/speakers/Lorrena_Black.jpeg'
 import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.webp'
 import MaridyMazaira from '@/assets/images/speakers/MaridyMazaira.webp'
@@ -36,6 +40,7 @@ import StephanieFrantz from '@/assets/images/speakers/Stephanie_Frantz.jpeg'
 import StephenWylie from '@/assets/images/speakers/Stephen_Wylie.jpeg'
 import TriviaBarnes from '@/assets/images/speakers/TriviaBarnes.webp'
 import UmeloOnyejiaka from '@/assets/images/speakers/Umelo_Onyejiaka.webp'
+import VahiGuner from '@/assets/images/speakers/Vahi_Guner.png'
 import WilliamBowen from '@/assets/images/speakers/William_Bowen.webp'
 import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
 
@@ -69,7 +74,7 @@ export const SpeakersData = [
         'leadership',
       ],
       track: 'Leadership',
-      time: '03:00',
+      time: '15:00',
       room: 'MCC3',
     },
     isWTM: false,
@@ -94,7 +99,7 @@ export const SpeakersData = [
         "Using real-world lessons from a long-running SaaS product, this session is a case study in modernizing a complex legacy platform. When dealing with a 15-year-old platform, the question isn't just how to modernize but what to modernize. Should you refactor piece by piece or rewrite from scratch?",
       tags: ['modernization', 'leadership', 'product', 'saas'],
       track: 'Innovation',
-      time: '02:00',
+      time: '14:00',
       room: 'MCC4',
     },
     isWTM: false,
@@ -119,7 +124,7 @@ export const SpeakersData = [
         "Ever wonder what's lurking in the dark corners of your node_modules, like unidentified flying dependencies sneaking aboard your project? In an age of escalating software supply chain attacks, knowing exactly what you're shipping is as vital as tracking strange lights in the sky.",
       tags: ['javascript', 'cybersecurity', 'frontend', 'open source', 'sbom'],
       track: 'Tech+Design',
-      time: '02:00',
+      time: '14:00',
       room: 'MCC1',
     },
     isWTM: false,
@@ -151,7 +156,7 @@ export const SpeakersData = [
         'Take-Home',
       ],
       track: 'Innovation',
-      time: '04:00',
+      time: '16:00',
       room: 'MCC4',
     },
     isWTM: false,
@@ -181,7 +186,7 @@ export const SpeakersData = [
         'Physical AI',
       ],
       track: 'Innovation',
-      time: '03:00',
+      time: '15:00',
       room: 'MCC4',
     },
     isWTM: false,
@@ -232,7 +237,7 @@ export const SpeakersData = [
       description: `As artificial intelligence rapidly expands across every layer of technology—from large language models (LLMs) and multimodal systems to autonomous agents and API-driven pipelines—the attack surface is growing just as fast. Traditional application security practices aren’t enough to protect this new ecosystem, where data, prompts, and model outputs all become potential threat vectors.\n\nThis session equips developers with practical tactics to secure AI from code to cloud. Attendees will learn how to identify and defend against prompt injection, data poisoning, and model exfiltration; harden agents and RAG pipelines; and integrate AI security checks into your CI/CD workflow.\n\nI'll also cover emerging frameworks like the EU AI Act and NIST AI RMF, translating them into actionable engineering practices.\n\nBy the end, attendees will walk away with a developer’s playbook for building AI systems that are not just innovative, but also secure, transparent, and resilient.`,
       tags: ['Software Security', 'AI Security', 'Application Security'],
       track: 'Innovation',
-      time: '01:00',
+      time: '13:00',
       room: 'MCC4',
     },
     isWTM: false,
@@ -258,7 +263,7 @@ export const SpeakersData = [
         'This panel offers an opportunity for everyone in tech to learn from the experiences of leaders, engineers, entrepreneurs who are driving change in the industry. We’ll discuss strategies for overcoming obstacles, fostering diversity, and creating inclusive environments where all voices are heard. Whether you’re an ally, a mentor, or someone navigating your own career path, you’ll gain valuable insights on how to build a more equitable and innovative tech community.',
       tags: [],
       track: 'Leadership',
-      time: '04:00',
+      time: '16:00',
       room: 'MCC3',
     },
     isWTM: true,
@@ -282,7 +287,7 @@ export const SpeakersData = [
       description: `This panel offers an opportunity for everyone in tech to learn from the experiences of leaders, engineers, entrepreneurs who are driving change in the industry. We’ll discuss strategies for overcoming obstacles, fostering diversity, and creating inclusive environments where all voices are heard. Whether you’re an ally, a mentor, or someone navigating your own career path, you’ll gain valuable insights on how to build a more equitable and innovative tech community.`,
       tags: [],
       track: 'Leadership',
-      time: '04:00',
+      time: '16:00',
       room: 'MCC3',
     },
     isWTM: true,
@@ -308,7 +313,7 @@ export const SpeakersData = [
         'This panel offers an opportunity for everyone in tech to learn from the experiences of leaders, engineers, entrepreneurs who are driving change in the industry. We’ll discuss strategies for overcoming obstacles, fostering diversity, and creating inclusive environments where all voices are heard. Whether you’re an ally, a mentor, or someone navigating your own career path, you’ll gain valuable insights on how to build a more equitable and innovative tech community.',
       tags: [],
       track: 'Leadership',
-      time: '04:00',
+      time: '16:00',
       room: 'MCC3',
     },
     isWTM: true,
@@ -336,7 +341,7 @@ export const SpeakersData = [
         'This panel offers an opportunity for everyone in tech to learn from the experiences of leaders, engineers, entrepreneurs who are driving change in the industry. We’ll discuss strategies for overcoming obstacles, fostering diversity, and creating inclusive environments where all voices are heard. Whether you’re an ally, a mentor, or someone navigating your own career path, you’ll gain valuable insights on how to build a more equitable and innovative tech community.',
       tags: [],
       track: 'Leadership',
-      time: '04:00',
+      time: '16:00',
       room: 'MCC3',
     },
     isWTM: true,
@@ -362,7 +367,7 @@ export const SpeakersData = [
         'This panel offers an opportunity for everyone in tech to learn from the experiences of leaders, engineers, entrepreneurs who are driving change in the industry. We’ll discuss strategies for overcoming obstacles, fostering diversity, and creating inclusive environments where all voices are heard. Whether you’re an ally, a mentor, or someone navigating your own career path, you’ll gain valuable insights on how to build a more equitable and innovative tech community.',
       tags: [],
       track: 'Leadership',
-      time: '04:00',
+      time: '16:00',
       room: 'MCC3',
     },
     isWTM: true,
@@ -415,7 +420,7 @@ export const SpeakersData = [
       description: `The rise of Large Language Models and AI agents has created a massive opportunity for developers to make their applications smarter and more integrated. But how can we securely expose our app's core functions—like fetching user data or posting a message—to these external services? The answer lies in building a dedicated "tool server," and this session will show you exactly how to do it, step-by-step.\n\nThis talk provides a practical, hands-on guide to building a secure, serverless tool server using the powerhouse combination of Firebase Authentication and Google Cloud Functions. We will start from a blank canvas and architect a simple, yet robust, API that allows authenticated clients to execute predefined functions.\n\nAttendees will leave with actionable knowledge and the confidence to:\n\nStructure a simple Machine-to-Machine Communication (MCP) API from scratch.\n\nImplement a bulletproof authentication layer using Firebase Auth ID tokens to protect their endpoints.\n\nWrite, deploy, and manage a scalable "tool" using a Google Cloud Function.\n\nUnderstand the token validation flow required for any external service to securely interact with their backend.\n\nThe session will culminate in a live demo where we will call our newly built, secure tool from an external client, showcasing a complete, end-to-end workflow. Join this session to learn how to unlock your application's potential in the new era of connected intelligence.`,
       tags: ['AI', 'Firebase', 'Google Cloud'],
       track: 'Tech+Design',
-      time: '01:00',
+      time: '13:00',
       room: 'MCC1',
     },
     isWTM: false,
@@ -450,7 +455,7 @@ export const SpeakersData = [
         'Production AI',
       ],
       track: 'Build with AI',
-      time: '04:00',
+      time: '16:00',
       room: 'Sound Board',
     },
     isWTM: false,
@@ -486,7 +491,7 @@ export const SpeakersData = [
         'Edge Cases',
       ],
       track: 'Build with AI',
-      time: '01:00',
+      time: '13:00',
       room: 'Sound Board',
     },
     isWTM: false,
@@ -510,7 +515,7 @@ export const SpeakersData = [
       description: `Abstract\n\nGiving AI agents access to real-world tools is powerful, but how do you do it safely and at scale? Model Context Protocol (MCP) provides a standard, but building a robust server is key. Learn how to build and deploy MCP servers, integrate them with clients, and address the critical challenges of security, data governance, and scalability.\n\nSpecifics\n\nFirst, we will cover the foundational components of the MCP client-server architecture, defining a clear contract between server and client based on a minimal MCP server in Python with FastAPI and/or Google's ADK. You will see how a client connects, discovers these capabilities, and invokes them, forming the core of agentic interaction.\n\nIt is fun enough to build a local MCP server, but it is exciting to deploy one that runs remotely. In addition, we will explore communication patterns that unlock more sophisticated, real-time interactions, such as Server-Sent Events (SSE) or WebSockets for bidirectional communication, allowing servers to push updates to clients within dynamic applications like live dashboards or collaborative tools.\n\n Finally, we touch on the critical concerns around deploying your MCP server to a production-ready service. This includes:\n\n* Security: essential protections like Transport Layer Security (TLS) and OAuth 2.1\n\n* Data governance strategies: how to limit AI agents to specific data they are permitted to, while creating an auditable and compliant system\n\n* Scalability: how to handle thousands of concurrent clients efficiently and with resilience by using containerized MCP services\n\nAudience\n\nThis session is designed for developers and platform engineers looking to explore the world of MCP and agentic workflows. It is not an exhaustive guide to every feature of the MCP specification but serves as a practical introduction to building servers that can prove the value of agentic AI. As attendees explore their own use cases, they should continue to ask questions about security, safety, and scalability using the knowledge presented here as a framework to guide the discussion.`,
       tags: [],
       track: 'Build with AI',
-      time: '03:00',
+      time: '15:00',
       room: 'Sound Board',
     },
     isWTM: false,
@@ -534,7 +539,7 @@ export const SpeakersData = [
       description: `While AI conversations often center on data science and machine learning teams, the reality is that SRE, delivery, and cloud engineering teams are sitting on a goldmine of opportunities to leverage AI in their daily workflows—no ML expertise required. This talk bridges the gap between AI hype and practical implementation, demonstrating how infrastructure and operations teams can harness AI tools today to eliminate toil, accelerate incident response, and optimize cloud operations.\n\nThrough real-world examples and live demonstrations, we'll explore creative applications of AI that go beyond basic chatbot assistance: using LLMs for intelligent runbook generation and execution, implementing AI-powered log analysis that actually reduces MTTR, automating post-mortem creation with context-aware insights, and leveraging AI for capacity planning and cost optimization.\n\nWe'll also address common pitfalls, security considerations, and how to measure the actual impact of AI adoption in operations. Whether you're skeptical about AI or eager to adopt it, this session provides a pragmatic roadmap for enhancing your engineering effectiveness without waiting for your organization's official AI strategy.`,
       tags: ['AI', 'SRE', 'DevOps', 'Platform Engineering', 'Delivery'],
       track: 'Build with AI',
-      time: '02:00',
+      time: '14:00',
       room: 'Sound Board',
     },
     isWTM: false,
@@ -584,7 +589,7 @@ export const SpeakersData = [
       description: `You just realized you forgot a semicolon or maybe you want to change that one word in your app. Normally you would have to open your computer, sign in, launch your IDE, make the change, then push to your repo. Is there a better way?\n\nAbsolutely! Google released IDX which has now become Firebase Studio and it has been a game charger for the times when you don't need a full dev machine, and sometimes even when you do. Join this session to see how to quickly make changes to an application from just your browser, even your phone!`,
       tags: ['Firebase', 'AI', 'coding assistant'],
       track: 'Tech+Design',
-      time: '03:00',
+      time: '15:00',
       room: 'MCC1',
     },
     isWTM: false,
@@ -688,7 +693,7 @@ export const SpeakersData = [
       description: `A technical deep-dive for developers on securing modern connected vehicles with Android Auto and Automotive OS. We analyze the critical attack surface where Android meets the CAN bus, focusing on vulnerabilities like permission abuse, Intent injection, and privilege escalation in the vehicle. Learn to implement proper sandboxing, isolation and the proper use of Car APIs to prevent remote vehicle compromise through Android applications.`,
       tags: ['cybersecurity', 'android', 'car hacking'],
       track: 'Tech+Design',
-      time: '04:00',
+      time: '16:00',
       room: 'MCC1',
     },
     isWTM: false,
@@ -747,7 +752,7 @@ export const SpeakersData = [
         'empathy',
       ],
       track: 'Leadership',
-      time: '02:00',
+      time: '14:00',
       room: 'MCC3',
     },
     isWTM: false,
@@ -816,7 +821,7 @@ export const SpeakersData = [
         'Web Development',
       ],
       track: 'Level Up',
-      time: '02:00',
+      time: '14:00',
       room: 'MCC2',
     },
     isWTM: false,
@@ -885,7 +890,7 @@ export const SpeakersData = [
     name: 'Angel Porras',
     email: 'aporras3@ford.com',
     avatar: AngelPorras,
-    bio: `Born in Guatemala City, Angel F. Porras immigrated to the U.S. in the late 1990s, overcoming language and cultural barriers to pursue his passion for engineering. After earning degrees from UC Berkeley and San Jose State Universities, he joined Ford Motor Company through the Ford College Graduate program and discovered his calling in electric vehicle innovation. Now Technical Specialist for Electric Vehicle Controls, Angel holds nearly 80 patents spanning EV Charging, Thermal Management, and Intelligent scheduling.\n\nAngel received the 2025 Star Innovator Award at the SHPE National Convention in Philadelphia where he also helped recruit the next generation of STEM talent. Now as a SHPE Lifetime Member Angel is passionate about mentorship, innovation in mobility, and supporting pathways that bring more diverse voices into engineering.`,
+    bio: `Born in Guatemala City, Angel F. Porras immigrated to the U.S. in the late 1990s, overcoming language and cultural barriers to pursue his passion for engineering. After earning degrees from UC Berkeley and San Jose State Universities, he joined Ford Motor Company through the Ford College Graduate program and discovered his calling in electric vehicle innovation. Now Technical Specialist for Electric Vehicle Controls, Angel holds nearly 80 patents spanning EV Charging, Thermal Management, and Intelligent scheduling.\n\nAngel received the 2025 Star Innovator Award at the SHPE National Convention in Philadelphia where he also helped recruit the next generation of STEAM talent. Now as a SHPE Lifetime Member Angel is passionate about mentorship, innovation in mobility, and supporting pathways that bring more diverse voices into engineering.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/angel-porras-1150372/',
     url: 'https://www.shpedetroit.org/',
@@ -893,17 +898,17 @@ export const SpeakersData = [
     position: 'Electrification Systems and Controls Technical Specialist',
     session: {
       title:
-        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEAM',
       abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
-      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEAM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
       \nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
       \nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
       \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
       \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
-      \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      \nShaping the Future of STEAM: Preparing the next generation and driving meaningful change in organizations and communities`,
       tags: [],
       track: 'Level Up',
-      time: '01:00',
+      time: '13:00',
       room: 'MCC2',
     },
     isWTM: false,
@@ -923,17 +928,17 @@ export const SpeakersData = [
     position: 'Software Developer I - Generative AI',
     session: {
       title:
-        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEAM',
       abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
-      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEAM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
       \nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
       \nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
       \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
       \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
-      \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      \nShaping the Future of STEAM: Preparing the next generation and driving meaningful change in organizations and communities`,
       tags: [],
       track: 'Level Up',
-      time: '01:00',
+      time: '13:00',
       room: 'MCC2',
     },
     isWTM: false,
@@ -945,7 +950,7 @@ export const SpeakersData = [
     name: 'Maridy Mazaira',
     email: 'maridymazaira@gmail.com',
     avatar: MaridyMazaira,
-    bio: `Maridy Mazaira graduated with Distinction from the University of Michigan–Dearborn with a B.S. in Industrial and Systems Engineering. She previously served as Supervisor of Engineering Continuous Improvement at DTE Energy, where she led initiatives in Tree Trimming, Damage Claims, Emergency Preparedness and Response and more.\n\nToday, Maridy serves as President of the Society of Hispanic Professional Engineers – Detroit Chapter. Passionate about education and community impact, she is dedicated to creating opportunities, fostering representation, and inspiring the next generation of Hispanic students to pursue STEM careers.`,
+    bio: `Maridy Mazaira graduated with Distinction from the University of Michigan–Dearborn with a B.S. in Industrial and Systems Engineering. She previously served as Supervisor of Engineering Continuous Improvement at DTE Energy, where she led initiatives in Tree Trimming, Damage Claims, Emergency Preparedness and Response and more.\n\nToday, Maridy serves as President of the Society of Hispanic Professional Engineers – Detroit Chapter. Passionate about education and community impact, she is dedicated to creating opportunities, fostering representation, and inspiring the next generation of Hispanic students to pursue STEAM careers.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/maridy-mazaira/',
     url: 'https://www.shpedetroit.org/',
@@ -954,17 +959,17 @@ export const SpeakersData = [
     position: 'President',
     session: {
       title:
-        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEAM',
       abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
-      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEAM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
       \nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
       \nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
       \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
       \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
-      \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      \nShaping the Future of STEAM: Preparing the next generation and driving meaningful change in organizations and communities`,
       tags: [],
       track: 'Level Up',
-      time: '01:00',
+      time: '13:00',
       room: 'MCC2',
     },
     isWTM: false,
@@ -976,7 +981,7 @@ export const SpeakersData = [
     name: 'Martez Coleman',
     email: 'nsbedetroitpcichair@gmail.com',
     avatar: MartezColeman,
-    bio: `Martez Coleman is a Manufacturing Project Engineer at FANUC America and a self-described servant leader who approaches engineering with service at the forefront. He holds a master’s degree in robotics from Wayne State University and a bachelor’s degree in industrial engineering from Central Michigan University. As a first-generation college graduate from Flint, Martez is committed to empowering the next generation of STEM leaders. Through his involvement with programs such as GEAR UP, AmeriCorps, and the National Society of Black Engineers, he continues to mentor students and create pathways for youth to pursue engineering and technology.`,
+    bio: `Martez Coleman is a Manufacturing Project Engineer at FANUC America and a self-described servant leader who approaches engineering with service at the forefront. He holds a master’s degree in robotics from Wayne State University and a bachelor’s degree in industrial engineering from Central Michigan University. As a first-generation college graduate from Flint, Martez is committed to empowering the next generation of STEAM leaders. Through his involvement with programs such as GEAR UP, AmeriCorps, and the National Society of Black Engineers, he continues to mentor students and create pathways for youth to pursue engineering and technology.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/martez-coleman-jr-27107212b/',
     url: 'https://nsbedetroitprofessionals.org/',
@@ -984,17 +989,17 @@ export const SpeakersData = [
     position: '',
     session: {
       title:
-        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEAM',
       abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
-      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEAM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
       \nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
       \nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
       \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
       \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
-      \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      \nShaping the Future of STEAM: Preparing the next generation and driving meaningful change in organizations and communities`,
       tags: [],
       track: 'Level Up',
-      time: '01:00',
+      time: '13:00',
       room: 'MCC2',
     },
     isWTM: false,
@@ -1006,7 +1011,7 @@ export const SpeakersData = [
     name: 'Raquel Estrada',
     email: 'raquel.estrada8@gmail.com',
     avatar: RaquelEstrada,
-    bio: `Raquel Estrada is the Vice President of Internal Relations for SHPE Detroit and a proud Salvadoran who is passionate about empowering the Hispanic community. She believes in the power of unity and collaboration to open doors for others in STEM.\n\nRaquel is a Process Transformation Manager – VP at Comerica Bank and holds three master’s degrees, along with a Bachelor’s in Industrial Engineering. With more than twelve years of international experience in financial services, consumer goods, and automotive, Raquel has built her career around driving change, leading with impact, and a deep passion for Continuous Improvement.`,
+    bio: `Raquel Estrada is the Vice President of Internal Relations for SHPE Detroit and a proud Salvadoran who is passionate about empowering the Hispanic community. She believes in the power of unity and collaboration to open doors for others in STEAM.\n\nRaquel is a Process Transformation Manager – VP at Comerica Bank and holds three master’s degrees, along with a Bachelor’s in Industrial Engineering. With more than twelve years of international experience in financial services, consumer goods, and automotive, Raquel has built her career around driving change, leading with impact, and a deep passion for Continuous Improvement.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/raquel-estrada/',
     url: 'https://www.shpedetroit.org/',
@@ -1014,17 +1019,17 @@ export const SpeakersData = [
     position: 'Enterprise Process Transformation Manager',
     session: {
       title:
-        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEAM',
       abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
-      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEAM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
       \nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
       \nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
       \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
       \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
-      \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      \nShaping the Future of STEAM: Preparing the next generation and driving meaningful change in organizations and communities`,
       tags: [],
       track: 'Level Up',
-      time: '01:00',
+      time: '13:00',
       room: 'MCC2',
     },
     isWTM: false,
@@ -1036,25 +1041,26 @@ export const SpeakersData = [
     name: 'Trivia Barnes',
     email: 'trivia.barnes@zf.com ',
     avatar: TriviaBarnes,
-    bio: `A member of the National Society of Black Engineers, I currently serve as the Collegiate Initiative Chair for 2023–24 and the Pre-Collegiate Initiative Chair for 2024–25 with the NSBE Detroit Professional Chapter. I am also a NASA Community College Aerospace Scholar. I bring more than fifteen years of manufacturing and automotive experience, including assembly, quality, and line-lead responsibilities. I am familiar with 3-D modeling tools such as Fusion 360 for CAD, CAM, and CAE, as well as SolidWorks and Catia. My background includes experience with KUKA robotic production systems and GD&T, along with leadership roles focused on training and delivering quality service. I also have extensive experience interpreting technical data related to manufacturing equipment and processes.`,
+    bio: `I am a member of the National Society of Black Engineers, serving as the Collegiate Initiative Chair for 2023–24 and the Pre-Collegiate Initiative Chair for 2024–25 with the NSBE Detroit Professional Chapter. I am also a NASA Community College Aerospace Scholar, which brings awareness to the benefits from recruiting community college students. My educational and skilled background consists of Industrial Technology and Mechatronic Engineering.  With more than fifteen years of manufacturing and automotive experience in assembly, quality, and line-lead operations, and now R&D. Currently employed with ZF Group as the Divisional Electrician in Charge Lead Engineer for commercial vehicles and high voltage systems. I train employees on high voltage safety awareness, certifications, and PPE needed while working with high voltage. I enjoy working cross-functional with many regions internationally. This allows me to have insight on the benefits and perspective gained by working with many different cultures. I am skilled at interpreting technical data for manufacturing equipment and processes and enjoy helping teams deliver accurate, high-quality results. I am a single parent to an intelligently creative 16-year-old daughter whose an amazing athlete and proud member of the Detroit Youth Choir. I am a small business owner with an accessories line (Ears That Hear) and beverage bar (HERbal Love).`,
     twitter: '',
+    instagram: 'https://www.instagram.com/earsthathear19/',
     linkedIn: 'https://www.linkedin.com/in/triviabarnes/',
     url: 'https://nsbedetroitprofessionals.org/',
     organization: 'ZF Group',
     position: 'Divisional Electrician in Charge',
     session: {
       title:
-        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEAM',
       abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
-      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEAM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
       \nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
       \nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
       \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
       \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
-      \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      \nShaping the Future of STEAM: Preparing the next generation and driving meaningful change in organizations and communities`,
       tags: [],
       track: 'Level Up',
-      time: '01:00',
+      time: '13:00',
       room: 'MCC2',
     },
     isWTM: false,
@@ -1126,7 +1132,7 @@ export const SpeakersData = [
         'Work-Life Balance',
       ],
       track: 'Level Up',
-      time: '03:00',
+      time: '15:00',
       room: 'MCC2',
     },
     isWTM: false,
@@ -1207,7 +1213,7 @@ export const SpeakersData = [
       description: ``,
       tags: [],
       track: 'Workshops',
-      time: '01:00',
+      time: '13:00',
       room: 'Salon A-C',
       sessionDuration: 2,
     },
@@ -1232,7 +1238,7 @@ export const SpeakersData = [
       description: ``,
       tags: [],
       track: 'Workshops',
-      time: '03:00',
+      time: '15:00',
       room: 'Salon A-C',
       sessionDuration: 2,
     },
@@ -1257,8 +1263,202 @@ export const SpeakersData = [
       description: `Azure AI Foundry is a unified platform designed for enterprise AI operations, model building, and application development. It combines production-grade infrastructure with user-friendly interfaces, enabling organizations to build and operate AI applications confidently. Agent Framework is an open-source SDK in Python and C# for building next-gen Agentic AI apps.`,
       tags: [],
       track: 'Leadership',
-      time: '01:00',
+      time: '13:00',
       room: 'MCC3',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 44,
+    name: 'TBD',
+    email: '',
+    avatar: null,
+    bio: ``,
+    twitter: null,
+    linkedIn: null,
+    url: null,
+    organization: null,
+    position: null,
+    session: {
+      title: 'AI Hackathon Winners Presentations, Demos & Awards',
+      abstract: null,
+      description: null,
+      tags: [],
+      track: 'Level Up',
+      time: '16:00',
+      room: 'MCC2',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 45,
+    name: 'Vahi Guner',
+    email: 'vahiguner@ibm.com',
+    avatar: VahiGuner,
+    bio: `Vahi Guner is an AI Engineer at IBM with a background in Electrical Engineering. He has hands-on experience working with both traditional machine learning models and modern generative AI technologies.\n\nFor other questions, like who is supporting the session etc. We'll be there as team Brandon, Jason, myself and Michael as our manager.`,
+    twitter: null,
+    linkedIn: null,
+    url: null,
+    organization: 'IBM Client Engineering',
+    position: 'AI Engineer',
+    session: {
+      title: 'AI Assistants & Agentic AI: watsonx Orchestrate Lab',
+      abstract: `This session highlights how IBM watsonx and agentic AI architectures can streamline complex HR operations by unifying workflows across disparate enterprise systems. Using a simplified AskHR agent built with watsonx Orchestrate, we demonstrate how reasoning-enabled agents interact with tools, APIs, and knowledge sources to perform tasks such as querying employee data, submitting time-off requests, and updating records.\n\nWe will walk through the technical architecture behind the agent—including multi-agent orchestration, OpenAPI-based connectors, secure data retrieval, and built-in grounding to minimize hallucinations. The lab showcases how developers can rapidly integrate existing HR platforms like Workday or SuccessFactors, or create custom tools for any internal system.\n\nAttendees will leave with a practical understanding of how to build, configure, and extend agentic workflows on watsonx to automate real-world operational processes at scale.`,
+      description: null,
+      tags: [],
+      track: 'Hackathon',
+      time: '11:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 46,
+    name: 'Brandon Brown',
+    email: 'brandon.brown1@ibm.com',
+    avatar: BrandonBrown,
+    bio: `Brandon Brown is an AI engineer at IBM who helps organizations navigate their AI adoption journey. He bridges the gap between cutting-edge AI technology and practical business applications, enabling companies to achieve measurable ROI through intelligent automation and data-driven solutions.`,
+    twitter: null,
+    linkedIn: null,
+    url: null,
+    organization: 'IBM Client Engineering',
+    position: 'AI Engineer',
+    session: {
+      title: 'AI Assistants & Agentic AI: watsonx Orchestrate Lab',
+      abstract: `This session highlights how IBM watsonx and agentic AI architectures can streamline complex HR operations by unifying workflows across disparate enterprise systems. Using a simplified AskHR agent built with watsonx Orchestrate, we demonstrate how reasoning-enabled agents interact with tools, APIs, and knowledge sources to perform tasks such as querying employee data, submitting time-off requests, and updating records.\n\nWe will walk through the technical architecture behind the agent—including multi-agent orchestration, OpenAPI-based connectors, secure data retrieval, and built-in grounding to minimize hallucinations. The lab showcases how developers can rapidly integrate existing HR platforms like Workday or SuccessFactors, or create custom tools for any internal system.\n\nAttendees will leave with a practical understanding of how to build, configure, and extend agentic workflows on watsonx to automate real-world operational processes at scale.`,
+      description: null,
+      tags: [],
+      track: 'Hackathon',
+      time: '11:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 47,
+    name: 'Jason Fleming',
+    email: 'jason.fleming@ibm.com',
+    avatar: JasonFleming,
+    bio: `As an IBM Client Engineering Solution Architect, Jason Fleming leads the design and delivery of agile, hybrid cloud solutions—leveraging deep domain expertise, strategic innovation, and collaborative client engagement to drive impactful Proofs of Value across industries.`,
+    twitter: null,
+    linkedIn: null,
+    url: null,
+    organization: 'IBM Client Engineering',
+    position: 'Solution Architect',
+    session: {
+      title: 'AI Assistants & Agentic AI: watsonx Orchestrate Lab',
+      abstract: `This session highlights how IBM watsonx and agentic AI architectures can streamline complex HR operations by unifying workflows across disparate enterprise systems. Using a simplified AskHR agent built with watsonx Orchestrate, we demonstrate how reasoning-enabled agents interact with tools, APIs, and knowledge sources to perform tasks such as querying employee data, submitting time-off requests, and updating records.\n\nWe will walk through the technical architecture behind the agent—including multi-agent orchestration, OpenAPI-based connectors, secure data retrieval, and built-in grounding to minimize hallucinations. The lab showcases how developers can rapidly integrate existing HR platforms like Workday or SuccessFactors, or create custom tools for any internal system.\n\nAttendees will leave with a practical understanding of how to build, configure, and extend agentic workflows on watsonx to automate real-world operational processes at scale.`,
+      description: null,
+      tags: [],
+      track: 'Hackathon',
+      time: '11:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 48,
+    name: 'Hoda Solati',
+    email: null,
+    avatar: HodaSolati,
+    bio: `Hoda Solati is an award-winning UX designer working at BraunAbility blending creativity, technology, and innovation to craft inclusive, user-centered experiences. With advanced degrees in UX Design and Animation, she explores cutting-edge technologies such as VR, AR, and robotics to solve complex design challenges. Recognized at global events including DDX’25 NYC, IEEE Smart Mobility, and Ars Electronica, Hoda is passionate about redefining the future of user experience through innovation and accessibility.`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/hoda-solati',
+    url: null,
+    organization: 'BraunAbility',
+    position: 'UX Designer',
+    session: {
+      title: 'Design for AI Session',
+      abstract: null,
+      description: null,
+      tags: ['Design', 'User Experience', 'User Interface', 'AR', 'VR'],
+      track: 'Hackathon',
+      time: '10:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 49,
+    name: 'Shima Solati',
+    email: null,
+    avatar: ShimaSolati,
+    bio: `Shima Solati is an award-winning UX/UI designer and researcher at BraunAbility, leading efforts to advance mobility and accessibility through innovative, user-centered design. With a Master’s in User Experience Design from the College for Creative Studies and dual degrees in fashion and textiles, Shima brings a rare multidisciplinary perspective to solving complex challenges. Her expertise spans immersive and assistive technologies, VR, AR, robotics, and her portfolio includes impactful work for KUKA Robotics, the Augmented Reality Center, General Motors, and Ford. Passionate about inclusive design and emerging technologies, Shima is dedicated to creating intuitive solutions that empower all users.`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/shima-solati/',
+    url: null,
+    organization: 'BraunAbility',
+    position: 'UX/UI Designer and Researcher',
+    session: {
+      title: 'Design for AI Session',
+      abstract: null,
+      description: null,
+      tags: [],
+      track: 'Hackathon',
+      time: '10:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 50,
+    name: 'Jenna Ritten',
+    email: null,
+    avatar: JennaRitten,
+    bio: null,
+    twitter: 'jritten',
+    linkedIn: 'https://www.linkedin.com/in/jritten/',
+    github: 'https://github.com/jritten',
+    url: null,
+    organization: 'IBM',
+    position: 'Chief Developer Advocate & Senior Architect',
+    session: {
+      title: 'AI Hackathon Keynote',
+      abstract: null,
+      description: null,
+      tags: [],
+      track: 'Hackathon',
+      time: '09:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 51,
+    name: 'Keith Faigin',
+    email: null,
+    avatar: KeithFaigin,
+    bio: `As a technology strategist and business leader, Keith Faigin specializes in harnessing the power of technology to drive operational excellence and unlock transformative results. With a proven track record as an executive, consultant, and founder, Keith has led large-scale technology initiatives, steered digital transformations, and ensured seamless IT operations across every facet of business, where he has amassed a lot of lessons learned in the process.\n\nBeyond delivering projects, Keith loves building high-performing, motivated teams that are energized by the mission and equipped to achieve success. He wants his teams to work in an environment where innovation, collaboration, and growth are the foundation of achievement.`,
+    twitter: null,
+    linkedIn: null,
+    github: null,
+    url: null,
+    organization: 'Little Caesars',
+    position: 'Chief Information Officer',
+    session: {
+      title: 'DevFest Keynote Speaker',
+      abstract: null,
+      description: null,
+      tags: [],
+      track: 'Build with AI',
+      time: '09:00',
+      room: 'Sound Board',
     },
     isWTM: false,
     isGDE: false,

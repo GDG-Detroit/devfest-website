@@ -78,6 +78,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
           bio={speaker.bio}
           github={speaker.github}
           id={speaker.id}
+          instagram={speaker.instagram}
           isGDE={speaker.isGDE}
           isWTM={speaker.isWTM}
           linkedin={speaker.linkedIn}

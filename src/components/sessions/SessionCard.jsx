@@ -31,13 +31,13 @@ function SessionCard({
     if (sessionTime.includes('-')) {
       const [startStr, endStr] = sessionTime.split('-').map((str) => str.trim())
       return {
-        startTime: format(parse(startStr, 'h:mm', new Date()), 'h:mm a'),
-        endTime: format(parse(endStr, 'h:mm', new Date()), 'h:mm a'),
+        startTime: format(parse(startStr, 'HH:mm', new Date()), 'h:mm a'),
+        endTime: format(parse(endStr, 'HH:mm', new Date()), 'h:mm a'),
       }
     }
 
     // Otherwise, calculate end time based on duration
-    const parsedStartTime = parse(sessionTime, 'h:mm', new Date())
+    const parsedStartTime = parse(sessionTime, 'HH:mm', new Date())
     return {
       startTime: format(parsedStartTime, 'h:mm a'),
       endTime: format(addHours(parsedStartTime, sessionDuration), 'h:mm a'),

@@ -7,7 +7,7 @@ import {
   IoLinkOutline,
   IoLogoTwitter,
 } from 'react-icons/io5'
-import { FaMastodon } from 'react-icons/fa6'
+import { FaInstagram, FaMastodon } from 'react-icons/fa6'
 
 import { SpeakerContext } from './SpeakerContext'
 
@@ -93,6 +93,7 @@ function SpeakerDetails({
   avatar,
   bio,
   id,
+  instagram,
   isGDE,
   isWTM,
   mastodon,
@@ -293,6 +294,20 @@ function SpeakerDetails({
           {organization && <p className="mt-2 text-white">{organization}</p>}
 
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+            {instagram && (
+              <a
+                href={`${instagram}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-full border border-white/30 bg-black/30 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                onClick={(e) => e.stopPropagation()}
+                aria-label={`${name}'s Instagram profile - opens in new tab`}
+                style={interactiveFocusVars}
+              >
+                <FaInstagram className="mr-2 size-4" aria-hidden="true" />@
+                {instagram}
+              </a>
+            )}
             {mastodon && (
               <a
                 href={`${mastodon}`}
@@ -486,6 +501,7 @@ SpeakerDetails.propTypes = {
   avatar: PropTypes.string.isRequired,
   bio: PropTypes.string,
   id: PropTypes.number.isRequired,
+  instagram: PropTypes.string,
   isGDE: PropTypes.bool,
   isWTM: PropTypes.bool,
   mastodon: PropTypes.string,

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import GithubHandle from '@/components/ui/GithubHandle'
+import InstagramHandle from '@/components/ui/InstagramHandle'
 import LinkedInHandle from '@/components/ui/LinkedInHandle'
 import MastodonHandle from '@/components/ui//MastadonHandle'
 import TwitterHandle from '@/components/ui/TwitterHandle'
@@ -12,6 +13,7 @@ const ProfileCard = ({
   github,
   isGDE = false,
   isWTM = false,
+  instagram,
   linkedin,
   mastodon,
   name,
@@ -132,6 +134,7 @@ const ProfileCard = ({
   const renderSocialLinks = (linkedin || github || twitter || mastodon) && (
     <div className="inline-flex items-center gap-2">
       {github && <GithubHandle handle={github} absolute={false} />}
+      {instagram && <InstagramHandle handle={instagram} absolute={false} />}
       {linkedin && <LinkedInHandle handle={linkedin} absolute={false} />}
       {mastodon && <MastodonHandle handle={mastodon} absolute={false} />}
       {twitter && (
@@ -203,6 +206,7 @@ const ProfileCard = ({
 ProfileCard.propTypes = {
   avatar: PropTypes.string.isRequired,
   github: PropTypes.string,
+  instagram: PropTypes.string,
   isGDE: PropTypes.bool,
   isWTM: PropTypes.bool,
   linkedin: PropTypes.string,
