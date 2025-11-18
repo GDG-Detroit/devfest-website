@@ -5,6 +5,7 @@ import HackathonInfo from '@/components/sessions/HackathonInfo'
 import NoSessionsAvailable from '@/components/sessions/NoSessionsAvailable'
 import Schedule from '@/components/sessions/Schedule'
 import SessionCard from '@/components/sessions/SessionCard'
+import VenueMaps from '@/components/sessions/VenueMaps'
 import SessionsLogo from '@/assets/images/icn-sessions.png'
 
 import { DIRECTION } from '@/constants/directions'
@@ -255,6 +256,8 @@ const SessionsSection = ({
         >
           {currentSession === 'Schedule' ? (
             <Schedule />
+          ) : currentSession === 'Map' ? (
+            <VenueMaps />
           ) : currentSession === 'Hackathon' ? (
             <HackathonInfo />
           ) : currentTrackSessions.length > 0 ? (
