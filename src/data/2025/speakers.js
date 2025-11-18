@@ -6,6 +6,7 @@ import AnkitaGuha from '@/assets/images/speakers/Ankita_Guha.jpg'
 import BandhanKaur from '@/assets/images/speakers/Bandhan_Kaur.jpeg'
 import BernadetteAtanga from '@/assets/images/speakers/Bernadette_Atanga.jpeg'
 import BorisWilfriedNyasse from '@/assets/images/speakers/Boris_Wilfried_Nyasse.png'
+import BrandonBrown from '@/assets/images/speakers/Brandon_Brown.jpg'
 import BrianMcKeiver from '@/assets/images/speakers/Brian_McKeiver.png'
 import ChrisDemars from '@/assets/images/speakers/Chris_Demars.jpg'
 import CynthiaRespert from '@/assets/images/speakers/Cynthia_Respert.jpeg'
@@ -16,7 +17,9 @@ import HafeezJimoh from '@/assets/images/speakers/Hafeez_Jimoh.png'
 import HodaSolati from '@/assets/images/speakers/Hoda_Solati.jpg'
 import IdaByrdHill from '@/assets/images/speakers/Ida_Byrd-Hill.jpeg'
 import JC_Escalante from '@/assets/images/speakers/JC_Escalante.jpeg'
+import JasonFleming from '@/assets/images/speakers/Jason_Fleming.jpg'
 import JayWhitsitt from '@/assets/images/speakers/Jay_Whitsitt.jpeg'
+import JennaRitten from '@/assets/images/organizers/Jenna_Ritten-x96.webp'
 import JeseekiaVaughn from '@/assets/images/speakers/Jeseekia_Vaughn.jpeg'
 import JoelVasallo from '@/assets/images/speakers/Joel_Vasallo.jpg'
 import KamilleTynes from '@/assets/images/speakers/Kamille_Tynes.webp'
@@ -36,6 +39,7 @@ import StephanieFrantz from '@/assets/images/speakers/Stephanie_Frantz.jpeg'
 import StephenWylie from '@/assets/images/speakers/Stephen_Wylie.jpeg'
 import TriviaBarnes from '@/assets/images/speakers/TriviaBarnes.webp'
 import UmeloOnyejiaka from '@/assets/images/speakers/Umelo_Onyejiaka.webp'
+import VahiGuner from '@/assets/images/speakers/Vahi_Guner.png'
 import WilliamBowen from '@/assets/images/speakers/William_Bowen.webp'
 import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
 
@@ -885,7 +889,7 @@ export const SpeakersData = [
     name: 'Angel Porras',
     email: 'aporras3@ford.com',
     avatar: AngelPorras,
-    bio: `Born in Guatemala City, Angel F. Porras immigrated to the U.S. in the late 1990s, overcoming language and cultural barriers to pursue his passion for engineering. After earning degrees from UC Berkeley and San Jose State Universities, he joined Ford Motor Company through the Ford College Graduate program and discovered his calling in electric vehicle innovation. Now Technical Specialist for Electric Vehicle Controls, Angel holds nearly 80 patents spanning EV Charging, Thermal Management, and Intelligent scheduling.\n\nAngel received the 2025 Star Innovator Award at the SHPE National Convention in Philadelphia where he also helped recruit the next generation of STEM talent. Now as a SHPE Lifetime Member Angel is passionate about mentorship, innovation in mobility, and supporting pathways that bring more diverse voices into engineering.`,
+    bio: `Born in Guatemala City, Angel F. Porras immigrated to the U.S. in the late 1990s, overcoming language and cultural barriers to pursue his passion for engineering. After earning degrees from UC Berkeley and San Jose State Universities, he joined Ford Motor Company through the Ford College Graduate program and discovered his calling in electric vehicle innovation. Now Technical Specialist for Electric Vehicle Controls, Angel holds nearly 80 patents spanning EV Charging, Thermal Management, and Intelligent scheduling.\n\nAngel received the 2025 Star Innovator Award at the SHPE National Convention in Philadelphia where he also helped recruit the next generation of STEAM talent. Now as a SHPE Lifetime Member Angel is passionate about mentorship, innovation in mobility, and supporting pathways that bring more diverse voices into engineering.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/angel-porras-1150372/',
     url: 'https://www.shpedetroit.org/',
@@ -893,14 +897,14 @@ export const SpeakersData = [
     position: 'Electrification Systems and Controls Technical Specialist',
     session: {
       title:
-        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEAM',
       abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
-      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEAM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
       \nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
       \nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
       \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
       \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
-      \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      \nShaping the Future of STEAM: Preparing the next generation and driving meaningful change in organizations and communities`,
       tags: [],
       track: 'Level Up',
       time: '01:00',
@@ -923,14 +927,14 @@ export const SpeakersData = [
     position: 'Software Developer I - Generative AI',
     session: {
       title:
-        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEAM',
       abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
-      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEAM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
       \nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
       \nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
       \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
       \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
-      \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      \nShaping the Future of STEAM: Preparing the next generation and driving meaningful change in organizations and communities`,
       tags: [],
       track: 'Level Up',
       time: '01:00',
@@ -945,7 +949,7 @@ export const SpeakersData = [
     name: 'Maridy Mazaira',
     email: 'maridymazaira@gmail.com',
     avatar: MaridyMazaira,
-    bio: `Maridy Mazaira graduated with Distinction from the University of Michigan–Dearborn with a B.S. in Industrial and Systems Engineering. She previously served as Supervisor of Engineering Continuous Improvement at DTE Energy, where she led initiatives in Tree Trimming, Damage Claims, Emergency Preparedness and Response and more.\n\nToday, Maridy serves as President of the Society of Hispanic Professional Engineers – Detroit Chapter. Passionate about education and community impact, she is dedicated to creating opportunities, fostering representation, and inspiring the next generation of Hispanic students to pursue STEM careers.`,
+    bio: `Maridy Mazaira graduated with Distinction from the University of Michigan–Dearborn with a B.S. in Industrial and Systems Engineering. She previously served as Supervisor of Engineering Continuous Improvement at DTE Energy, where she led initiatives in Tree Trimming, Damage Claims, Emergency Preparedness and Response and more.\n\nToday, Maridy serves as President of the Society of Hispanic Professional Engineers – Detroit Chapter. Passionate about education and community impact, she is dedicated to creating opportunities, fostering representation, and inspiring the next generation of Hispanic students to pursue STEAM careers.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/maridy-mazaira/',
     url: 'https://www.shpedetroit.org/',
@@ -954,14 +958,14 @@ export const SpeakersData = [
     position: 'President',
     session: {
       title:
-        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEAM',
       abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
-      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEAM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
       \nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
       \nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
       \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
       \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
-      \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      \nShaping the Future of STEAM: Preparing the next generation and driving meaningful change in organizations and communities`,
       tags: [],
       track: 'Level Up',
       time: '01:00',
@@ -976,7 +980,7 @@ export const SpeakersData = [
     name: 'Martez Coleman',
     email: 'nsbedetroitpcichair@gmail.com',
     avatar: MartezColeman,
-    bio: `Martez Coleman is a Manufacturing Project Engineer at FANUC America and a self-described servant leader who approaches engineering with service at the forefront. He holds a master’s degree in robotics from Wayne State University and a bachelor’s degree in industrial engineering from Central Michigan University. As a first-generation college graduate from Flint, Martez is committed to empowering the next generation of STEM leaders. Through his involvement with programs such as GEAR UP, AmeriCorps, and the National Society of Black Engineers, he continues to mentor students and create pathways for youth to pursue engineering and technology.`,
+    bio: `Martez Coleman is a Manufacturing Project Engineer at FANUC America and a self-described servant leader who approaches engineering with service at the forefront. He holds a master’s degree in robotics from Wayne State University and a bachelor’s degree in industrial engineering from Central Michigan University. As a first-generation college graduate from Flint, Martez is committed to empowering the next generation of STEAM leaders. Through his involvement with programs such as GEAR UP, AmeriCorps, and the National Society of Black Engineers, he continues to mentor students and create pathways for youth to pursue engineering and technology.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/martez-coleman-jr-27107212b/',
     url: 'https://nsbedetroitprofessionals.org/',
@@ -984,14 +988,14 @@ export const SpeakersData = [
     position: '',
     session: {
       title:
-        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEAM',
       abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
-      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEAM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
       \nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
       \nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
       \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
       \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
-      \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      \nShaping the Future of STEAM: Preparing the next generation and driving meaningful change in organizations and communities`,
       tags: [],
       track: 'Level Up',
       time: '01:00',
@@ -1006,7 +1010,7 @@ export const SpeakersData = [
     name: 'Raquel Estrada',
     email: 'raquel.estrada8@gmail.com',
     avatar: RaquelEstrada,
-    bio: `Raquel Estrada is the Vice President of Internal Relations for SHPE Detroit and a proud Salvadoran who is passionate about empowering the Hispanic community. She believes in the power of unity and collaboration to open doors for others in STEM.\n\nRaquel is a Process Transformation Manager – VP at Comerica Bank and holds three master’s degrees, along with a Bachelor’s in Industrial Engineering. With more than twelve years of international experience in financial services, consumer goods, and automotive, Raquel has built her career around driving change, leading with impact, and a deep passion for Continuous Improvement.`,
+    bio: `Raquel Estrada is the Vice President of Internal Relations for SHPE Detroit and a proud Salvadoran who is passionate about empowering the Hispanic community. She believes in the power of unity and collaboration to open doors for others in STEAM.\n\nRaquel is a Process Transformation Manager – VP at Comerica Bank and holds three master’s degrees, along with a Bachelor’s in Industrial Engineering. With more than twelve years of international experience in financial services, consumer goods, and automotive, Raquel has built her career around driving change, leading with impact, and a deep passion for Continuous Improvement.`,
     twitter: '',
     linkedIn: 'https://www.linkedin.com/in/raquel-estrada/',
     url: 'https://www.shpedetroit.org/',
@@ -1014,14 +1018,14 @@ export const SpeakersData = [
     position: 'Enterprise Process Transformation Manager',
     session: {
       title:
-        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEAM',
       abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
-      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEAM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
       \nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
       \nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
       \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
       \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
-      \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      \nShaping the Future of STEAM: Preparing the next generation and driving meaningful change in organizations and communities`,
       tags: [],
       track: 'Level Up',
       time: '01:00',
@@ -1044,14 +1048,14 @@ export const SpeakersData = [
     position: 'Divisional Electrician in Charge',
     session: {
       title:
-        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEM',
+        'Leading Through Change: Hispanic & Black Engineers Shaping the Future of STEAM',
       abstract: `Hispanic and Black Engineers continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.”\n\nJoin us as this panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.`,
-      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
+      description: `Hispanic and Black professionals continue to rise as innovators, problem-solvers, mentors, and community builders—often while navigating spaces where they are the “first” or the “only.” This panel highlights how cultural identity and lived experience can be powerful sources of leadership and creativity. Panelists will share personal stories of resilience and reinvention, discuss how they’ve carved space for themselves in the tech industry, and reflect on what it means to shape the future while creating pathways for those coming next.\n\nAt the heart of this conversation is a shared commitment to expanding representation in STEAM, elevating emerging talent, and leading with purpose and community.\n\nKey Discussion Themes
       \nResilience & Reinvention: Navigating career changes, industry shifts, and personal turning points
       \nIdentity as Leadership: How culture and lived experience influence innovation, teamwork, and decision-making
       \nRepresentation & Visibility: Why it matters to see yourself in the industry—and how we widen that path
       \nCommunity & Support Networks: The impact of SHPE, NSBE, ERGs, mentorship, and family on personal and professional growth
-      \nShaping the Future of STEM: Preparing the next generation and driving meaningful change in organizations and communities`,
+      \nShaping the Future of STEAM: Preparing the next generation and driving meaningful change in organizations and communities`,
       tags: [],
       track: 'Level Up',
       time: '01:00',
@@ -1259,6 +1263,175 @@ export const SpeakersData = [
       track: 'Leadership',
       time: '01:00',
       room: 'MCC3',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 44,
+    name: 'TBD',
+    email: '',
+    avatar: null,
+    bio: ``,
+    twitter: null,
+    linkedIn: null,
+    url: null,
+    organization: null,
+    position: null,
+    session: {
+      title: 'AI Hackathon Winners Presentations, Demos & Awards',
+      abstract: null,
+      description: null,
+      tags: [],
+      track: 'Level Up',
+      time: '04:00',
+      room: 'MCC2',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 45,
+    name: 'Vahi Guner',
+    email: 'vahiguner@ibm.com',
+    avatar: VahiGuner,
+    bio: `Vahi Guner is an AI Engineer at IBM with a background in Electrical Engineering. He has hands-on experience working with both traditional machine learning models and modern generative AI technologies.\n\nFor other questions, like who is supporting the session etc. We'll be there as team Brandon, Jason, myself and Michael as our manager.`,
+    twitter: null,
+    linkedIn: null,
+    url: null,
+    organization: 'IBM Client Engineering',
+    position: 'AI Engineer',
+    session: {
+      title: 'AI Assistants & Agentic AI: watsonx Orchestrate Lab',
+      abstract: `his session highlights how IBM watsonx and agentic AI architectures can streamline complex HR operations by unifying workflows across disparate enterprise systems. Using a simplified AskHR agent built with watsonx Orchestrate, we demonstrate how reasoning-enabled agents interact with tools, APIs, and knowledge sources to perform tasks such as querying employee data, submitting time-off requests, and updating records.\n\nWe will walk through the technical architecture behind the agent—including multi-agent orchestration, OpenAPI-based connectors, secure data retrieval, and built-in grounding to minimize hallucinations. The lab showcases how developers can rapidly integrate existing HR platforms like Workday or SuccessFactors, or create custom tools for any internal system.\n\nAttendees will leave with a practical understanding of how to build, configure, and extend agentic workflows on watsonx to automate real-world operational processes at scale.`,
+      description: null,
+      tags: [],
+      track: 'Hackathon',
+      time: '11:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 46,
+    name: 'Brandon Brown',
+    email: 'brandon.brown1@ibm.com',
+    avatar: BrandonBrown,
+    bio: `Brandon Brown is an AI engineer at IBM who helps organizations navigate their AI adoption journey. He bridges the gap between cutting-edge AI technology and practical business applications, enabling companies to achieve measurable ROI through intelligent automation and data-driven solutions.`,
+    twitter: null,
+    linkedIn: null,
+    url: null,
+    organization: 'IBM Client Engineering',
+    position: 'AI Engineer',
+    session: {
+      title: 'AI Assistants & Agentic AI: watsonx Orchestrate Lab',
+      abstract: `his session highlights how IBM watsonx and agentic AI architectures can streamline complex HR operations by unifying workflows across disparate enterprise systems. Using a simplified AskHR agent built with watsonx Orchestrate, we demonstrate how reasoning-enabled agents interact with tools, APIs, and knowledge sources to perform tasks such as querying employee data, submitting time-off requests, and updating records.\n\nWe will walk through the technical architecture behind the agent—including multi-agent orchestration, OpenAPI-based connectors, secure data retrieval, and built-in grounding to minimize hallucinations. The lab showcases how developers can rapidly integrate existing HR platforms like Workday or SuccessFactors, or create custom tools for any internal system.\n\nAttendees will leave with a practical understanding of how to build, configure, and extend agentic workflows on watsonx to automate real-world operational processes at scale.`,
+      description: null,
+      tags: [],
+      track: 'Hackathon',
+      time: '11:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 47,
+    name: 'Jason Fleming',
+    email: 'jason.fleming@ibm.com',
+    avatar: JasonFleming,
+    bio: `As an IBM Client Engineering Solution Architect, Jason Fleming leads the design and delivery of agile, hybrid cloud solutions—leveraging deep domain expertise, strategic innovation, and collaborative client engagement to drive impactful Proofs of Value across industries.`,
+    twitter: null,
+    linkedIn: null,
+    url: null,
+    organization: 'IBM Client Engineering',
+    position: 'Solution Architect',
+    session: {
+      title: 'AI Assistants & Agentic AI: watsonx Orchestrate Lab',
+      abstract: `his session highlights how IBM watsonx and agentic AI architectures can streamline complex HR operations by unifying workflows across disparate enterprise systems. Using a simplified AskHR agent built with watsonx Orchestrate, we demonstrate how reasoning-enabled agents interact with tools, APIs, and knowledge sources to perform tasks such as querying employee data, submitting time-off requests, and updating records.\n\nWe will walk through the technical architecture behind the agent—including multi-agent orchestration, OpenAPI-based connectors, secure data retrieval, and built-in grounding to minimize hallucinations. The lab showcases how developers can rapidly integrate existing HR platforms like Workday or SuccessFactors, or create custom tools for any internal system.\n\nAttendees will leave with a practical understanding of how to build, configure, and extend agentic workflows on watsonx to automate real-world operational processes at scale.`,
+      description: null,
+      tags: [],
+      track: 'Hackathon',
+      time: '11:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 48,
+    name: 'Hoda Solati',
+    email: null,
+    avatar: HodaSolati,
+    bio: `Hoda Solati is an award-winning UX designer working at BraunAbility blending creativity, technology, and innovation to craft inclusive, user-centered experiences. With advanced degrees in UX Design and Animation, she explores cutting-edge technologies such as VR, AR, and robotics to solve complex design challenges. Recognized at global events including DDX’25 NYC, IEEE Smart Mobility, and Ars Electronica, Hoda is passionate about redefining the future of user experience through innovation and accessibility.`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/hoda-solati',
+    url: null,
+    organization: 'BraunAbility',
+    position: 'UX Designer',
+    session: {
+      title: 'Design for AI Session',
+      abstract: null,
+      description: null,
+      tags: ['Design', 'User Experience', 'User Interface', 'AR', 'VR'],
+      track: 'Hackathon',
+      time: '10:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 49,
+    name: 'Shima Solati',
+    email: null,
+    avatar: ShimaSolati,
+    bio: `Shima Solati is an award-winning UX/UI designer and researcher at BraunAbility, leading efforts to advance mobility and accessibility through innovative, user-centered design. With a Master’s in User Experience Design from the College for Creative Studies and dual degrees in fashion and textiles, Shima brings a rare multidisciplinary perspective to solving complex challenges. Her expertise spans immersive and assistive technologies, VR, AR, robotics, and her portfolio includes impactful work for KUKA Robotics, the Augmented Reality Center, General Motors, and Ford. Passionate about inclusive design and emerging technologies, Shima is dedicated to creating intuitive solutions that empower all users.`,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/shima-solati/',
+    url: null,
+    organization: 'BraunAbility',
+    position: 'UX/UI Designer and Researcher',
+    session: {
+      title: 'Design for AI Session',
+      abstract: null,
+      description: null,
+      tags: [],
+      track: 'Hackathon',
+      time: '10:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 50,
+    name: 'Jenna Ritten',
+    email: null,
+    avatar: JennaRitten,
+    bio: null,
+    twitter: 'jritten',
+    linkedin: 'https://www.linkedin.com/in/jritten/',
+    github: 'https://github.com/jritten',
+    url: null,
+    organization: 'IBM',
+    position: 'Chief Developer Advocate & Senior Architect',
+    session: {
+      title: 'AI Hackathon Keynote',
+      abstract: null,
+      description: null,
+      tags: [],
+      track: 'Hackathon',
+      time: '09:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
     },
     isWTM: false,
     isGDE: false,

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import HackathonInfo from '@/components/sessions/HackathonInfo'
 import NoSessionsAvailable from '@/components/sessions/NoSessionsAvailable'
 import Schedule from '@/components/sessions/Schedule'
 import SessionCard from '@/components/sessions/SessionCard'
@@ -255,8 +254,6 @@ const SessionsSection = ({
         >
           {currentSession === 'Schedule' ? (
             <Schedule />
-          ) : currentSession === 'Hackathon' ? (
-            <HackathonInfo />
           ) : currentTrackSessions.length > 0 ? (
             <ul className="grid w-full grid-cols-1 gap-10 py-7">
               {hasSessionsForTrack ? (
