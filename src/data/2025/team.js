@@ -176,7 +176,7 @@ export const teamData = [
     university: '',
     bio: `Shima Solati is an award-winning UX/UI designer and researcher at BraunAbility, leading efforts to advance mobility and accessibility through innovative, user-centered design. With a Master’s in User Experience Design from the College for Creative Studies and dual degrees in fashion and textiles, Shima brings a rare multidisciplinary perspective to solving complex challenges. Her expertise spans immersive and assistive technologies, VR, AR, robotics, and her portfolio includes impactful work for KUKA Robotics, the Augmented Reality Center, General Motors, and Ford. Passionate about inclusive design and emerging technologies, Shima is dedicated to creating intuitive, innovative solutions that empower all users.`,
     organization: 'BraunAbility',
-    role: 'UX/UI Designer and Researcher',
+    role: 'UX/UI Designer & Researcher',
     avatar: ShimaSolati,
   },
   {
@@ -190,7 +190,7 @@ export const teamData = [
     university: '',
     bio: `Hoda Solati is an award-winning UX designer working at BraunAbility blending creativity, technology, and innovation to craft inclusive, user-centered experiences. With advanced degrees in UX Design and Animation, she explores cutting-edge technologies such as VR, AR, and robotics to solve complex design challenges. Recognized at global events including DDX’25 NYC and IEEE Smart Mobility, Hoda is passionate about redefining the future of user experience through innovation and accessibility.`,
     organization: 'BraunAbility + GDG + Women Techmakers, I/O 2025',
-    role: 'UX/UI Designer and Researcher',
+    role: 'UX/UI Designer & Researcher',
     avatar: HodaSolati,
   },
   {
@@ -216,7 +216,7 @@ export const teamData = [
     devfest: 'organizer',
     star: false,
     university: '',
-    bio: ``,
+    bio: `Hernando was born and raised in Barranquilla, Colombia. He holds a dual bachelor degree in Mechanical Engineering from the Universidad del Norte and University of South Florida, as well as a Ph.D. in Mechanical Engineering from the University of Alabama in Huntsville. He's currently working as a Battery Electro-Chemical Interactions Researcher at General Motors R&D, researching new technologies to increase battery safety for EVs. He's been part of SHPE since 2009 and has been an open advocate for hispanic development and  formation in advanced STEM careers`,
     organization:
       'Society of Hispanic Professional Engineers - SHPE Detroit Professional',
     role: 'Director of Professional Development',
@@ -245,7 +245,7 @@ export const teamData = [
     devfest: 'organizer',
     star: false,
     university: '',
-    bio: ``,
+    bio: `Raquel Estrada is the Vice President of Internal Relations for SHPE Detroit and a proud Salvadoran who is passionate about empowering the Hispanic community. She believes in the power of unity and collaboration to open doors for others in STEM. Raquel is a Process Transformation Manager – VP at Comerica Bank and holds three master’s degrees, along with a Bachelor’s in Industrial Engineering. With more than twelve years of international experience in financial services, consumer goods, and automotive, Raquel has built her career around driving change, leading with impact, and a deep passion for Continuous Improvement.`,
     organization:
       'Society of Hispanic Professional Engineers - SHPE Detroit Professional',
     role: 'SHPE Detroit Vice President',
@@ -260,7 +260,8 @@ export const teamData = [
     devfest: 'organizer',
     star: false,
     university: '',
-    bio: ``,
+    bio: `Maridy Mazaira graduated with Distinction from the University of Michigan–Dearborn with a B.S. in Industrial and Systems Engineering. She previously served as Supervisor of Engineering Continuous Improvement at DTE Energy, where she led initiatives in Tree Trimming, Damage Claims, Emergency Preparedness and Response and more.
+Today, Maridy serves as President of the Society of Hispanic Professional Engineers – Detroit Chapter. Passionate about education and community impact, she is dedicated to creating opportunities, fostering representation, and inspiring the next generation of Hispanic students to pursue STEM careers.`,
     organization:
       'Society of Hispanic Professional Engineers - SHPE Detroit Professional',
     role: 'SHPE Detroit President',
