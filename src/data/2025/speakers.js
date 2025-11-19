@@ -38,6 +38,7 @@ import ShimaSolati from '@/assets/images/speakers/Shima_Solati.jpg'
 import ShugmiShumunov from '@/assets/images/speakers/shugmi_shumunov.webp'
 import StephanieFrantz from '@/assets/images/speakers/Stephanie_Frantz.jpeg'
 import StephenWylie from '@/assets/images/speakers/Stephen_Wylie.jpeg'
+import TimBates from '@/assets/images/speakers/Tim_Bates.png'
 import TriviaBarnes from '@/assets/images/speakers/TriviaBarnes.webp'
 import UmeloOnyejiaka from '@/assets/images/speakers/Umelo_Onyejiaka.webp'
 import VahiGuner from '@/assets/images/speakers/Vahi_Guner.png'
@@ -1490,5 +1491,30 @@ export const SpeakersData = [
     },
     isWTM: true,
     isGDE: false,
+  },
+  {
+    id: 53,
+    name: 'Tim Bates',
+    email: 'Tim@sovereignailabs.com',
+    avatar: TimBates,
+    bio: null,
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/thegodfatheroftech/',
+    github: null,
+    url: null,
+    organization: 'Sovereign AI Labs',
+    position: 'Founder',
+    session: {
+      title: 'Think Small to Build Big: Why Tiny AI Models Are the Future',
+      abstract: `In this high-impact lightning talk, Professor Timothy E. Bates—known as The Godfather of Tech—breaks down why small-scale AI models are the most powerful tool in a solo developer’s arsenal. Aimed at builders, coders, creators, and engineers working on internal apps, dashboards, and game engines like Unity or Unreal, this session demystifies the capabilities of 1B–7B parameter models like Mistral 7B and Phi-2—and shows how they rival giants, without the cloud.\n\nFrom Detroit to global dev rooms, Prof B explains how edge AI is democratizing innovation, enabling localized, private, and high-speed deployments for solo makers and indie teams. You'll leave with a blueprint for how to deploy, fine-tune, and quantize small LLMs, all while aligning with ethical and efficient AI development practices.\n\nWhether you're coding in a coffee shop or managing AI ops for a small business, this talk equips you with the mindset and tools to build lean, lethal, and local.`,
+      description: null,
+      tags: [],
+      track: 'Hackathon',
+      time: '13:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
   },
 ]
