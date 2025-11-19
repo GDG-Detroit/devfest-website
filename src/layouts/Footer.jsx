@@ -1,62 +1,171 @@
+import { Link } from 'react-router-dom'
+import { sections, externalLinks } from '../data/2025/navigation'
+import ShrinkrayLogo from '@/assets/images/icons/shrinkray.svg'
+import ShumunovLogo from '@/assets/images/icons/shug40.png'
+
 function Footer() {
+  // Helper function to get navbar height for scroll offset
+  const getNavbarHeight = () => {
+    const navbar = document.querySelector('nav')
+    return navbar ? navbar.offsetHeight : 96
+  }
+
+  // Easing function for smooth scrolling (ease-in-out)
+  const easeInOutCubic = (t) => {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+  }
+
+  // Smooth scroll with easing
+  const smoothScrollTo = (targetPosition, duration = 800) => {
+    const startPosition = window.pageYOffset
+    const distance = targetPosition - startPosition
+    let startTime = null
+
+    const animation = (currentTime) => {
+      if (startTime === null) startTime = currentTime
+      const timeElapsed = currentTime - startTime
+      const progress = Math.min(timeElapsed / duration, 1)
+      const ease = easeInOutCubic(progress)
+
+      window.scrollTo(0, startPosition + distance * ease)
+
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animation)
+      }
+    }
+
+    requestAnimationFrame(animation)
+  }
+
+  // Handle navigation to section anchors
+  const handleNavigation = (event, sectionId) => {
+    event.preventDefault()
+    const target = document.querySelector(`#${sectionId}`)
+
+    if (target) {
+      const navbarHeight = getNavbarHeight()
+      const targetRect = target.getBoundingClientRect()
+      const scrollPosition = targetRect.top + window.pageYOffset - navbarHeight
+
+      smoothScrollTo(scrollPosition)
+    }
+  }
+
   return (
     <footer
       role="contentinfo"
-      className="flex h-28 flex-col items-center justify-center bg-gray-100 text-black dark:bg-gray-800 dark:text-white"
+      className="flex flex-col bg-gray-100 text-black dark:bg-gray-800 dark:text-white"
     >
-      <h3 className="mb-3">Contact us</h3>
-      <div className="flex space-x-4">
-        <button
-          type="button"
-          className="mb-2 inline-block rounded-full bg-white p-3 text-xs font-medium uppercase leading-normal text-black shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg dark:bg-gray-700 dark:text-white"
-          onClick={() =>
-            window.open(
-              'https://twitter.com/intent/tweet?text=I%27m%20attending%20Google%20Developer%20Groups%20GDG%20Detroit%20w%2F%20Michigan%20DevFest%20on%20Dec%202.',
-              '_blank'
-            )
-          }
-        >
-          <svg
-            viewBox="0 0 16 17"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            role="img"
-            alt="X (Twitter) icon"
-            data-testid="XIcon"
-            title="Share on X (Twitter)"
-            color="currentColor"
-          >
-            <path
-              d="M9.51664 6.79444L15.3449 0.0195312H13.9638L8.90311 5.90209L4.86115 0.0195312H0.199219L6.31146 8.915L0.199219 16.0195H1.58041L6.92464 9.80735L11.1933 16.0195H15.8552L9.5163 6.79444H9.51664ZM7.62491 8.99337L7.00561 8.10758L2.07808 1.05927H4.19951L8.17609 6.74748L8.79538 7.63327L13.9645 15.0271H11.843L7.62491 8.99371V8.99337Z"
-              fill="currentColor"
-            ></path>
-          </svg>
-        </button>
-
-        <button
-          type="button"
-          className="mb-2 inline-block rounded-full bg-white p-3 text-xs font-medium uppercase leading-normal text-black shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg dark:bg-gray-700 dark:text-white"
-          onClick={() =>
-            window.open(
-              'https://www.linkedin.com/shareArticle?mini=true&url=https://gdg.community.dev/e/m8hffb/',
-              '_blank'
-            )
-          }
-        >
-          <svg
-            className="size-5 fill-current"
-            role="img"
-            alt="LinkedIn icon"
-            title="Share on LinkedIn"
-            viewBox="0 0 256 256"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g>
-              <path d="M218.123122,218.127392 L180.191928,218.127392 L180.191928,158.724263 C180.191928,144.559023 179.939053,126.323993 160.463756,126.323993 C140.707926,126.323993 137.685284,141.757585 137.685284,157.692986 L137.685284,218.123441 L99.7540894,218.123441 L99.7540894,95.9665207 L136.168036,95.9665207 L136.168036,112.660562 L136.677736,112.660562 C144.102746,99.9650027 157.908637,92.3824528 172.605689,92.9280076 C211.050535,92.9280076 218.138927,118.216023 218.138927,151.114151 L218.123122,218.127392 Z M56.9550587,79.2685282 C44.7981969,79.2707099 34.9413443,69.4171797 34.9391618,57.260052 C34.93698,45.1029244 44.7902948,35.2458562 56.9471566,35.2436736 C69.1040185,35.2414916 78.9608713,45.0950217 78.963054,57.2521493 C78.9641017,63.090208 76.6459976,68.6895714 72.5186979,72.8184433 C68.3913982,76.9473153 62.7929898,79.26748 56.9550587,79.2685282 M75.9206558,218.127392 L37.94995,218.127392 L37.94995,95.9665207 L75.9206558,95.9665207 L75.9206558,218.127392 Z M237.033403,0.0182577091 L18.8895249,0.0182577091 C8.57959469,-0.0980923971 0.124827038,8.16056231 -0.001,18.4706066 L-0.001,237.524091 C0.120519052,247.839103 8.57460631,256.105934 18.8895249,255.9977 L237.033403,255.9977 C247.368728,256.125818 255.855922,247.859464 255.999,237.524091 L255.999,18.4548016 C255.851624,8.12438979 247.363742,-0.133792868 237.033403,0.000790807055"></path>
-            </g>
-          </svg>
-        </button>
+      <div className="mx-auto w-full max-w-7xl px-6 py-8 md:flex md:items-center md:justify-between lg:px-8">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:order-2">
+          {sections
+            .filter((section) => section.id !== 'landing')
+            .map((section) => (
+              <Link
+                key={section.id}
+                to={`#${section.id}`}
+                onClick={(event) => handleNavigation(event, section.id)}
+                className="text-sm text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+              >
+                {section.text}
+              </Link>
+            ))}
+          {externalLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className="text-sm text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+            >
+              {link.text}
+            </Link>
+          ))}
+        </div>
+        <p className="mt-8 text-center text-sm text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">
+          © {new Date().getFullYear()} GDG Detroit. All rights reserved.
+        </p>
+      </div>
+      <div className="mx-auto w-full max-w-full border-t border-gray-300 bg-gray-900 px-6 pb-24 pt-8 lg:px-8 dark:border-gray-700">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="md:col-span-2">
+              {/* Left column - 2/3 width */}
+              <div>
+                <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-400">
+                  Brought to you by:
+                </h3>
+              </div>
+              <div className="my-8 grid grid-cols-2 gap-4 text-white">
+                <div className="flex gap-4">
+                  <div className="col-1 mt-1">
+                    <img
+                      src={ShumunovLogo}
+                      alt="Shumunov Solutions logo"
+                      className="size-8 object-contain"
+                      width={40}
+                      height={40}
+                    />{' '}
+                  </div>
+                  <div className="col-1 mt-1">
+                    <p className="text-sm font-medium text-white">
+                      <a
+                        href="http://shumunovsolutions.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-yellow-500 hover:text-gray-300"
+                      >
+                        Shumunov Solutions
+                      </a>
+                    </p>
+                    <p className="text-xs text-gray-400">
+                      UI/UX Development Fullstack React & Next.js
+                    </p>
+                    <p className="mt-2 text-xs italic text-gray-400">
+                      We blend thoughtful code with storytelling that truly
+                      connects.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="col-1">
+                    <img
+                      src={ShrinkrayLogo}
+                      alt="Shrinkray Interactive, LLC logo"
+                      className="size-16 object-contain"
+                      width={40}
+                      height={40}
+                    />{' '}
+                  </div>
+                  <div className="col-1 mt-4">
+                    <p className="text-sm font-medium text-white">
+                      <a
+                        href="https://shrinkraylabs.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-yellow-500 hover:text-gray-300"
+                      >
+                        Shrinkray Interactive, LLC
+                      </a>
+                    </p>
+                    <p className="text-xs text-gray-400">
+                      UI/UX Design, Accessibility, & Development
+                    </p>
+                    <p className="mt-2 text-xs italic text-gray-400">
+                      Enhancing Customer Experience through Accessibility,
+                      Performance, Project Management, and UX Engineering
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="text-lf w-full text-left italic text-gray-400">
+                ... just one damn project after another
+              </div>
+            </div>
+            <div className="md:col-span-1">
+              {/* Right column - 1/3 width */}
+              <div className="flex flex-col gap-4 text-white"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   )
