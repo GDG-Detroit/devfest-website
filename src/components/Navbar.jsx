@@ -2,18 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { FaBars, FaXmark } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 import GDGDetroitLogo from './ui/GDGDetroitLogo'
-
-const externalLinks = [{ to: '/previous-events', text: 'Previous Events' }]
-
-const sections = [
-  { id: 'landing', text: 'Landing' },
-  { id: 'location', text: 'Location' },
-  { id: 'sessions', text: 'Sessions' },
-  { id: 'speakers', text: 'Speakers' },
-  { id: 'jobboard', text: 'Job Board' },
-  { id: 'partners', text: 'Partners' },
-  { id: 'devteam', text: 'DevFest Team' },
-]
+import { sections, externalLinks } from '@/data/2025/navigation'
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState('landing')
@@ -235,7 +224,7 @@ function Navbar() {
               activeLink === section.id
                 ? 'after:w-full after:opacity-100'
                 : 'after:w-0 after:opacity-0'
-            } after:absolute after:bottom-0 after:left-0 after:h-1 after:bg-primary-400 after:transition-all after:duration-300 after:ease-in-out`}
+            } after:duration-400 after:absolute after:bottom-0 after:left-0 after:h-1 after:bg-primary-400 after:transition-all after:ease-in-out`}
           >
             {section.text}
           </Link>
