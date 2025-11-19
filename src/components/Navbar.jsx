@@ -224,7 +224,7 @@ function Navbar() {
               activeLink === section.id
                 ? 'after:w-full after:opacity-100'
                 : 'after:w-0 after:opacity-0'
-            } after:duration-400 after:absolute after:bottom-0 after:left-0 after:h-1 after:bg-primary-400 after:transition-all after:ease-in-out`}
+            } after:absolute after:bottom-0 after:left-0 after:h-1 after:bg-primary-400 after:transition-all after:duration-300 after:ease-in-out`}
           >
             {section.text}
           </Link>

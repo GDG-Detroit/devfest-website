@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { sections, externalLinks } from '../data/2025/navigation'
 import ShrinkrayLogo from '@/assets/images/icons/shrinkray.svg'
 import ShumunovLogo from '@/assets/images/icons/shug40.png'
+import GdgDetroitLogo from '@/assets/images/gdg-detroit-logo-footer.svg'
 
 function Footer() {
   // Helper function to get navbar height for scroll offset
@@ -90,43 +91,43 @@ function Footer() {
             <div className="md:col-span-2">
               {/* Left column - 2/3 width */}
               <div>
-                <h3 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-400">
+                <h3 className="mb-2 text-lg font-semibold uppercase tracking-wide text-gray-400">
                   Brought to you by:
                 </h3>
               </div>
-              <div className="my-8 grid grid-cols-2 gap-4 text-white">
-                <div className="flex gap-4">
-                  <div className="col-1 mt-1">
+              <div className="my-8 grid grid-cols-1 gap-6 text-white md:grid-cols-2">
+                <div className="flex flex-col items-center gap-2 md:flex-row md:items-center md:gap-4">
+                  <div className="flex justify-center md:mt-1">
                     <img
                       src={ShumunovLogo}
                       alt="Shumunov Solutions logo"
-                      className="size-8 object-contain"
+                      className="size-11 object-contain md:size-8"
                       width={40}
                       height={40}
                     />{' '}
                   </div>
-                  <div className="col-1 mt-1">
+                  <div className="text-center md:mt-1 md:text-left">
                     <p className="text-sm font-medium text-white">
                       <a
                         href="http://shumunovsolutions.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-bold text-yellow-500 hover:text-gray-300"
+                        className="text-md font-bold text-yellow-500 hover:text-gray-300"
                       >
                         Shumunov Solutions
                       </a>
                     </p>
-                    <p className="text-xs text-gray-400">
+                    <p className="prose text-pretty text-sm text-white">
                       UI/UX Development Fullstack React & Next.js
                     </p>
-                    <p className="mt-2 text-xs italic text-gray-400">
+                    <p className="prose mt-2 text-pretty text-sm italic text-white">
                       We blend thoughtful code with storytelling that truly
                       connects.
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-4">
-                  <div className="col-1">
+                <div className="flex flex-col items-center gap-2 md:flex-row md:items-center md:gap-4">
+                  <div className="flex justify-center">
                     <img
                       src={ShrinkrayLogo}
                       alt="Shrinkray Interactive, LLC logo"
@@ -135,34 +136,45 @@ function Footer() {
                       height={40}
                     />{' '}
                   </div>
-                  <div className="col-1 mt-4">
+                  <div className="text-center md:mt-4 md:text-left">
                     <p className="text-sm font-medium text-white">
                       <a
                         href="https://shrinkraylabs.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-bold text-yellow-500 hover:text-gray-300"
+                        className="text-md font-bold text-yellow-500 hover:text-gray-300"
                       >
                         Shrinkray Interactive, LLC
                       </a>
                     </p>
-                    <p className="text-xs text-gray-400">
+                    <p className="prose text-pretty text-sm text-white">
                       UI/UX Design, Accessibility, & Development
                     </p>
-                    <p className="mt-2 text-xs italic text-gray-400">
+                    <p className="prose mt-2 text-pretty text-sm italic text-white">
                       Enhancing Customer Experience through Accessibility,
                       Performance, Project Management, and UX Engineering
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="text-lf w-full text-left italic text-gray-400">
+              <div className="w-full text-center italic text-gray-400 md:text-left">
                 ... just one damn project after another
               </div>
             </div>
-            <div className="md:col-span-1">
+            <div className="flex flex-col items-center justify-center md:col-span-1">
               {/* Right column - 1/3 width */}
-              <div className="flex flex-col gap-4 text-white"></div>
+              <div className="flex flex-col gap-1">
+                <img
+                  src={GdgDetroitLogo}
+                  alt="GDG Detroit Logo"
+                  className="h-auto w-64 object-contain object-center"
+                />
+                <p className="prose text-pretty text-sm text-white">
+                  The GDG Detroit team is a group of volunteers who are
+                  passionate about helping the community learn and grow in the
+                  field of technology.
+                </p>
+              </div>
             </div>
           </div>
         </div>
