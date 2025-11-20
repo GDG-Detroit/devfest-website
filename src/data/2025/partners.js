@@ -1,18 +1,19 @@
+import CCS from '@/assets/images/sponsors/spo-ccs-logo.webp'
 import CompassDetroit from '@/assets/images/sponsors/Compass_Detroit_logo.webp'
+import DetroitHackerHouse from '@/assets/images/sponsors/Detroit_Hacker_House.png'
+import GDGAnnArbor from '@/assets/images/organizations/org-gdg-a2.webp'
+import DTE from '@/assets/images/sponsors/spo-dte-logo.webp'
+import GDGDetroit from '@/assets/images/organizations/org-gdg-detroit.webp'
+import GDGToledo from '@/assets/images/organizations/org-gdg-toledo.webp'
+import GDGUofMDearborn from '@/assets/images/organizations/org-gdg-umd.webp'
+import GDGWindsor from '@/assets/images/organizations/org-gdg-windsor.webp'
+import GDGWSU from '@/assets/images/organizations/org-gdg-wsu.webp'
 import Google from '@/assets/images/sponsors/Google_logo.webp'
+import IBM from '@/assets/images/sponsors/spo-ibm-logo.webp'
+import NSBEDetroit from '@/assets/images/organizations/org-nsbe-logo.webp'
 import SHPEDetroit from '@/assets/images/organizations/org-shpe-logo.webp'
 import WomenTechmakers from '@/assets/images/organizations/org-wtm-logo.webp'
-import GDGDetroit from '@/assets/images/organizations/org-gdg-detroit.webp'
-import GDGAnnArbor from '@/assets/images/organizations/org-gdg-a2.webp'
-import GDGToledo from '@/assets/images/organizations/org-gdg-toledo.webp'
-import GDGWindsor from '@/assets/images/organizations/org-gdg-windsor.webp'
-import GDGUofMDearborn from '@/assets/images/organizations/org-gdg-umd.webp'
-import GDGWSU from '@/assets/images/organizations/org-gdg-wsu.webp'
-import NSBEDetroit from '@/assets/images/organizations/org-nsbe-logo.webp'
 import WSU from '@/assets/images/sponsors/spo-wsu-logo.webp'
-import IBM from '@/assets/images/sponsors/spo-ibm-logo.webp'
-import DTE from '@/assets/images/sponsors/spo-dte-logo.webp'
-import CCS from '@/assets/images/sponsors/spo-ccs-logo.webp'
 // Partners data combining sponsors and organizations
 // Organized by tier: Platinum, Diamond, Gold, and Organizations
 
@@ -72,10 +73,18 @@ We are committed to significantly improving the lives of as many people as possi
       url: 'https://www.collegeforcreativestudies.edu/',
       tier: 'Gold Sponsor',
     },
+    {
+      id: 7,
+      name: 'Detroit Hacker House',
+      logo: DetroitHackerHouse,
+      desc: 'Our goal is to incubate technology companies through a residential, cohort-based accelerator program in Detroit, MI. We provide room, board, mentorship and curriculum designed to remove distractions and barriers for founders to focus on building their product and business model through MVP validation.',
+      url: 'https://detroithackerhouse.com',
+      tier: 'Gold Sponsor',
+    },
   ],
   organizations: [
     {
-      id: 7,
+      id: 8,
       name: 'GDG Detroit',
       logo: GDGDetroit,
       desc: 'Google Developer Group Detroit is a community of developers interested in Google technologies.',
@@ -83,7 +92,7 @@ We are committed to significantly improving the lives of as many people as possi
       tier: 'Organization',
     },
     {
-      id: 8,
+      id: 9,
       name: 'GDG Ann Arbor',
       logo: GDGAnnArbor,
       desc: 'Google Developer Group Ann Arbor is a community of developers interested in Google technologies.',
@@ -91,7 +100,7 @@ We are committed to significantly improving the lives of as many people as possi
       tier: 'Organization',
     },
     {
-      id: 9,
+      id: 10,
       name: 'GDG Toledo',
       logo: GDGToledo,
       desc: 'Google Developer Group Toledo is a community of developers interested in Google technologies.',
@@ -99,7 +108,7 @@ We are committed to significantly improving the lives of as many people as possi
       tier: 'Organization',
     },
     {
-      id: 10,
+      id: 11,
       name: 'GDG Windsor',
       logo: GDGWindsor,
       desc: 'Google Developer Group Windsor is a community of developers interested in Google technologies.',
@@ -107,7 +116,7 @@ We are committed to significantly improving the lives of as many people as possi
       tier: 'Organization',
     },
     {
-      id: 11,
+      id: 12,
       name: 'GDG UofM Dearborn',
       logo: GDGUofMDearborn,
       desc: 'Google Developer Group at University of Michigan-Dearborn is a student chapter interested in Google technologies.',
@@ -115,7 +124,7 @@ We are committed to significantly improving the lives of as many people as possi
       tier: 'Organization',
     },
     {
-      id: 12,
+      id: 13,
       name: 'GDG Wayne State University',
       logo: GDGWSU,
       desc: 'Google Developer Group at Wayne State University is a student chapter interested in Google technologies.',
@@ -123,7 +132,7 @@ We are committed to significantly improving the lives of as many people as possi
       tier: 'Organization',
     },
     {
-      id: 13,
+      id: 14,
       name: 'Women Techmakers',
       logo: WomenTechmakers,
       desc: 'Women Techmakers is a global program providing visibility, community, and resources for women in technology.',
@@ -131,7 +140,7 @@ We are committed to significantly improving the lives of as many people as possi
       tier: 'Organization',
     },
     {
-      id: 14,
+      id: 15,
       name: 'NSBE Detroit',
       logo: NSBEDetroit,
       desc: 'National Society of Black Engineers Detroit Professional Chapter supports Black engineers and their communities.',
@@ -139,7 +148,7 @@ We are committed to significantly improving the lives of as many people as possi
       tier: 'Organization',
     },
     {
-      id: 15,
+      id: 16,
       name: 'SHPE Detroit',
       logo: SHPEDetroit,
       desc: 'Society of Hispanic Professional Engineers Detroit chapter empowers the Hispanic community to realize their full potential.',
