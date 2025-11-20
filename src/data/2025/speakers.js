@@ -805,7 +805,7 @@ export const SpeakersData = [
     bio: `Shugmi Shumunov is a software developer who believes code is the ultimate storytelling medium. With a primary focus on the JavaScript ecosystem within the e-commerce, I've enjoyed working across the stack in various industries. I'm always seeking beautiful, elegant, and performant solutions while collaborating with talented, curious, and passionate engineers and tech enthusiasts\n\nWhen the terminal is closed and my hands are off the keyboard, you'll find me lifting weights, adventuring outdoors, exploring new places, or immersed in the worlds of manga or a good book`,
     twitter: null,
     linkedIn: 'https://www.linkedin.com/in/shugmishumunov/',
-    url: null,
+    url: ['http://shumunovsolutions.com', 'https://shugknight24.github.io'],
     github: 'https://github.com/ShugKnight24',
     organization: 'Shumunov Solutions',
     position: 'Developer',

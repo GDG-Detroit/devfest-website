@@ -146,13 +146,5 @@ We are committed to significantly improving the lives of as many people as possi
       url: 'https://www.shpedetroit.org/',
       tier: 'Organization',
     },
-    {
-      id: 16,
-      name: 'Brayan Gutierrez',
-      logo: null,
-      desc: 'Brayan is a visual journalist and filmmaker based in Detroit, working in both photography and video. He earned his degree in Film from Wayne State University, with minors in Photography and Media Arts & Studies. His work includes editorial assignments, documentary projects, and commercial content.\n\nBrayan has covered political events, press conferences, cultural celebrations, and community stories for news outlets, nonprofits, and institutions. He also collaborates with brands and businesses to create visuals for digital platforms.\n\nOutside of client work, Brayan shoots 35mm and medium format film to explore personal projects. Some of that work has been shown at festivals in the U.S. and abroad.',
-      url: 'https://brayangutierrez.com/',
-      tier: 'Organization',
-    },
   ],
 }
