@@ -1093,7 +1093,7 @@ export const SpeakersData = [
         'Wellness',
         'Health',
       ],
-      track: '',
+      track: 'Workshops',
       time: '08:00',
       room: '',
     },
@@ -1455,7 +1455,7 @@ export const SpeakersData = [
     organization: 'Little Caesars',
     position: 'Chief Information Officer',
     session: {
-      title: 'DevFest Keynote Speaker',
+      title: 'Michigan DevFest Keynote',
       abstract: null,
       description: null,
       tags: [],
