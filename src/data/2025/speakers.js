@@ -48,7 +48,7 @@ import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
 export const SpeakersData = [
   {
     id: 1,
-    name: 'Roland Frohman',
+    name: 'Roland Frohman III',
     email: null,
     avatar: 'https://placehold.co/600x400/4285F4/FFFFFF?text=Roland+Frohman',
     bio: 'Roland’s research explores the convergence of physical and digital interactions within connected product ecosystems, with particular focus on IoT devices and spatial computing interfaces. His work investigates how emerging technologies—including AR/VR/XR, voice interfaces, and AI-driven interactions—shape human-centered design across multiple touch points. Through his practice and teaching, he examines the evolution from traditional 2D interfaces to spatial computing environments, developing pedagogical approaches that prepare designers for increasingly complex, multi-modal experiences. His current research involves creating frameworks for seamless cross-platform experiences that bridge the gap between industrial design and digital interaction.',
@@ -1083,7 +1083,7 @@ export const SpeakersData = [
       ],
       track: 'Workshops',
       time: '08:00',
-      room: '',
+      room: 'MCC Sound Board Conference Center',
     },
     isWTM: false,
     isGDE: false,
