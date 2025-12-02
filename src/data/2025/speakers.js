@@ -29,10 +29,10 @@ import LorrenaBlack from '@/assets/images/speakers/Lorrena_Black.jpeg'
 import MadonaSWambua from '@/assets/images/speakers/Madona_S_Wambua.webp'
 import MaridyMazaira from '@/assets/images/speakers/MaridyMazaira.webp'
 import MartezColeman from '@/assets/images/speakers/MartezColeman.webp'
-import MichaelBower from '@/assets/images/speakers/Michael_Bower.jpg'
 import NileshPatel from '@assets/images/speakers/Nilesh_Patel.jpg'
 import PooyaAlavian from '@/assets/images/speakers/Pooya_Alavian.webp'
 import RaquelEstrada from '@/assets/images/speakers/RaquelEstrada.webp'
+import RolandFrohman from '@/assets/images/speakers/Roland_Frohman_III.jpeg'
 import ShamsAhson from '@/assets/images/speakers/Shams_Ahson.jpeg'
 import ShimaSolati from '@/assets/images/speakers/Shima_Solati.jpg'
 import ShugmiShumunov from '@/assets/images/speakers/shugmi_shumunov.webp'
@@ -49,32 +49,22 @@ import WScottRichardson from '@/assets/images/speakers/W_Scott_Richardson.jpeg'
 export const SpeakersData = [
   {
     id: 1,
-    name: 'Michael Bower',
-    email: 'thebowershow@gmail.com',
-    avatar: MichaelBower,
-    bio: "Michael Bower is a veteran broadcaster, podcaster, and audiobook narrator with 30+ years behind the mic. He's covered 9/11, the Boston Marathon bombing, and Uvalde for outlets like NBC News Radio, ESPN, and WDFN Detroit. As an audiobook narrator, he's produced more than 150 titles on Audible and brings stories to life with clarity and authenticity. Today, he helps businesses, teams, and audiences understand how AI is reshaping communication and why authenticity has become the most radical—and essential—tool we have.",
-    twitter: 'thebowershow',
-    linkedIn: 'linkedin.com/in/thebowershow',
+    name: 'Roland Frohman III',
+    email: null,
+    avatar: RolandFrohman,
+    bio: 'Roland’s research explores the convergence of physical and digital interactions within connected product ecosystems, with particular focus on IoT devices and spatial computing interfaces. His work investigates how emerging technologies—including AR/VR/XR, voice interfaces, and AI-driven interactions—shape human-centered design across multiple touch points. Through his practice and teaching, he examines the evolution from traditional 2D interfaces to spatial computing environments, developing pedagogical approaches that prepare designers for increasingly complex, multi-modal experiences. His current research involves creating frameworks for seamless cross-platform experiences that bridge the gap between industrial design and digital interaction.',
+    twitter: null,
+    linkedIn: 'https://www.linkedin.com/in/rhfrohman3/',
     url: null,
-    organization: '',
-    position: '',
+    organization: 'College for Creative Studies',
+    position: 'Graduate Adjunct Professor',
     session: {
-      title:
-        'The Ethics of Voice & Storytelling: Who Gets Heard in the Age of AI',
+      title: 'The Wise One',
       abstract:
-        "In January 2024, a finance worker in Hong Kong authorized $25.5 million in transfers after a video call with their CFO and colleagues. The devastating truth came later: every person on that call was a deepfake. This wasn't just fraud—it was a direct assault on the trust infrastructure modern business runs on. Michael Bower argues that when voices can be cloned, authenticity itself becomes radical. With real-world examples and a practical 3-step framework, this talk shows developers and leaders how to defend trust in the age of AI.",
+        'The Wise One is an AI chatbot designed with Blender to help guide new visitors to the land of Diatopia.',
       description:
-        'AI can clone any voice in seconds—including yours. What happens when trust in voice collapses? From $25M deepfake scams to fake "kidnap" calls, discover why authenticity is now radical—and how developers and leaders can protect trust in the AI era.',
-      tags: [
-        'AI',
-        'ethics',
-        'voice',
-        'trust',
-        'security',
-        'storytelling',
-        'communication',
-        'leadership',
-      ],
+        'The Wise One is an AI chatbot designed with Blender to help guide new visitors to the land of Diatopia.',
+      tags: ['AI', 'voice', '3D Modeling', 'storytelling', 'communication'],
       track: 'Leadership',
       time: '15:00',
       room: 'MCC3',
@@ -471,7 +461,7 @@ export const SpeakersData = [
     avatar: AdonaiVera,
     bio: `I'm Adonaí Vera, a Machine Learning Engineer with VIII years of expertise. Specialized in computer vision models and machine learning algorithms using TensorFlow, Docker, OpenCV, and more.\n\nCareer journey: Software Developer ➡️AI Developer ➡️ AI Leader ➡️ CTO. My diverse roles have sharpened my skills in creating customer-focused AI products.\n\nProudly one of Google's top 10 TensorFlow certified Developers in Colombia. Author of “Curso Profesional de Redes neuronales con TensorFlow” & “Curso Profesional de computer vision con TensorFlow” at Platzi. Winner of Covid19 Hackathon & Innovate2019 with Ecopetrol Colombia. \n\nPassionate about contributing to open-source projects like FiftyOne, Keras, and Supervision. 🤖 Constantly learning and growing in the ever-evolving field of AI and Machine Learning.`,
     twitter: 'AdonaiVera19',
-    linkedIn: null,
+    linkedIn: 'https://www.linkedin.com/in/adonai-vera',
     url: 'https://www.adonaivera.com/',
     organization: 'Voxel51',
     position: 'Machine Learning and DevRel',
@@ -1095,7 +1085,7 @@ export const SpeakersData = [
       ],
       track: 'Workshops',
       time: '08:00',
-      room: '',
+      room: 'MCC Sound Board Conference Center',
     },
     isWTM: false,
     isGDE: false,
@@ -1230,7 +1220,7 @@ export const SpeakersData = [
     avatar: AdonaiVera,
     bio: `I'm Adonaí Vera, a Machine Learning Engineer with VIII years of expertise. Specialized in computer vision models and machine learning algorithms using TensorFlow, Docker, OpenCV, and more.\n\nCareer journey: Software Developer ➡️AI Developer ➡️ AI Leader ➡️ CTO. My diverse roles have sharpened my skills in creating customer-focused AI products.\n\nProudly one of Google's top 10 TensorFlow certified Developers in Colombia. Author of “Curso Profesional de Redes neuronales con TensorFlow” & “Curso Profesional de computer vision con TensorFlow” at Platzi. Winner of Covid19 Hackathon & Innovate2019 with Ecopetrol Colombia. \n\nPassionate about contributing to open-source projects like FiftyOne, Keras, and Supervision. 🤖 Constantly learning and growing in the ever-evolving field of AI and Machine Learning.`,
     twitter: 'AdonaiVera19',
-    linkedIn: null,
+    linkedIn: 'https://www.linkedin.com/in/adonai-vera',
     url: 'https://www.adonaivera.com/',
     organization: 'Voxel51',
     position: 'Machine Learning and DevRel',
@@ -1511,6 +1501,38 @@ export const SpeakersData = [
       tags: [],
       track: 'Hackathon',
       time: '13:00',
+      room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
+    },
+    isWTM: false,
+    isGDE: false,
+    mastodon: null,
+  },
+  {
+    id: 54,
+    name: 'William Bowen',
+    email: 'wbowen05@gmail.com',
+    avatar: WilliamBowen,
+    bio: `I am an IT specialist and fitness instructor with a passion for both technology and health. In my IT role, I manage service orders, telecommunication contracts, and iOS device support while auditing software for compliance. I have also taught multiple classes in computer programming and information assurance. My expertise extends to mentoring through the National Society of Black Engineers (NSBE) and the Cyber Patriot program, where I deliver talks and tutorials on technology and computers. As a fitness enthusiast, I have led boot camp classes that blend strength and cardio training, competed in powerlifting meets with UPA and USAPL, and participated in NPC physique competitions.`,
+    twitter: '',
+    linkedIn: 'https://www.linkedin.com/in/william-bowen-a7216610/',
+    url: '',
+    organization: '',
+    position: 'IT Specialist & Fitness Instructor',
+    session: {
+      title: 'Hackathon Morning Meditation & Yoga',
+      abstract: `Ignite your body and mind with our Fitness Yoga class — a dynamic blend of yoga, strength training, and cardio designed to build power, flexibility, and endurance. Move with intention, break a sweat, and leave feeling strong, centered, and fully recharged.`,
+      description: `This fitness yoga class blends traditional yoga poses with strength training and cardiovascular movements for a balanced, full-body workout. Participants will improve flexibility, build lean muscle, and boost endurance through flowing sequences, bodyweight exercises, and dynamic movement. The class is designed to enhance both physical strength and mindfulness, leaving you energized, focused, and refreshed.`,
+      tags: [
+        'Fitness',
+        'Yoga',
+        'Strength',
+        'Cardio',
+        'Mindfulness',
+        'Wellness',
+        'Health',
+      ],
+      track: 'Hackathon',
+      time: '08:00',
       room: 'STEM Innovation Learning Center (SILC) - 7th Floor',
     },
     isWTM: false,
