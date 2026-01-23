@@ -88,7 +88,7 @@ function Footer() {
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="col-span-1 md:col-span-3">
-              {/* Left column - 2/3 width */}
+              {/* Full width column */}
               <div>
                 <h3 className="mb-2 text-lg font-semibold uppercase tracking-wide text-gray-400">
                   Brought to you by:
@@ -96,7 +96,7 @@ function Footer() {
               </div>
             </div>
             <div className="flex items-center justify-center">
-              {/* Right column - 1/3 width */}
+              {/* Left column - 1/3 width */}
               <img
                 src={GdgDetroitLogo}
                 alt="GDG Detroit Logo"
@@ -104,7 +104,7 @@ function Footer() {
               />
             </div>
             <div className="flex items-center justify-center">
-              {/* middle column - 1/3 width */}
+              {/* Middle column - 1/3 width */}
               <img
                 src={CompassDetroit}
                 alt="Compass Detroit Logo"
@@ -113,7 +113,6 @@ function Footer() {
             </div>
             <div className="grid grid-cols-1 items-center">
               {/* Right column - 1/3 width */}
-
               <p className="prose text-pretty text-sm text-white">
                 The Compass Detroit and GDG Detroit teams are volunteers who are
                 passionate about helping the community learn and grow in the
