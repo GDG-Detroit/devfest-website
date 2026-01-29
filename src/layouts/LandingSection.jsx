@@ -15,7 +15,7 @@ function LandingSection() {
 
         <div className="flex w-full flex-col justify-between bg-pumpkin-200 text-black lg:w-1/2">
           <div className="flex grow flex-col items-center justify-center space-y-8 p-10">
-            <h2 className="text-4xl font-bold text-indigo-900 font-biorhyme">
+            <h2 className="text-4xl font-bold font-biorhyme text-indigo-900">
               February 28, 2026
             </h2>
 
