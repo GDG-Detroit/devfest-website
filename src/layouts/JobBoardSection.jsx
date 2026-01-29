@@ -12,7 +12,7 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
       className="flex flex-col justify-center bg-yellow-50 p-8 py-24 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="relative w-full pt-0">
-        <h2 className="w-full text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
+        <h2 className="w-full text-center font-biorhyme text-4xl text-black md:text-5xl lg:text-6xl">
           {year && !isCurrentYear ? `${year} ` : ''}Job Board
         </h2>
         <img

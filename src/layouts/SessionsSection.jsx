@@ -184,7 +184,7 @@ const SessionsSection = ({
             } transition-transform duration-100 ease-linear`}
           />
         </button>
-        <h2 className="text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
+        <h2 className="text-center font-biorhyme text-4xl text-black md:text-5xl lg:text-6xl">
           {year} Sessions
         </h2>
         <img

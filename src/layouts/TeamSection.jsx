@@ -64,7 +64,7 @@ const TeamSection = ({ teamData, year }) => {
       className=" bg-primary-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="flex w-full justify-center pt-0">
-        <h2 className="mb-4 w-full text-center font-russell text-4xl text-black md:mb-6 md:text-5xl lg:text-6xl">
+        <h2 className="mb-4 w-full text-center font-biorhyme text-4xl text-black md:mb-6 md:text-5xl lg:text-6xl">
           {year ? `${year} ` : ''}DevFest Team
         </h2>
         <img

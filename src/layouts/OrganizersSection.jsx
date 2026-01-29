@@ -9,7 +9,7 @@ function OrganizersSection() {
       className="flex flex-col justify-center bg-sky-100 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="relative flex w-full justify-between pt-0">
-        <h2 className="w-full text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
+        <h2 className="w-full text-center font-biorhyme text-4xl text-black md:text-5xl lg:text-6xl">
           Organizers
         </h2>
         <img

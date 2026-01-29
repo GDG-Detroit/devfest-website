@@ -37,7 +37,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
           } transition-transform duration-100 ease-linear`}
         />
       </button>
-      <h2 className="w-full text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
+      <h2 className="w-full text-center font-biorhyme text-4xl text-black md:text-5xl lg:text-6xl">
         {year} Speakers
       </h2>
       <img
