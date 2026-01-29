@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { FaBars, FaXmark } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
-import GDGDetroitLogo from './ui/GDGDetroitLogo'
+import GDGDetroitLogo from './ui/CompassDetroitLogo'
 import { sections, externalLinks } from '@/data/2025/navigation'
 
 function Navbar() {
@@ -285,7 +285,7 @@ function Navbar() {
       aria-label="Main navigation"
       className={`fixed left-0 top-0 z-10 w-screen overflow-hidden ${
         activeLink === 'landing'
-          ? 'bg-primary-400 text-sky-900'
+          ? 'bg-white text-sky-900'
           : 'bg-white text-gray-700 shadow-lg dark:bg-gray-700 dark:text-gray-100'
       }`}
     >
