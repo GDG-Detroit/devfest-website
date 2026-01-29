@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { FaBars, FaXmark } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
-import GDGDetroitLogo from './ui/CompassDetroitLogo'
+import CompassDetroitLogo from './ui/CompassDetroitLogo'
 import { sections, externalLinks } from '@/data/2025/navigation'
 
 function Navbar() {
@@ -306,7 +306,7 @@ function Navbar() {
           onClick={handleHomeNavigation}
           aria-label="Go to home page"
         >
-          <GDGDetroitLogo
+          <CompassDetroitLogo
             textColor={
               isDarkMode && activeLink !== 'landing' ? '#FFFFFF' : '#0c4a6e'
             }
