@@ -27,7 +27,7 @@ const PartnersSection = ({
 
     return (
       <div className="mb-12">
-        <h3 className="mb-6 py-4 text-center font-russell text-5xl text-black">
+        <h3 className="mb-6 py-4 text-center font-biorhyme text-5xl text-black">
           {tierName}
         </h3>
         <div
@@ -82,7 +82,7 @@ const PartnersSection = ({
       className="flex flex-col justify-center bg-white p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="relative w-full pt-0">
-        <h2 className="w-full text-center font-russell text-4xl text-black md:text-5xl lg:text-6xl">
+        <h2 className="w-full text-center font-biorhyme text-4xl text-black md:text-5xl lg:text-6xl">
           {year && !isCurrentYear ? `${year} ` : ''}Partners
         </h2>
         <img

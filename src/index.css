@@ -39,6 +39,67 @@
   /* Example: .custom-button { ... } */
 }
 
+/* Yoda 404 Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+}
+
+@keyframes floatVariation {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+  66% {
+    transform: translateY(-14px) rotate(-1.5deg);
+  }
+}
+
+@keyframes floatVariation2 {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  20% {
+    transform: translateY(-6px) rotate(-1deg);
+  }
+  40% {
+    transform: translateY(-15px) rotate(0deg);
+  }
+  60% {
+    transform: translateY(-9px) rotate(1.5deg);
+  }
+  80% {
+    transform: translateY(-12px) rotate(-0.5deg);
+  }
+}
+
+.yoda-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.yoda-float-variation {
+  animation: floatVariation 5s ease-in-out infinite;
+}
+
+.yoda-float-variation2 {
+  animation: floatVariation2 6s ease-in-out infinite;
+}
+
 /* Reset any potential conflicting styles */
 * {
   box-sizing: border-box;
@@ -52,13 +113,9 @@ body {
 }
 
 :root {
-  font-family:
-    Open Sans,
-    Helvetica,
-    Arial,
-    sans-serif;
+  font-family: Montserrat, 'Open Sans', Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
 
   /* color: rgba(255, 255, 255, 0.87); */
   /* background-color: #242424; */
@@ -76,11 +133,6 @@ body {
   min-height: 100vh;
 }
 
-@font-face {
-  font-family: 'Russell';
-  src: url('./assets/fonts/RussellRg.otf');
-}
-
 /* Orbitron Variable Font */
 @font-face {
   font-family: 'Orbitron';
@@ -96,6 +148,24 @@ body {
   font-family: 'Asimovian';
   src: url('./assets/fonts/asimovian-regular-webfont.woff2') format('woff2');
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat Variable Font */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* BioRhyme Font */
+@font-face {
+  font-family: 'BioRhyme';
+  src: url('./assets/fonts/BioRhyme-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }

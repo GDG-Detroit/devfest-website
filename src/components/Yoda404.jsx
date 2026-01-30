@@ -5,18 +5,29 @@ import yodaHead from '@/assets/images/yodahead.webp'
 
 const Yoda404 = () => {
   const [randomQuote, setRandomQuote] = useState('')
+  const [animationClass, setAnimationClass] = useState('yoda-float')
 
   useEffect(() => {
     // Generate a random quote when component mounts
     const quote = yodaQuotes[Math.floor(Math.random() * yodaQuotes.length)]
     setRandomQuote(quote)
+
+    // Randomly select animation variation for more organic feel
+    const animations = [
+      'yoda-float',
+      'yoda-float-variation',
+      'yoda-float-variation2',
+    ]
+    const randomAnimation =
+      animations[Math.floor(Math.random() * animations.length)]
+    setAnimationClass(randomAnimation)
   }, [])
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-8 bg-gradient-to-br from-emerald-50 to-primary-100 p-8 text-center">
       {/* 404 Error Display */}
       <div className="mb-4">
-        <h1 className="font-russell text-8xl font-bold text-emerald-800">
+        <h1 className="font-biorhyme text-8xl font-bold text-emerald-800">
           404
         </h1>
         <h2 className="mt-2 text-2xl text-gray-800">Page Not Found</h2>
@@ -44,7 +55,7 @@ const Yoda404 = () => {
           <img
             src={yodaHead}
             alt="Decorative Yoda head for 404 page"
-            className="size-full object-contain"
+            className={`size-full object-contain ${animationClass}`}
             loading="eager"
             width="192"
             height="192"
@@ -84,7 +95,7 @@ const Yoda404 = () => {
         <p className="text-sm text-gray-800">
           The page you&apos;re looking for doesn&apos;t exist. Use the
           navigation above to find what you need, or return to our homepage to
-          explore Michigan DevFest 2025.
+          explore Compass Detroit 2026.
         </p>
       </div>
     </div>

@@ -1,6 +1,6 @@
-# Michigan DevFest Website
+# Compass Detroit Website
 
-The repository for the website of [Michigan DevFest](https://midevfest.com/). Built with Vite, React, and Tailwind CSS.
+The repository for the website of [Compass-Detroit](https://compass-detroit.com/). Built with Vite, React, and Tailwind CSS.
 
 ## Quick Start
 
@@ -26,8 +26,8 @@ These extensions work with the project's `.vscode/settings.json` to provide auto
 1. Clone and navigate to the repository:
 
 ```bash
-git clone https://github.com/GDG-Detroit/devfest-website.git
-cd devfest-website
+git clone https://github.com/Compass-Detroit/compass-website.git
+cd compass-website
 ```
 
 2. Install the project dependencies:
@@ -81,15 +81,15 @@ docker run -p 3000:3000 michigan-devfest-website
 
 ### Docker Commands
 
-| Command                                                                  | Description                                     |
-| ------------------------------------------------------------------------ | ----------------------------------------------- |
-| `docker build -t michigan-devfest-website .`                             | Build the Docker image                          |
-| `docker run -p 3000:3000 michigan-devfest-website`                       | Run the container on port 3000                  |
-| `docker run -d -p 3000:3000 --name devfest-app michigan-devfest-website` | Run container in detached mode with custom name |
-| `docker stop devfest-app`                                                | Stop the running container                      |
-| `docker rm devfest-app`                                                  | Remove the container                            |
-| `docker images`                                                          | List all Docker images                          |
-| `docker rmi michigan-devfest-website`                                    | Remove the Docker image                         |
+| Command                                                                 | Description                                     |
+| ----------------------------------------------------------------------- | ----------------------------------------------- |
+| `docker build -t compass-detroit-website .`                             | Build the Docker image                          |
+| `docker run -p 3000:3000 compass-detroit-website`                       | Run the container on port 3000                  |
+| `docker run -d -p 3000:3000 --name compass-app compass-detroit-website` | Run container in detached mode with custom name |
+| `docker stop compass-app`                                               | Stop the running container                      |
+| `docker rm compass-app`                                                 | Remove the container                            |
+| `docker images`                                                         | List all Docker images                          |
+| `docker rmi compass-detroit-website`                                    | Remove the Docker image                         |
 
 ### Environment Variables
 

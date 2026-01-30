@@ -18,7 +18,7 @@ const EventList = () => {
         <div className="flex flex-col items-center justify-center px-8 py-12 sm:px-10 sm:py-16 md:px-14 md:py-20 lg:px-16 lg:py-24">
           <h1
             id="main-heading"
-            className="mb-8 text-center font-russell text-4xl font-bold text-primary-800 md:text-5xl lg:text-6xl"
+            className="mb-8 text-center font-biorhyme text-4xl font-bold text-primary-800 md:text-5xl lg:text-6xl"
           >
             Michigan DevFest Past Events
           </h1>
@@ -49,7 +49,7 @@ const EventList = () => {
           <div className="w-full px-8 sm:px-10 md:px-14 lg:px-16">
             <h2
               id="events-heading"
-              className="mb-12 text-center font-russell text-3xl font-bold text-primary-800 md:text-4xl"
+              className="mb-12 text-center font-biorhyme text-3xl font-bold text-primary-800 md:text-4xl"
             >
               Explore Past Events
             </h2>

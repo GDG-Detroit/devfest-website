@@ -54,7 +54,7 @@ function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="flex flex-col bg-gray-100 text-black dark:bg-gray-800 dark:text-white"
+      className="flex flex-col bg-charcoal-100 text-black dark:bg-indigo-800 dark:text-white"
     >
       <div className="mx-auto w-full max-w-7xl px-6 py-8 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:order-2">
@@ -84,7 +84,7 @@ function Footer() {
           © {new Date().getFullYear()} GDG Detroit. All rights reserved.
         </p>
       </div>
-      <div className="mx-auto w-full max-w-full border-t border-gray-300 bg-gray-900 px-6 pb-24 pt-8 lg:px-8 dark:border-gray-700">
+      <div className="mx-auto w-full max-w-full border-t border-gray-300 bg-indigo-950 px-6 pb-24 pt-8 lg:px-8 dark:border-gray-700">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="col-span-1 md:col-span-3">

@@ -1,12 +1,12 @@
 {
-  "name": "Michigan DevFest 2025",
-  "short_name": "DevFest MI",
-  "description": "Join Michigan's largest developer conference — DevFest 2025 in Detroit. Hackathon, talks, workshops, and networking across mobile, web, and AI.",
+  "name": "Compass Detroit",
+  "short_name": "Compass Detroit",
+  "description": "Compass Detroit is a community of developers, designers, and entrepreneurs who are passionate about building the future of technology.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#0d47a1",
+  "theme_color": "#1e1b4b",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

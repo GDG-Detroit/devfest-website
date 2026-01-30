@@ -25,7 +25,7 @@ const PreviousEvent = () => {
           <div className="flex min-h-[90vh] min-w-[100vw] flex-col items-center justify-center p-4 text-center sm:px-10 md:px-8 lg:px-8">
             <h1
               id="not-found-heading"
-              className="mb-4 font-russell text-4xl font-bold text-primary-950"
+              className="mb-4 font-biorhyme text-4xl font-bold text-primary-950"
             >
               Event Not Found
             </h1>
@@ -64,7 +64,7 @@ const PreviousEvent = () => {
         <div className="flex flex-col items-center justify-center px-8 py-12 sm:px-10 sm:py-16 md:px-14 md:py-20 lg:px-16 lg:py-24">
           <h1
             id="event-heading"
-            className="mb-8 text-center font-russell text-4xl font-bold text-primary-800 md:text-5xl lg:text-6xl"
+            className="mb-8 text-center font-biorhyme text-4xl font-bold text-primary-800 md:text-5xl lg:text-6xl"
           >
             Michigan DevFest {year}
           </h1>
