@@ -113,14 +113,9 @@ const PreviousEvent = () => {
           year={yearNumber}
           speakersData={speakersData}
           tracks={eventMetadata.tracks}
-          defaultExpanded
         />
 
-        <SpeakersSection
-          year={yearNumber}
-          speakersData={speakersData}
-          defaultExpanded
-        />
+        <SpeakersSection year={yearNumber} speakersData={speakersData} />
 
         {sponsorsData.length > 0 && (
           <SponsorsSection
