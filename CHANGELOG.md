@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Initial changelog
+- New pages: Connections, Media, Careers Hub
+- Media section and Connections page
+- Community and membership content on home
+- Compass logo integration (PR #4)
 
 ### Changed
 
@@ -19,11 +23,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated Montserrat to use variable font (weight 500 for body text)
 - Added full color ranges for charcoal, pumpkin, burnt, lime, and indigo in Tailwind config
 - Converted GDGDetroitLogo component from TSX to JSX with proper PropTypes
+- Navigation and copyright updates; navbar items reorganized
+- Home section and sub-sections restructured
+- Broader description area on home
+- Team section migrated to leadership with new tabs
+- Partners section refactored
+- Speakers section refactored
+- Setup for Compass org and next event; migrated content to 2026
+- Favicons updated
+- CONTRIBUTING.md updated (contribution and contact info)
 
 ### Fixed
 
 - Fixed git remote configuration (origin now points to Compass-Detroit/compass-website)
 - Fixed Montserrat font weight to use Medium (500) instead of Thin (100)
+- Fixed incorrect variable name usage
 
 ## [0.1.0] - 2026-01-28
 
