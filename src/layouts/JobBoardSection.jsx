@@ -22,8 +22,8 @@ const JobBoardSection = ({ year = new Date().getFullYear() }) => {
         />
       </div>
 
-      <div className="mx-auto mb-12 max-w-4xl">
-        <p className="mt-6 text-lg leading-8 text-gray-600">
+      <div className="mx-auto mb-12 ">
+        <p className="max-w-4xl mt-6 text-lg leading-8 text-gray-600">
           This job board is made possible by our generous sponsors, ranging from
           local Detroit organizations and regional companies to some of the
           world&apos;s best global tech companies. They voluntarily provide
