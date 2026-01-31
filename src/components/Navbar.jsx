@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { FaBars, FaXmark } from 'react-icons/fa6'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import CompassDetroitLogo from './ui/CompassDetroitLogo'
-import { sections, externalLinks } from '@/data/2025/navigation'
+import { sections, externalLinks } from '@/data/2026/navigation'
 
 function Navbar() {
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
   const [activeLink, setActiveLink] = useState('landing')
   const [isNavVisible, setIsNavVisible] = useState(false)
   const [isManualNavigation, setIsManualNavigation] = useState(false)
@@ -214,13 +216,17 @@ function Navbar() {
       {sections.map((section) => (
         <li key={section.id} role="none" className="text-center">
           <Link
-            to={`#${section.id}`}
-            onClick={(event) => handleNavigation(event, section.id)}
+            to={isHomePage ? `#${section.id}` : `/#${section.id}`}
+            onClick={
+              isHomePage
+                ? (event) => handleNavigation(event, section.id)
+                : undefined
+            }
             role="menuitem"
             aria-current={activeLink === section.id ? 'page' : undefined}
             className={`${
               section.id === 'landing' ? 'hidden' : ''
-            } relative px-2 py-6 pb-2 ${
+            } relative px-2 py-4 pb-2 ${
               activeLink === section.id
                 ? 'after:w-full after:opacity-100'
                 : 'after:w-0 after:opacity-0'
@@ -253,8 +259,12 @@ function Navbar() {
           className={`${section.id === 'landing' ? 'hidden' : ''}`}
         >
           <Link
-            to={`#${section.id}`}
-            onClick={(event) => handleNavigation(event, section.id)}
+            to={isHomePage ? `#${section.id}` : `/#${section.id}`}
+            onClick={
+              isHomePage
+                ? (event) => handleNavigation(event, section.id)
+                : undefined
+            }
             aria-current={activeLink === section.id ? 'page' : undefined}
             className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 dark:hover:bg-primary-400 ${
               activeLink === section.id
