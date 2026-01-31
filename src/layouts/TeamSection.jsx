@@ -60,12 +60,12 @@ const TeamSection = ({ teamData, year }) => {
 
   return (
     <section
-      id="devteam"
+      id="leadership"
       className=" bg-primary-50 p-8 sm:px-10 md:px-14 lg:px-16"
     >
       <div className="flex w-full justify-center pt-0">
         <h2 className="mb-4 w-full text-center font-biorhyme text-4xl text-black md:mb-6 md:text-5xl lg:text-6xl">
-          {year ? `${year} ` : ''}DevFest Team
+          {year ? `${year} ` : ''}Leadership Team
         </h2>
         <img
           src={DevLogo}
@@ -77,12 +77,12 @@ const TeamSection = ({ teamData, year }) => {
       </div>
 
       <div className="mx-auto flex max-w-full justify-center lg:mx-0">
-        <p className="prose mt-6 max-w-2xl text-left text-lg/8 text-gray-600 [text-wrap:pretty]">
+        <p className="prose mt-6 max-w-4xl text-left text-lg/8 text-gray-600 [text-wrap:pretty]">
           Our team of {teamCount} includes GDG organizers, session facilitators,
           and web developers — a mix of university students and industry
           professionals from companies like IBM, Little Caesars, and tech
           entrepreneurs with deep expertise in the tech industry. Together, we
-          are bringing <strong>DevFest Michigan</strong> to life.
+          are bringing <strong>Compass Detroit, Michigan</strong> to life.
         </p>
       </div>
 
