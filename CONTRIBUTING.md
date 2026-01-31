@@ -1,6 +1,6 @@
-# Contributing to DevFest Detroit Website
+# Contributing to Compass Detroit Website
 
-Thank you for your interest in contributing to the DevFest Detroit website! This document provides guidelines and information for contributors.
+Thank you for your interest in contributing to the Compass Detroit website! This document provides guidelines and information for contributors.
 
 ## Getting Started
 
@@ -17,7 +17,7 @@ Thank you for your interest in contributing to the DevFest Detroit website! This
 
    ```bash
    git clone https://github.com/YOUR_USERNAME/compass-website.git
-   cd devfest-website
+   cd compass-website
    ```
 
 3. **Install dependencies**:
@@ -33,6 +33,26 @@ Thank you for your interest in contributing to the DevFest Detroit website! This
    ```
 
 5. **Open your browser** and navigate to `http://localhost:5173`
+
+### GitHub Desktop: Push/PR goes to wrong org or repo
+
+If **Push** or **Create Pull Request** in GitHub Desktop opens or targets a different organization or repository (e.g. GDG Detroit or devfest-website):
+
+1. **Re-add the repo** so GitHub Desktop picks up the correct remote:
+
+   - In GitHub Desktop: **File → Remove repository** (removes it from the list only; files stay on disk).
+   - **File → Add Local Repository** and choose this project folder (`compass-website`).
+   - GitHub Desktop will use the existing Git remotes; pushes and "Create Pull Request" should now target **Compass-Detroit/compass-website**.
+
+2. **Confirm remotes in Terminal** (optional):
+   ```bash
+   git remote -v
+   ```
+   You should see `origin` (and optionally `upstream`) pointing to `https://github.com/Compass-Detroit/compass-website.git`. If not:
+   ```bash
+   git remote set-url origin https://github.com/Compass-Detroit/compass-website.git
+   ```
+   Then remove and re-add the repo in GitHub Desktop as in step 1.
 
 ## Code Quality Standards
 
