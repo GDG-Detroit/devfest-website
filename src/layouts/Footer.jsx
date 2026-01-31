@@ -1,9 +1,12 @@
-import { Link } from 'react-router-dom'
-import { sections, externalLinks } from '../data/2025/navigation'
+import { Link, useLocation } from 'react-router-dom'
+import { sections, externalLinks } from '@/data/2026/navigation'
 import GdgDetroitLogo from '@/assets/images/gdg-detroit-logo-footer.svg'
 import CompassDetroit from '@/assets/images/sponsors/Compass_Detroit_logo.webp'
 
 function Footer() {
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
+
   // Helper function to get navbar height for scroll offset
   const getNavbarHeight = () => {
     const navbar = document.querySelector('nav')
@@ -63,8 +66,12 @@ function Footer() {
             .map((section) => (
               <Link
                 key={section.id}
-                to={`#${section.id}`}
-                onClick={(event) => handleNavigation(event, section.id)}
+                to={isHomePage ? `#${section.id}` : `/#${section.id}`}
+                onClick={
+                  isHomePage
+                    ? (event) => handleNavigation(event, section.id)
+                    : undefined
+                }
                 className="text-sm text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
               >
                 {section.text}
@@ -81,7 +88,7 @@ function Footer() {
           ))}
         </div>
         <p className="mt-8 text-center text-sm text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">
-          © {new Date().getFullYear()} GDG Detroit. All rights reserved.
+          © {new Date().getFullYear()} Compass Detroit. All rights reserved.
         </p>
       </div>
       <div className="mx-auto w-full max-w-full border-t border-gray-300 bg-indigo-950 px-6 pb-24 pt-8 lg:px-8 dark:border-gray-700">
