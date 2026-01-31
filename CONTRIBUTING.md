@@ -16,7 +16,7 @@ Thank you for your interest in contributing to the DevFest Detroit website! This
 2. **Clone your fork** locally:
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/devfest-website.git
+   git clone https://github.com/YOUR_USERNAME/compass-website.git
    cd devfest-website
    ```
 

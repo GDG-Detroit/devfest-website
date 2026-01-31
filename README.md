@@ -262,7 +262,7 @@ The built files will be in the `dist/` directory, ready for deployment.
 
 ### Issues
 
-This project uses GitHub Issues & GitHub Projects in the GDG Detroit organization for tracking development. Please create an issue if you encounter any problems or have suggestions for improvements.
+This project uses GitHub Issues & GitHub Projects in the [Compass-Detroit](https://github.com/Compass-Detroit/compass-website) repository for tracking development. Please create an issue if you encounter any problems or have suggestions for improvements.
 
 <!-- TODO: Create an issue template -->
 
