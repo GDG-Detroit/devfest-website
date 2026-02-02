@@ -29,6 +29,115 @@ function Navbar() {
 
   const navRef = useRef(null)
   const mobileButtonRef = useRef(null)
+  const pathwaysContainerRef = useRef(null)
+  const pathwaysTriggerRef = useRef(null)
+  const pathwaysMenuRef = useRef(null)
+
+  // Open Pathways menu and focus first item (for keyboard)
+  const openPathwaysAndFocusFirst = () => {
+    setIsPathwaysOpen(true)
+    requestAnimationFrame(() => {
+      const firstItem = pathwaysMenuRef.current?.querySelector(
+        'a[role="menuitem"]'
+      )
+      firstItem?.focus()
+    })
+  }
+
+  // Open Pathways menu and focus last item (for keyboard Arrow Up)
+  const openPathwaysAndFocusLast = () => {
+    setIsPathwaysOpen(true)
+    requestAnimationFrame(() => {
+      const items = pathwaysMenuRef.current?.querySelectorAll(
+        'a[role="menuitem"]'
+      )
+      items?.[items.length - 1]?.focus()
+    })
+  }
+
+  // Close Pathways and return focus to trigger
+  const closePathwaysAndFocusTrigger = () => {
+    setIsPathwaysOpen(false)
+    pathwaysTriggerRef.current?.focus()
+  }
+
+  // Close Pathways when focus leaves the dropdown container (keyboard tabbing out)
+  const handlePathwaysBlur = () => {
+    // Use requestAnimationFrame so we check activeElement after focus has moved
+    requestAnimationFrame(() => {
+      if (
+        pathwaysContainerRef.current &&
+        !pathwaysContainerRef.current.contains(document.activeElement)
+      ) {
+        setIsPathwaysOpen(false)
+      }
+    })
+  }
+
+  // Keyboard: Pathways button keydown (Enter, Space, ArrowDown, ArrowUp, Escape)
+  const handlePathwaysTriggerKeyDown = (e) => {
+    if (e.key === 'Escape') {
+      if (isPathwaysOpen) {
+        e.preventDefault()
+        closePathwaysAndFocusTrigger()
+      }
+      return
+    }
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault()
+      if (isPathwaysOpen) {
+        const items = pathwaysMenuRef.current?.querySelectorAll(
+          'a[role="menuitem"]'
+        )
+        if (items?.length) {
+          const currentIndex = Array.from(items).indexOf(
+            document.activeElement
+          )
+          if (currentIndex === -1) {
+            // Focus on button; move to first or last item
+            if (e.key === 'ArrowDown') {
+              items[0]?.focus()
+            } else {
+              items[items.length - 1]?.focus()
+            }
+          } else if (e.key === 'ArrowDown') {
+            items[Math.min(currentIndex + 1, items.length - 1)]?.focus()
+          } else {
+            items[Math.max(currentIndex - 1, 0)]?.focus()
+          }
+        }
+      } else {
+        if (e.key === 'ArrowDown') {
+          openPathwaysAndFocusFirst()
+        } else {
+          openPathwaysAndFocusLast()
+        }
+      }
+      return
+    }
+    // Enter and Space trigger click (toggle) - no preventDefault so button works normally
+  }
+
+  // Keyboard: Pathways menu item keydown (ArrowDown, ArrowUp, Escape)
+  const handlePathwaysMenuItemKeyDown = (e, index) => {
+    if (e.key === 'Escape') {
+      e.preventDefault()
+      closePathwaysAndFocusTrigger()
+      return
+    }
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault()
+      const items = pathwaysMenuRef.current?.querySelectorAll(
+        'a[role="menuitem"]'
+      )
+      if (!items?.length) return
+      const nextIndex =
+        e.key === 'ArrowDown'
+          ? Math.min(index + 1, items.length - 1)
+          : Math.max(index - 1, 0)
+      items[nextIndex]?.focus()
+    }
+  }
 
   // Helper function to get accurate navbar height
   const getNavbarHeight = () => {
@@ -225,7 +334,7 @@ function Navbar() {
   const desktopNavList = (
     <ul
       role="menubar"
-      className="flex flex-row flex-wrap z-50 items-baseline justify-end gap-x-6 px-4 py-2"
+      className="flex flex-row flex-nowrap z-50 items-baseline justify-end gap-x-6 px-4 py-2"
     >
       {sections.map((section) => (
         <li key={section.id} role="none" className="text-center">
@@ -250,54 +359,64 @@ function Navbar() {
           </Link>
         </li>
       ))}
-      <li
-        role="none"
-        className="relative text-center"
-        onMouseEnter={() => setIsPathwaysOpen(true)}
-        onMouseLeave={() => setIsPathwaysOpen(false)}
-      >
-        <button
-          type="button"
-          role="menuitem"
-          aria-expanded={isPathwaysOpen}
-          aria-haspopup="true"
-          aria-controls="pathways-menu"
-          id="pathways-trigger"
-          className="relative inline-flex items-baseline gap-1 px-2 py-4 pb-2 after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:opacity-100"
-          onClick={(e) => {
-            e.preventDefault()
-            setIsPathwaysOpen((prev) => !prev)
+      <li role="none" className="relative text-center">
+        <div
+          ref={pathwaysContainerRef}
+          className="relative"
+          onBlur={handlePathwaysBlur}
+          onMouseEnter={() => setIsPathwaysOpen(true)}
+          onMouseLeave={() => {
+            if (
+              !pathwaysContainerRef.current?.contains(document.activeElement)
+            ) {
+              setIsPathwaysOpen(false)
+            }
           }}
         >
-          {pathways.text}
-          <FaChevronDown
-            className={`size-3.5 shrink-0 transition-transform duration-200 ${
-              isPathwaysOpen ? 'rotate-180' : ''
+          <button
+            ref={pathwaysTriggerRef}
+            type="button"
+            role="menuitem"
+            aria-expanded={isPathwaysOpen}
+            aria-haspopup="menu"
+            aria-controls="pathways-menu"
+            id="pathways-trigger"
+            className="relative inline-flex items-baseline gap-1 px-2 py-4 pb-2 after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:opacity-100"
+            onClick={() => setIsPathwaysOpen((prev) => !prev)}
+            onKeyDown={handlePathwaysTriggerKeyDown}
+          >
+            {pathways.text}
+            <FaChevronDown
+              className={`size-3.5 shrink-0 transition-transform duration-200 ${
+                isPathwaysOpen ? 'rotate-180' : ''
+              }`}
+              aria-hidden
+            />
+          </button>
+          <ul
+            ref={pathwaysMenuRef}
+            id="pathways-menu"
+            role="menu"
+            aria-labelledby="pathways-trigger"
+            className={`absolute right-0 top-full z-40 -mt-0.5 min-w-40 rounded-md border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-600 dark:bg-gray-700 ${
+              isPathwaysOpen ? 'block' : 'hidden'
             }`}
-            aria-hidden
-          />
-        </button>
-        <ul
-          id="pathways-menu"
-          role="menu"
-          aria-labelledby="pathways-trigger"
-          className={`absolute right-0 top-full z-40 -mt-0.5 min-w-40 rounded-md border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-600 dark:bg-gray-700 ${
-            isPathwaysOpen ? 'block' : 'hidden'
-          }`}
-        >
-          {pathways.children.map((link) => (
-            <li key={link.to} role="none">
-              <Link
-                to={link.to}
-                role="menuitem"
-                className="relative block px-4 py-2 text-left text-gray-700 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:bg-gray-100 hover:after:w-full hover:after:opacity-100 dark:text-gray-100 dark:hover:bg-gray-600"
-                onClick={() => setIsPathwaysOpen(false)}
-              >
-                {link.text}
-              </Link>
-            </li>
-          ))}
-        </ul>
+          >
+            {pathways.children.map((link, index) => (
+              <li key={link.to} role="none">
+                <Link
+                  to={link.to}
+                  role="menuitem"
+                  className="relative block px-4 py-2 text-left text-gray-700 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:bg-gray-100 hover:after:w-full hover:after:opacity-100 dark:text-gray-100 dark:hover:bg-gray-600"
+                  onClick={() => setIsPathwaysOpen(false)}
+                  onKeyDown={(e) => handlePathwaysMenuItemKeyDown(e, index)}
+                >
+                  {link.text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </li>
     </ul>
   )
