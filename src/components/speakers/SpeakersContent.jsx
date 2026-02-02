@@ -26,7 +26,7 @@ const SpeakersContent = ({ year, defaultExpanded }) => {
     <div className="flex w-full justify-between pt-0">
       <button
         aria-label={
-          isExpanded ? `Collapse ${year} Speakers` : `Expand ${year} Speakers`
+          isExpanded ? `Collapse ${year} Compass Detroit Speakers` : `Expand ${year} Compass Detroit Speakers`
         }
         onClick={toggleExpanded}
         className="flex cursor-pointer items-center text-black transition-colors hover:text-gray-600"

@@ -1,15 +1,27 @@
 import { useEffect, useRef, useState } from 'react'
-import { FaBars, FaXmark } from 'react-icons/fa6'
+import { FaBars, FaChevronDown, FaXmark } from 'react-icons/fa6'
 import { Link, useLocation } from 'react-router-dom'
 import CompassDetroitLogo from './ui/CompassDetroitLogo'
-import { sections, externalLinks } from '@/data/2026/navigation'
+import { sections, pathways } from '@/data/2026/navigation'
 
 function Navbar() {
   const location = useLocation()
   const isHomePage = location.pathname === '/'
   const [activeLink, setActiveLink] = useState('landing')
   const [isNavVisible, setIsNavVisible] = useState(false)
+  const [isPathwaysOpen, setIsPathwaysOpen] = useState(false)
+  const [isPathwaysExpandedMobile, setIsPathwaysExpandedMobile] = useState(false)
   const [isManualNavigation, setIsManualNavigation] = useState(false)
+
+  // Auto-expand Pathways on mobile when we're on a pathway page
+  const isPathwayPage = pathways.children.some(
+    (link) => link.to === location.pathname
+  )
+  useEffect(() => {
+    if (isPathwayPage) {
+      setIsPathwaysExpandedMobile(true)
+    }
+  }, [isPathwayPage])
   const [isNavigating, setIsNavigating] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(
     window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -50,6 +62,7 @@ function Navbar() {
   const closeMobileNav = () => {
     if (isNavVisible) {
       setIsNavVisible(false)
+      setIsPathwaysExpandedMobile(false)
     }
   }
 
@@ -185,6 +198,7 @@ function Navbar() {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
         setIsNavVisible(false)
+        setIsPathwaysOpen(false)
       }
     }
 
@@ -211,7 +225,7 @@ function Navbar() {
   const desktopNavList = (
     <ul
       role="menubar"
-      className="flex flex-row justify-end space-x-6 px-4 py-2"
+      className="flex flex-row flex-wrap z-50 items-baseline justify-end gap-x-6 px-4 py-2"
     >
       {sections.map((section) => (
         <li key={section.id} role="none" className="text-center">
@@ -236,17 +250,55 @@ function Navbar() {
           </Link>
         </li>
       ))}
-      {externalLinks.map((link) => (
-        <li key={link.to} role="none" className="text-center">
-          <Link
-            to={link.to}
-            role="menuitem"
-            className="relative px-2 py-6 pb-2 after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:opacity-100"
-          >
-            {link.text}
-          </Link>
-        </li>
-      ))}
+      <li
+        role="none"
+        className="relative text-center"
+        onMouseEnter={() => setIsPathwaysOpen(true)}
+        onMouseLeave={() => setIsPathwaysOpen(false)}
+      >
+        <button
+          type="button"
+          role="menuitem"
+          aria-expanded={isPathwaysOpen}
+          aria-haspopup="true"
+          aria-controls="pathways-menu"
+          id="pathways-trigger"
+          className="relative inline-flex items-baseline gap-1 px-2 py-4 pb-2 after:absolute after:bottom-0 after:left-0 after:h-1 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:opacity-100"
+          onClick={(e) => {
+            e.preventDefault()
+            setIsPathwaysOpen((prev) => !prev)
+          }}
+        >
+          {pathways.text}
+          <FaChevronDown
+            className={`size-3.5 shrink-0 transition-transform duration-200 ${
+              isPathwaysOpen ? 'rotate-180' : ''
+            }`}
+            aria-hidden
+          />
+        </button>
+        <ul
+          id="pathways-menu"
+          role="menu"
+          aria-labelledby="pathways-trigger"
+          className={`absolute right-0 top-full z-40 -mt-0.5 min-w-40 rounded-md border border-gray-200 bg-white py-1 shadow-lg dark:border-gray-600 dark:bg-gray-700 ${
+            isPathwaysOpen ? 'block' : 'hidden'
+          }`}
+        >
+          {pathways.children.map((link) => (
+            <li key={link.to} role="none">
+              <Link
+                to={link.to}
+                role="menuitem"
+                className="relative block px-4 py-2 text-left text-gray-700 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary-400 after:opacity-0 after:transition-all after:duration-300 after:ease-in-out hover:bg-gray-100 hover:after:w-full hover:after:opacity-100 dark:text-gray-100 dark:hover:bg-gray-600"
+                onClick={() => setIsPathwaysOpen(false)}
+              >
+                {link.text}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </li>
     </ul>
   )
 
@@ -276,16 +328,51 @@ function Navbar() {
           </Link>
         </li>
       ))}
-      {externalLinks.map((link) => (
-        <li key={link.to}>
-          <Link
-            to={link.to}
-            className="block rounded-lg px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-primary-400 dark:hover:text-gray-900"
-          >
-            {link.text}
-          </Link>
-        </li>
-      ))}
+      <li>
+        <button
+          type="button"
+          aria-expanded={isPathwaysExpandedMobile}
+          aria-controls="pathways-mobile-menu"
+          className="flex w-full items-center justify-center gap-2 rounded-lg px-4 py-3 text-center text-gray-700 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-primary-400 dark:hover:text-gray-900"
+          onClick={() =>
+            setIsPathwaysExpandedMobile((prev) => !prev)
+          }
+        >
+          {pathways.text}
+          <FaChevronDown
+            className={`size-3.5 shrink-0 transition-transform duration-200 ${
+              isPathwaysExpandedMobile ? 'rotate-180' : ''
+            }`}
+            aria-hidden
+          />
+        </button>
+        <ul
+          id="pathways-mobile-menu"
+          className={`space-y-1 overflow-hidden pl-4 ${
+            isPathwaysExpandedMobile ? 'mt-2' : 'hidden'
+          }`}
+        >
+          {pathways.children.map((link) => {
+            const isActivePathway = location.pathname === link.to
+            return (
+              <li key={link.to}>
+                <Link
+                  to={link.to}
+                  aria-current={isActivePathway ? 'page' : undefined}
+                  className={`block rounded-lg px-4 py-3 text-center transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-primary-400 dark:hover:text-gray-900 ${
+                    isActivePathway
+                      ? 'bg-primary-100 font-semibold text-primary-700'
+                      : 'text-gray-700'
+                  }`}
+                  onClick={closeMobileNav}
+                >
+                  {link.text}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </li>
     </ul>
   )
 
@@ -293,7 +380,7 @@ function Navbar() {
     <nav
       ref={navRef}
       aria-label="Main navigation"
-      className={`fixed left-0 top-0 z-10 w-screen overflow-hidden ${
+      className={`fixed left-0 top-0 z-30 w-screen ${
         activeLink === 'landing'
           ? 'bg-white text-sky-900'
           : 'bg-white text-gray-700 shadow-lg dark:bg-gray-700 dark:text-gray-100'
@@ -307,7 +394,7 @@ function Navbar() {
           } section`}
       </div>
       <div
-        className="grid w-full min-w-0 max-w-full grid-cols-[1fr_auto] items-center gap-2 overflow-hidden p-2 sm:p-4"
+        className="grid w-full min-w-0 max-w-full grid-cols-[1fr_auto] items-center gap-2 p-2 sm:p-4"
         style={{ width: '100%', maxWidth: '100%' }}
       >
         <Link

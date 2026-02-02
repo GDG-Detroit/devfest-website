@@ -9,8 +9,15 @@ export const sections = [
   { id: 'leadership', text: 'Leadership' },
 ]
 
-export const externalLinks = [
-  { to: '/careers-hub', text: 'Careers Hub' },
-  { to: '/connections', text: 'Connections' },
-  { to: '/media', text: 'Media' },
-]
+// Pathways dropdown: careers-hub, connections, media (used in Navbar)
+export const pathways = {
+  text: 'Pathways',
+  children: [
+    { to: '/careers-hub', text: 'Careers Hub' },
+    { to: '/connections', text: 'Connections' },
+    { to: '/media', text: 'Media' },
+  ],
+}
+
+// Flat list of pathway links (used in Footer)
+export const externalLinks = pathways.children

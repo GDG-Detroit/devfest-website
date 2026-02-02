@@ -4,7 +4,7 @@ import { FaTicket } from 'react-icons/fa6'
 
 function LandingSection() {
   return (
-    <section id="landing" className="mt-16 bg-indigo-950">
+    <section id="landing" className="mt-16 z-0 bg-indigo-950">
       <div className="mx-auto flex max-w-[1554px] flex-wrap">
         <div className="mx-auto mt-4 flex w-full items-center justify-center p-12 lg:mt-0 lg:w-1/2">
           <EventLogoSvg
