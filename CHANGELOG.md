@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+## [0.1.2] - 2026-01-30
+
+### Added
+
+- Pathways dropdown in navbar: Careers Hub, Connections, and Media grouped under a single “Pathways” item with caret
+- Golden (primary) underline on hover for Pathways subnav items (desktop)
+- Mobile: active pathway page highlighted with yellow (primary) background; Pathways section auto-expands when on a pathway page
+
+### Changed
+
+- Navbar z-index raised (z-30) so it stays in front of LandingSection and other content
+- Removed overflow-hidden from nav and inner grid so Pathways dropdown is no longer clipped
+- Pathways trigger aligned with other nav items (items-baseline, inline-flex) so “Pathways” sits on the same line
+- Pathways dropdown panel nudged up slightly (-mt-0.5) for cleaner alignment
+
 ## [0.1.1] - 2026-01-30
 
 ### Added
@@ -47,5 +64,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed Montserrat font weight to use Medium (500) instead of Thin (100)
 - Fixed incorrect variable name usage
 
-[Unreleased]: https://github.com/Compass-Detroit/compass-website/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/Compass-Detroit/compass-website/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/Compass-Detroit/compass-website/releases/tag/v0.1.2
+[0.1.1]: https://github.com/Compass-Detroit/compass-website/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/Compass-Detroit/compass-website/releases/tag/v0.1.0
