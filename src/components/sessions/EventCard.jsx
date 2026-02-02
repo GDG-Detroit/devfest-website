@@ -5,49 +5,49 @@ const trackColors = {
   'AI Foundations': {
     bg: 'bg-purple-100',
     border: 'border-purple-400',
-    badge: 'bg-purple-500',
+    badge: 'bg-purple-700',
     text: 'text-purple-700',
   },
   'Build with AI': {
     bg: 'bg-blue-100',
     border: 'border-blue-400',
-    badge: 'bg-blue-500',
+    badge: 'bg-blue-700',
     text: 'text-blue-700',
   },
   Innovation: {
     bg: 'bg-emerald-100',
     border: 'border-emerald-400',
-    badge: 'bg-emerald-500',
+    badge: 'bg-emerald-700',
     text: 'text-emerald-700',
   },
   Leadership: {
     bg: 'bg-amber-100',
     border: 'border-amber-400',
-    badge: 'bg-amber-500',
+    badge: 'bg-amber-700',
     text: 'text-amber-700',
   },
   'Level Up': {
     bg: 'bg-rose-100',
     border: 'border-rose-400',
-    badge: 'bg-rose-500',
+    badge: 'bg-rose-700',
     text: 'text-rose-700',
   },
   Career: {
     bg: 'bg-cyan-100',
     border: 'border-cyan-400',
-    badge: 'bg-cyan-500',
+    badge: 'bg-cyan-700',
     text: 'text-cyan-700',
   },
   Session: {
     bg: 'bg-gray-100',
     border: 'border-gray-400',
-    badge: 'bg-gray-500',
+    badge: 'bg-gray-700',
     text: 'text-gray-700',
   },
   default: {
     bg: 'bg-white',
     border: 'border-gray-200',
-    badge: 'bg-primary-500',
+    badge: 'bg-primary-700',
     text: 'text-gray-700',
   },
 }
@@ -93,7 +93,7 @@ const EventCard = ({
       >
         {/* Track badge */}
         <span
-          className={`mb-2 inline-flex w-fit items-center rounded-full ${colors.badge} px-3 py-1 text-xs font-semibold text-white`}
+          className={`mb-2 inline-flex w-fit items-center rounded-full ${colors.badge} px-3 py-1 text-xs font-extrabold text-white`}
         >
           {track}
         </span>
