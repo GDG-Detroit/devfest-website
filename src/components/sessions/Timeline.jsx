@@ -54,8 +54,8 @@ const Timeline = ({ schedule, compact = false }) => {
                   alignRight={!compact && timeIndex % 2 !== 0}
                   compact={compact}
                 />
-              ) : (
-                // Multiple events for a single time slot
+              ) : timeSlot?.events.length === 2 ? (
+                // Two events - show side by side on desktop
                 <div
                   className={`flex flex-col gap-4 ${
                     !compact && 'md:flex-row md:justify-between md:gap-8'
@@ -73,6 +73,28 @@ const Timeline = ({ schedule, compact = false }) => {
                     alignRight={!compact}
                     compact={compact}
                   />
+                </div>
+              ) : (
+                // Multiple events (3+) - centered full-width grid with track badges
+                <div className={compact ? 'flex flex-col gap-3' : 'pt-20'}>
+                  <div
+                    className={`${
+                      compact
+                        ? 'flex flex-col gap-3'
+                        : 'mx-auto grid w-full max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+                    }`}
+                  >
+                    {timeSlot?.events.map((event, eventIndex) => (
+                      <EventCard
+                        key={eventIndex}
+                        title={event?.title}
+                        description={event?.description}
+                        alignRight={false}
+                        compact={compact}
+                        gridMode={!compact}
+                      />
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
