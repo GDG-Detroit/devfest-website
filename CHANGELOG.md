@@ -7,11 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.2] - 2026-01-30
+## [0.1.2] - 2026-02-01
 
 ### Added
 
-- Pathways dropdown in navbar: Careers Hub, Connections, and Media grouped under a single “Pathways” item with caret
+- Add new tab in navigation, "Pathways"
+- Careers Hub, Connections, and Media grouped under a single “Pathways” item with caret
 - Golden (primary) underline on hover for Pathways subnav items (desktop)
 - Mobile: active pathway page highlighted with yellow (primary) background; Pathways section auto-expands when on a pathway page
 
