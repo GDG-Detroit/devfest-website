@@ -9,83 +9,81 @@ import {
 } from 'react-icons/io5'
 import { FaInstagram, FaMastodon } from 'react-icons/fa6'
 
+import colors from 'tailwindcss/colors'
 import { SpeakerContext } from './SpeakerContext'
 
+// Convert Tailwind hex to rgba for gradients/patterns (Tailwind v3.4 default palette)
+const hexToRgba = (hex, alpha) => {
+  const r = parseInt(hex.slice(1, 3), 16)
+  const g = parseInt(hex.slice(3, 5), 16)
+  const b = parseInt(hex.slice(5, 7), 16)
+  return `rgba(${r},${g},${b},${alpha})`
+}
+
+// Track themes: Tailwind CSS 3.4 standard colors via name-shade (e.g. sky-400, violet-950)
 const TRACK_THEMES = {
   default: {
-    gradient: 'linear-gradient(135deg, #0f4c81 0%, #1d3557 48%, #0b132b 100%)',
-    pattern:
-      'radial-gradient(circle at 22% 18%, rgba(148,197,248,0.32) 0, rgba(148,197,248,0.08) 36%, transparent 62%), radial-gradient(circle at 78% 22%, rgba(59,130,246,0.28) 0, rgba(59,130,246,0.08) 35%, transparent 64%)',
-    fallbackColor: '#0b132b',
-    badgeBorder: 'rgba(147,197,253,0.55)',
-    badgeText: '#ffffff',
-    focusColor: '#60a5fa',
-    focusRingOffset: 'rgba(15, 23, 42, 0.6)',
+    gradient: `linear-gradient(135deg, ${colors.sky[900]} 0%, ${colors.sky[800]} 48%, ${colors.sky[950]} 100%)`,
+    pattern: `radial-gradient(circle at 22% 18%, ${hexToRgba(colors.sky[400], 0.32)} 0, ${hexToRgba(colors.sky[400], 0.08)} 36%, transparent 62%), radial-gradient(circle at 78% 22%, ${hexToRgba(colors.sky[500], 0.28)} 0, ${hexToRgba(colors.sky[500], 0.08)} 35%, transparent 64%)`,
+    fallbackColor: colors.sky[950],
+    badgeBorder: hexToRgba(colors.sky[300], 0.55),
+    badgeText: colors.white,
+    focusColor: colors.sky[700],
+    focusRingOffset: hexToRgba(colors.sky[950], 0.6),
   },
   'Build with AI': {
-    gradient: 'linear-gradient(135deg, #7c3aed 0%, #5b21b6 52%, #1e1b4b 100%)',
-    pattern:
-      'radial-gradient(circle at 24% 20%, rgba(192,132,252,0.38) 0, rgba(192,132,252,0.12) 35%, transparent 60%), radial-gradient(circle at 78% 18%, rgba(244,114,182,0.32) 0, rgba(244,114,182,0.1) 38%, transparent 65%)',
-    fallbackColor: '#1e1b4b',
-    badgeBorder: 'rgba(216,180,254,0.6)',
-    badgeText: '#ffffff',
-    focusColor: '#c084fc',
-    focusRingOffset: 'rgba(76, 29, 149, 0.65)',
+    gradient: `linear-gradient(135deg, ${colors.violet[600]} 0%, ${colors.violet[800]} 52%, ${colors.violet[950]} 100%)`,
+    pattern: `radial-gradient(circle at 24% 20%, ${hexToRgba(colors.violet[300], 0.38)} 0, ${hexToRgba(colors.violet[300], 0.12)} 35%, transparent 60%), radial-gradient(circle at 78% 18%, ${hexToRgba(colors.pink[400], 0.32)} 0, ${hexToRgba(colors.pink[400], 0.1)} 38%, transparent 65%)`,
+    fallbackColor: colors.violet[950],
+    badgeBorder: hexToRgba(colors.violet[300], 0.6),
+    badgeText: colors.white,
+    focusColor: colors.violet[700],
+    focusRingOffset: hexToRgba(colors.violet[900], 0.65),
   },
   Innovation: {
-    gradient:
-      'linear-gradient(135deg, #ffcb05 0%, #efb403 40%, #a46204 70%, #422006 100%)',
-    pattern:
-      'radial-gradient(circle at 26% 22%, rgba(254,240,138,0.52) 0, rgba(254,240,138,0.16) 34%, transparent 58%), radial-gradient(circle at 80% 20%, rgba(253,224,71,0.4) 0, rgba(253,224,71,0.12) 36%, transparent 64%)',
-    fallbackColor: '#422006',
-    badgeBorder: 'rgba(253,230,138,0.6)',
-    badgeText: '#ffffff',
-    focusColor: '#fcd34d',
-    focusRingOffset: 'rgba(161, 98, 4, 0.55)',
+    gradient: `linear-gradient(135deg, ${colors.amber[500]} 0%, ${colors.amber[600]} 40%, ${colors.amber[900]} 70%, ${colors.amber[950]} 100%)`,
+    pattern: `radial-gradient(circle at 26% 22%, ${hexToRgba(colors.amber[200], 0.52)} 0, ${hexToRgba(colors.amber[200], 0.16)} 34%, transparent 58%), radial-gradient(circle at 80% 20%, ${hexToRgba(colors.amber[300], 0.4)} 0, ${hexToRgba(colors.amber[300], 0.12)} 36%, transparent 64%)`,
+    fallbackColor: colors.amber[950],
+    badgeBorder: hexToRgba(colors.amber[200], 0.6),
+    badgeText: colors.white,
+    focusColor: colors.amber[700],
+    focusRingOffset: hexToRgba(colors.amber[800], 0.55),
   },
   'Tech+Design': {
-    gradient:
-      'linear-gradient(135deg, #fb7185 0%, #ec4899 46%, #9d174d 80%, #3b0764 100%)',
-    pattern:
-      'radial-gradient(circle at 24% 24%, rgba(248,113,113,0.42) 0, rgba(248,113,113,0.14) 32%, transparent 58%), radial-gradient(circle at 78% 16%, rgba(244,114,182,0.38) 0, rgba(244,114,182,0.14) 36%, transparent 64%)',
-    fallbackColor: '#3b0764',
-    badgeBorder: 'rgba(251,113,133,0.55)',
-    badgeText: '#ffffff',
-    focusColor: '#f472b6',
-    focusRingOffset: 'rgba(109, 40, 91, 0.55)',
+    gradient: `linear-gradient(135deg, ${colors.pink[500]} 0%, ${colors.pink[600]} 46%, ${colors.pink[800]} 80%, ${colors.pink[950]} 100%)`,
+    pattern: `radial-gradient(circle at 24% 24%, ${hexToRgba(colors.pink[300], 0.42)} 0, ${hexToRgba(colors.pink[300], 0.14)} 32%, transparent 58%), radial-gradient(circle at 78% 16%, ${hexToRgba(colors.pink[400], 0.38)} 0, ${hexToRgba(colors.pink[400], 0.14)} 36%, transparent 64%)`,
+    fallbackColor: colors.pink[950],
+    badgeBorder: hexToRgba(colors.pink[300], 0.55),
+    badgeText: colors.white,
+    focusColor: colors.pink[700],
+    focusRingOffset: hexToRgba(colors.pink[800], 0.55),
   },
   Workshops: {
-    gradient:
-      'linear-gradient(135deg, #f97316 0%, #ea580c 48%, #c2410c 78%, #431407 100%)',
-    pattern:
-      'radial-gradient(circle at 24% 22%, rgba(254,215,170,0.48) 0, rgba(254,215,170,0.16) 30%, transparent 58%), radial-gradient(circle at 78% 20%, rgba(249,115,22,0.36) 0, rgba(249,115,22,0.12) 34%, transparent 62%)',
-    fallbackColor: '#431407',
-    badgeBorder: 'rgba(254,215,170,0.58)',
-    badgeText: '#ffffff',
-    focusColor: '#fb923c',
-    focusRingOffset: 'rgba(124, 45, 18, 0.6)',
+    gradient: `linear-gradient(135deg, ${colors.orange[500]} 0%, ${colors.orange[600]} 48%, ${colors.orange[700]} 78%, ${colors.orange[950]} 100%)`,
+    pattern: `radial-gradient(circle at 24% 22%, ${hexToRgba(colors.orange[300], 0.48)} 0, ${hexToRgba(colors.orange[300], 0.16)} 30%, transparent 58%), radial-gradient(circle at 78% 20%, ${hexToRgba(colors.orange[400], 0.36)} 0, ${hexToRgba(colors.orange[400], 0.12)} 34%, transparent 62%)`,
+    fallbackColor: colors.orange[950],
+    badgeBorder: hexToRgba(colors.orange[300], 0.58),
+    badgeText: colors.white,
+    focusColor: colors.orange[700],
+    focusRingOffset: hexToRgba(colors.orange[900], 0.6),
   },
   'Level Up': {
-    gradient:
-      'linear-gradient(135deg, #22c55e 0%, #16a34a 48%, #15803d 74%, #022c22 100%)',
-    pattern:
-      'radial-gradient(circle at 18% 20%, rgba(74,222,128,0.42) 0, rgba(74,222,128,0.14) 33%, transparent 58%), radial-gradient(circle at 80% 24%, rgba(134,239,172,0.36) 0, rgba(134,239,172,0.12) 35%, transparent 62%)',
-    fallbackColor: '#022c22',
-    badgeBorder: 'rgba(187,247,208,0.5)',
-    badgeText: '#ffffff',
-    focusColor: '#34d399',
-    focusRingOffset: 'rgba(15, 58, 34, 0.6)',
+    gradient: `linear-gradient(135deg, ${colors.green[500]} 0%, ${colors.green[600]} 48%, ${colors.green[700]} 74%, ${colors.green[950]} 100%)`,
+    pattern: `radial-gradient(circle at 18% 20%, ${hexToRgba(colors.green[400], 0.42)} 0, ${hexToRgba(colors.green[400], 0.14)} 33%, transparent 58%), radial-gradient(circle at 80% 24%, ${hexToRgba(colors.green[300], 0.36)} 0, ${hexToRgba(colors.green[300], 0.12)} 35%, transparent 62%)`,
+    fallbackColor: colors.green[950],
+    badgeBorder: hexToRgba(colors.green[200], 0.5),
+    badgeText: colors.white,
+    focusColor: colors.green[700],
+    focusRingOffset: hexToRgba(colors.green[950], 0.6),
   },
   Leadership: {
-    gradient:
-      'linear-gradient(135deg, #38bdf8 0%, #0ea5e9 45%, #0369a1 78%, #082f49 100%)',
-    pattern:
-      'radial-gradient(circle at 22% 20%, rgba(125,211,252,0.46) 0, rgba(125,211,252,0.14) 32%, transparent 58%), radial-gradient(circle at 80% 22%, rgba(56,189,248,0.34) 0, rgba(56,189,248,0.12) 36%, transparent 64%)',
-    fallbackColor: '#082f49',
-    badgeBorder: 'rgba(191,219,254,0.55)',
-    badgeText: '#ffffff',
-    focusColor: '#38bdf8',
-    focusRingOffset: 'rgba(8, 47, 73, 0.6)',
+    gradient: `linear-gradient(135deg, ${colors.sky[400]} 0%, ${colors.sky[500]} 45%, ${colors.sky[700]} 78%, ${colors.sky[950]} 100%)`,
+    pattern: `radial-gradient(circle at 22% 20%, ${hexToRgba(colors.sky[300], 0.46)} 0, ${hexToRgba(colors.sky[300], 0.14)} 32%, transparent 58%), radial-gradient(circle at 80% 22%, ${hexToRgba(colors.sky[400], 0.34)} 0, ${hexToRgba(colors.sky[400], 0.12)} 36%, transparent 64%)`,
+    fallbackColor: colors.sky[950],
+    badgeBorder: hexToRgba(colors.sky[200], 0.55),
+    badgeText: colors.white,
+    focusColor: colors.sky[700],
+    focusRingOffset: hexToRgba(colors.sky[950], 0.6),
   },
 }
 
@@ -435,7 +433,7 @@ function SpeakerDetails({
                       onClick={() =>
                         setShowFullDescription(!showFullDescription)
                       }
-                      className="mt-3 text-sm font-medium text-sky-600 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2"
+                      className="mt-3 text-sm font-bold text-sky-700 transition-colors hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2"
                       style={{
                         ...interactiveFocusVars,
                       }}
@@ -454,22 +452,22 @@ function SpeakerDetails({
 
         <div className="mt-8 flex items-center justify-center space-x-6 text-sm text-gray-500">
           <div className="flex items-center space-x-2">
-            <kbd className="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600">
+            <kbd className="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-bold text-gray-800">
               ←
             </kbd>
-            <span>Previous</span>
+            <span className="text-gray-800">Previous</span>
           </div>
           <div className="flex items-center space-x-2">
-            <kbd className="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600">
+            <kbd className="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-bold text-gray-800">
               →
             </kbd>
-            <span>Next</span>
+            <span className="text-gray-800">Next</span>
           </div>
           <div className="flex items-center space-x-2">
-            <kbd className="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600">
+            <kbd className="inline-flex items-center rounded bg-gray-100 px-2 py-1 text-xs font-bold text-gray-800">
               Esc
             </kbd>
-            <span>Close</span>
+            <span className="text-gray-800">Close</span>
           </div>
         </div>
       </div>
