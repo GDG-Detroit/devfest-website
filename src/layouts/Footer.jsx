@@ -1,59 +1,11 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { sections, externalLinks } from '@/data/2026/navigation'
 import GdgDetroitLogo from '@/assets/images/gdg-detroit-logo-footer.svg'
 import CompassDetroit from '@/assets/images/sponsors/Compass_Detroit_logo.webp'
 
 function Footer() {
-  const location = useLocation()
-  const isHomePage = location.pathname === '/'
-
-  // Helper function to get navbar height for scroll offset
-  const getNavbarHeight = () => {
-    const navbar = document.querySelector('nav')
-    return navbar ? navbar.offsetHeight : 96
-  }
-
-  // Easing function for smooth scrolling (ease-in-out)
-  const easeInOutCubic = (t) => {
-    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
-  }
-
-  // Smooth scroll with easing
-  const smoothScrollTo = (targetPosition, duration = 800) => {
-    const startPosition = window.pageYOffset
-    const distance = targetPosition - startPosition
-    let startTime = null
-
-    const animation = (currentTime) => {
-      if (startTime === null) startTime = currentTime
-      const timeElapsed = currentTime - startTime
-      const progress = Math.min(timeElapsed / duration, 1)
-      const ease = easeInOutCubic(progress)
-
-      window.scrollTo(0, startPosition + distance * ease)
-
-      if (timeElapsed < duration) {
-        requestAnimationFrame(animation)
-      }
-    }
-
-    requestAnimationFrame(animation)
-  }
-
-  // Handle navigation to section anchors
-  const handleNavigation = (event, sectionId) => {
-    event.preventDefault()
-    const target = document.querySelector(`#${sectionId}`)
-
-    if (target) {
-      const navbarHeight = getNavbarHeight()
-      const targetRect = target.getBoundingClientRect()
-      const scrollPosition = targetRect.top + window.pageYOffset - navbarHeight
-
-      smoothScrollTo(scrollPosition)
-    }
-  }
-
+  // Section links always use /#section-id so that smooth scrolling is handled
+  // consistently by the Navbar's hash-based useEffect (from any page, including home).
   return (
     <footer
       role="contentinfo"
@@ -66,12 +18,7 @@ function Footer() {
             .map((section) => (
               <Link
                 key={section.id}
-                to={isHomePage ? `#${section.id}` : `/#${section.id}`}
-                onClick={
-                  isHomePage
-                    ? (event) => handleNavigation(event, section.id)
-                    : undefined
-                }
+                to={`/#${section.id}`}
                 className="text-sm text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
               >
                 {section.text}
