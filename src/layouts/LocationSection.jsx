@@ -16,7 +16,7 @@ function LocationSection() {
             </div>
             <h2
               id="location-heading"
-              className="text-lg font-biorhyme font-semibold md:text-xl lg:text-2xl"
+              className="font-biorhyme text-lg font-semibold md:text-xl lg:text-2xl"
             >
               When & Where
             </h2>
@@ -62,16 +62,16 @@ function LocationSection() {
                     className="not-italic xl:whitespace-nowrap"
                     aria-label="Main event venue address"
                   >
-                    Need the new address & map
+                    1 Energy Plaza, Detroit, MI 48226
                   </address>
                 </dd>
               </dl>
               <a
-                href="https://www.google.com/maps/dir//2901+Grand+River+Ave,+Detroit,+MI+48201/@42.3388889,-83.0703527,1162m/data=!3m2!1e3!5s0x883b2d527a607d6f:0xe075cfc124b83793!4m20!1m10!3m9!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!2sMotorCity+Casino+Hotel!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3!3m8!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3?entry=ttu"
+                href="https://www.google.com/maps/dir//DTE+Energy+Headquarters+1+Energy+Plaza+Detroit,+48226"
                 target="_blank"
                 className="mb-4 mt-3 inline-flex items-center whitespace-nowrap rounded bg-sky-900 px-8 py-5 text-primary-50 shadow-xl transition delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2"
                 rel="noreferrer"
-                aria-label="Get directions to DTE (opens in new tab)"
+                aria-label="Get directions to DTE Energy Headquarters (opens in new tab)"
               >
                 GET DTE DIRECTIONS
               </a>
@@ -83,30 +83,32 @@ function LocationSection() {
             <h4 className="mb-2 text-sm font-semibold text-gray-700 dark:text-white">
               Saturday - DTE Location
             </h4>
+            <p className="mb-2 text-lg font-semibold">
+              DTE Energy Headquarters
+            </p>
             <div
               className="rounded-2xl border-4 border-blue-500 bg-white p-1"
               role="region"
               aria-label="Saturday location map"
             >
-              <p className="text-center">Need the new address & map</p>
               <iframe
-                title="MotorCity Casino Hotel"
-                aria-label="Map showing MotorCity Casino Hotel location"
+                title="DTE Energy Headquarters"
+                aria-label="Map showing DTE Energy Headquarters location"
                 className="aspect-[4/3] rounded-xl border-4 border-white"
                 style={{
                   maxWidth: '100%',
                   width: '100%',
                   boxSizing: 'border-box',
                 }}
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5043.696479671668!2d-83.07032016920797!3d42.33888511227875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d4d71da8bb1%3A0xe4a8072514ccbe55!2sMotorCity%20Casino%20Hotel!5e1!3m2!1sen!2sus!4v1757466338342!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1610!2d-83.0603389!3d42.3337713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d363de9d8eb%3A0xb42701b85d37b41d!2sDTE%20Energy%20Headquarters!5e1!3m2!1sen!2sus!4v1706832000000!5m2!1sen!2sus"
                 allowFullScreen
                 loading="lazy"
                 sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
               >
                 <p>
-                  Interactive map showing MotorCity Casino Hotel location.
+                  Interactive map showing DTE Energy Headquarters location.
                   <a
-                    href="https://www.google.com/maps/dir//2901+Grand+River+Ave,+Detroit,+MI+48201/@42.3388889,-83.0703527,1162m/data=!3m2!1e3!5s0x883b2d527a607d6f:0xe075cfc124b83793!4m20!1m10!3m9!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!2sMotorCity+Casino+Hotel!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3!3m8!1s0x883b2d4d71da8bb1:0xe4a8072514ccbe55!5m2!4m1!1i2!8m2!3d42.3388889!4d-83.0677778!16zL20vMDdtMmN3?entry=ttu"
+                    href="https://www.google.com/maps/dir//DTE+Energy+Headquarters+1+Energy+Plaza+Detroit,+48226"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
