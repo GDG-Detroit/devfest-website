@@ -213,6 +213,7 @@ const SessionsSection = ({
       >
         <nav
           ref={navRef}
+          role="tablist"
           id="sessions-nav"
           aria-label="Session track navigation"
           className={`scrollbar-visible mt-4 flex w-full flex-nowrap items-center justify-start gap-1 overflow-x-auto overflow-y-visible rounded-md bg-black py-3 pe-4 ps-4 md:px-6 ${
