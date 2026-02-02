@@ -205,7 +205,7 @@ function Navbar() {
       performScroll(target, 500)
     }
 
-    const tryScroll = (retriesLeft = 20) => {
+    const tryScroll = (retriesLeft = 10) => {
       const target = document.querySelector(`#${sectionId}`)
       if (target) {
         scrollToSection(target)
