@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Hash-based smooth scroll: Navbar `useEffect` scrolls to section when navigating to `/#section-id` from any page (Navbar or Footer), with retry until the home section is in the DOM
 - Add new tab in navigation, "Pathways"
 - Careers Hub, Connections, and Media grouped under a single “Pathways” item with caret
 - Golden (primary) underline on hover for Pathways subnav items (desktop)
@@ -18,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **Pathways dropdown accessibility**: Focus-based open/close (`onBlur` on container); keyboard support (Enter/Space toggle, Arrow Down/Up open and focus first/last item, Escape close and return focus to trigger, Arrow keys move between items); `aria-haspopup="menu"`; removed `preventDefault` from button click; mouse leave only closes when focus is outside the dropdown
+- **Footer**: Section links always use `/#section-id`; removed Footer’s own scroll logic so smooth scrolling is handled by the Navbar’s hash-based effect for both Navbar and Footer links
 - Navbar z-index raised (z-30) so it stays in front of LandingSection and other content
 - Removed overflow-hidden from nav and inner grid so Pathways dropdown is no longer clipped
 - Pathways trigger aligned with other nav items (items-baseline, inline-flex) so “Pathways” sits on the same line
@@ -40,11 +43,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Partners section refactored
 - Speakers section refactored
 - Remove Past Events page and redirect to Previous Events page
-
-### Fixed
-
-- Fixed git remote configuration (origin now points to Compass-Detroit/compass-website)
-- Fixed incorrect variable name usage
 
 ## [0.1.0] - 2026-01-28
 
