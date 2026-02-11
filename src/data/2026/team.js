@@ -19,6 +19,7 @@ import ShugmiShumunov from '@/data/2025/assets/images/team/shugmi_shumunov-x96.w
 import SohamMhatre from '@/data/2025/assets/images/team/soham_mhatre.webp'
 import SohanKetireddy from '@/data/2025/assets/images/team/sohan_ketireddy-x96.webp'
 import SumiaSaleh from '@/data/2025/assets/images/team/Sumia_Saleh-x96.webp'
+import TerrellMcKinney from '@/data/2026/assets/images/team/Terrell_McKinney.webp'
 
 export const teamData = [
   {
@@ -319,5 +320,19 @@ Today, Maridy serves as President of the Society of Hispanic Professional Engine
     organization: '',
     role: 'Student',
     avatar: Rehanashri,
+  },
+  {
+    id: 22,
+    name: 'Terrell McKinney',
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/terrellmckinney/',
+    github: 'https://github.com/Terlam',
+    devfest: 'devteam',
+    star: false,
+    university: '',
+    bio: `Terrell McKinney is a software engineer and educator at Aaron Douglas LLC, and a community builder who helps make complex topics like AI, technical interviews, and modern careers more human and accessible. He contributes to the Compass Detroit dev team and to initiatives like the Black CS Success Summit. His approach centers care, practical skill-building, and the belief that technology should serve people—not the other way around.`,
+    organization: 'Aaron Douglas LLC',
+    role: 'Software Engineer',
+    avatar: TerrellMcKinney,
   },
 ]
